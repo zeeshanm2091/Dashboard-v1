@@ -1,0 +1,25 @@
+.mycomp-card,
+.mypms-card {
+  .card-body {
+    // @include dis-flex();
+    // height: calc(100% - 20px);
+    .card-left {
+      // width: 40%;
+      text-align: center;
+
+      span {
+        font-size: 60px;
+        color: $dark-secondary;
+      }
+    }
+
+    .card-right {
+      // width: 60%;
+      p {
+        text-transform: capitalize;
+        line-height: 20px;
+        color: $text;
+      }
+    }
+  }
+}

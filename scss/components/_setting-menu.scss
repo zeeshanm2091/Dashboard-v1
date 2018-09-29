@@ -1,0 +1,114 @@
+.setting-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.setting-menu {
+  // max-width: 500px;
+  width: 500px;
+  position: fixed;
+  background-color: $light;
+  left: -100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  padding-top: 30px;
+  -webkit-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
+  -moz-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
+  box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
+
+  .setting-head {
+    @include dis-flex();
+    padding: 0 30px 30px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid $border;
+
+    span {
+      &:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.accord-container {
+  .accord-item-title {
+    padding: 0 30px;
+    height: 55px;
+    border-bottom: 1px solid $border;
+    text-transform: capitalize;
+    font-size: 18px;
+    @include dis-flex();
+    color: $text;
+    cursor: pointer;
+  }
+
+  .active {
+    .accord-item-body {
+      display: block;
+    }
+  }
+
+  .accord-item-body {
+    height: calc(100vh - 256px);
+    background-color: $light;
+    display: none;
+  }
+
+  .accord-body-list {
+    @include dis-flex();
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 30px;
+    overflow: auto;
+    height: calc(100vh - 250px);
+
+    section {
+      height: 170px;
+      border: 1px solid #ccc;
+      width: 48%;
+      margin-bottom: 20px;
+      background-color: $white;
+      cursor: move;
+
+      .widget-img {
+        height: 120px;
+        border-bottom: 1px solid $border;
+
+        img {
+          height: 100%;
+          width: 100%;
+          padding: 10px;
+        }
+
+        &.full-width {
+          img {
+            padding: 0;
+          }
+        }
+      }
+
+      .widget-title {
+        @include dis-flex();
+        // span{
+        //   display: block;
+        // }
+        text-transform: capitalize;
+        font-weight: bold;
+        color: $text;
+        justify-content: center;
+        height: 50px;
+        padding: 0 5px;
+        text-align: center;
+      }
+
+      .main-markup {
+        display: none;
+      }
+    }
+  }
+}

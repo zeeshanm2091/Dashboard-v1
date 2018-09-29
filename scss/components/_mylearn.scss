@@ -1,0 +1,31 @@
+.mylearn-card {
+  .card-body {
+    justify-content: center;
+
+    .learn-list {
+      @include dis-flex();
+      width:100%;
+      .learn-item{
+        @include dis-flex();
+        width: 33.33%;
+        .card-left{
+          font-size: 60px;
+          color:$secondary
+        }
+        .card-right{
+          color:$text;
+          text-transform: capitalize;
+          .learn-desc{
+            .learn-top{
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+            .learn-bottom{
+              line-height:18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

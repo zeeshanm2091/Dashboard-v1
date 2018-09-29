@@ -1,0 +1,27 @@
+.ctc-card {
+  color:$text;
+  .card-body{
+    .card-left{
+      span{
+        font-size: 60px;
+        color:$secondary;
+      }
+
+    }
+  }
+  .claim-desc {
+    margin-bottom: 10px;
+    .claim-title {
+      text-transform: capitalize;
+      font-weight: 700;
+      // font-size: 14px;
+      margin-bottom: 2px;
+    }
+    .claim-txt{
+      font-size: 12px;
+      @media screen and (max-width:1024px){
+        line-height: 16px;
+      }
+    }
+  }
+}

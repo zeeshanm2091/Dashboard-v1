@@ -1,0 +1,24 @@
+.moreLink-card {
+  .db-slider {
+    // margin-top: 20px;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .slider-item-content {
+      &:hover{
+            transform: scale(1);
+      }
+      .slider-top-block {
+        height: auto;
+        width: auto;
+        background-color:transparent;
+        border-radius: 0%;
+        margin-bottom: 15px;
+        color:$dark-secondary;
+        font-size:70px;
+      }
+    }
+  }
+}

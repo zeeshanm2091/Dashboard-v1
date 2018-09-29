@@ -1,0 +1,58 @@
+.rnr-block {
+  .rnr-list {
+    @include dis-flex();
+
+    .rnr-item {
+      border: 1px solid $border;
+      padding: 20px 10px 10px;
+      width:31%;
+
+      .rnr-top {
+        @include dis-flex();
+        justify-content: flex-start;
+
+        .rnr-userprofile {
+          span {
+            display: block;
+
+            &.userName {
+              font-size: 14px;
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+
+            &.user-desg {
+              font-size: 12px;
+              color: $text;
+            }
+          }
+        }
+
+        .rnr-img {
+          height: 40px;
+          width: 40px;
+          margin-right: 10px;
+
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            background-color: $black;
+          }
+        }
+      }
+
+      .rnr-desc {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 13px;
+        color:$text;
+        em{
+          text-transform: capitalize;
+          font-weight: bold;
+          color:$black;
+        }
+      }
+    }
+  }
+}

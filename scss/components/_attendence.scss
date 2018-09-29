@@ -1,0 +1,63 @@
+.atten-card {
+
+
+  .card-body {
+    .card-left {
+      width: 60%;
+      text-align: center;
+    }
+
+    .card-right {
+      width: 40%;
+      .empConnect{
+        margin-top: 0px;
+      }
+
+      .attn-info {
+        span {
+          color:$text;
+
+          &.attn-count {
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+            @media screen and (max-width:1024px){
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .attn-cal-list {
+    @include dis-flex();
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80%;
+    @media screen and (max-width:1024px){
+      width:100%;
+    }
+    @media screen and (max-width:992px){
+      width:60%;
+    }
+
+    span {
+      &.cal-date {
+        height: 14px;
+        width: 14px;
+        background-color: $border;
+        margin: 2px;
+        border-radius: 2px;
+        @media screen and (max-width:1024px){
+          height: 12px;
+          width: 12px;
+        }
+        &.cal-abs{
+          background-color:$danger;
+        }
+      }
+    }
+  }
+}

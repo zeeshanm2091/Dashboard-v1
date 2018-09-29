@@ -1,0 +1,11 @@
+.empConnect {
+  &.empBday {
+    .card-head {
+      .card-right {
+        .emp-filteList {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

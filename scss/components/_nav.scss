@@ -1,0 +1,22 @@
+.db-nav {
+  @include gradient(left,$list1);
+
+  .nav-list {
+    @include dis-flex();
+    justify-content: flex-start;
+    height: 60px;
+
+    .nav-item {
+      margin-right: 20px;
+      a {
+        color: $white;
+        text-transform: capitalize;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

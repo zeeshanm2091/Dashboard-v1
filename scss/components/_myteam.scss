@@ -1,0 +1,54 @@
+.my-team {
+  .card-head{
+    .card-right{
+      .emp-filteList{
+
+        justify-content: flex-end;
+        .emp-filter-item{
+          &:last-child{
+            width: auto;
+          }
+
+        }
+      }
+    }
+  }
+  .myteam-list {
+    @include dis-flex();
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .myteam-item {
+      position: relative;
+      margin: 0 5px 5px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        background-color:$black;
+        border-radius: 50%;
+      }
+
+      .attn-status {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &.attn-abs{
+          span {
+            background-color:$danger;
+          }
+        }
+
+        span {
+          height: 15px;
+          width: 15px;
+          background-color:$secondary;
+          display: block;
+          border-radius: 50%;
+          border: 3px solid $white;
+        }
+      }
+    }
+  }
+}

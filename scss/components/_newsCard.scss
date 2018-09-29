@@ -1,0 +1,130 @@
+.newsCard {
+  border: 1px solid $border;
+  height: 180px;
+  .bx-wrapper .bx-next{
+    right:0px;
+  }
+
+  .bx-wrapper .bx-prev{
+    left:0px;
+  }
+
+
+  background-color: $black;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: $white;
+
+  .newsCard-content {
+
+
+    @include dis-flex();
+    align-items: flex-start;
+    position: relative;
+
+    @media screen and (max-width:767px){
+      flex-direction: column;
+      height: auto;
+    }
+
+
+    .newsCard-img-block {
+      width: 40%;
+      position: relative;
+
+      @media screen and (max-width:767px){
+          width: 100%;
+          height:200px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .newsCard-play-btn {
+        height: 50px;
+        width: 50px;
+        background-color: $danger;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 50%;
+        margin-left: -25px;
+        border-radius: 50%;
+        color: $white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &:before {
+          line-height: 50px;
+        }
+      }
+    }
+
+    .newsCard-desc {
+      width: 60%;
+      padding: 20px 40px 0 20px;
+
+      @media screen and (max-width:992px){
+          width: 100%;
+      }
+
+      .newsCard-name {
+        margin-bottom: 10px;
+
+        span {
+          height: 25px;
+          line-height: 25px;
+          padding: 0 15px;
+          @include gradient(left,$list1);
+          color: $white;
+          text-transform: capitalize;
+          display: inline-block;
+        }
+      }
+
+      .newsCard-text {
+        // padding-bottom: 40px;
+        line-height: 18px;
+      }
+
+      .newsCard-title {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+
+      .newsCard-link {
+        span {
+          height: 40px;
+          width: 40px;
+          position: absolute;
+          text-align: center;
+          line-height: 40px;
+          bottom: 0;
+          right: 0;
+          color: $secondary;
+          font-size: 20px;
+          transition: all 0.2s ease-in-out;
+          &:hover{
+            transform: scale(1.05);
+          }
+
+          &:before {
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
