@@ -2267,8 +2267,17 @@ table {
   right: 0;
 }
 
+.empConnect.empBday {
+  padding: 0;
+}
+.empConnect.empBday .card-head {
+  padding: 20px 20px 0;
+}
 .empConnect.empBday .card-head .card-right .emp-filteList {
   justify-content: flex-end;
+}
+.empConnect.empBday .db-slider {
+  padding: 0 20px;
 }
 
 .db-slider a {
@@ -2385,6 +2394,10 @@ table {
   }
 }
 
+.db-slider:hover .db-arrow {
+  opacity: 1;
+}
+
 .db-arrow {
   color: green;
   font-size: 20px;
@@ -2392,6 +2405,7 @@ table {
   height: 40px;
   width: 40px;
   text-align: center;
+  opacity: 0;
 }
 .db-arrow:before {
   line-height: 40px;
@@ -2541,6 +2555,19 @@ table {
   color: #777874;
 }
 
+.moreLink-card {
+  padding: 0px;
+}
+.moreLink-card .card-head {
+  padding: 20px 20px 0 20px;
+}
+.moreLink-card .card-body {
+  height: auto;
+  margin-top: 20px;
+}
+.moreLink-card .db-slider {
+  padding: 0 20px;
+}
 .moreLink-card .db-slider a:hover {
   text-decoration: none;
 }

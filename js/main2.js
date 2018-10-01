@@ -91,6 +91,7 @@ $(document).ready(function() {
       prevEl: '.swiper-button-prev',
     },
     loop: true,
+    autoHeight:true,
   });
 
 
@@ -102,6 +103,7 @@ $(document).ready(function() {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
+    autoHeight:true,
 
   });
 
@@ -113,6 +115,7 @@ $(document).ready(function() {
     slidesPerView: 6,
     spaceBetween: 20,
     loop: true,
+    autoHeight:true,
 
   });
 

@@ -138,6 +138,14 @@
 // new slider
 
 
+.db-slider{
+  &:hover{
+    .db-arrow {
+      opacity: 1;
+    }
+  }
+}
+
 
 .db-arrow {
   color: green;
@@ -146,6 +154,7 @@
   height: 40px;
   width: 40px;
   text-align: center;
+  opacity: 0;
 
   &:before {
     line-height: 40px;

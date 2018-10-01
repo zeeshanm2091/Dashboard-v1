@@ -1,11 +1,19 @@
 .empConnect {
   &.empBday {
+    padding: 0;
+
     .card-head {
+      padding: 20px 20px 0;
+
       .card-right {
         .emp-filteList {
           justify-content: flex-end;
         }
       }
+    }
+
+    .db-slider {
+      padding: 0 20px;
     }
   }
 }
