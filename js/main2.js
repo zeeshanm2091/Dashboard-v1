@@ -90,7 +90,7 @@ $(document).ready(function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    loop:true,
+    loop: true,
   });
 
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
     },
     slidesPerView: 3,
     spaceBetween: 20,
-    loop:true,
+    loop: true,
 
   });
 
@@ -112,7 +112,7 @@ $(document).ready(function() {
     },
     slidesPerView: 6,
     spaceBetween: 20,
-    loop:true,
+    loop: true,
 
   });
 
@@ -144,9 +144,6 @@ $(document).ready(function() {
   $(function() {
     $('.left-list,.right-list').sortable()
       .on('sortable:receive', function(e, ui) {
-
-
-
         var swiper = new Swiper('.swiper-container', {
           navigation: {
             nextEl: '.swiper-button-next',
@@ -169,11 +166,6 @@ $(document).ready(function() {
           slidesPerView: 6,
           spaceBetween: 20,
         });
-
-
-
-
-
       })
 
   })
@@ -182,13 +174,27 @@ $(document).ready(function() {
 
 
   $(function() {
-  $('.left-list,.right-list').sortable()
-  .on('sortable:activate', function(e, ui) {
-    $('section').css("z-index","10")
+    $('.left-list,.right-list').sortable()
+      .on('sortable:activate', function(e, ui) {
+        $('section').css("z-index", "10")
+      })
   })
+
+
+
+
+//*************************************************************************drop down code***************************************************************************************************************//
+
+$('.selected-item').click(function(){
+  $(this).parent().find('.dropdown-list').slideToggle();
 })
 
-
+$('.dropdown-item').click(function(){
+  var selTxt = $(this).html();
+  console.log(selTxt);
+  $(this).parent().parent().find('.selected-item').html(selTxt);
+  $(this).parent().slideUp();
+})
 
 
 

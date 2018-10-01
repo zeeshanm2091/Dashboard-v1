@@ -1584,6 +1584,7 @@ table {
 .dropdown-block {
   position: relative;
   cursor: pointer;
+  width: 80px;
 }
 .dropdown-block .selected-item {
   padding-right: 30px;

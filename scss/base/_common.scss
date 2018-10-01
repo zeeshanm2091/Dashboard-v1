@@ -129,7 +129,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 .dropdown-block {
   position: relative;
   cursor: pointer;
-
+  width:80px;
   .selected-item {
     padding-right: 30px;
     z-index: 3;
