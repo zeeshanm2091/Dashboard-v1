@@ -52,11 +52,39 @@ $(document).ready(function() {
 
   $('.delete-btn').click(function() {
     $(this).parent().remove();
-    if ($(this).parent().attr('class') === "sec-50") {
-      $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-    } else {
-      $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
+
+    // if ($(this).parent().attr('class') === "sec-50") {
+    //   $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
+    // } else {
+    //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
+    // }
+
+    var widLength = $('.widget-list > section').length;
+    var newArr = [];
+    for (var i = 1; i < widLength + 1; i++) {
+      console.log(newArr.push($('.widget-list section:nth-child('+i+') .main-markup > div').attr('class')));
     }
+
+    console.log(newArr);
+
+    if(jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1){
+      if ($(this).parent().attr('class') === "sec-50") {
+        $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
+      } else {
+        $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
+      }
+    }
+    else{
+      // alert("Widget Already present in the widget list");
+    }
+
+
+
+
+
+
+
+
   });
 
   //****************************************************************************attendance block******************************************************************//
