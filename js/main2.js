@@ -75,7 +75,7 @@ $(document).ready(function() {
       }
     }
     else{
-      // alert("Widget Already present in the widget list");
+      alert("Widget Already present in the widget list");
     }
 
 
