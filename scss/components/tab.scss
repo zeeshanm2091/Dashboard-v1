@@ -1,0 +1,46 @@
+.tab-block {
+  .tab-head {
+    .tab-title-list {
+      @include dis-flex();
+      justify-content: flex-start;
+      position: relative;
+      top: 1px;
+
+      .tab-title-item {
+        height: 40px;
+        line-height: 40px;
+        width: 130px;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        border: 1px solid $border;
+        cursor: pointer;
+        border-bottom: none;
+        border-right: none;
+        background-color: $secondary;
+        color: $white;
+
+        &:last-child {
+          border-right: 1px solid $border;
+        }
+
+        &.active {
+          color:$black;
+          background-color:$white;
+        }
+      }
+    }
+  }
+
+  .tab-body {
+    border: 1px solid #ccc;
+    background-color: $white;
+    height: 480px;
+    overflow: hidden;
+
+    .tab-content {
+      height: 480px;
+      overflow-y: auto;
+    }
+  }
+}
