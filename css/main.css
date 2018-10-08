@@ -2099,6 +2099,7 @@ table {
 .newsCard .newsCard-content .newsCard-desc {
   width: 60%;
   padding: 20px 40px 0 20px;
+  text-align: left;
 }
 @media screen and (max-width: 992px) {
   .newsCard .newsCard-content .newsCard-desc {
