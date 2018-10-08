@@ -1,6 +1,10 @@
 .theme-v2 {
   background-color: $bg-color;
 
+  .setting-icon{
+    color:$white;
+  }
+  
   .option-list {
     .option-list-item {
       .option-icon-block {

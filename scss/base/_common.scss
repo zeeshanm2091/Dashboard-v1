@@ -53,7 +53,6 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
-
 * {
   box-sizing: border-box;
 }
@@ -68,20 +67,23 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   max-width: 1440px;
   margin: auto;
 
-
-
-  .widget-img-block{
+  .widget-img-block {
     display: none;
   }
 
-  .widget-list{
-    .delete-btn{display: none}
-    .widget-img-block{
+  .widget-list {
+    .delete-btn {
+      display: none;
+    }
+
+    .widget-img-block {
       display: block;
     }
   }
+}
 
-
+.main-container-fluid{
+  max-width: 100%;
 }
 
 .ot-pd {
@@ -100,6 +102,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   align-items: flex-start;
   // align-items: flex-start;
   position: relative;
+  flex-wrap: wrap;
   @media screen and (max-width:992px) {
     flex-direction: column;
   }
@@ -107,8 +110,6 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   .db-left,
   .db-right {
     width: 49%;
-
-
     @media screen and (max-width:992px) {
       width: 100%;
 
@@ -129,7 +130,8 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 .dropdown-block {
   position: relative;
   cursor: pointer;
-  width:80px;
+  width: 80px;
+
   .selected-item {
     padding-right: 30px;
     z-index: 3;
@@ -232,17 +234,16 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 }
 
 #__ph0,
-#__ph1{
+#__ph1 {
   z-index: 1000000;
   border: 1px dashed $border;
   margin-top: 30px;
   height: 250px;
 }
 
-#__ph3{
+#__ph3 {
   border: 1px dashed $border;
   background-color: transparent;
-
 }
 
 #__ph4 {
@@ -253,7 +254,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 
 .placeholder {
   border: 1px dashed $border;
-  width:100px;
+  width: 100px;
 }
 
 .left-list,
@@ -262,15 +263,16 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   align-items: flex-start;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height:800px;
-  border:1px dashed $border;
+  min-height: 800px;
+  border: 1px dashed $border;
+
   section {
     position: relative;
     width: 100%;
     cursor: move;
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
 
-    &:hover .delete-btn{
+    &:hover .delete-btn {
       display: block;
     }
 
@@ -285,7 +287,8 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
       background-color: $border;
       cursor: pointer;
       display: none;
-      &:before{
+
+      &:before {
         line-height: 40px;
       }
     }
@@ -295,8 +298,6 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
     }
   }
 }
-
-
 // .widget-list{
 //   .main-stru{
 //     display: none;

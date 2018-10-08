@@ -5,6 +5,12 @@ $(document).ready(function() {
     $(this).parent().find('.menu-main-content').animate({
       left: "0%"
     }, 300)
+    $('.setting-menu').animate({
+      left: "-50%"
+    }, 300);
+    $('.main-content').animate({
+      left: "0px"
+    }, 300)
   })
 
   $('.close-btn').click(function() {
@@ -18,11 +24,14 @@ $(document).ready(function() {
       left: "0px"
     }, 300);
     $('.main-content').animate({
-      left: "230px"
+      left: "420px"
+    }, 300);
+    $('.menu-main-content').animate({
+      left: "-50%"
     }, 300);
   })
 
-  $('.setting-menu .icon-wrong').click(function() {
+  $('.setting-menu .setting-head > .icon-wrong').click(function() {
     $('.setting-menu').animate({
       left: "-500px"
     }, 300)
@@ -42,11 +51,6 @@ $(document).ready(function() {
     $('.noti-wrap').fadeToggle();
   });
 
-  $(document).on('click', function(e) {
-    if ($(e.target).closest(".header-notification").length === 0) {
-      $(".noti-wrap").hide();
-    }
-  });
 
   //****************************************************************************delete btn code*******************************************************************//
 
@@ -61,21 +65,22 @@ $(document).ready(function() {
 
     var widLength = $('.widget-list > section').length;
     var newArr = [];
+
+
     for (var i = 1; i < widLength + 1; i++) {
-      console.log(newArr.push($('.widget-list section:nth-child('+i+') .main-markup > div').attr('class')));
+      console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
     }
 
     console.log(newArr);
 
-    if(jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1){
+    if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
       if ($(this).parent().attr('class') === "sec-50") {
         $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
       } else {
         $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
       }
-    }
-    else{
-      alert("Widget Already present in the widget list");
+    } else {
+      // alert("Widget Already present in the widget list");
     }
 
 
@@ -119,7 +124,7 @@ $(document).ready(function() {
       prevEl: '.swiper-button-prev',
     },
     loop: true,
-    autoHeight:true,
+    autoHeight: true,
   });
 
 
@@ -131,7 +136,7 @@ $(document).ready(function() {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
-    autoHeight:true,
+    autoHeight: true,
 
   });
 
@@ -143,7 +148,7 @@ $(document).ready(function() {
     slidesPerView: 6,
     spaceBetween: 20,
     loop: true,
-    autoHeight:true,
+    autoHeight: true,
 
   });
 
@@ -153,19 +158,19 @@ $(document).ready(function() {
 
   $('.left-list,.right-list').sortable({
     items: 'section',
-    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item',
+    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
     forcePlaceholderSize: true,
   })
 
   $('.divide-block').sortable({
     items: 'li',
-    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item',
+    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
     forcePlaceholderSize: true,
   })
 
   $('.widget-list').sortable({
     items: 'section',
-    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item',
+    cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
     forcePlaceholderSize: true,
     connectWith: '.left-list,.right-list',
   });
@@ -214,23 +219,74 @@ $(document).ready(function() {
 
 
 
-//*************************************************************************drop down code***************************************************************************************************************//
+  //*************************************************************************drop down code***************************************************************************************************************//
 
-$('.selected-item').click(function(){
-  $(this).parent().find('.dropdown-list').slideToggle();
+  $('.selected-item').click(function() {
+    $(this).parent().find('.dropdown-list').slideToggle();
+  })
+
+  $('.dropdown-item').click(function() {
+    var selTxt = $(this).html();
+    console.log(selTxt);
+    $(this).parent().parent().find('.selected-item').html(selTxt);
+    $(this).parent().slideUp();
+  })
+
+
+
+  //************************************************************************theme change code**************************************************************************************************************//
+
+
+
+  $('.theme-item').click(function() {
+    var Childno = $(this).index();
+    $('.main-content').addClass('theme-v' + Childno);
+
+  })
+
+
+  //***********************************************************************closing div code ***********************************************************************//
+
+  $(document).mouseup(function(e) {
+    var container = $(".dropdown-list");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.slideUp();
+    }
+  });
+
+
+  $(document).mouseup(function(e) {
+    var container = $(".noti-wrap");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.fadeOut();
+    }
+  });
+
+
+
+  //tab code
+
+
+  $('.tab-title-item').click(function(){
+
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+
+
+    var tabNo = $(this).index()+1;
+    $('.tab-content').siblings().fadeOut();
+    $('.tab-content:nth-child('+tabNo+')').fadeIn();
+
+
+
+  })
+
+
+
+
+
 })
-
-$('.dropdown-item').click(function(){
-  var selTxt = $(this).html();
-  console.log(selTxt);
-  $(this).parent().parent().find('.selected-item').html(selTxt);
-  $(this).parent().slideUp();
-})
-
-
-
-
-
-})
-
-//

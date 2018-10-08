@@ -1,5 +1,24 @@
+
+
+
 .db-basic-banner {
-    height: 350px;
-    background-color: #ccc;
+  background-color: #ccc;
+  width: 100%;
+  margin-bottom: 30px;
+
+  img {
     width: 100%;
+    height: auto;
+  }
+}
+
+
+.__basic{
+  .db-left{
+    padding-left: 30px;
+  }
+
+  .db-right{
+    padding-right: 30px;
+  }
 }

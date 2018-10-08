@@ -1,6 +1,10 @@
 .theme-v1 {
   background-color: $bg-color;
 
+  .setting-icon{
+    color:$white;
+  }
+
   .menu-main-content{
     .option-list{
       .option-list-item{

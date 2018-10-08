@@ -86,8 +86,6 @@
     .right-block {
       @include dis-flex();
 
-
-
       .right-head-menu {
         .menu-icon {
           @include dis-flex();
@@ -121,7 +119,7 @@
           border-radius: 20px;
           padding-bottom: 40px;
           display: none;
-          z-index: 10;
+          z-index: 100;
 
           &:before {
             content: "";
@@ -179,71 +177,6 @@
             left: 0;
             width: 100%;
           }
-
-          .noti-list {
-            .noti-item {
-              padding: 0 20px;
-              height: 80px;
-              color: $text;
-              @include dis-flex();
-              border-bottom: 1px solid $border;
-
-              .noti-item-left {
-                @include dis-flex();
-                justify-content: space-between;
-                font-size: 14px;
-
-                .noti-img {
-                  margin-right: 10px;
-
-                  img {
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 50%;
-                    background-color: #000;
-                  }
-                }
-
-                .noti-content {
-                  span {
-                    display: block;
-
-                    &.noti-date,
-                    &.noti-desc {
-                      text-transform: capitalize;
-                      font-weight: bold;
-                      margin-bottom: 5px;
-                    }
-                  }
-                }
-              }
-
-              .noti-item-right {
-                .noti-actions {
-                  @include dis-flex();
-                  font-size: 12px;
-                  color: $secondary;
-
-                  span {
-                    cursor: pointer;
-                    height: 25px;
-                    width: 25px;
-                    border-radius: 50%;
-                    border: 1px solid $secondary;
-                    text-align: center;
-
-                    &:first-child {
-                      margin-right: 5px;
-                    }
-
-                    &:before {
-                      line-height: 23px;
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
 
         .noti-count {
@@ -262,6 +195,71 @@
           font-weight: bold;
           letter-spacing: 1px;
           animation: 2s infinite beatHeart;
+        }
+      }
+    }
+  }
+}
+
+.noti-list {
+  .noti-item {
+    padding: 0 20px;
+    height: 80px;
+    color: $text;
+    @include dis-flex();
+    border-bottom: 1px solid $border;
+
+    .noti-item-left {
+      @include dis-flex();
+      justify-content: space-between;
+      font-size: 14px;
+
+      .noti-img {
+        margin-right: 10px;
+
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background-color: #000;
+        }
+      }
+
+      .noti-content {
+        span {
+          display: block;
+
+          &.noti-date,
+          &.noti-desc {
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .noti-item-right {
+      .noti-actions {
+        @include dis-flex();
+        font-size: 12px;
+        color: $secondary;
+
+        span {
+          cursor: pointer;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          border: 1px solid $secondary;
+          text-align: center;
+
+          &:first-child {
+            margin-right: 5px;
+          }
+
+          &:before {
+            line-height: 23px;
+          }
         }
       }
     }
