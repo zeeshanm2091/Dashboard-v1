@@ -10,6 +10,12 @@
       span {
         font-size: 60px;
         color: $dark-secondary;
+        @media screen and (max-width:1200px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width:1200px) {
+          font-size: 60px;
+        }
       }
     }
 

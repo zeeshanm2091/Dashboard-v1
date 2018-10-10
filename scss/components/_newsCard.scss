@@ -95,6 +95,9 @@
       .newsCard-text {
         // padding-bottom: 40px;
         line-height: 18px;
+        @media screen and (max-width:1200px){
+          font-size: 14px;
+        }
       }
 
       .newsCard-title {
@@ -103,6 +106,12 @@
         text-transform: capitalize;
         line-height: 20px;
         margin-bottom: 10px;
+        text-align: justify;
+        @media screen and (max-width: 1200px){
+          font-size: 14px;
+          line-height: 16px;
+          margin-bottom: 5px;
+        }
       }
 
       .newsCard-link {

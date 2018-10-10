@@ -1510,6 +1510,10 @@ table {
 }
 
 /******main content*****/
+body {
+  font-size: 14px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1685,6 +1689,11 @@ table {
   height: calc(100% - 45px);
   padding: 0 20px;
 }
+@media screen and (max-width: 1200px) {
+  .card-body {
+    padding: 0 10px;
+  }
+}
 .card-body .card-left {
   width: 40%;
   text-align: center;
@@ -1746,7 +1755,7 @@ table {
 }
 .left-list section .delete-btn,
 .right-list section .delete-btn {
-  z-index: 10;
+  z-index: 11;
   position: absolute;
   right: 0;
   top: 30px;
@@ -2211,12 +2220,25 @@ label:hover {
 .newsCard .newsCard-content .newsCard-desc .newsCard-text {
   line-height: 18px;
 }
+@media screen and (max-width: 1200px) {
+  .newsCard .newsCard-content .newsCard-desc .newsCard-text {
+    font-size: 14px;
+  }
+}
 .newsCard .newsCard-content .newsCard-desc .newsCard-title {
   font-size: 16px;
   font-weight: bold;
   text-transform: capitalize;
   line-height: 20px;
   margin-bottom: 10px;
+  text-align: justify;
+}
+@media screen and (max-width: 1200px) {
+  .newsCard .newsCard-content .newsCard-desc .newsCard-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
 }
 .newsCard .newsCard-content .newsCard-desc .newsCard-link span {
   height: 40px;
@@ -2246,17 +2268,17 @@ label:hover {
 .empConnect .db-slider {
   padding: 0 20px;
 }
-@media screen and (max-width: 1024px) {
-  .empConnect {
-    padding: 10px;
-  }
-}
 .empConnect .card-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   padding: 20px 20px 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .empConnect .card-head {
+    padding: 10px 10px 0 10px;
+  }
 }
 .empConnect .card-head .card-left {
   display: flex;
@@ -2266,6 +2288,7 @@ label:hover {
 .empConnect .card-head .card-left .card-head-title {
   text-transform: capitalize;
   font-weight: bold;
+  font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
   .empConnect .card-head .card-left .card-head-title {
@@ -2319,7 +2342,7 @@ label:hover {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 .empConnect .card-head .card-right .emp-filteList .emp-filter-item {
   text-transform: capitalize;
@@ -2331,13 +2354,13 @@ label:hover {
 .empConnect .card-head .card-right .emp-filteList .emp-filter-item:last-child {
   width: 70px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .empConnect .card-head .card-right .emp-filteList .emp-filter-item {
     font-size: 12px;
     text-align: center;
   }
   .empConnect .card-head .card-right .emp-filteList .emp-filter-item:last-child {
-    width: 60px;
+    width: 80px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2372,11 +2395,21 @@ label:hover {
 .empConnect.empBday .card-head {
   padding: 20px 20px 0;
 }
+@media screen and (max-width: 1200px) {
+  .empConnect.empBday .card-head {
+    padding: 10px 10px 0;
+  }
+}
 .empConnect.empBday .card-head .card-right .emp-filteList {
   justify-content: flex-end;
 }
 .empConnect.empBday .db-slider {
   padding: 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .empConnect.empBday .db-slider {
+    padding: 0 10px;
+  }
 }
 
 .db-slider a {
@@ -2422,11 +2455,16 @@ label:hover {
 }
 .db-slider .slider-item-content .slider-bottom-block .emp-name {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 1366px) {
+  .db-slider .slider-item-content .slider-bottom-block .emp-name {
+    font-size: 12px;
+  }
+}
 .db-slider .slider-item-content .slider-bottom-block .emp-desg {
-  font-size: 12px;
+  font-size: 11px;
 }
 .db-slider .slider-item-content .slider-bottom-block .emp-desg span {
   display: block;
@@ -2495,6 +2533,9 @@ label:hover {
 
 .db-slider:hover .db-arrow {
   opacity: 1;
+}
+.db-slider:hover .db-arrow:focus {
+  outline: none;
 }
 
 .db-arrow {
@@ -2651,6 +2692,18 @@ label:hover {
   font-size: 60px;
   color: #89b72e;
 }
+@media screen and (max-width: 1200px) {
+  .mycomp-card .card-body .card-left span,
+.mypms-card .card-body .card-left span {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mycomp-card .card-body .card-left span,
+.mypms-card .card-body .card-left span {
+    font-size: 60px;
+  }
+}
 .mycomp-card .card-body .card-right p,
 .mypms-card .card-body .card-right p {
   text-transform: capitalize;
@@ -2684,7 +2737,17 @@ label:hover {
   border-radius: 0%;
   margin-bottom: 15px;
   color: #89b72e;
-  font-size: 70px;
+  font-size: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .moreLink-card .db-slider .slider-item-content .slider-top-block {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .moreLink-card .db-slider .slider-item-content .slider-top-block {
+    font-size: 60px;
+  }
 }
 
 .atten-card .card-body .card-left {
@@ -2736,7 +2799,7 @@ label:hover {
   margin: 2px;
   border-radius: 2px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .atten-card .attn-cal-list span.cal-date {
     height: 12px;
     width: 12px;
@@ -2752,6 +2815,16 @@ label:hover {
 .ctc-card .card-body .card-left span {
   font-size: 60px;
   color: #99cc33;
+}
+@media screen and (max-width: 1200px) {
+  .ctc-card .card-body .card-left span {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .ctc-card .card-body .card-left span {
+    font-size: 60px;
+  }
 }
 .ctc-card .claim-desc {
   margin-bottom: 10px;
@@ -2789,6 +2862,16 @@ label:hover {
   font-size: 60px;
   color: #99cc33;
 }
+@media screen and (max-width: 1200px) {
+  .mylearn-card .card-body .learn-list .learn-item .card-left {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .mylearn-card .card-body .learn-list .learn-item .card-left {
+    font-size: 60px;
+  }
+}
 .mylearn-card .card-body .learn-list .learn-item .card-right {
   color: #777874;
   text-transform: capitalize;
@@ -2805,11 +2888,106 @@ label:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .rnr-block .rnr-list {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .rnr-block .rnr-list {
+    margin-top: 30px;
+  }
 }
 .rnr-block .rnr-list .rnr-item {
   border: 1px solid #d6d8d1;
   padding: 20px 10px 10px;
   width: 31%;
+  position: relative;
+}
+.rnr-block .rnr-list .rnr-item:before {
+  height: 42px;
+  width: 42px;
+  content: "";
+  background-color: #ccc;
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  margin-left: -21px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .rnr-block .rnr-list .rnr-item:before {
+    height: 32px;
+    width: 32px;
+    top: -16px;
+    left: 50%;
+    margin-left: -16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .rnr-block .rnr-list .rnr-item:before {
+    height: 42px;
+    width: 42px;
+    top: -21px;
+    left: 50%;
+    margin-left: -21px;
+  }
+}
+.rnr-block .rnr-list .rnr-item:after {
+  content: "";
+  width: 50px;
+  height: 22px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  margin-left: -25px;
+}
+@media screen and (max-width: 1200px) {
+  .rnr-block .rnr-list .rnr-item:after {
+    height: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .rnr-block .rnr-list .rnr-item:after {
+    height: 22px;
+  }
+}
+.rnr-block .rnr-list .rnr-item .rnr-award-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  top: -20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  background-color: #fff;
+  padding: 5px;
+  z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  .rnr-block .rnr-list .rnr-item .rnr-award-img {
+    height: 30px;
+    width: 30px;
+    top: -15px;
+    margin-left: -15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .rnr-block .rnr-list .rnr-item .rnr-award-img {
+    height: 40px;
+    width: 40px;
+    top: -20px;
+    margin-left: -20px;
+  }
+}
+.rnr-block .rnr-list .rnr-item .rnr-award-img img {
+  height: auto;
+  width: 100%;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top {
   display: flex;
@@ -2821,12 +2999,12 @@ label:hover {
   display: block;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top .rnr-userprofile span.userName {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top .rnr-userprofile span.user-desg {
-  font-size: 12px;
+  font-size: 11px;
   color: #777874;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top .rnr-img {
@@ -2841,9 +3019,9 @@ label:hover {
   background-color: #000000;
 }
 .rnr-block .rnr-list .rnr-item .rnr-desc {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 14px;
-  margin-top: 13px;
+  margin-top: 5px;
   color: #777874;
 }
 .rnr-block .rnr-list .rnr-item .rnr-desc em {
@@ -2856,6 +3034,11 @@ label:hover {
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .setting-icon {
+    display: none;
+  }
 }
 
 .setting-menu {

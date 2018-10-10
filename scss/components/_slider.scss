@@ -52,12 +52,16 @@
 
       .emp-name {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 5px;
+
+        @media screen and (max-width:1366px){
+          font-size: 12px;
+        }
       }
 
       .emp-desg {
-        font-size: 12px;
+        font-size: 11px;
 
         span {
           display: block;
@@ -142,6 +146,9 @@
   &:hover{
     .db-arrow {
       opacity: 1;
+      &:focus{
+        outline: none;
+      }
     }
   }
 }

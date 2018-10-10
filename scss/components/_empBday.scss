@@ -2,8 +2,12 @@
   &.empBday {
     padding: 0;
 
+
     .card-head {
       padding: 20px 20px 0;
+      @media screen and(max-width:1200px){
+        padding: 10px 10px 0;
+      }
 
       .card-right {
         .emp-filteList {
@@ -14,6 +18,9 @@
 
     .db-slider {
       padding: 0 20px;
+      @media screen and(max-width:1200px){
+        padding: 0 10px;
+      }
     }
   }
 }

@@ -10,7 +10,13 @@
         width: 33.33%;
         .card-left{
           font-size: 60px;
-          color:$secondary
+          color:$secondary;
+          @media screen and (max-width:1200px){
+            font-size: 40px;
+          }
+          @media screen and (max-width:992px){
+            font-size: 60px;
+          }
         }
         .card-right{
           color:$text;

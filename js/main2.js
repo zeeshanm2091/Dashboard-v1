@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
   //****************************************************************************head menu code*******************************************************************//
-  $('.menu-icon').click(function() {
+  $('.menu-tab .menu-icon').click(function() {
     $(this).parent().find('.menu-main-content').animate({
       left: "0%"
     }, 300)
     $('.setting-menu').animate({
-      left: "-50%"
+      left: "-100%"
     }, 300);
     $('.main-content').animate({
       left: "0px"
@@ -128,6 +128,7 @@ $(document).ready(function() {
     pagination: {
       el: '.swiper-pagination',
     },
+    simulateTouch:false,
   });
 
   var swiper = new Swiper('.empConnect .swiper-container', {
@@ -139,7 +140,7 @@ $(document).ready(function() {
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-
+    simulateTouch:false,
   });
 
 
@@ -152,7 +153,7 @@ $(document).ready(function() {
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-
+    simulateTouch:false,
   });
 
   var swiper = new Swiper('.moreLink-card .swiper-container', {
@@ -160,12 +161,56 @@ $(document).ready(function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 6,
+    slidesPerView: 4,
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-
+    simulateTouch:false,
   });
+
+
+
+
+  if($(window).width() < 1200){
+    var swiper = new Swiper('.small-card .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 2,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      simulateTouch:false,
+    });
+  }
+
+  else if($(window).width() < 992){
+    var swiper = new Swiper('.small-card .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoHeight: true,
+      simulateTouch:false,
+    });
+  }
+  else{
+    var swiper = new Swiper('.small-card .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 2,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      simulateTouch:false,
+    });
+  }
 
 
   //****************************************************************************drag and drop code*************************************************************************//
@@ -204,6 +249,7 @@ $(document).ready(function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+          simulateTouch:false,
         });
         var swiper = new Swiper('.small-card .swiper-container', {
           navigation: {
@@ -212,14 +258,16 @@ $(document).ready(function() {
           },
           slidesPerView: 3,
           spaceBetween: 20,
+          simulateTouch:false,
         });
         var swiper = new Swiper('.moreLink-card .swiper-container', {
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
-          slidesPerView: 6,
+          slidesPerView: 4,
           spaceBetween: 20,
+          simulateTouch:false,
         });
       })
 

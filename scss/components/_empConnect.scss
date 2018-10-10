@@ -7,20 +7,22 @@
   .db-slider{
     padding: 0 20px;
   }
-    @media screen and (max-width:1024px){
-      padding:10px;
-    }
+
 
   .card-head {
     @include dis-flex();
     margin-bottom: 10px;
     padding: 20px 20px 0 20px;
+    @media screen and (max-width:1200px){
+      padding: 10px 10px 0 10px;
+    }
     .card-left {
       @include dis-flex();
 
       .card-head-title{
         text-transform: capitalize;
         font-weight:bold;
+        font-size: 16px;
         @media screen and (max-width:1024px){
           font-size: 14px;
         }
@@ -64,7 +66,7 @@
       .emp-filteList {
         @include dis-flex();
         position: relative;
-        z-index: 1;
+        z-index: 10;
 
         .emp-filter-item {
           text-transform: capitalize;
@@ -76,11 +78,11 @@
             width:70px;
           }
 
-          @media screen and (max-width:1024px){
+          @media screen and (max-width:1200px){
             font-size: 12px;
             text-align: center;
             &:last-child{
-              width:60px;
+              width:80px;
             }
           }
 
