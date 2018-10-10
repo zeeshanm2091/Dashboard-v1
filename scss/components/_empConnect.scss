@@ -2,8 +2,11 @@
   height: 180px;
   border: 1px solid #ccc;
   margin-top: 30px;
-  padding: 20px;
+  // padding: 20px;
   background-color: $white;
+  .db-slider{
+    padding: 0 20px;
+  }
     @media screen and (max-width:1024px){
       padding:10px;
     }
@@ -11,7 +14,7 @@
   .card-head {
     @include dis-flex();
     margin-bottom: 10px;
-
+    padding: 20px 20px 0 20px;
     .card-left {
       @include dis-flex();
 
@@ -60,6 +63,8 @@
 
       .emp-filteList {
         @include dis-flex();
+        position: relative;
+        z-index: 1;
 
         .emp-filter-item {
           text-transform: capitalize;

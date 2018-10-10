@@ -53,6 +53,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
+
 * {
   box-sizing: border-box;
 }
@@ -82,7 +83,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   }
 }
 
-.main-container-fluid{
+.main-container-fluid {
   max-width: 100%;
 }
 
@@ -221,7 +222,8 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 
 .card-body {
   @include dis-flex();
-  height: calc(100% - 20px);
+  height: calc(100% - 45px);
+  padding: 0 20px;
 
   .card-left {
     width: 40%;
@@ -231,6 +233,11 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   .card-right {
     width: 60%;
   }
+}
+
+.option-list #__ph1 {
+  height: 100px;
+  width: 100px;
 }
 
 #__ph0,
@@ -298,6 +305,12 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
     }
   }
 }
+
+.db-full-width {
+    width: 100%;
+}
+
+
 // .widget-list{
 //   .main-stru{
 //     display: none;
@@ -316,3 +329,80 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
 // .sec-50 {
 //   width: 48%;
 // }
+
+
+
+//login input blocks
+
+
+* {
+  font-family: Arial;
+}
+
+input {
+  border: none;
+  border-bottom: solid 1px black;
+  z-index: 10;
+  width: 100%;
+}
+input:focus, input:valid {
+  transition: 0.3s ease-in-out all;
+  border-bottom: solid 1px $secondary;
+  outline: none;
+}
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+  opacity: 1;
+}
+input:focus:-ms-input-placeholder, input:valid:-ms-input-placeholder {
+  opacity: 1;
+}
+input:focus::-ms-input-placeholder, input:valid::-ms-input-placeholder {
+  opacity: 1;
+}
+input:focus::placeholder, input:valid::placeholder {
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+label {
+  color: #999;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  margin-top: -2px;
+  z-index: 0;
+  transition: 0.2s ease all;
+  top:0px;
+  text-transform: capitalize;
+}
+
+.input-group {
+  margin-top: 25px;
+  position: relative;
+}
+
+input:focus + label, input:valid + label {
+  color: $secondary;
+  font-size: 10px;
+  top: -10px;
+  transition: 0.2s ease all;
+}
+
+label:hover {
+  cursor: text;
+}

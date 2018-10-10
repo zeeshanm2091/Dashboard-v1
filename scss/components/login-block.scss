@@ -1,0 +1,45 @@
+.login-body {
+  .login-block {
+    position: relative;
+    padding-top: 109px;
+    width: 350px;
+    height: 509px;
+
+    .login-title-block {
+      position: absolute;
+      height: 218px;
+      width: 218px;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      margin-left: -109px;
+      border: 1px solid #ccc;
+      background-color: $white;
+      text-align: center;
+
+      span{
+        display: block;
+        &.icon-lock{
+          font-size: 40px;
+          color: $secondary;
+          padding: 25px 0 15px;
+        }
+        &.login-txt{
+          text-transform: capitalize;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .login-body-block {
+      position: absolute;
+      height: 400px;
+      width: 350px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: $white;
+      padding: 70px 40px 0;
+      
+    }
+  }
+}

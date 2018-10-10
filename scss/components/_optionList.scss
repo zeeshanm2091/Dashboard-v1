@@ -5,10 +5,12 @@
   align-items: flex-start;
   margin-top: 30px;
 
+
   .option-list-item {
     width: 25%;
     text-align: center;
-    margin-bottom: 90px;
+    // padding-bottom: 90px;
+
     transition: all 0.2s ease-in-out;
     @media screen and (max-width:992px) {
       margin-bottom: 50px;
@@ -22,6 +24,7 @@
       color: $black;
       text-decoration: none;
       text-transform: capitalize;
+      display: block;
     }
 
     .option-icon-block {
@@ -72,5 +75,11 @@
         width: 80px;
       }
     }
+  }
+}
+
+.db-body{
+  .option-list-item {
+    height: 200px;
   }
 }

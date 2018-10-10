@@ -118,8 +118,12 @@
 
 .theme-item {
     width: 48%;
-    height: 170px;
+    height: 110px;
     border: 1px solid #cccc;
     margin-bottom: 20px;
     cursor: pointer;
+    img{
+      width: 100%;
+      height:100%;
+    }
 }
