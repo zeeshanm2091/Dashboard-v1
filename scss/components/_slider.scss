@@ -146,6 +146,7 @@
   &:hover{
     .db-arrow {
       opacity: 1;
+
       &:focus{
         outline: none;
       }
@@ -162,6 +163,10 @@
   width: 40px;
   text-align: center;
   opacity: 0;
+
+  @media screen and (max-width:992px){
+    opacity: 1;
+  }
 
   &:before {
     line-height: 40px;

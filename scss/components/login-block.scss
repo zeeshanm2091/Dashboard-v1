@@ -1,4 +1,14 @@
+.login-page {
+  background-image: url("../images/bg3.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
 .login-body {
+  @include dis-flex();
+  padding-top: 70px;
+  height: calc(100vh - 120px);
+
   .login-block {
     position: relative;
     padding-top: 109px;
@@ -13,18 +23,19 @@
       top: 0;
       left: 50%;
       margin-left: -109px;
-      border: 1px solid #ccc;
       background-color: $white;
       text-align: center;
 
-      span{
+      span {
         display: block;
-        &.icon-lock{
+
+        &.icon-lock {
           font-size: 40px;
           color: $secondary;
           padding: 25px 0 15px;
         }
-        &.login-txt{
+
+        &.login-txt {
           text-transform: capitalize;
           font-size: 14px;
         }
@@ -35,11 +46,100 @@
       position: absolute;
       height: 400px;
       width: 350px;
-      border: 1px solid #ccc;
       border-radius: 20px;
       background-color: $white;
-      padding: 70px 40px 0;
-      
+      padding: 50px 40px 0;
+    }
+  }
+}
+
+.login-input-list {
+  margin: 25px 0 15px;
+  @include dis-flex();
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: bold;
+
+  .re-me {
+    &.active {
+      color: $secondary;
+    }
+    cursor: pointer;
+
+    .icon {
+      padding-right: 5px;
+      position: relative;
+      top: 3px;
+      font-size: 16px;
+    }
+    color: $disabled;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.login-footer {
+  width: 350px;
+  position: fixed;
+  bottom: -160px;
+  left: 50%;
+  margin-left: -175px;
+  text-align: center;
+  height: 250px;
+  background-color: $dark-secondary;
+  text-transform: capitalize;
+  font-size: 16px;
+  border-radius: 50%;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+
+  .down-links {
+    @include dis-flex();
+    justify-content: space-evenly;
+    margin-top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.db-overlay {
+  width: 100%;
+  height: calc(100vh - 81px);
+  position: absolute;
+  background-color: rgba(0,0,0,.2);
+}
+
+.zingo-desc {
+  position: relative;
+  a{
+    color:$white;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  span {
+    display: block;
+    color: $white;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &:first-child {
+      font-size: 62px;
+
+    }
+    &:nth-child(2){
+      font-size: 32px;
+      margin: 30px 0 40px;
+    }
+    &:nth-child(3){
+
     }
   }
 }

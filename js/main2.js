@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   $('.close-btn').click(function() {
     $(this).parent().animate({
-      left: "-50%"
+      left: "-80%"
     }, 300)
   });
 
@@ -171,46 +171,37 @@ $(document).ready(function() {
 
 
 
-  if($(window).width() < 1200){
+
+  if($(window).width() > 992 && $(window).width() < 1200){
     var swiper = new Swiper('.small-card .swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 2,
-      spaceBetween: 10,
-      loop: true,
-      autoHeight: true,
-      simulateTouch:false,
-    });
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+        autoHeight: true,
+        simulateTouch:false,
+      });
   }
 
-  else if($(window).width() < 992){
+  else if($(window).width() < 992 && $(window).width() > 767 ){
     var swiper = new Swiper('.small-card .swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 3,
-      spaceBetween: 20,
-      loop: true,
-      autoHeight: true,
-      simulateTouch:false,
-    });
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        autoHeight: true,
+        simulateTouch:false,
+      });
   }
-  else{
-    var swiper = new Swiper('.small-card .swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 2,
-      spaceBetween: 10,
-      loop: true,
-      autoHeight: true,
-      simulateTouch:false,
-    });
-  }
+
+
+
 
 
   //****************************************************************************drag and drop code*************************************************************************//
@@ -235,9 +226,18 @@ $(document).ready(function() {
     connectWith: '.left-list,.right-list',
   });
 
-  $('.__basic2 .option-list').sortable({
+
+  $('.__basic2 .option-list,.menu-main-content .option-list').sortable({
     disabled: true
   })
+
+
+  if($(window).width() < 992){
+    $('.left-list,.right-list,.divide-block,.widget-list').sortable({
+      disabled: true
+    })
+
+  }
 
 
 
@@ -361,6 +361,26 @@ $(document).ready(function() {
     $('.tab-content:nth-child(' + tabNo + ')').fadeIn();
 
 
+
+  })
+
+
+
+  //*****************************************login page*************************//
+
+  $('.re-me').click(function(){
+    $(this).toggleClass('active');
+  });
+
+  $('.pass-eye').click(function(){
+    $(this).toggleClass('icon-visibility')
+
+    if($(this).parent().find('input').attr('type') === "password"){
+      $(this).parent().find('input').attr("type","text")
+    }
+    else{
+      $(this).parent().find('input').attr("type","password")
+    }
 
   })
 
