@@ -78,6 +78,10 @@
   a {
     text-decoration: none;
     color: $black;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -117,8 +121,15 @@
 
 .zingo-desc {
   position: relative;
-  a{
-    color:$white;
+  @include dis-flex();
+
+  .zingo-img {
+    margin-right: 10px;
+    display: none;
+  }
+
+  a {
+    color: $white;
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
@@ -132,14 +143,147 @@
 
     &:first-child {
       font-size: 62px;
-
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       font-size: 32px;
       margin: 30px 0 40px;
     }
-    &:nth-child(3){
 
+    &:nth-child(3) {}
+  }
+}
+
+.screen-1 {
+  .login-body {
+    flex-direction: row-reverse;
+
+    .zingo-desc {
+      .zingo-img {
+        margin-right: 10px;
+        display: block;
+      }
     }
+  }
+}
+
+.screen-2 {
+  .login-body {
+    justify-content: center;
+    align-items: flex-start;
+
+    .zingo-desc {
+      display: none;
+    }
+  }
+}
+
+.small-bot {
+  @include dis-flex();
+  flex-direction: column;
+  position: absolute;
+  right: 25px;
+  bottom: 35px;
+  display: none;
+
+  img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  a {
+    color: $white;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.screen-3 {
+  .small-bot {
+    display: flex;
+  }
+
+  .zingo-desc {
+    display: none;
+  }
+}
+
+.screen-4 {
+  .login-body {
+    justify-content: center;
+    align-items: flex-start;
+
+    .login-block {
+      .login-title-block {
+        background-color: transparent;
+
+        span {
+          color: $white;
+        }
+      }
+
+      .login-body-block {
+        background-color: transparent;
+      }
+    }
+
+    .zingo-desc {
+      display: none;
+    }
+  }
+
+  .com-code {
+    display: none;
+  }
+
+  .pass-eye {
+    color: $white;
+  }
+
+  label {
+    color: $white;
+  }
+
+  input {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:focus {
+      &+ label {
+        color: $white;
+      }
+    }
+  }
+
+  .punch {
+    display: none;
+  }
+
+  .login-input-list {
+    a {
+      color: $white;
+    }
+
+    .re-me {
+      color: $white;
+
+      &.active {
+        color: $secondary;
+      }
+    }
+  }
+
+  .login-footer {
+    width: auto;
+    position: static;
+    bottom: auto;
+    left: auto;
+    margin-left: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
   }
 }
