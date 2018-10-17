@@ -408,6 +408,26 @@ $(document).ready(function() {
 
 
 
+  //login title content
+
+  $('.title-submit').click(function(){
+      var loginTitle = $('.login-title').val();
+      var loginSubtitle = $('.login-subtitle').val();
+      var loginLinkTxt = $('.login-link-input').val();
+      var loginLinkUrl = $('.login-link-url').val();
+
+      $('.zingo-content span:nth-child(1)').html(loginTitle)
+      $('.zingo-content span:nth-child(2)').html(loginSubtitle);
+      $('.login-link').html(loginSubtitle);
+      $('.login-link').attr('href',loginLinkUrl);
+  })
+
+
+  $('.bgImg-list .theme-item').click(function() {
+    var Childno = $(this).index()+1;
+    $('.login-page').css("background-image","url(../images/bg"+Childno+".jpg)")
+  })
+
 
 
 

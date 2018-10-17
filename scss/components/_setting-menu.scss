@@ -2,8 +2,7 @@
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
-
-  @media screen and (max-width:992px){
+  @media screen and (max-width:992px) {
     display: none;
   }
 }
@@ -22,6 +21,18 @@
   -moz-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
 
+  .setting-pull {
+    height: 60px;
+    width: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    right: -30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 1;
+  }
+
   .setting-head {
     @include dis-flex();
     padding: 0 30px 30px;
@@ -35,6 +46,11 @@
         cursor: pointer;
       }
     }
+  }
+
+  .setting-body {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -116,18 +132,16 @@
     }
   }
 }
-
-
 //theme change list
-
 .theme-item {
-    width: 48%;
-    height: 110px;
-    border: 1px solid #cccc;
-    margin-bottom: 20px;
-    cursor: pointer;
-    img{
-      width: 100%;
-      height:100%;
-    }
+  width: 48%;
+  height: 110px;
+  border: 1px solid #cccc;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
