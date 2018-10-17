@@ -1872,6 +1872,7 @@ label:hover {
   align-items: center;
   text-transform: capitalize;
   font-size: 16px;
+  cursor: pointer;
 }
 .db-btn:hover {
   opacity: 0.8;
@@ -3253,6 +3254,7 @@ label:hover {
   width: 15%;
 }
 
+/****tab block****/
 .tab-block .tab-head .tab-title-list {
   display: flex;
   justify-content: space-between;
@@ -3293,6 +3295,7 @@ label:hover {
   overflow-y: auto;
 }
 
+/****tab block end****/
 .login-head .menu-icon {
   font-size: 30px;
   color: #777874;
@@ -3439,6 +3442,18 @@ label:hover {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.db-overlay.type-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.db-overlay.type-2 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.db-overlay.type-3 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.db-overlay.type-4 {
+  background-color: black;
+}
 
 .zingo-desc {
   position: relative;
@@ -3514,52 +3529,52 @@ label:hover {
   display: none;
 }
 
-.screen-4 .login-body {
+.screen-3 .login-body {
   justify-content: center;
   align-items: flex-start;
 }
-.screen-4 .login-body .login-block .login-title-block {
+.screen-3 .login-body .login-block .login-title-block {
   background-color: transparent;
 }
-.screen-4 .login-body .login-block .login-title-block span {
+.screen-3 .login-body .login-block .login-title-block span {
   color: #ffffff;
 }
-.screen-4 .login-body .login-block .login-body-block {
+.screen-3 .login-body .login-block .login-body-block {
   background-color: transparent;
 }
-.screen-4 .login-body .zingo-desc {
+.screen-3 .login-body .zingo-desc {
   display: none;
 }
-.screen-4 .com-code {
+.screen-3 .com-code {
   display: none;
 }
-.screen-4 .pass-eye {
+.screen-3 .pass-eye {
   color: #ffffff;
 }
-.screen-4 label {
+.screen-3 label {
   color: #ffffff;
 }
-.screen-4 input {
+.screen-3 input {
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
 }
-.screen-4 input:focus + label {
+.screen-3 input:focus + label {
   color: #ffffff;
 }
-.screen-4 .punch {
+.screen-3 .punch {
   display: none;
 }
-.screen-4 .login-input-list a {
+.screen-3 .login-input-list a {
   color: #ffffff;
 }
-.screen-4 .login-input-list .re-me {
+.screen-3 .login-input-list .re-me {
   color: #ffffff;
 }
-.screen-4 .login-input-list .re-me.active {
+.screen-3 .login-input-list .re-me.active {
   color: #99cc33;
 }
-.screen-4 .login-footer {
+.screen-3 .login-footer {
   width: auto;
   position: static;
   bottom: auto;
@@ -3568,6 +3583,10 @@ label:hover {
   height: auto;
   background-color: transparent;
   border-radius: 0;
+}
+
+.login-setting-icon {
+  font-size: 20px;
 }
 
 /*****themes******/

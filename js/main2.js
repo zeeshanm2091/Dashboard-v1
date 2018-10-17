@@ -33,7 +33,7 @@ $(document).ready(function() {
 
   $('.setting-menu .setting-head > .icon-wrong').click(function() {
     $('.setting-menu').animate({
-      left: "-500px"
+      left: "-600px"
     }, 300)
     $('.main-content').animate({
       left: "0px"
@@ -318,7 +318,7 @@ $(document).ready(function() {
 
   $('.theme-item').click(function() {
     var Childno = $(this).index();
-    $('.main-content').addClass('theme-v' + Childno);
+    $('.dashboard-page').attr('class','main-content dashboard-page theme-v'+Childno)
 
 
   })
@@ -359,9 +359,6 @@ $(document).ready(function() {
     var tabNo = $(this).index() + 1;
     $('.tab-content').siblings().fadeOut();
     $('.tab-content:nth-child(' + tabNo + ')').fadeIn();
-
-
-
   })
 
 
@@ -383,6 +380,33 @@ $(document).ready(function() {
     }
 
   })
+
+
+  //login page setting page
+
+  $('.login-setting-icon').click(function(){
+    $(this).parent().find('.setting-menu').animate({
+      left: "0%"
+    }, 300)
+
+    $('.login-page').animate({
+      left: "500px"
+    }, 300)
+
+
+  });
+
+  $('.login-setup .theme-item').click(function(){
+      var logChild = $(this).index()+1;
+      $('.login-page').attr('class','main-content login-page screen-'+logChild)
+  });
+
+  $('.overlay-setup .theme-item').click(function(){
+      var logChild = $(this).index()+1;
+      $('.db-overlay').attr('class','db-overlay type-'+logChild)
+  });
+
+
 
 
 
