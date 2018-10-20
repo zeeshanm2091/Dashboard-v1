@@ -3515,16 +3515,44 @@ label:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .db-overlay.type-1 {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(51%, rgba(0, 0, 0, 0.51)), color-stop(71%, rgba(0, 0, 0, 0.71)), color-stop(100%, black));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#000000", GradientType=1 );
 }
 .db-overlay.type-2 {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(51, 204, 204, 0);
+  background: -moz-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(51, 204, 204, 0)), color-stop(51%, rgba(51, 204, 204, 0.51)), color-stop(71%, rgba(51, 204, 204, 0.71)), color-stop(100%, #33cccc));
+  background: -webkit-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
+  background: -o-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
+  background: -ms-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
+  background: linear-gradient(to right, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#33cccc", endColorstr="#33cccc", GradientType=1 );
 }
 .db-overlay.type-3 {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(153, 204, 51, 0);
+  background: -moz-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(153, 204, 51, 0)), color-stop(51%, rgba(153, 204, 51, 0.51)), color-stop(71%, rgba(153, 204, 51, 0.71)), color-stop(100%, #99cc33));
+  background: -webkit-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
+  background: -o-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
+  background: -ms-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
+  background: linear-gradient(to right, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#99cc33", endColorstr="#99cc33", GradientType=1 );
 }
 .db-overlay.type-4 {
-  background-color: black;
+  background: rgba(3, 169, 245, 0);
+  background: -moz-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(3, 169, 245, 0)), color-stop(51%, rgba(3, 169, 245, 0.51)), color-stop(71%, rgba(3, 169, 245, 0.71)), color-stop(100%, #03a9f5));
+  background: -webkit-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  background: -o-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  background: -ms-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  background: linear-gradient(to right, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#03a9f5", endColorstr="#03a9f5", GradientType=1 );
 }
 
 .zingo-desc {

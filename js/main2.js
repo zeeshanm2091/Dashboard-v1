@@ -225,7 +225,7 @@ $(document).ready(function() {
   });
 
 
-  $('.__basic2 .option-list,.menu-main-content .option-list').sortable({
+  $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
     disabled: true
   })
 
