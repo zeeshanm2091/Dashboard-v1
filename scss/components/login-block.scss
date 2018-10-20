@@ -2,13 +2,18 @@
   background-image: url("../images/bg3.jpg");
   background-size: cover;
   height: 100vh;
+
+  .setting-menu {
+    box-shadow: none;
+    left:-500px;
+  }
+
+
+
 }
-
-
 
 .login-body {
   @include dis-flex();
-  padding-top: 70px;
   height: calc(100vh - 120px);
 
   .login-block {
@@ -46,11 +51,11 @@
 
     .login-body-block {
       position: absolute;
-      height: 400px;
+      height: 370px;
       width: 350px;
       border-radius: 20px;
       background-color: $white;
-      padding: 50px 40px 0;
+      padding: 30px 30px 0;
     }
   }
 }
@@ -120,21 +125,21 @@
   position: absolute;
   background-color: rgba(0,0,0,.2);
 
-  &.type-1{
+  &.type-1 {
     background-color: rgba(0,0,0,.5);
   }
-  &.type-2{
+
+  &.type-2 {
     background-color: rgba(0,0,0,.7);
   }
 
-  &.type-3{
+  &.type-3 {
     background-color: rgba(0,0,0,.8);
   }
 
-  &.type-4{
+  &.type-4 {
     background-color: rgba(0,0,0,1);
   }
-
 }
 
 .zingo-desc {
@@ -173,15 +178,12 @@
   }
 }
 
-
-
-
-
 .screen-1 {
   .login-body {
     flex-direction: row-reverse;
 
     .zingo-desc {
+      max-width: 650px;
       .zingo-img {
         margin-right: 10px;
         display: block;
@@ -193,7 +195,7 @@
 .screen-2 {
   .login-body {
     justify-content: center;
-    align-items: flex-start;
+    // align-items: flex-start;
 
     .zingo-desc {
       display: none;
@@ -311,20 +313,24 @@
   }
 }
 
-.login-setting-icon{
+.login-setting-icon {
   font-size: 20px;
 }
 
-
 .login-fields {
-    height: 40px;
-    margin-bottom: 10px;
-    border-bottom: 0px;
-    font-size: 25px;
-    padding: 0 10px;
-    text-transform: capitalize;
+  height: 40px;
+  margin-bottom: 10px;
+  border-bottom: 0;
+  font-size: 25px;
+  padding: 0 10px;
+  text-transform: capitalize;
 
-    &:focus,&:valid{
-      border-bottom: 0px;
-    }
+  &:focus,
+  &:valid {
+    border-bottom: 0;
+  }
+}
+
+span.log-imgUplaod{
+
 }

@@ -354,7 +354,7 @@ body{
 
 input {
   border: none;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px $text;
   z-index: 10;
   width: 100%;
 }
@@ -432,9 +432,10 @@ label:hover {
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     cursor: pointer;
+    position: relative;
     &:hover{
       opacity: 0.8;
     }

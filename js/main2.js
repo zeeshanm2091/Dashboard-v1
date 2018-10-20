@@ -128,7 +128,7 @@ $(document).ready(function() {
     pagination: {
       el: '.swiper-pagination',
     },
-    simulateTouch:false,
+    simulateTouch: false,
   });
 
   var swiper = new Swiper('.empConnect .swiper-container', {
@@ -140,7 +140,7 @@ $(document).ready(function() {
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-    simulateTouch:false,
+    simulateTouch: false,
   });
 
 
@@ -153,7 +153,7 @@ $(document).ready(function() {
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-    simulateTouch:false,
+    simulateTouch: false,
   });
 
   var swiper = new Swiper('.moreLink-card .swiper-container', {
@@ -165,39 +165,37 @@ $(document).ready(function() {
     spaceBetween: 20,
     loop: true,
     autoHeight: true,
-    simulateTouch:false,
+    simulateTouch: false,
   });
 
 
 
 
 
-  if($(window).width() > 992 && $(window).width() < 1200){
+  if ($(window).width() > 992 && $(window).width() < 1200) {
     var swiper = new Swiper('.small-card .swiper-container', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 2,
-        spaceBetween: 10,
-        loop: true,
-        autoHeight: true,
-        simulateTouch:false,
-      });
-  }
-
-  else if($(window).width() < 992 && $(window).width() > 767 ){
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 2,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      simulateTouch: false,
+    });
+  } else if ($(window).width() < 992 && $(window).width() > 767) {
     var swiper = new Swiper('.small-card .swiper-container', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true,
-        autoHeight: true,
-        simulateTouch:false,
-      });
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      simulateTouch: false,
+    });
   }
 
 
@@ -232,7 +230,7 @@ $(document).ready(function() {
   })
 
 
-  if($(window).width() < 992){
+  if ($(window).width() < 992) {
     $('.left-list,.right-list,.divide-block,.widget-list').sortable({
       disabled: true
     })
@@ -249,7 +247,7 @@ $(document).ready(function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
-          simulateTouch:false,
+          simulateTouch: false,
         });
         var swiper = new Swiper('.small-card .swiper-container', {
           navigation: {
@@ -258,7 +256,7 @@ $(document).ready(function() {
           },
           slidesPerView: 3,
           spaceBetween: 20,
-          simulateTouch:false,
+          simulateTouch: false,
         });
         var swiper = new Swiper('.moreLink-card .swiper-container', {
           navigation: {
@@ -267,7 +265,7 @@ $(document).ready(function() {
           },
           slidesPerView: 4,
           spaceBetween: 20,
-          simulateTouch:false,
+          simulateTouch: false,
         });
       })
 
@@ -318,7 +316,7 @@ $(document).ready(function() {
 
   $('.theme-item').click(function() {
     var Childno = $(this).index();
-    $('.dashboard-page').attr('class','main-content dashboard-page theme-v'+Childno)
+    $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno)
 
 
   })
@@ -365,18 +363,17 @@ $(document).ready(function() {
 
   //*****************************************login page*************************//
 
-  $('.re-me').click(function(){
+  $('.re-me').click(function() {
     $(this).toggleClass('active');
   });
 
-  $('.pass-eye').click(function(){
+  $('.pass-eye').click(function() {
     $(this).toggleClass('icon-visibility')
 
-    if($(this).parent().find('input').attr('type') === "password"){
-      $(this).parent().find('input').attr("type","text")
-    }
-    else{
-      $(this).parent().find('input').attr("type","password")
+    if ($(this).parent().find('input').attr('type') === "password") {
+      $(this).parent().find('input').attr("type", "text")
+    } else {
+      $(this).parent().find('input').attr("type", "password")
     }
 
   })
@@ -384,7 +381,7 @@ $(document).ready(function() {
 
   //login page setting page
 
-  $('.login-setting-icon').click(function(){
+  $('.login-setting-icon').click(function() {
     $(this).parent().find('.setting-menu').animate({
       left: "0%"
     }, 300)
@@ -396,37 +393,92 @@ $(document).ready(function() {
 
   });
 
-  $('.login-setup .theme-item').click(function(){
-      var logChild = $(this).index()+1;
-      $('.login-page').attr('class','main-content login-page screen-'+logChild)
+  $('.login-setup .theme-item').click(function() {
+    var logChild = $(this).index() + 1;
+    $('.login-page').attr('class', 'main-content login-page screen-' + logChild)
   });
 
-  $('.overlay-setup .theme-item').click(function(){
-      var logChild = $(this).index()+1;
-      $('.db-overlay').attr('class','db-overlay type-'+logChild)
+  $('.overlay-setup .theme-item').click(function() {
+    var logChild = $(this).index() + 1;
+    $('.db-overlay').attr('class', 'db-overlay type-' + logChild)
   });
 
 
 
   //login title content
 
-  $('.title-submit').click(function(){
-      var loginTitle = $('.login-title').val();
-      var loginSubtitle = $('.login-subtitle').val();
-      var loginLinkTxt = $('.login-link-input').val();
-      var loginLinkUrl = $('.login-link-url').val();
+  $('.title-submit').click(function() {
+    var loginTitle = $('.login-title').val();
+    var loginSubtitle = $('.login-subtitle').val();
+    var loginLinkTxt = $('.login-link-input').val();
+    var loginLinkUrl = $('.login-link-url').val();
 
-      $('.zingo-content span:nth-child(1)').html(loginTitle)
-      $('.zingo-content span:nth-child(2)').html(loginSubtitle);
-      $('.login-link').html(loginSubtitle);
-      $('.login-link').attr('href',loginLinkUrl);
+    $('.zingo-content span:nth-child(1)').html(loginTitle)
+    $('.zingo-content span:nth-child(2)').html(loginSubtitle);
+    $('.login-link').html(loginSubtitle);
+    $('.login-link').attr('href', loginLinkUrl);
   })
 
 
-  $('.bgImg-list .theme-item').click(function() {
-    var Childno = $(this).index()+1;
-    $('.login-page').css("background-image","url(../images/bg"+Childno+".jpg)")
-  })
+  // $('.bgImg-list .theme-item').click(function() {
+  //   // var Childno = $(this).index() + 1;
+  //   // $('.login-page').css("background-image", "url(../images/bg" + Childno + ".jpg)")
+  //
+  //
+  //
+  //
+  //
+  // })
+
+  //bg image upload code
+
+    $('input[type="file"]').change(function(e){
+             var fileName = e.target.files[0].name;
+             $('.img-display-block img').attr('src',"../images/"+fileName);
+             $('.log-imgUplaod ').click(function(){
+               $('.login-page').css("background-image", "url(../images/"+fileName+")");
+             })
+        });
+
+
+
+  $('.setting-pull').click(function() {
+
+
+
+
+    $(this).toggleClass("active");
+
+    if($(this).attr('class')=== "setting-pull active"){
+      $('.setting-menu').animate({
+        left: "0%"
+      }, 300)
+
+      $('.login-page').animate({
+        left: "500px"
+      }, 300)
+
+      $(this).find('.icon').removeClass('icon-next')
+      $(this).find('.icon').addClass('icon-back')
+    }
+    else{
+      $('.setting-menu').animate({
+         left: "-500px"
+       }, 300)
+       $('.main-content').animate({
+         left: "0px"
+       }, 300)
+
+       $(this).find('.icon').removeClass('icon-next');
+       $(this).find('.icon').addClass('icon-next')
+    }
+
+  });
+
+
+
+
+
 
 
 
