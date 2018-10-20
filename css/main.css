@@ -1791,7 +1791,7 @@ body {
 
 input {
   border: none;
-  border-bottom: solid 1px #777874;
+  border-bottom: solid 1px #d6d8d1;
   z-index: 10;
   width: 100%;
 }
@@ -3099,6 +3099,7 @@ label:hover {
   z-index: 1;
   border-top-right-radius: 120px;
   border-bottom-right-radius: 120px;
+  cursor: pointer;
 }
 .setting-pull span.icon {
   position: absolute;

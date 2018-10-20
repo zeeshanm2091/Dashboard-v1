@@ -459,7 +459,7 @@ $(document).ready(function() {
       }, 300)
 
       $(this).find('.icon').removeClass('icon-next')
-      $(this).find('.icon').addClass('icon-back')
+      $(this).find('.icon').addClass('icon-setting')
     }
     else{
       $('.setting-menu').animate({
@@ -469,13 +469,16 @@ $(document).ready(function() {
          left: "0px"
        }, 300)
 
-       $(this).find('.icon').removeClass('icon-next');
-       $(this).find('.icon').addClass('icon-next')
+       $(this).find('.icon').removeClass('icon-setting');
+       $(this).find('.icon').addClass('icon-next ')
     }
 
   });
 
 
+  $('.login-btn').click(function(){
+
+  })
 
 
 
