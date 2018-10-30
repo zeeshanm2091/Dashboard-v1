@@ -3117,7 +3117,7 @@ label:hover {
   position: fixed;
   background-color: #f1f3ed;
   left: -100%;
-  height: 100%;
+  height: 100vh;
   z-index: 100;
   top: 0;
   padding-top: 30px;
@@ -3393,7 +3393,7 @@ label:hover {
   height: 25px;
   width: 30px;
   margin-top: -12px;
-  left: -30px;
+  left: -35px;
 }
 
 .login-page {
@@ -3411,6 +3411,11 @@ label:hover {
   justify-content: space-between;
   align-items: center;
   height: calc(100vh - 120px);
+}
+@media screen and (max-width: 1366px) {
+  .login-body {
+    padding: 0 50px;
+  }
 }
 .login-body .login-block {
   position: relative;
@@ -3448,6 +3453,12 @@ label:hover {
   border-radius: 20px;
   background-color: #ffffff;
   padding: 30px 30px 0;
+}
+@media screen and (max-width: 992px) {
+  .login-body .login-block .login-body-block {
+    padding: 20px 20px 0;
+    height: 350px;
+  }
 }
 
 .login-input-list {
@@ -3572,6 +3583,11 @@ label:hover {
   text-transform: capitalize;
   font-weight: bold;
 }
+@media screen and (max-width: 992px) {
+  .zingo-desc a {
+    font-size: 16px;
+  }
+}
 .zingo-desc span {
   display: block;
   color: #ffffff;
@@ -3581,9 +3597,20 @@ label:hover {
 .zingo-desc span:first-child {
   font-size: 62px;
 }
+@media screen and (max-width: 992px) {
+  .zingo-desc span:first-child {
+    font-size: 42px;
+  }
+}
 .zingo-desc span:nth-child(2) {
   font-size: 32px;
   margin: 30px 0 40px;
+}
+@media screen and (max-width: 992px) {
+  .zingo-desc span:nth-child(2) {
+    font-size: 26px;
+    margin: 20px 0 20px;
+  }
 }
 .screen-1 .login-body {
   flex-direction: row-reverse;
@@ -3594,6 +3621,11 @@ label:hover {
 .screen-1 .login-body .zingo-desc .zingo-img {
   margin-right: 10px;
   display: block;
+}
+@media screen and (max-width: 992px) {
+  .screen-1 .login-body .zingo-desc .zingo-img {
+    display: none;
+  }
 }
 
 .screen-2 .login-body {

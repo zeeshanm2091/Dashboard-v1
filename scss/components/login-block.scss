@@ -15,6 +15,9 @@
 .login-body {
   @include dis-flex();
   height: calc(100vh - 120px);
+  @media screen and (max-width:1366px){
+    padding: 0 50px;
+  }
 
   .login-block {
     position: relative;
@@ -56,6 +59,10 @@
       border-radius: 20px;
       background-color: $white;
       padding: 30px 30px 0;
+      @media screen and (max-width:992px){
+        padding: 20px 20px 0;
+        height:350px;
+      }
     }
   }
 }
@@ -185,6 +192,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f5', end
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
+    @media screen and (max-width:992px){
+      font-size: 16px;
+    }
   }
 
   span {
@@ -195,11 +205,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f5', end
 
     &:first-child {
       font-size: 62px;
+      @media screen and (max-width:992px){
+        font-size: 42px;
+      }
     }
 
     &:nth-child(2) {
       font-size: 32px;
       margin: 30px 0 40px;
+      @media screen and (max-width:992px){
+        font-size: 26px;
+        margin: 20px 0 20px;
+      }
     }
 
     &:nth-child(3) {}
@@ -215,6 +232,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f5', end
       .zingo-img {
         margin-right: 10px;
         display: block;
+        @media screen and (max-width:992px){
+          display: none;
+        }
       }
     }
   }

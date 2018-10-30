@@ -90,7 +90,45 @@ $(document).ready(function() {
 
 
 
+
+
+
   });
+
+  var mainListLeft = $('.left-list > section').length;
+  var mainListRight = $('.right-list > section').length;
+
+  var ListArr = [];
+
+  for (var i = 1; i < mainListLeft + 1; i++) {
+    console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+  for (var i = 1; i < mainListRight + 1; i++) {
+    console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+
+
+
+
+
+    // if (jQuery.inArray($('.widget-list').find('.main-markup > div').attr('class'), ListArr) === -1) {
+    //   alert("not in the list")
+    // }
+    // else{
+    //   alert("In the list")
+    // }
+
+
+
+
+
+
+
+  // console.log(mainList);
+
+  // console.log(ListArr);
 
   //****************************************************************************attendance block******************************************************************//
 
