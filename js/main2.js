@@ -57,43 +57,25 @@ $(document).ready(function() {
   $('.delete-btn').click(function() {
     $(this).parent().remove();
 
-    // if ($(this).parent().attr('class') === "sec-50") {
-    //   $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-    // } else {
-    //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-    // }
-
-    var widLength = $('.widget-list > section').length;
-    var newArr = [];
-
-
-    for (var i = 1; i < widLength + 1; i++) {
-      console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-    }
-
-    console.log(newArr);
-
     if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
       if ($(this).parent().attr('class') === "sec-50") {
         $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
       } else {
         $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
       }
-    } else {
-      // alert("Widget Already present in the widget list");
     }
 
-
-
-
-
-
-
-
-
-
-
   });
+
+  var widLength = $('.widget-list > section').length;
+  var newArr = [];
+  for (var i = 1; i < widLength + 1; i++) {
+    console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+
+
+
 
   var mainListLeft = $('.left-list > section').length;
   var mainListRight = $('.right-list > section').length;
@@ -108,17 +90,49 @@ $(document).ready(function() {
     console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
   }
 
+  console.log(ListArr);
+  console.log(newArr);
+
+
+  // $('.widget-list section').droppable()
+  //   .on('droppable:activate', function(e, ui) {
+  //     // $(this).find('.main-markup > div').attr('class')
+  //     console.log($(this).find('.main-markup > div').attr('class'));
+  //   })
+
+
+
+  $(function() {
+    $('.widget-list').sortable({
+        items: 'section',
+        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head,div',
+        activeClass: 'active'
+      })
+      .on('sortable:activate', function(e, ui) {
+
+
+      // console.log($(this).find('.main-markup > div').attr('class'));
+
+      // $('.widget-list').sortable({ disabled: true })
+
+
+
+
+      })
+
+  })
 
 
 
 
 
-    // if (jQuery.inArray($('.widget-list').find('.main-markup > div').attr('class'), ListArr) === -1) {
-    //   alert("not in the list")
-    // }
-    // else{
-    //   alert("In the list")
-    // }
+
+  // if (jQuery.inArray($('.widget-list').find('.main-markup > div').attr('class'), ListArr) === -1) {
+  //   alert("not in the list")
+  // }
+  // else{
+  //   alert("In the list")
+  // }
 
 
 
@@ -470,13 +484,13 @@ $(document).ready(function() {
 
   //bg image upload code
 
-    $('input[type="file"]').change(function(e){
-             var fileName = e.target.files[0].name;
-             $('.img-display-block img').attr('src',"../images/"+fileName);
-             $('.log-imgUplaod ').click(function(){
-               $('.login-page').css("background-image", "url(../images/"+fileName+")");
-             })
-        });
+  $('input[type="file"]').change(function(e) {
+    var fileName = e.target.files[0].name;
+    $('.img-display-block img').attr('src', "../images/" + fileName);
+    $('.log-imgUplaod ').click(function() {
+      $('.login-page').css("background-image", "url(../images/" + fileName + ")");
+    })
+  });
 
 
 
@@ -487,7 +501,7 @@ $(document).ready(function() {
 
     $(this).toggleClass("active");
 
-    if($(this).attr('class')=== "setting-pull active"){
+    if ($(this).attr('class') === "setting-pull active") {
       $('.setting-menu').animate({
         left: "0%"
       }, 300)
@@ -498,23 +512,22 @@ $(document).ready(function() {
 
       $(this).find('.icon').removeClass('icon-next')
       $(this).find('.icon').addClass('icon-setting')
-    }
-    else{
+    } else {
       $('.setting-menu').animate({
-         left: "-500px"
-       }, 300)
-       $('.main-content').animate({
-         left: "0px"
-       }, 300)
+        left: "-500px"
+      }, 300)
+      $('.main-content').animate({
+        left: "0px"
+      }, 300)
 
-       $(this).find('.icon').removeClass('icon-setting');
-       $(this).find('.icon').addClass('icon-next ')
+      $(this).find('.icon').removeClass('icon-setting');
+      $(this).find('.icon').addClass('icon-next ')
     }
 
   });
 
 
-  $('.login-btn').click(function(){
+  $('.login-btn').click(function() {
 
   })
 
