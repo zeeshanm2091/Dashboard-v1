@@ -52,97 +52,6 @@ $(document).ready(function() {
   });
 
 
-  //****************************************************************************delete btn code*******************************************************************//
-
-  $('.delete-btn').click(function() {
-    $(this).parent().remove();
-
-    if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
-      if ($(this).parent().attr('class') === "sec-50") {
-        $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-      } else {
-        $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-      }
-    }
-
-  });
-
-  var widLength = $('.widget-list > section').length;
-  var newArr = [];
-  for (var i = 1; i < widLength + 1; i++) {
-    console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-  }
-
-
-
-
-
-  var mainListLeft = $('.left-list > section').length;
-  var mainListRight = $('.right-list > section').length;
-
-  var ListArr = [];
-
-  for (var i = 1; i < mainListLeft + 1; i++) {
-    console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-  }
-
-  for (var i = 1; i < mainListRight + 1; i++) {
-    console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-  }
-
-  console.log(ListArr);
-  console.log(newArr);
-
-
-  // $('.widget-list section').droppable()
-  //   .on('droppable:activate', function(e, ui) {
-  //     // $(this).find('.main-markup > div').attr('class')
-  //     console.log($(this).find('.main-markup > div').attr('class'));
-  //   })
-
-
-
-  $(function() {
-    $('.widget-list').sortable({
-        items: 'section',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head,div',
-        activeClass: 'active'
-      })
-      .on('sortable:activate', function(e, ui) {
-
-
-      // console.log($(this).find('.main-markup > div').attr('class'));
-
-      // $('.widget-list').sortable({ disabled: true })
-
-
-
-
-      })
-
-  })
-
-
-
-
-
-
-  // if (jQuery.inArray($('.widget-list').find('.main-markup > div').attr('class'), ListArr) === -1) {
-  //   alert("not in the list")
-  // }
-  // else{
-  //   alert("In the list")
-  // }
-
-
-
-
-
-
-
-  // console.log(mainList);
-
-  // console.log(ListArr);
 
   //****************************************************************************attendance block******************************************************************//
 
@@ -343,7 +252,43 @@ $(document).ready(function() {
 
 
 
+  //****************************************************************************delete btn code*******************************************************************//
 
+  $('.delete-btn').click(function() {
+    $(this).parent().remove();
+
+    if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
+      if ($(this).parent().attr('class') === "sec-50") {
+        $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
+      } else {
+        $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
+      }
+    }
+
+  });
+
+  var widLength = $('.widget-list > section').length;
+  var newArr = [];
+  for (var i = 1; i < widLength + 1; i++) {
+    console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+
+  var mainListLeft = $('.left-list > section').length;
+  var mainListRight = $('.right-list > section').length;
+
+  var ListArr = [];
+
+  for (var i = 1; i < mainListLeft + 1; i++) {
+    console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+  for (var i = 1; i < mainListRight + 1; i++) {
+    console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+  }
+
+  console.log(ListArr);
+  console.log(newArr);
 
 
 
@@ -531,6 +476,41 @@ $(document).ready(function() {
 
   })
 
+  $('.db-toggle-btn').click(function() {
+    $(this).toggleClass('active')
+    $('.btn-group.punch').toggle(200);
+
+  })
+
+
+
+  //****************************************************************************datepicker***************************************************************************
+
+
+
+//**********************colorpicker*************************
+
+const pickr = new Pickr({
+    el: '.color-picker',
+
+    default: '#42445A',
+
+    components: {
+
+        preview: true,
+        opacity: true,
+        hue: true,
+
+        interaction: {
+            hex: true,
+            rgba: true,
+            hsva: true,
+            input: true,
+            clear: true,
+            save: true
+        }
+    }
+});
 
 
 

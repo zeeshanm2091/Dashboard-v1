@@ -1796,25 +1796,30 @@ input {
   width: 100%;
 }
 
-input:focus, input:valid {
+input:focus,
+input:valid {
   transition: 0.3s ease-in-out all;
   border-bottom: solid 1px #99cc33;
   outline: none;
 }
 
-input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder {
   opacity: 1;
 }
 
-input:focus:-ms-input-placeholder, input:valid:-ms-input-placeholder {
+input:focus:-ms-input-placeholder,
+input:valid:-ms-input-placeholder {
   opacity: 1;
 }
 
-input:focus::-ms-input-placeholder, input:valid::-ms-input-placeholder {
+input:focus::-ms-input-placeholder,
+input:valid::-ms-input-placeholder {
   opacity: 1;
 }
 
-input:focus::placeholder, input:valid::placeholder {
+input:focus::placeholder,
+input:valid::placeholder {
   opacity: 1;
 }
 
@@ -1842,7 +1847,7 @@ label {
   margin-top: -2px;
   z-index: 0;
   transition: 0.2s ease all;
-  top: 0px;
+  top: 0;
   text-transform: capitalize;
 }
 
@@ -1851,7 +1856,8 @@ label {
   position: relative;
 }
 
-input:focus + label, input:valid + label {
+input:focus + label,
+input:valid + label {
   color: #99cc33;
   font-size: 10px;
   top: -10px;
@@ -1899,6 +1905,50 @@ label:hover {
   height: 20px;
   width: 20px;
   text-align: right;
+}
+
+.db-toggle-btn {
+  height: 20px;
+  width: 50px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 20px;
+}
+.db-toggle-btn.active span.toggle-btn-in {
+  left: calc(100% - 20px);
+}
+.db-toggle-btn.active span.btn-txt-off {
+  display: block;
+}
+.db-toggle-btn.active span.btn-txt-on {
+  display: none;
+}
+.db-toggle-btn span.toggle-btn-in {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #99cc33;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0.3s;
+  z-index: 2;
+}
+.db-toggle-btn span.btn-txt-off, .db-toggle-btn span.btn-txt-on {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  display: block;
+}
+.db-toggle-btn span.btn-txt-on {
+  text-align: right;
+  padding-right: 8px;
+}
+.db-toggle-btn span.btn-txt-off {
+  display: none;
+  text-align: left;
+  padding-left: 8px;
 }
 
 /****components****/
@@ -3145,6 +3195,10 @@ label:hover {
   position: relative;
   z-index: 1;
 }
+.setting-menu .setting-body .accord-container {
+  overflow: auto;
+  height: 85vh;
+}
 
 .accord-container .accord-item-title {
   padding: 0 30px;
@@ -3243,8 +3297,8 @@ label:hover {
   position: absolute;
   height: 100%;
   width: 100%;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   text-transform: capitalize;
   font-size: 20px;
   color: #ffffff;
@@ -3448,16 +3502,14 @@ label:hover {
 }
 .login-body .login-block .login-body-block {
   position: absolute;
-  height: 370px;
   width: 350px;
   border-radius: 20px;
   background-color: #ffffff;
-  padding: 30px 30px 0;
+  padding: 30px 30px;
 }
 @media screen and (max-width: 992px) {
   .login-body .login-block .login-body-block {
-    padding: 20px 20px 0;
-    height: 350px;
+    padding: 20px 20px;
   }
 }
 
@@ -3533,7 +3585,6 @@ label:hover {
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
   background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#000000", GradientType=1 );
 }
 .db-overlay.type-2 {
   background: rgba(51, 204, 204, 0);
@@ -3543,7 +3594,6 @@ label:hover {
   background: -o-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
   background: -ms-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
   background: linear-gradient(to right, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#33cccc", endColorstr="#33cccc", GradientType=1 );
 }
 .db-overlay.type-3 {
   background: rgba(153, 204, 51, 0);
@@ -3553,7 +3603,6 @@ label:hover {
   background: -o-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
   background: -ms-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
   background: linear-gradient(to right, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#99cc33", endColorstr="#99cc33", GradientType=1 );
 }
 .db-overlay.type-4 {
   background: rgba(3, 169, 245, 0);
@@ -3563,7 +3612,6 @@ label:hover {
   background: -o-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
   background: -ms-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
   background: linear-gradient(to right, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#03a9f5", endColorstr="#03a9f5", GradientType=1 );
 }
 
 .zingo-desc {
@@ -3609,7 +3657,7 @@ label:hover {
 @media screen and (max-width: 992px) {
   .zingo-desc span:nth-child(2) {
     font-size: 26px;
-    margin: 20px 0 20px;
+    margin: 20px 0;
   }
 }
 .screen-1 .login-body {
@@ -3734,6 +3782,35 @@ label:hover {
 }
 .login-fields:focus, .login-fields:valid {
   border-bottom: 0;
+}
+
+.lan-list .dropdown-block {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  line-height: 40px;
+  padding: 0 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #777874;
+}
+.lan-list .dropdown-block .selected-item {
+  display: block;
+}
+.lan-list .dropdown-block .dropdown-list {
+  top: 40px;
+  width: 100%;
+}
+.lan-list .dropdown-block .dropdown-list .dropdown-item {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.lan-list .dropdown-block:before {
+  top: 50%;
+  right: 10px;
 }
 
 /*****themes******/

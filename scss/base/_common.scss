@@ -53,8 +53,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
-
-body{
+body {
   font-size: 14px;
 }
 
@@ -228,8 +227,7 @@ body{
   @include dis-flex();
   height: calc(100% - 45px);
   padding: 0 20px;
-
-  @media screen and (max-width:1200px){
+  @media screen and (max-width:1200px) {
     padding: 0 10px;
   }
 
@@ -289,7 +287,7 @@ body{
 
     &:hover .delete-btn {
       display: block;
-      @media screen and (max-width:992px){
+      @media screen and (max-width:992px) {
         display: none;
       }
     }
@@ -306,8 +304,6 @@ body{
       cursor: pointer;
       display: none;
 
-
-
       &:before {
         line-height: 40px;
       }
@@ -320,10 +316,8 @@ body{
 }
 
 .db-full-width {
-    width: 100%;
+  width: 100%;
 }
-
-
 // .widget-list{
 //   .main-stru{
 //     display: none;
@@ -342,11 +336,7 @@ body{
 // .sec-50 {
 //   width: 48%;
 // }
-
-
-
 //login input blocks
-
 
 * {
   font-family: Arial;
@@ -358,21 +348,31 @@ input {
   z-index: 10;
   width: 100%;
 }
-input:focus, input:valid {
+
+input:focus,
+input:valid {
   transition: 0.3s ease-in-out all;
   border-bottom: solid 1px $secondary;
   outline: none;
 }
-input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder {
   opacity: 1;
 }
-input:focus:-ms-input-placeholder, input:valid:-ms-input-placeholder {
+
+input:focus:-ms-input-placeholder,
+input:valid:-ms-input-placeholder {
   opacity: 1;
 }
-input:focus::-ms-input-placeholder, input:valid::-ms-input-placeholder {
+
+input:focus::-ms-input-placeholder,
+input:valid::-ms-input-placeholder {
   opacity: 1;
 }
-input:focus::placeholder, input:valid::placeholder {
+
+input:focus::placeholder,
+input:valid::placeholder {
   opacity: 1;
 }
 
@@ -400,7 +400,7 @@ label {
   margin-top: -2px;
   z-index: 0;
   transition: 0.2s ease all;
-  top:0px;
+  top: 0;
   text-transform: capitalize;
 }
 
@@ -409,7 +409,8 @@ label {
   position: relative;
 }
 
-input:focus + label, input:valid + label {
+input:focus + label,
+input:valid + label {
   color: $secondary;
   font-size: 10px;
   top: -10px;
@@ -419,44 +420,104 @@ input:focus + label, input:valid + label {
 label:hover {
   cursor: text;
 }
-
-
 //button css
 
 .db-btn {
-    height: 42px;
-    border: 1px solid $border;
-    border-radius: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    font-size: 14px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    &:hover{
-      opacity: 0.8;
-    }
+  height: 42px;
+  border: 1px solid $border;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-.btn-group{
+.btn-group {
   margin-top: 20px;
   @include dis-flex();
-  .db-btn {
-      width: 48%;
-  }
 
+  .db-btn {
+    width: 48%;
+  }
 }
 
 .pass-eye {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 16px;
-    cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  text-align: right;
+}
+
+.db-toggle-btn {
+  height: 20px;
+  width: 50px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 20px;
+
+  &.active {
+    span{
+      &.toggle-btn-in {
+        left: calc(100% - 20px);
+      }
+      &.btn-txt-off {
+        display: block;
+      }
+
+      &.btn-txt-on{
+        display: none;
+      }
+    }
+
+
+  }
+
+  span.toggle-btn-in {
     height: 20px;
     width: 20px;
-    text-align: right;
+    border-radius: 50%;
+    background-color: $secondary;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.3s;
+    z-index: 2;
+  }
+
+  span {
+    &.btn-txt-off,
+    &.btn-txt-on {
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 20px;
+      display: block;
+    }
+
+    &.btn-txt-on {
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    &.btn-txt-off {
+      display: none;
+      text-align: left;
+      padding-left: 8px;
+    }
+
+
+  }
 }

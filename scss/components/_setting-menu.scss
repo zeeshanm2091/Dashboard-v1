@@ -69,6 +69,11 @@
   .setting-body {
     position: relative;
     z-index: 1;
+
+    .accord-container {
+      overflow: auto;
+      height: 85vh;
+    }
   }
 }
 
@@ -97,8 +102,6 @@
     overflow: auto;
   }
 
-
-
   .accord-body-list {
     @include dis-flex();
     flex-wrap: wrap;
@@ -107,7 +110,6 @@
     padding: 30px;
     // overflow: auto;
     // height: 670px;
-
     section {
       height: 170px;
       border: 1px solid #ccc;
@@ -174,31 +176,26 @@
       top: 0;
       left: 0;
       opacity: 0;
-      &:hover ~ span{
+
+      &:hover ~ span {
         opacity: 1;
       }
     }
 
-
-    span{
+    span {
       @include dis-flex();
       justify-content: center;
       position: absolute;
       height: 100%;
       width: 100%;
-      left: 0px;
-      top: 0px;
+      left: 0;
+      top: 0;
       text-transform: capitalize;
       font-size: 20px;
-      color:$white;
+      color: $white;
       background-color: rgba(0,0,0,0.5);
       opacity: 0;
-
-
-
     }
-
-
   }
 
   img {
@@ -207,8 +204,7 @@
   }
 }
 
-
-.login-page{
+.login-page {
   .accord-container {
     .accord-item-body {
       height: 300px;
