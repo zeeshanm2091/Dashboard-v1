@@ -1626,6 +1626,7 @@ body {
   text-transform: capitalize;
   line-height: 30px;
   border-bottom: 1px solid #d6d8d1;
+  position: relative;
 }
 .dropdown-block .dropdown-list .dropdown-item:hover {
   background-color: #eef1e9;
@@ -1949,6 +1950,28 @@ label:hover {
   display: none;
   text-align: left;
   padding-left: 8px;
+}
+
+.sub-btn {
+  background-color: #99cc33;
+  color: #ffffff;
+  border: none;
+}
+
+.db-check {
+  height: 12px;
+  width: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.active .db-check {
+  background-color: #33cc80;
+  border-color: #33cc80;
+}
+
+.disabled {
+  opacity: 0.5;
 }
 
 /****components****/
@@ -3168,7 +3191,7 @@ label:hover {
   background-color: #f1f3ed;
   left: -100%;
   height: 100vh;
-  z-index: 100;
+  z-index: 99;
   top: 0;
   padding-top: 30px;
   -webkit-box-shadow: 7px 2px 34px 0 #cccccc;
@@ -3265,6 +3288,9 @@ label:hover {
 .accord-container .accord-body-list section .main-markup {
   display: none;
 }
+.accord-container .overlay-setup .accord-body-list {
+  display: block;
+}
 
 .theme-item {
   width: 48%;
@@ -3313,6 +3339,9 @@ label:hover {
 .login-page .accord-container .accord-item-body {
   height: 300px;
   overflow: auto;
+}
+.login-page .accord-container .accord-item-body .db-btn {
+  width: 50%;
 }
 
 .db-basic-banner {
@@ -3464,6 +3493,7 @@ label:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
   height: calc(100vh - 120px);
 }
 @media screen and (max-width: 1366px) {
@@ -3807,6 +3837,9 @@ label:hover {
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .lan-list .dropdown-block:before {
   top: 50%;

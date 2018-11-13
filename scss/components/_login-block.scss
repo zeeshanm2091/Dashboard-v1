@@ -11,6 +11,7 @@
 
 .login-body {
   @include dis-flex();
+  justify-content: space-evenly;
   height: calc(100vh - 120px);
   @media screen and (max-width:1366px) {
     padding: 0 50px;
@@ -394,8 +395,9 @@ span.log-imgUplaod {}
 
       .dropdown-item{
         height: 40px;
-        line-height: 40px;
-        padding: 0 10px;
+    line-height: 40px;
+    padding: 0 10px;
+    @include dis-flex();
       }
     }
     &:before{
