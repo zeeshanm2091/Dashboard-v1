@@ -1512,6 +1512,31 @@ table {
 /******main content*****/
 body {
   font-size: 14px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 11px;
 }
 
 * {
@@ -1956,6 +1981,18 @@ label:hover {
   background-color: #99cc33;
   color: #ffffff;
   border: none;
+}
+
+.btn-yes {
+  background-color: #99cc33;
+  border-color: #99cc33;
+  color: #ffffff;
+}
+
+.btn-no {
+  background-color: #ff6666;
+  border-color: #ff6666;
+  color: #ffffff;
 }
 
 .db-check {
@@ -3606,42 +3643,7 @@ label:hover {
   height: calc(100vh - 81px);
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2);
-}
-.db-overlay.type-1 {
-  background: rgba(0, 0, 0, 0);
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(51%, rgba(0, 0, 0, 0.51)), color-stop(71%, rgba(0, 0, 0, 0.71)), color-stop(100%, black));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.51) 51%, rgba(0, 0, 0, 0.71) 71%, black 100%);
-}
-.db-overlay.type-2 {
-  background: rgba(51, 204, 204, 0);
-  background: -moz-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(51, 204, 204, 0)), color-stop(51%, rgba(51, 204, 204, 0.51)), color-stop(71%, rgba(51, 204, 204, 0.71)), color-stop(100%, #33cccc));
-  background: -webkit-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-  background: -o-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-  background: -ms-linear-gradient(left, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-  background: linear-gradient(to right, rgba(51, 204, 204, 0) 0%, rgba(51, 204, 204, 0.51) 51%, rgba(51, 204, 204, 0.71) 71%, #33cccc 100%);
-}
-.db-overlay.type-3 {
-  background: rgba(153, 204, 51, 0);
-  background: -moz-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(153, 204, 51, 0)), color-stop(51%, rgba(153, 204, 51, 0.51)), color-stop(71%, rgba(153, 204, 51, 0.71)), color-stop(100%, #99cc33));
-  background: -webkit-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-  background: -o-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-  background: -ms-linear-gradient(left, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-  background: linear-gradient(to right, rgba(153, 204, 51, 0) 0%, rgba(153, 204, 51, 0.51) 51%, rgba(153, 204, 51, 0.71) 71%, #99cc33 100%);
-}
-.db-overlay.type-4 {
-  background: rgba(3, 169, 245, 0);
-  background: -moz-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(3, 169, 245, 0)), color-stop(51%, rgba(3, 169, 245, 0.51)), color-stop(71%, rgba(3, 169, 245, 0.71)), color-stop(100%, #03a9f5));
-  background: -webkit-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
-  background: -o-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
-  background: -ms-linear-gradient(left, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
-  background: linear-gradient(to right, rgba(3, 169, 245, 0) 0%, rgba(3, 169, 245, 0.51) 51%, rgba(3, 169, 245, 0.71) 71%, #03a9f5 100%);
+  opacity: 0.45;
 }
 
 .zingo-desc {
@@ -3844,6 +3846,40 @@ label:hover {
 .lan-list .dropdown-block:before {
   top: 50%;
   right: 10px;
+}
+
+.dp-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+.dp-popup.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.dp-popup .db-btn {
+  font-size: 16px;
+  font-weight: bold;
+}
+.dp-popup .dp-popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  width: 40%;
+}
+.dp-popup .dp-popup-content .db-popup-head {
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 /*****themes******/

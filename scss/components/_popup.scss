@@ -1,0 +1,33 @@
+.dp-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  background-color: rgba(0,0,0,0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+  &.active{
+    @include dis-flex();
+    justify-content: center;
+  }
+
+  .db-btn{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .dp-popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    width:40%;
+    .db-popup-head{
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+  }
+}

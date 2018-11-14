@@ -297,11 +297,6 @@ $(document).ready(function() {
     console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
   }
 
-  // console.log(ListArr);
-  // console.log(newArr);
-
-
-
   //*************************************************************************drop down code***************************************************************************************************************//
 
   $('.selected-item').click(function() {
@@ -336,8 +331,6 @@ $(document).ready(function() {
 
   $(document).mouseup(function(e) {
     var container = $(".dropdown-list");
-
-    // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.slideUp();
     }
@@ -346,8 +339,6 @@ $(document).ready(function() {
 
   $(document).mouseup(function(e) {
     var container = $(".noti-wrap");
-
-    // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.fadeOut();
     }
@@ -359,11 +350,8 @@ $(document).ready(function() {
 
 
   $('.tab-title-item').click(function() {
-
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
-
-
     var tabNo = $(this).index() + 1;
     $('.tab-content').siblings().fadeOut();
     $('.tab-content:nth-child(' + tabNo + ')').fadeIn();
@@ -376,7 +364,6 @@ $(document).ready(function() {
   $('.re-me').click(function() {
     $(this).toggleClass('active');
   });
-
   $('.pass-eye').click(function() {
     $(this).toggleClass('icon-visibility')
 
@@ -385,7 +372,6 @@ $(document).ready(function() {
     } else {
       $(this).parent().find('input').attr("type", "password")
     }
-
   })
 
 
@@ -395,72 +381,67 @@ $(document).ready(function() {
     $(this).parent().find('.setting-menu').animate({
       left: "0%"
     }, 300)
-
     $('.login-page').animate({
       left: "500px"
     }, 300)
-
-
   });
 
-  var logChild;
+  var logChild = 1;
 
   $('.login-setup .theme-item').click(function() {
-     logChild = $(this).index() + 1;
+    logChild = $(this).index() + 1;
     $('.login-page').attr('class', 'main-content login-page screen-' + logChild);
 
-    if(logChild === 2 | logChild === 3 ){
+    if (logChild === 2 | logChild === 3) {
       $('.login-page .login-inputs').slideUp();
-    }
-    else{
+    } else {
       $('.login-page .login-inputs').slideDown();
     }
 
-    if(logChild === 3 ){
+    if (logChild === 3) {
       $('.login-page .punch-opt').slideUp();
-    }
-    else {
+    } else {
       {
         $('.login-page .punch-opt').slideDown();
       }
     }
-
-
   });
 
 
   //*******************************************************************************Apply button****************************************************************//
 
-  $('.app-btn').click(function(){
-    // console.log("screen-"+logChild);
-    // console.log(overlayColor);
-    // console.log($('.img-display-block > img').attr('src'));
-    // console.log(punchInVal);
-
-    var appArr = [
-      {
-        screen:"screen-"+logChild,
-        overlay:overlayColor,
-        bgImg:$('.img-display-block > img').attr('src'),
-        punch:punchInVal,
-        effDate:{
-          StartDate:$('.esStDate').val(),
-          EndDate:$('.esEdDate').val()
-        },
-        inputFields:{
-          title:$('.login-title').val(),
-          subTitle:$('.login-subtitle').val(),
-          linkText:$('.login-link-input').val(),
-          linkUrl:$('.login-link-url').val()
-        }
-
-      }
-    ];
-
-    console.log(appArr);
 
 
+  $('.app-btn').click(function() {
+    $('.dp-popup').addClass('active');
+    $('.confirm-btn .db-btn').click(function() {
+      $('.dp-popup').removeClass('active');
+    })
   })
+
+
+  $('.confirm-btn .btn-yes').click(function() {
+    var appArr = [{
+      screen: "screen-" + logChild,
+      overlay: overlayColor,
+      bgImg: $('.img-display-block > img').attr('src'),
+      punch: punchInVal,
+      effDate: {
+        StartDate: $('.esStDate').val(),
+        EndDate: $('.esEdDate').val()
+      },
+      inputFields: {
+        title: loginTitle,
+        subTitle: loginSubtitle,
+        linkText: loginLinkTxt,
+        linkUrl: loginLinkUrl
+      }
+
+    }];
+    console.log(appArr);
+  })
+
+
 
   //*******************************************************************************Apply button****************************************************************//
 
@@ -475,49 +456,57 @@ $(document).ready(function() {
 
   //login title content
 
-  $('.title-submit').click(function() {
-    var loginTitle = $('.login-title').val();
-    var loginSubtitle = $('.login-subtitle').val();
-    var loginLinkTxt = $('.login-link-input').val();
-    var loginLinkUrl = $('.login-link-url').val();
 
-    $('.zingo-content span:nth-child(1)').html(loginTitle)
-    $('.zingo-content span:nth-child(2)').html(loginSubtitle);
-    $('.login-link').html(loginSubtitle);
+
+
+  var loginTitle = $('.zingo-content .loginTitle').html();
+  var loginSubtitle = $('.zingo-content .loginSubtitle').html();
+  var loginLinkTxt = $('.login-link').html();
+  var loginLinkUrl = $('.login-link').attr('href');
+
+  $('.input-submit').click(function() {
+    loginTitle = $('.login-title').val();
+    loginSubtitle = $('.login-subtitle').val();
+    loginLinkTxt = $('.login-link-input').val();
+    loginLinkUrl = $('.login-link-url').val();
+
+    $('.zingo-content .loginTitle').html(loginTitle)
+    $('.zingo-content .loginSubtitle').html(loginSubtitle);
+    $('.login-link').html(loginLinkTxt);
     $('.login-link').attr('href', loginLinkUrl);
+
+
+    if((loginTitle.length) && (loginSubtitle.length ) && (loginLinkTxt.length) && (loginLinkUrl.length) > 0){
+      
+    }
+    else{
+      alert("plz enter the text required");
+    }
+
+
   })
 
 
 
 
-    //bg image upload code
+  //bg image upload code
 
-    var imgName;
-
-    $('input[type="file"]').change(function(e) {
-
+  var imgName;
+  $('input[type="file"]').change(function(e) {
     imgName = e.target.files[0].name;
-
     // console.log(imgName);
-
     $('.img-display-block > img').attr('src', "../images/" + imgName);
-
     var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
-
-    // console.log(imgNameExt);
-
     if ($.inArray(imgNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
-
       $('.img-display-block > img').attr('src', "../images/" + "bg1.jpg");
       alert("Please select the valid file format")
+    } else {
+      $('.log-imgUplaod ').click(function() {
+        $('.login-page').css("background-image", "url(../images/" + imgName + ")");
+      })
     }
-    else {
-        $('.log-imgUplaod ').click(function() {
-          $('.login-page').css("background-image", "url(../images/" + imgName + ")");
-        })
-      }
 
-    });
+  });
 
 
 
@@ -526,18 +515,14 @@ $(document).ready(function() {
 
 
   $('.setting-pull').click(function() {
-
     $(this).toggleClass("active");
-
     if ($(this).attr('class') === "setting-pull active") {
       $('.setting-menu').animate({
         left: "0%"
       }, 300)
-
       $('.login-page').animate({
         left: "500px"
       }, 300)
-
       $(this).find('.icon').removeClass('icon-next')
       $(this).find('.icon').addClass('icon-setting')
     } else {
@@ -547,29 +532,19 @@ $(document).ready(function() {
       $('.main-content').animate({
         left: "0px"
       }, 300)
-
       $(this).find('.icon').removeClass('icon-setting');
       $(this).find('.icon').addClass('icon-next ')
     }
-
   });
 
-  var punchInVal;
+  var punchInVal = 1;
   $('.login-btn').click(function() {})
   $('.db-toggle-btn').click(function() {
     $(this).toggleClass('active')
     $('.btn-group.punch').toggle(200);
-
-    if($(this).attr('class') === 'db-toggle-btn active'){
+    if ($(this).attr('class') === 'db-toggle-btn active') {
       punchInVal = 0
     }
-    else{
-      punchInVal = 1
-    }
-
-
-
-
   })
 
 
@@ -584,15 +559,11 @@ $(document).ready(function() {
 
   const pickr = new Pickr({
     el: '.color-picker',
-
     default: '#42445A',
-
     components: {
-
       preview: true,
       opacity: true,
       hue: true,
-
       interaction: {
         hex: true,
         rgba: true,
@@ -605,8 +576,7 @@ $(document).ready(function() {
   });
 
 
-  var overlayColor;
-
+  var overlayColor = "rgba(162, 163, 174, 0.4)";
   $('.overlay-setup .db-btn').click(function() {
     overlayColor = $('.pcr-button').css("backgroundColor");
     $('.db-overlay').css({
@@ -615,3 +585,6 @@ $(document).ready(function() {
   })
 
 })
+
+
+//************************************************************************popup block*****************************************************//

@@ -11,3 +11,7 @@
 .pcr-app {
   height:11em;
 }
+
+.pcr-app .pcr-selection .pcr-color-opacity{
+  display: none;
+}
