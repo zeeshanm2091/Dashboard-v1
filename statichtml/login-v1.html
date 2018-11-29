@@ -94,6 +94,9 @@
                                     <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
                                     <input type="text" class="login-fields login-link-input" placeholder="link text">
                                     <input type="text" class="login-fields login-link-url" placeholder="link url">
+                                    <div class="db-error-mgs">
+                                      <span>*Please enter the required fields</span>
+                                    </div>
                                     <div class="db-btn input-submit" style="background-color:#89b72e;color:#fff;border:none">
                                       <span>submit</span>
                                     </div>
@@ -131,8 +134,8 @@
                                   </div>
                                   <div class="accord-item-body">
                                     <div class="accord-body-list">
-                                      <div class="dropdown-block multi-select">
-                                        <span class="selected-item">english</span>
+                                      <div class="dropdown-block multi-select language-select">
+                                        <span class="selected-item">Select your languages</span>
                                         <div class="dropdown-list" style="display: none;">
                                           <div class="dropdown-item">hindi <span class="db-check"></span></div>
                                           <div class="dropdown-item">marathi <span class="db-check"></span></div>
@@ -304,7 +307,7 @@
 
   </div>
 
-  <div class="dp-popup">
+  <div class="dp-popup confirm-popup">
     <div class="dp-popup-content">
       <!-- <div class="close-btn icon icon-wrong"></div> -->
       <div class="db-popup-head">
@@ -323,6 +326,22 @@
     </div>
   </div>
 
+  <div class="dp-popup error-popup">
+    <div class="dp-popup-content">
+      <div class="db-popup-head">
+          <h2>Please Enter The Required details</h2>
+      </div>
+      <div class="db-popup-body">
+        <div class="confirm-btn">
+              <div class="db-btn btn-yes">
+                <span>ok</span>
+              </div>
+
+            </div>
+      </div>
+    </div>
+  </div>
+
   <!-- *****fancy box**** -->
   <script src="../js/jquery-3.3.1.min.js" charset="utf-8"></script>
   <script src="../js/jquery.fancybox.min.js" charset="utf-8"></script>
@@ -334,7 +353,7 @@
 
   <script src="../js/touch-dnd.js"></script>
 
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/login-page.css">
   <script src="../js/main2.js" charset="utf-8"></script>
 
   <!-- date picker  -->

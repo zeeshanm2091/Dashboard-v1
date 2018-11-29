@@ -17,6 +17,8 @@
     @include dis-flex();
     justify-content: center;
     flex-wrap: wrap;
+    height: 110px;
+    overflow-y: scroll;
 
     .myteam-item {
       position: relative;
