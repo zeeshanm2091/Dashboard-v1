@@ -253,9 +253,16 @@ font-size: 11px;
 .divide-block {
   @include dis-flex();
 
+      @media screen and (max-width:767px){
+        flex-direction: column;
+      }
+
   .divide-left,
   .divide-right {
     width: 48%;
+    @media screen and (max-width:767px){
+      width:100%;
+    }
   }
 }
 //card body css
@@ -266,6 +273,11 @@ font-size: 11px;
   padding: 0 20px;
   @media screen and (max-width:1200px) {
     padding: 0 10px;
+  }
+
+  @media screen and (max-width:767px) {
+    height:180px;
+    
   }
 
   .card-left {
@@ -374,6 +386,9 @@ font-size: 11px;
 
     &.sec-50 {
       width: 48%;
+      @media screen and (max-width:767px){
+        width:100%;
+      }
     }
   }
 }

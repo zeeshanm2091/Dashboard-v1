@@ -47,6 +47,10 @@
   -moz-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
 
+  @media screen and (max-width:767px){
+    display: none;
+  }
+
   &.active {
     left: 0;
   }

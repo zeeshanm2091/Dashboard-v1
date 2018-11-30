@@ -5,9 +5,16 @@
     .learn-list {
       @include dis-flex();
       width:100%;
+      @media screen and (max-width:767px){
+        flex-direction: column;
+      }
       .learn-item{
         @include dis-flex();
         width: 33.33%;
+        @media screen and (max-width:767px){
+          width:100%;
+          margin-bottom: 20px;
+        }
         .card-left{
           font-size: 60px;
           color:$secondary;

@@ -1,6 +1,9 @@
 .newsCard {
   border: 1px solid $border;
   height: 180px;
+  @media screen and (max-width:767px){
+    height:auto;
+  }
   .bx-wrapper .bx-next{
     right:0px;
   }
@@ -76,6 +79,10 @@
 
       @media screen and (max-width:992px){
           width: 100%;
+      }
+
+      @media screen and (max-width:767px){
+          padding-bottom:10px;
       }
 
       .newsCard-name {

@@ -1712,9 +1712,20 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .divide-block {
+    flex-direction: column;
+  }
+}
 .divide-block .divide-left,
 .divide-block .divide-right {
   width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .divide-block .divide-left,
+.divide-block .divide-right {
+    width: 100%;
+  }
 }
 
 .card-body {
@@ -1727,6 +1738,11 @@ h6 {
 @media screen and (max-width: 1200px) {
   .card-body {
     padding: 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-body {
+    height: 180px;
   }
 }
 .card-body .card-left {
@@ -1818,6 +1834,12 @@ h6 {
 .left-list section.sec-50,
 .right-list section.sec-50 {
   width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .left-list section.sec-50,
+.right-list section.sec-50 {
+    width: 100%;
+  }
 }
 
 .db-full-width {
@@ -2313,6 +2335,11 @@ label:hover {
   margin-top: 30px;
   background-color: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .newsCard {
+    height: auto;
+  }
+}
 .newsCard .bx-wrapper .bx-next {
   right: 0px;
 }
@@ -2379,6 +2406,11 @@ label:hover {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .newsCard .newsCard-content .newsCard-desc {
+    padding-bottom: 10px;
+  }
+}
 .newsCard .newsCard-content .newsCard-desc .newsCard-name {
   margin-bottom: 10px;
 }
@@ -2441,6 +2473,12 @@ label:hover {
   border: 1px solid #ccc;
   margin-top: 30px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .empConnect {
+    height: auto;
+    padding-bottom: 10px;
+  }
 }
 .empConnect .db-slider {
   padding: 0 20px;
@@ -2972,6 +3010,11 @@ label:hover {
     width: 60%;
   }
 }
+@media screen and (max-width: 767px) {
+  .atten-card .attn-cal-list {
+    width: 100%;
+  }
+}
 .atten-card .attn-cal-list span.cal-date {
   height: 14px;
   width: 14px;
@@ -3089,11 +3132,22 @@ label:hover {
   align-items: center;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .mylearn-card .card-body .learn-list {
+    flex-direction: column;
+  }
+}
 .mylearn-card .card-body .learn-list .learn-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 33.33%;
+}
+@media screen and (max-width: 767px) {
+  .mylearn-card .card-body .learn-list .learn-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .mylearn-card .card-body .learn-list .learn-item .card-left {
   font-size: 60px;
@@ -3138,11 +3192,25 @@ label:hover {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 767px) {
+  .rnr-block .rnr-list {
+    flex-direction: column;
+  }
+}
 .rnr-block .rnr-list .rnr-item {
   border: 1px solid #d6d8d1;
   padding: 20px 10px 10px;
   width: 31%;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .rnr-block .rnr-list .rnr-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .rnr-block .rnr-list .rnr-item:last-child {
+    margin-bottom: 0px;
+  }
 }
 .rnr-block .rnr-list .rnr-item:before {
   height: 42px;
@@ -3314,6 +3382,11 @@ label:hover {
   -webkit-box-shadow: 7px 2px 34px 0 #cccccc;
   -moz-box-shadow: 7px 2px 34px 0 #cccccc;
   box-shadow: 7px 2px 34px 0 #cccccc;
+}
+@media screen and (max-width: 767px) {
+  .setting-menu {
+    display: none;
+  }
 }
 .setting-menu.active {
   left: 0;
