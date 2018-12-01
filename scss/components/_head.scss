@@ -44,6 +44,11 @@
             padding: 25px 30px;
             width: 70%;
           }
+          @media screen and (max-width:767px) {
+            padding: 25px 20px;
+            width: 90%;
+            left: -100%;
+          }
         }
 
         .menu-title {
@@ -121,6 +126,9 @@
           padding-bottom: 40px;
           display: none;
           z-index: 100;
+          @media screen and (max-width:767px) {
+            width: 300px;
+          }
 
           &:before {
             content: "";
@@ -159,6 +167,16 @@
               &:last-child {
                 text-transform: uppercase;
                 color: $text;
+
+                span {
+                  &.icon {
+                    &.icon-filter {
+                      font-size: 20px;
+                      top: 5px;
+                      position: relative;
+                    }
+                  }
+                }
               }
             }
           }
@@ -253,6 +271,11 @@
           border-radius: 50%;
           border: 1px solid $secondary;
           text-align: center;
+
+          &.noti-wrong {
+            color: $danger;
+            border: 1px solid $danger;
+          }
 
           &:first-child {
             margin-right: 5px;

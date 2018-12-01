@@ -1610,8 +1610,25 @@ h6 {
   }
 }
 @media screen and (max-width: 992px) {
+  .db-body .db-left,
+.db-body .db-right {
+    width: 100%;
+  }
+  .db-body .db-left .atten-card,
+.db-body .db-left .ctc-card,
+.db-body .db-right .atten-card,
+.db-body .db-right .ctc-card {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
   .db-body .db-right {
     margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .db-body .db-right {
+    margin-top: 0px;
   }
 }
 
@@ -1742,15 +1759,25 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .card-body {
-    height: 180px;
+    height: auto;
   }
 }
 .card-body .card-left {
   width: 40%;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .card-body .card-left {
+    width: 50%;
+  }
+}
 .card-body .card-right {
   width: 60%;
+}
+@media screen and (max-width: 767px) {
+  .card-body .card-right {
+    width: 50%;
+  }
 }
 
 .option-list #__ph1 {
@@ -2106,6 +2133,13 @@ label:hover {
     width: 70%;
   }
 }
+@media screen and (max-width: 767px) {
+  .db-head .db-head-content .left-block .menu-tab .menu-main-content {
+    padding: 25px 20px;
+    width: 90%;
+    left: -100%;
+  }
+}
 .db-head .db-head-content .left-block .menu-tab .menu-title {
   text-transform: capitalize;
   margin-bottom: 50px;
@@ -2175,6 +2209,11 @@ label:hover {
   display: none;
   z-index: 100;
 }
+@media screen and (max-width: 767px) {
+  .db-head .db-head-content .right-block .header-notification .noti-wrap {
+    width: 300px;
+  }
+}
 .db-head .db-head-content .right-block .header-notification .noti-wrap:before {
   content: "";
   position: absolute;
@@ -2211,6 +2250,11 @@ label:hover {
 .db-head .db-head-content .right-block .header-notification .noti-wrap .noti-header span:last-child {
   text-transform: uppercase;
   color: #777874;
+}
+.db-head .db-head-content .right-block .header-notification .noti-wrap .noti-header span:last-child span.icon.icon-filter {
+  font-size: 20px;
+  top: 5px;
+  position: relative;
 }
 .db-head .db-head-content .right-block .header-notification .noti-wrap .noti-footer {
   text-align: center;
@@ -2294,6 +2338,10 @@ label:hover {
   border-radius: 50%;
   border: 1px solid #99cc33;
   text-align: center;
+}
+.noti-list .noti-item .noti-item-right .noti-actions span.noti-wrong {
+  color: #ff6666;
+  border: 1px solid #ff6666;
 }
 .noti-list .noti-item .noti-item-right .noti-actions span:first-child {
   margin-right: 5px;
@@ -2626,6 +2674,11 @@ label:hover {
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 767px) {
+  .empConnect.empBday .db-slider {
+    padding: 10px 10px 10px 0;
+  }
+}
 
 .db-slider a {
   text-decoration: none;
@@ -2854,6 +2907,12 @@ label:hover {
   height: 100px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .menu-main-content .option-list .option-list-item {
+    height: 80px;
+    width: 33.33%;
+  }
+}
 
 .db-body .option-list-item {
   height: 200px;
@@ -2939,6 +2998,11 @@ label:hover {
   height: auto;
   margin-top: 20px;
 }
+@media screen and (max-width: 767px) {
+  .moreLink-card .card-body {
+    height: 100px;
+  }
+}
 .moreLink-card .db-slider {
   padding: 0 20px;
 }
@@ -2966,6 +3030,15 @@ label:hover {
   .moreLink-card .db-slider .slider-item-content .slider-top-block {
     font-size: 60px;
   }
+}
+@media screen and (max-width: 767px) {
+  .moreLink-card .db-slider .slider-item-content .slider-top-block {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+}
+.moreLink-card .swiper-container-autoheight, .moreLink-card .swiper-container-autoheight .swiper-slide {
+  height: 105px;
 }
 
 .atten-card .card-body .card-left {
@@ -3012,7 +3085,7 @@ label:hover {
 }
 @media screen and (max-width: 767px) {
   .atten-card .attn-cal-list {
-    width: 100%;
+    width: 65%;
   }
 }
 .atten-card .attn-cal-list span.cal-date {
@@ -3123,6 +3196,27 @@ label:hover {
   }
 }
 
+.ctc-tab .card-head-title span {
+  position: relative;
+  cursor: pointer;
+}
+.ctc-tab .card-head-title span.active {
+  border-bottom: 1px solid #ccc;
+}
+.ctc-tab .card-head-title span.ctc-title {
+  position: relative;
+  margin-right: 10px;
+}
+.ctc-tab .card-head-title span.ctc-title:before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #777874;
+  right: -9px;
+  position: absolute;
+  top: 0px;
+}
+
 .mylearn-card .card-body {
   justify-content: center;
 }
@@ -3134,7 +3228,8 @@ label:hover {
 }
 @media screen and (max-width: 767px) {
   .mylearn-card .card-body .learn-list {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .mylearn-card .card-body .learn-list .learn-item {
@@ -3145,7 +3240,7 @@ label:hover {
 }
 @media screen and (max-width: 767px) {
   .mylearn-card .card-body .learn-list .learn-item {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
   }
 }

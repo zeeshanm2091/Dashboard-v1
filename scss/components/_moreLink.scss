@@ -6,6 +6,9 @@
   .card-body{
     height: auto;
     margin-top:20px;
+    @media screen and (max-width:767px){
+      height:100px;
+    }
   }
   .db-slider {
     padding:0 20px;
@@ -33,7 +36,14 @@
         @media screen and (max-width:992px){
           font-size: 60px;
         }
+        @media screen and (max-width:767px){
+          font-size: 40px;
+          margin-bottom:5px;
+        }
       }
     }
+  }
+  .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
+    height:105px;
   }
 }

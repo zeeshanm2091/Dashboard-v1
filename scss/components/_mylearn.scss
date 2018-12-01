@@ -6,13 +6,15 @@
       @include dis-flex();
       width:100%;
       @media screen and (max-width:767px){
-        flex-direction: column;
+        // flex-direction: column;
+        flex-wrap:wrap;
+        justify-content:center;
       }
       .learn-item{
         @include dis-flex();
         width: 33.33%;
         @media screen and (max-width:767px){
-          width:100%;
+          width:50%;
           margin-bottom: 20px;
         }
         .card-left{

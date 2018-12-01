@@ -30,4 +30,34 @@
       }
     }
   }
+
+}
+
+.ctc-tab{
+  .card-head-title{
+    span{
+      position: relative;
+      cursor: pointer;
+      &.active{
+        border-bottom:1px solid #ccc;
+      }
+      &.ctc-title {
+        position: relative;
+        margin-right: 10px;
+      &:before{
+        content: "";
+        height: 100%;
+        width:2px;
+        background-color: $text;
+        right:-9px;
+        position: absolute;
+        top:0px;
+
+
+      }
+      }
+    }
+  }
+
+
 }
