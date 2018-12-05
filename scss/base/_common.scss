@@ -202,7 +202,7 @@ font-size: 11px;
     z-index: 1;
   }
 
-  .dropdown-list {
+  .dropdown-list,.openList{
     position: absolute;
     background-color: $white;
     width: 150px;
@@ -229,6 +229,10 @@ font-size: 11px;
       }
     }
   }
+}
+
+.dropdown-block .openList{
+  display: block !important;
 }
 
 .serach-box {
@@ -519,6 +523,22 @@ label:hover {
 }
 //button css
 
+.btn-s{
+  .db-btn {
+    width:30%
+  }
+}
+.btn-m{
+  .db-btn {
+    width:45%
+  }
+}
+.btn-l{
+  .db-btn {
+    width:100%
+  }
+}
+
 .db-btn {
   height: 42px;
   border: 1px solid $border;
@@ -536,6 +556,10 @@ label:hover {
   &:hover {
     opacity: 0.8;
   }
+}
+
+.flat-btn {
+    height: 30px;
 }
 
 .btn-group {

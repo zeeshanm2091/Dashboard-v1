@@ -1661,7 +1661,7 @@ h6 {
   top: 7px;
   z-index: 1;
 }
-.dropdown-block .dropdown-list {
+.dropdown-block .dropdown-list, .dropdown-block .openList {
   position: absolute;
   background-color: #ffffff;
   width: 150px;
@@ -1671,7 +1671,7 @@ h6 {
   top: 20px;
   z-index: 100;
 }
-.dropdown-block .dropdown-list .dropdown-item {
+.dropdown-block .dropdown-list .dropdown-item, .dropdown-block .openList .dropdown-item {
   height: 30px;
   padding: 0 5px;
   text-transform: capitalize;
@@ -1679,11 +1679,15 @@ h6 {
   border-bottom: 1px solid #d6d8d1;
   position: relative;
 }
-.dropdown-block .dropdown-list .dropdown-item:hover {
+.dropdown-block .dropdown-list .dropdown-item:hover, .dropdown-block .openList .dropdown-item:hover {
   background-color: #eef1e9;
 }
-.dropdown-block .dropdown-list .dropdown-item:last-child {
+.dropdown-block .dropdown-list .dropdown-item:last-child, .dropdown-block .openList .dropdown-item:last-child {
   border-bottom: none;
+}
+
+.dropdown-block .openList {
+  display: block !important;
 }
 
 .serach-box {
@@ -1956,6 +1960,18 @@ label:hover {
   cursor: text;
 }
 
+.btn-s .db-btn {
+  width: 30%;
+}
+
+.btn-m .db-btn {
+  width: 45%;
+}
+
+.btn-l .db-btn {
+  width: 100%;
+}
+
 .db-btn {
   height: 42px;
   border: 1px solid #d6d8d1;
@@ -1972,6 +1988,10 @@ label:hover {
 }
 .db-btn:hover {
   opacity: 0.8;
+}
+
+.flat-btn {
+  height: 30px;
 }
 
 .btn-group {
@@ -2176,6 +2196,9 @@ label:hover {
   justify-content: space-between;
   align-items: center;
 }
+.db-head .db-head-content .right-block .right-head-menu {
+  position: relative;
+}
 .db-head .db-head-content .right-block .right-head-menu .menu-icon {
   display: flex;
   justify-content: space-between;
@@ -2190,6 +2213,57 @@ label:hover {
   margin-bottom: 5px;
   width: 5px;
   border-radius: 50%;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content {
+  border: 1px solid #d6d8d1;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 11;
+  right: -20px;
+  width: 200px;
+  font-size: 16px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  border-radius: 10px;
+  display: none;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content:before {
+  content: "";
+  position: absolute;
+  border-bottom: 10px solid #d6d8d1;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  top: -10px;
+  right: 10px;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content:after {
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  right: 10px;
+  top: -9px;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item {
+  padding: 0 10px;
+  line-height: 30px;
+  border-bottom: 1px solid #d6d8d1;
+  cursor: pointer;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item .icon {
+  padding-right: 10px;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item .icon:before {
+  line-height: 40px;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item:hover {
+  opacity: 0.7;
+}
+.db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item:last-child {
+  border-bottom: none;
 }
 .db-head .db-head-content .right-block .header-notification {
   font-size: 30px;
@@ -2574,6 +2648,51 @@ label:hover {
   width: 50%;
 }
 
+.changeHistory .accord-body-list {
+  display: block;
+}
+.changeHistory .db-history-ListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #d6d8d1;
+}
+.changeHistory .db-history-ListItem .history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-start;
+}
+.changeHistory .db-history-ListItem .history-item .historyDate {
+  padding-right: 10px;
+}
+.changeHistory .db-history-ListItem .history-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  text-transform: capitalize;
+}
+.changeHistory .db-history-ListItem .history-btn .flat-btn {
+  width: 45%;
+}
+
+.accord-item.app-changes {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #99cc33;
+  z-index: 10;
+}
+.accord-item.app-changes .link-btn {
+  color: #ffffff;
+}
+
 .login-head .menu-icon {
   font-size: 30px;
   color: #777874;
@@ -2661,11 +2780,11 @@ label:hover {
   width: 350px;
   border-radius: 20px;
   background-color: #ffffff;
-  padding: 30px 30px;
+  padding: 30px;
 }
 @media screen and (max-width: 992px) {
   .login-body .login-block .login-body-block {
-    padding: 20px 20px;
+    padding: 20px;
   }
 }
 
@@ -2894,10 +3013,10 @@ label:hover {
 }
 
 .login-fields {
-  height: 40px;
+  height: 30px;
   margin-bottom: 10px;
   border-bottom: 0;
-  font-size: 25px;
+  font-size: 16px;
   padding: 0 10px;
   text-transform: capitalize;
 }
@@ -2909,24 +3028,24 @@ label:hover {
   position: relative;
   cursor: pointer;
   width: 100%;
-  height: 40px;
+  height: 30px;
   background-color: #fff;
-  line-height: 40px;
+  line-height: 30px;
   padding: 0 10px;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 16px;
   color: #777874;
 }
 .lan-list .dropdown-block .selected-item {
   display: block;
 }
-.lan-list .dropdown-block .dropdown-list {
-  top: 40px;
+.lan-list .dropdown-block .dropdown-list, .lan-list .dropdown-block .openList {
+  top: 30px;
   width: 100%;
 }
-.lan-list .dropdown-block .dropdown-list .dropdown-item {
-  height: 40px;
-  line-height: 40px;
+.lan-list .dropdown-block .dropdown-list .dropdown-item, .lan-list .dropdown-block .openList .dropdown-item {
+  height: 30px;
+  line-height: 30px;
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
@@ -2935,6 +3054,25 @@ label:hover {
 .lan-list .dropdown-block:before {
   top: 50%;
   right: 10px;
+}
+
+.ef-date input {
+  width: 45%;
+}
+.ef-date span.dateTo {
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.language-title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .dp-popup {

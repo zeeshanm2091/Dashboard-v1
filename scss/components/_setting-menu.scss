@@ -46,8 +46,7 @@
   -webkit-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   -moz-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
-
-  @media screen and (max-width:767px){
+  @media screen and (max-width:767px) {
     display: none;
   }
 
@@ -106,8 +105,6 @@
     overflow: auto;
   }
 
-
-
   .accord-body-list {
     @include dis-flex();
     flex-wrap: wrap;
@@ -161,18 +158,13 @@
     }
   }
 
-  .overlay-setup{
-    .accord-body-list{
+  .overlay-setup {
+    .accord-body-list {
       display: block;
     }
   }
-
-
 }
-
-
 //theme change list
-
 .theme-item {
   width: 48%;
   height: 110px;
@@ -225,9 +217,56 @@
     .accord-item-body {
       height: 300px;
       overflow: auto;
-      .db-btn{
+
+      .db-btn {
         width: 50%;
+
+      }
+
+    }
+  }
+}
+
+.changeHistory {
+  .accord-body-list{
+    display: block;
+  }
+  .db-history-ListItem {
+    @include dis-flex();
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid $border;
+
+
+    .history-item {
+      @include dis-flex();
+      width: 60%;
+      justify-content: flex-start;
+      .historyDate{
+        padding-right: 10px;
+      }
+    }
+
+    .history-btn {
+      @include dis-flex();
+      width: 40%;
+      text-transform: capitalize;
+      .flat-btn{
+        width: 45%;
       }
     }
   }
+}
+
+.accord-item.app-changes {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary;
+    z-index: 10  ;
+    .link-btn{
+      color:$white;
+    }
 }
