@@ -638,10 +638,15 @@ $(document).ready(function() {
     $('.main-content').animate({
       left: "0px"
     }, 300)
-    // $(this).find('.icon').removeClass('icon-setting');
-    // $(this).find('.icon').addClass('icon-next')
-
     $('.setting-menu .setting-pull').find('.icon').addClass('icon-next');
+  })
+
+  $('.history-btn > .flat-btn').click(function(){
+    $('.db-history-ListItem').siblings().find('.history-btn > .flat-btn').removeClass('sub-btn');
+    $(this).addClass("sub-btn");
+
+
+
   })
 
   var punchInVal = 1;
