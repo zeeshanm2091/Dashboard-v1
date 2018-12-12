@@ -81,6 +81,10 @@
 }
 
 .accord-container {
+  .accord-item:last-child {
+    padding-bottom: 60px;
+  }
+
   .accord-item-title {
     padding: 0 30px;
     height: 55px;
@@ -165,6 +169,7 @@
   }
 }
 //theme change list
+
 .theme-item {
   width: 48%;
   height: 110px;
@@ -220,17 +225,16 @@
 
       .db-btn {
         width: 50%;
-
       }
-
     }
   }
 }
 
 .changeHistory {
-  .accord-body-list{
+  .accord-body-list {
     display: block;
   }
+
   .db-history-ListItem {
     @include dis-flex();
     justify-content: space-between;
@@ -238,12 +242,12 @@
     padding: 10px 0;
     border-bottom: 1px solid $border;
 
-
     .history-item {
       @include dis-flex();
       width: 60%;
       justify-content: flex-start;
-      .historyDate{
+
+      .historyDate {
         padding-right: 10px;
       }
     }
@@ -252,7 +256,8 @@
       @include dis-flex();
       width: 40%;
       text-transform: capitalize;
-      .flat-btn{
+
+      .flat-btn {
         width: 45%;
       }
     }
@@ -260,13 +265,32 @@
 }
 
 .accord-item.app-changes {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: $secondary;
-    z-index: 10  ;
-    .link-btn{
-      color:$white;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  background-color: $secondary;
+  z-index: 10;
+
+  .link-btn {
+    color: $white;
+  }
+}
+
+.login-inputs {
+  .accord-body-list {
+    display: block;
+    .bannerInput-group{
+      .banner-label {
+        display: block;
+        text-transform: capitalize;
+        color: $text;
+        margin-bottom: 5px;
+        // padding: 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
     }
+
+  }
 }

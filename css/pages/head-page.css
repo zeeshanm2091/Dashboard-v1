@@ -5,8 +5,8 @@
 /*****common colours****/
 @font-face {
   font-family: "zing-icon-font";
-  src: url("../../fonts/zing-icon-font.eot");
-  src: url("../../fonts/zing-icon-font.eot?#iefix") format("embedded-opentype"), url("../../fonts/zing-icon-font.woff") format("woff"), url("../../fonts/zing-icon-font.ttf") format("truetype"), url("../../fonts/zing-icon-font.svg#zing-icon-font") format("svg");
+  src: url("../../Fonts/zing-icon-font.eot");
+  src: url("../../Fonts/zing-icon-font.eot?#iefix") format("embedded-opentype"), url("../../Fonts/zing-icon-font.woff") format("woff"), url("../../Fonts/zing-icon-font.ttf") format("truetype"), url("../../Fonts/zing-icon-font.svg#zing-icon-font") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1628,7 +1628,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .db-body .db-right {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -1642,7 +1642,7 @@ h6 {
   font-size: 11px;
   text-align: right;
   padding-right: 20px;
-  padding-left: 0px;
+  padding-left: 0;
 }
 .dropdown-block .selected-item {
   padding-right: 30px;
@@ -1661,7 +1661,8 @@ h6 {
   top: 7px;
   z-index: 1;
 }
-.dropdown-block .dropdown-list, .dropdown-block .openList {
+.dropdown-block .dropdown-list,
+.dropdown-block .openList {
   position: absolute;
   background-color: #ffffff;
   width: 150px;
@@ -1671,7 +1672,8 @@ h6 {
   top: 20px;
   z-index: 100;
 }
-.dropdown-block .dropdown-list .dropdown-item, .dropdown-block .openList .dropdown-item {
+.dropdown-block .dropdown-list .dropdown-item,
+.dropdown-block .openList .dropdown-item {
   height: 30px;
   padding: 0 5px;
   text-transform: capitalize;
@@ -1679,10 +1681,12 @@ h6 {
   border-bottom: 1px solid #d6d8d1;
   position: relative;
 }
-.dropdown-block .dropdown-list .dropdown-item:hover, .dropdown-block .openList .dropdown-item:hover {
+.dropdown-block .dropdown-list .dropdown-item:hover,
+.dropdown-block .openList .dropdown-item:hover {
   background-color: #eef1e9;
 }
-.dropdown-block .dropdown-list .dropdown-item:last-child, .dropdown-block .openList .dropdown-item:last-child {
+.dropdown-block .dropdown-list .dropdown-item:last-child,
+.dropdown-block .openList .dropdown-item:last-child {
   border-bottom: none;
 }
 
@@ -1933,7 +1937,7 @@ input::placeholder {
 
 label {
   color: #999;
-  font-size: 14px;
+  font-size: 13px;
   position: absolute;
   left: 0;
   margin-top: -2px;
@@ -1946,6 +1950,9 @@ label {
 .input-group {
   margin-top: 25px;
   position: relative;
+}
+.input-group:first-child {
+  margin-top: 0;
 }
 
 input:focus + label,
@@ -1960,20 +1967,20 @@ label:hover {
   cursor: text;
 }
 
-.btn-s .db-btn {
-  width: 30%;
+.btn-s.db-btn {
+  width: 30% !important;
 }
 
-.btn-m .db-btn {
-  width: 45%;
+.btn-m.db-btn {
+  width: 45% !important;
 }
 
-.btn-l .db-btn {
-  width: 100%;
+.btn-l.db-btn {
+  width: 100% !important;
 }
 
 .db-btn {
-  height: 42px;
+  height: 40px;
   border: 1px solid #d6d8d1;
   border-radius: 20px;
   text-align: center;
@@ -1981,7 +1988,7 @@ label:hover {
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 13px;
   width: 100%;
   cursor: pointer;
   position: relative;
@@ -2013,6 +2020,7 @@ label:hover {
   height: 20px;
   width: 20px;
   text-align: right;
+  color: #d6d8d1;
 }
 
 .db-toggle-btn {
@@ -2063,6 +2071,7 @@ label:hover {
   background-color: #99cc33;
   color: #ffffff;
   border: none;
+  font-size: 16px;
 }
 
 .btn-yes {
@@ -2089,8 +2098,17 @@ label:hover {
   border-color: #33cc80;
 }
 
+/***disabled****/
 .disabled {
   opacity: 0.5;
+  position: relative;
+}
+.disabled:before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  z-index: 10;
 }
 
 /*****error mgs *****/
@@ -2111,6 +2129,11 @@ label:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .db-head .db-head-content {
+    height: 60px;
+  }
 }
 .db-head .db-head-content .left-block {
   display: flex;
@@ -2606,6 +2629,9 @@ label:hover {
   height: 85vh;
 }
 
+.accord-container .accord-item:last-child {
+  padding-bottom: 60px;
+}
 .accord-container .accord-item-title {
   padding: 0 30px;
   height: 55px;
@@ -2763,13 +2789,25 @@ label:hover {
 .accord-item.app-changes {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   background-color: #99cc33;
   z-index: 10;
 }
 .accord-item.app-changes .link-btn {
   color: #ffffff;
+}
+
+.login-inputs .accord-body-list {
+  display: block;
+}
+.login-inputs .accord-body-list .bannerInput-group .banner-label {
+  display: block;
+  text-transform: capitalize;
+  color: #777874;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /*****themes******/

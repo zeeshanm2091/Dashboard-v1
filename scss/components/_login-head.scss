@@ -7,8 +7,22 @@
   .right-block {
     min-width: 450px;
 
+
+    @media screen and (max-width:767px) {
+      min-width: 40%;
+    }
+
+
+
     .imp-link {
       position: relative;
+      @media screen and (max-width:767px) {
+        span:last-child{
+          display: none;
+        }
+      }
+
+
       a {
         color: $black;
         text-transform: capitalize;

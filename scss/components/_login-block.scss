@@ -5,7 +5,11 @@
 
   .setting-menu {
     box-shadow: none;
-    left: -500px;
+    left: 0px;
+    @media screen and (max-width:992px) {
+      display: none;
+    }
+
   }
 }
 
@@ -17,22 +21,33 @@
     padding: 0 50px;
   }
 
+  @media screen and (max-width:767px){
+    justify-content: center;
+    padding:0 20px;
+  }
+
   .login-block {
     position: relative;
-    padding-top: 109px;
-    width: 350px;
+    padding-top: 140px;
+    width: 360px;
     height: 509px;
 
     .login-title-block {
       position: absolute;
-      height: 218px;
-      width: 218px;
+      height: 210px;
+      width: 210px;
       border-radius: 50%;
-      top: 0;
+      top: 30px;
       left: 50%;
-      margin-left: -109px;
+      margin-left: -105px;
       background-color: $white;
       text-align: center;
+      @media screen and (max-width:992px) {
+        height: 190px;
+        width: 190px;
+        top: 50px;
+        margin-left: -95px;
+      }
 
       span {
         display: block;
@@ -40,7 +55,11 @@
         &.icon-lock {
           font-size: 40px;
           color: $secondary;
-          padding: 25px 0 15px;
+          padding: 40px 0 10px;
+          @media screen and (max-width:992px) {
+            font-size: 30px;
+            padding: 20px 0 10px;
+          }
         }
 
         &.login-txt {
@@ -52,23 +71,23 @@
 
     .login-body-block {
       position: absolute;
-      width: 350px;
-      border-radius: 20px;
+      border-radius: 10px;
       background-color: $white;
-      padding: 30px;
+      padding: 40px;
+      width: 100%;
       @media screen and (max-width:992px) {
         padding: 20px;
+        // width: 320px;
       }
     }
   }
 }
 
 .login-input-list {
-  margin: 25px 0 15px;
+  margin: 20px 0 15px;
   @include dis-flex();
   font-size: 13px;
   text-transform: capitalize;
-  font-weight: bold;
 
   .re-me {
     &.active {
@@ -92,6 +111,13 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.punch {
+  .db-btn {
+    color: $secondary;
+    border: 1px solid $secondary;
   }
 }
 
@@ -134,6 +160,15 @@
   position: relative;
   max-width: 400px;
   @include dis-flex();
+
+  .zingo-content {
+    @media screen and (max-width:992px) {
+      padding-left: 50px;
+    }
+    @media screen and (max-width:767px){
+      display: none;
+    }
+  }
 
   .zingo-img {
     margin-right: 10px;
@@ -244,6 +279,7 @@
     .login-block {
       .login-title-block {
         background-color: transparent;
+
         span {
           color: $black;
         }
@@ -350,7 +386,8 @@ span.log-imgUplaod {}
       display: block;
     }
 
-    .dropdown-list,.openList {
+    .dropdown-list,
+    .openList {
       top: 30px;
       width: 100%;
 
@@ -373,6 +410,7 @@ span.log-imgUplaod {}
   input {
     width: 45%;
   }
+
   span {
     &.dateTo {
       display: block;
@@ -386,8 +424,8 @@ span.log-imgUplaod {}
 }
 
 .language-title {
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
 }

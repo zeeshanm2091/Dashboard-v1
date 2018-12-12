@@ -27,13 +27,30 @@
 
   .dp-popup-content {
     background-color: #fff;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     border-radius: 10px;
     position: relative;
-    width:40%;
+    width:350px;
     .db-popup-head{
       text-transform: capitalize;
       font-weight: bold;
+      text-align: center;
     }
   }
+}
+
+.info-icon {
+height: 100px;
+width: 100px;
+background-color: $secondary;
+border-radius: 50%;
+position: absolute;
+top:50%;
+margin-top:-140px;
+left: 50%;
+margin-left: -50px;
+color: #fff;
+font-size: 70px;
+text-align: center;
+line-height: 100px;
 }

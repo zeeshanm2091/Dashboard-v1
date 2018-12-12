@@ -17,13 +17,13 @@
         <div class="main-container ot-pd">
           <div class="db-head-content">
             <div class="left-block">
-              <div class="menu-tab">
+              <!-- <div class="menu-tab">
                 <div class="menu-icon icon icon-menu-group">
                 </div>
                 <div class="menu-main-content">
                   <div class="close-btn icon icon-wrong"></div>
                 </div>
-              </div>
+              </div> -->
               <div class="main-logo">
                 <a href="javscript:;">
                    <img src="../images/zing-logo.png" alt="">
@@ -37,19 +37,20 @@
                   <span class="icon icon-setting"></span>
                 </div> -->
 
-                <div class="setting-menu">
+                <div class="setting-menu" style="left:0px;">
                   <div class="setting-pull">
-                    <span class="icon icon-next"></span>
+                    <span class="icon icon-setting"></span>
                   </div>
                   <div class="setting-head">
-                    <span>theme setup</span>
+                    <span>login page setup</span>
                     <!-- <span class="icon icon-wrong"></span> -->
                   </div>
                   <div class="setting-body">
                     <div class="accord-container">
+
                       <div class="accord-item login-setup">
                         <div class="accord-item-title">
-                          <span>login page (default)</span>
+                          <span>theme</span>
                           <span class="icon icon-down"></span>
                         </div>
                         <div class="accord-item-body">
@@ -70,7 +71,35 @@
 
                                 </div>
                               </div>
-                              <div class="accord-item overlay-setup">
+
+                              <div class="accord-item bgImg-list overlay-setup">
+                                <div class="accord-item-title">
+                                  <span>background/Overlay</span>
+                                  <span class="icon icon-down"></span>
+                                </div>
+                                <div class="accord-item-body">
+                                  <div class="bgImg-list accord-body-list">
+
+                                    <div class="theme-item big-item img-display-block">
+                                      <img src="../images/bg4.jpg" alt="">
+                                      <input type="file">
+                                      <span>select image to upload</span>
+                                    </div>
+                                    <!-- <div id="datepair" class="pikerDate">
+                                      <input type="text" class="login-fields date esStDate" placeholder="End Date">
+                                    </div> -->
+                                    <!-- <span class="log-imgUplaod db-btn sub-btn">
+                                        upload image
+                                    </span> -->
+                                    <div class="color-picker"></div>
+                                    <div class="db-btn sub-btn">Apply</div>
+
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <!-- <div class="accord-item overlay-setup">
                                 <div class="accord-item-title">
                                   <span>layover (default)</span>
                                   <span class="icon icon-down"></span>
@@ -81,10 +110,12 @@
                                     <div class="db-btn sub-btn">Apply</div>
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
+
+
                               <div class="accord-item lan-list">
                                 <div class="accord-item-title">
-                                  <span>Language Selection</span>
+                                  <span>Language</span>
                                   <span class="icon icon-down"></span>
                                 </div>
                                 <div class="accord-item-body">
@@ -102,7 +133,7 @@
                               </div>
                               <div class="accord-item login-inputs">
                                 <div class="accord-item-title">
-                                  <span>input fields</span>
+                                  <span>banner text</span>
                                   <span class="icon icon-down"></span>
                                 </div>
                                 <div class="accord-item-body">
@@ -110,10 +141,22 @@
                                     <div class="language-title">
                                       english
                                     </div>
-                                    <input type="text" class="login-fields login-title" placeholder="title">
-                                    <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
-                                    <input type="text" class="login-fields login-link-input" placeholder="link text">
-                                    <input type="text" class="login-fields login-link-url" placeholder="link url">
+                                    <div class="bannerInput-group">
+                                      <span class="banner-label">title</span>
+                                      <input type="text" class="login-fields login-title" placeholder="title">
+                                    </div>
+                                    <div class="bannerInput-group">
+                                      <span class="banner-label">subtitle</span>
+                                      <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
+                                    </div>
+                                    <div class="bannerInput-group">
+                                      <span class="banner-label">link text</span>
+                                      <input type="text" class="login-fields login-link-input" placeholder="link text">
+                                    </div>
+                                    <div class="bannerInput-group">
+                                      <span class="banner-label">link url</span>
+                                      <input type="text" class="login-fields login-link-url" placeholder="link url">
+                                    </div>
                                     <div class="db-error-mgs">
                                       <span>*Please enter the required fields</span>
                                     </div>
@@ -127,36 +170,15 @@
                                 </div>
                               </div>
 
-                              <div class="accord-item bgImg-list">
-                                <div class="accord-item-title">
-                                  <span>background images</span>
-                                  <span class="icon icon-down"></span>
-                                </div>
-                                <div class="accord-item-body">
-                                  <div class="bgImg-list accord-body-list">
-
-                                    <div class="theme-item big-item img-display-block">
-                                      <img src="../images/bg4.jpg" alt="">
-                                      <input type="file">
-                                      <span>select image to upload</span>
-                                    </div>
-                                    <div id="datepair" class="pikerDate">
-                                      <input type="text" class="login-fields date esStDate" placeholder="End Date">
-                                    </div>
-                                    <!-- <span class="log-imgUplaod db-btn sub-btn">
-                                        upload image
-                                    </span> -->
-                                  </div>
-                                </div>
-                              </div>
 
 
 
 
 
-                                <div class="accord-item punch-opt">
+
+                                <div class="accord-item punch-opt disabled">
                                   <div class="accord-item-title">
-                                    <span>View Punch Options</span>
+                                    <span>Punch In/Out</span>
                                     <div class="db-toggle-btn">
                                       <span class="toggle-btn-in"></span>
                                       <span class="btn-txt-on">ON</span>
@@ -177,19 +199,7 @@
                                   </div> -->
                                 </div>
 
-                                <div class="accord-item ef-date">
-                                  <div class="accord-item-title">
-                                    <span>Effective Date</span>
-                                    <span class="icon icon-down"></span>
-                                  </div>
-                                  <div class="accord-item-body">
-                                    <div id="datepair" class="accord-body-list">
-                                      <input type="text" class="login-fields date esStDate" placeholder="Start Date">
-                                      <span class="dateTo">to</span>
-                                      <input type="text" class="login-fields date esEdDate" placeholder="End Date">
-                                    </div>
-                                  </div>
-                                </div>
+
 
                                 <div class="accord-item app-changes">
                                   <div class="accord-item-title btn-s">
@@ -206,8 +216,12 @@
                                       <span>save</span>
                                     </div>
                                   </div>
-
                                 </div>
+
+
+
+
+
                                 <div class="accord-item changeHistory">
                                   <div class="accord-item-title">
                                     <span>History</span>
@@ -268,6 +282,22 @@
                                     </div>
                                   </div>
                                 </div>
+
+                                <div class="accord-item ef-date">
+                                  <div class="accord-item-title">
+                                    <span>Effective Date</span>
+                                    <span class="icon icon-down"></span>
+                                  </div>
+                                  <div class="accord-item-body">
+                                    <div id="datepair" class="accord-body-list">
+                                      <input type="text" class="login-fields date esStDate" placeholder="Start Date">
+                                      <span class="dateTo">to</span>
+                                      <input type="text" class="login-fields date esEdDate" placeholder="End Date">
+                                    </div>
+                                  </div>
+                                </div>
+
+
 
                               </div>
                             </div>
@@ -389,9 +419,11 @@
 
   <div class="dp-popup confirm-popup">
     <div class="dp-popup-content">
-      <!-- <div class="close-btn icon icon-wrong"></div> -->
+      <div class="info-icon">
+        <span class="icon icon-">!</span>
+      </div>
       <div class="db-popup-head">
-          <h2>are you sure you want to apply changes</h2>
+          <h5>are you sure you want to apply changes</h5>
       </div>
       <div class="db-popup-body">
         <div class="btn-group confirm-btn">

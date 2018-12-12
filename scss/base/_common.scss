@@ -53,34 +53,35 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
+
 body {
   font-size: 14px;
   font-family: sans-serif;
 }
 
-h1{
-font-size: 32px;
-}
-h2{
-font-size: 26px;
+h1 {
+  font-size: 32px;
 }
 
-h3{
-font-size: 20px;
+h2 {
+  font-size: 26px;
 }
 
-h4{
-font-size: 16px;
+h3 {
+  font-size: 20px;
 }
 
-h5{
-font-size: 13px;
+h4 {
+  font-size: 16px;
 }
 
-h6{
-font-size: 11px;
+h5 {
+  font-size: 13px;
 }
 
+h6 {
+  font-size: 11px;
+}
 
 * {
   box-sizing: border-box;
@@ -147,7 +148,6 @@ font-size: 11px;
         margin-top: 0;
       }
     }
-
     @media screen and (max-width:992px) {
       width: 100%;
 
@@ -156,7 +156,6 @@ font-size: 11px;
         margin-top: 30px;
       }
     }
-
   }
 
   .db-right {
@@ -164,7 +163,7 @@ font-size: 11px;
       margin-top: 30px;
     }
     @media screen and (max-width:767px) {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -174,13 +173,12 @@ font-size: 11px;
   cursor: pointer;
   width: 80px;
 
-  .login-fields{
+  .login-fields {
     height: 20px;
     font-size: 11px;
     text-align: right;
     padding-right: 20px;
-    padding-left:0px;
-
+    padding-left: 0;
   }
 
   .selected-item {
@@ -188,7 +186,7 @@ font-size: 11px;
     z-index: 3;
     position: relative;
     height: 100%;
-    width:100%;
+    width: 100%;
   }
 
   &:before {
@@ -202,7 +200,8 @@ font-size: 11px;
     z-index: 1;
   }
 
-  .dropdown-list,.openList{
+  .dropdown-list,
+  .openList {
     position: absolute;
     background-color: $white;
     width: 150px;
@@ -231,7 +230,7 @@ font-size: 11px;
   }
 }
 
-.dropdown-block .openList{
+.dropdown-block .openList {
   display: block !important;
 }
 
@@ -269,16 +268,15 @@ font-size: 11px;
 
 .divide-block {
   @include dis-flex();
-
-      @media screen and (max-width:767px){
-        flex-direction: column;
-      }
+  @media screen and (max-width:767px) {
+    flex-direction: column;
+  }
 
   .divide-left,
   .divide-right {
     width: 48%;
-    @media screen and (max-width:767px){
-      width:100%;
+    @media screen and (max-width:767px) {
+      width: 100%;
     }
   }
 }
@@ -291,10 +289,8 @@ font-size: 11px;
   @media screen and (max-width:1200px) {
     padding: 0 10px;
   }
-
   @media screen and (max-width:767px) {
-    height:auto;
-
+    height: auto;
   }
 
   .card-left {
@@ -342,13 +338,10 @@ font-size: 11px;
   width: 100px;
 }
 
-
-
-.active{
-
+.active {
   .left-list,
-  .right-list{
-    section{
+  .right-list {
+    section {
       &:hover .delete-btn {
         display: block;
         @media screen and (max-width:992px) {
@@ -357,12 +350,10 @@ font-size: 11px;
       }
     }
   }
-
-
 }
 
 .active {
-  section{
+  section {
     cursor: move;
   }
 }
@@ -376,20 +367,16 @@ font-size: 11px;
   min-height: 800px;
   border: 1px dashed $border;
 
-
-
   section {
     position: relative;
     width: 100%;
     margin-bottom: 0 !important;
-
     // &:hover .delete-btn {
     //   display: block;
     //   @media screen and (max-width:992px) {
     //     display: none;
     //   }
     // }
-
     .delete-btn {
       z-index: 11;
       position: absolute;
@@ -409,8 +396,8 @@ font-size: 11px;
 
     &.sec-50 {
       width: 48%;
-      @media screen and (max-width:767px){
-        width:100%;
+      @media screen and (max-width:767px) {
+        width: 100%;
       }
     }
   }
@@ -495,7 +482,7 @@ input::placeholder {
 
 label {
   color: #999;
-  font-size: 14px;
+  font-size: 13px;
   position: absolute;
   left: 0;
   margin-top: -2px;
@@ -508,6 +495,10 @@ label {
 .input-group {
   margin-top: 25px;
   position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 input:focus + label,
@@ -523,24 +514,26 @@ label:hover {
 }
 //button css
 
-.btn-s{
-  .db-btn {
-    width:30%
+.btn-s {
+  &.db-btn {
+    width: 30% !important;
   }
 }
-.btn-m{
-  .db-btn {
-    width:45%
+
+.btn-m {
+  &.db-btn {
+    width: 45% !important;
   }
 }
-.btn-l{
-  .db-btn {
-    width:100%
+
+.btn-l {
+  &.db-btn {
+    width: 100% !important;
   }
 }
 
 .db-btn {
-  height: 42px;
+  height: 40px;
   border: 1px solid $border;
   border-radius: 20px;
   text-align: center;
@@ -548,7 +541,7 @@ label:hover {
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 13px;
   width: 100%;
   cursor: pointer;
   position: relative;
@@ -559,7 +552,7 @@ label:hover {
 }
 
 .flat-btn {
-    height: 30px;
+  height: 30px;
 }
 
 .btn-group {
@@ -580,6 +573,7 @@ label:hover {
   height: 20px;
   width: 20px;
   text-align: right;
+  color: $disabled;
 }
 
 .db-toggle-btn {
@@ -590,23 +584,20 @@ label:hover {
   border-radius: 20px;
 
   &.active {
-    span{
+    span {
       &.toggle-btn-in {
         left: calc(100% - 20px);
       }
+
       &.btn-txt-off {
         display: block;
       }
 
-      &.btn-txt-on{
+      &.btn-txt-on {
         display: none;
       }
     }
-
-
   }
-
-
 
   span.toggle-btn-in {
     height: 20px;
@@ -640,49 +631,60 @@ label:hover {
       text-align: left;
       padding-left: 8px;
     }
-
-
   }
 }
 
-.sub-btn{
+.sub-btn {
   background-color: $secondary;
-  color:$white;
+  color: $white;
   border: none;
+  font-size: 16px;
 }
 
-.btn-yes{
+.btn-yes {
   background-color: $secondary;
-  border-color:$secondary;
-  color:$white;
+  border-color: $secondary;
+  color: $white;
 }
 
-.btn-no{
+.btn-no {
   background-color: $danger;
-  border-color:$danger;
-  color:$white;
+  border-color: $danger;
+  color: $white;
 }
 
+.db-check {
+  height: 12px;
+  width: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.active {
   .db-check {
-      height: 12px;
-      width: 12px;
-      border: 1px solid #ccc;
-      border-radius: 2px;
+    background-color: $success;
+    border-color: $success;
   }
+}
 
-  .active{
-    .db-check {
-      background-color: $success;
-      border-color:$success;
-    }
-  }
+/***disabled****/
 
-  .disabled{
-    opacity:0.5;
+.disabled {
+  opacity: 0.5;
+  position: relative;
+
+  &:before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    z-index: 10;
   }
+}
 
 
 /*****error mgs *****/
+
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;

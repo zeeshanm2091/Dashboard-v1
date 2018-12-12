@@ -76,6 +76,7 @@ $(document).ready(function() {
   $('.accord-item-title').click(function() {
     $('.accord-item-title span.icon').toggleClass('icon-up');
     $(this).parent().siblings().find('.accord-item-title span.icon').removeClass('icon-up');
+
     $(this).parent().find('.accord-item-body').slideToggle();
     $(this).parent().siblings().find('.accord-item-body').slideUp();
   });
@@ -409,9 +410,9 @@ $(document).ready(function() {
     }
   });
 
-  $('.lan-list').click(function() {
-    $('.addonInput').empty();
-  })
+  // $('.lan-list').click(function() {
+  //   $('.addonInput').empty();
+  // })
 
 
 
@@ -562,12 +563,19 @@ $(document).ready(function() {
   var loginLinkTxt = $('.login-link').html();
   var loginLinkUrl = $('.login-link').attr('href');
 
+  // $('.login-title').attr('placeholder',loginTitle)
+  // $('.login-subtitle').attr('placeholder',loginSubtitle)
+  // $('.login-link-input').attr('placeholder',loginLinkTxt)
+  // $('.login-link-url').attr('placeholder',loginLinkUrl)
+
+
+  console.log(loginTitle);
+
   $('.input-submit').click(function() {
     loginTitle = $('.login-title').val();
     loginSubtitle = $('.login-subtitle').val();
     loginLinkTxt = $('.login-link-input').val();
     loginLinkUrl = $('.login-link-url').val();
-
 
     if ((loginTitle.length) && (loginSubtitle.length) && (loginLinkTxt.length) && (loginLinkUrl.length) > 0) {
 
@@ -590,6 +598,7 @@ $(document).ready(function() {
 
 
 
+
   var imgName;
   $('input[type="file"]').change(function(e) {
     imgName = e.target.files[0].name;
@@ -608,17 +617,20 @@ $(document).ready(function() {
 
   });
 
+
+
+
   $('.setting-pull').click(function() {
     $(this).toggleClass("active");
-    if ($(this).attr('class') === "setting-pull active") {
+    if ($(this).attr('class') === "setting-pull") {
       $('.setting-menu').animate({
         left: "0%"
       }, 300)
       $('.login-page').animate({
         left: "500px"
       }, 300)
-      $(this).find('.icon').removeClass('icon-next')
-      $(this).find('.icon').addClass('icon-setting')
+      $(this).find('.icon').removeClass('icon-setting')
+      $(this).find('.icon').addClass('icon-next')
     } else {
       $('.setting-menu').animate({
         left: "-500px"
@@ -626,10 +638,12 @@ $(document).ready(function() {
       $('.main-content').animate({
         left: "0px"
       }, 300)
-      $(this).find('.icon').removeClass('icon-setting');
-      $(this).find('.icon').addClass('icon-next ')
+      $(this).find('.icon').removeClass('icon-next');
+      $(this).find('.icon').addClass('icon-setting')
     }
   });
+
+
 
   $('.pre-btn,.btn-yes,.history-btn > .flat-btn:first-child').click(function(){
     $('.setting-menu').animate({
@@ -644,9 +658,6 @@ $(document).ready(function() {
   $('.history-btn > .flat-btn').click(function(){
     $('.db-history-ListItem').siblings().find('.history-btn > .flat-btn').removeClass('sub-btn');
     $(this).addClass("sub-btn");
-
-
-
   })
 
   var punchInVal = 1;
@@ -684,15 +695,22 @@ $(document).ready(function() {
   });
 
 
-  var overlayColor = "rgba(162, 163, 174, 0.4)";
-  $('.overlay-setup .db-btn').click(function() {
+  var overlayColor;
+  $('.overlay-setup .sub-btn').click(function() {
     overlayColor = $('.pcr-button').css("backgroundColor");
     $('.db-overlay').css({
       "background-color": overlayColor
     })
   })
 
+
+
+
+
+
 })
+
+
 
 
 //************************************************************************popup block*****************************************************//
