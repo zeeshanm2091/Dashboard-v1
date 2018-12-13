@@ -5,11 +5,15 @@
   }
 
   .right-block {
-    min-width: 450px;
+    min-width: 550px;
+    position: relative;
+    padding-right: 110px;
+
 
 
     @media screen and (max-width:767px) {
-      min-width: 40%;
+      min-width: 60%;
+      padding-right: 90px;
     }
 
 
@@ -35,7 +39,7 @@
            }
 
         .icon {
-          color: $secondary;
+          color: $primary;
           font-size: 25px;
           position: absolute;
           top: 50%;
@@ -43,6 +47,12 @@
           width: 30px;
           margin-top: -12px;
           left: -35px;
+          &.icon-compensations{
+            font-size: 30px;
+              @media screen and (max-width:767px) {
+                margin-top:-14px;
+              }
+          }
         }
       }
     }

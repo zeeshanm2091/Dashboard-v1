@@ -376,7 +376,6 @@ $(document).ready(function() {
     // console.log(selTxt);
     $(this).parent().parent().find('.selected-item').html(selTxt);
     $(this).parent().slideUp();
-
   })
 
   $('.multi-select .dropdown-item').click(function() {
@@ -641,6 +640,10 @@ $(document).ready(function() {
       $(this).find('.icon').removeClass('icon-next');
       $(this).find('.icon').addClass('icon-setting')
     }
+
+
+
+
   });
 
 
@@ -652,7 +655,9 @@ $(document).ready(function() {
     $('.main-content').animate({
       left: "0px"
     }, 300)
-    $('.setting-menu .setting-pull').find('.icon').addClass('icon-next');
+    $('.setting-menu .setting-pull').find('.icon').removeClass('icon-next');
+    $('.setting-menu .setting-pull').find('.icon').addClass('icon-setting');
+    $('.setting-menu .setting-pull').addClass('active');
   })
 
   $('.history-btn > .flat-btn').click(function(){

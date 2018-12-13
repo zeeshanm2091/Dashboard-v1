@@ -4,7 +4,9 @@
   height: 100vh;
 
   .setting-menu {
-    box-shadow: none;
+    webkit-box-shadow: 1px 2px 5px 0 #cccccc;
+    -moz-box-shadow: 1px 2px 5px 0 #cccccc;
+    box-shadow: 1px 2px 5px 0 #cccccc;
     left: 0px;
     @media screen and (max-width:992px) {
       display: none;
@@ -32,12 +34,13 @@
     width: 360px;
     height: 509px;
 
+
     .login-title-block {
       position: absolute;
       height: 210px;
       width: 210px;
       border-radius: 50%;
-      top: 30px;
+      top: 40px;
       left: 50%;
       margin-left: -105px;
       background-color: $white;
@@ -54,8 +57,8 @@
 
         &.icon-lock {
           font-size: 40px;
-          color: $secondary;
-          padding: 40px 0 10px;
+          color: $primary;
+          padding: 30px 0 10px;
           @media screen and (max-width:992px) {
             font-size: 30px;
             padding: 20px 0 10px;
@@ -64,7 +67,7 @@
 
         &.login-txt {
           text-transform: capitalize;
-          font-size: 14px;
+          font-size: 16px;
         }
       }
     }
@@ -75,10 +78,7 @@
       background-color: $white;
       padding: 40px;
       width: 100%;
-      @media screen and (max-width:992px) {
-        padding: 20px;
-        // width: 320px;
-      }
+
     }
   }
 }
@@ -91,7 +91,7 @@
 
   .re-me {
     &.active {
-      color: $secondary;
+      color: $success;
     }
     cursor: pointer;
 
@@ -101,7 +101,7 @@
       top: 3px;
       font-size: 16px;
     }
-    color: $disabled;
+    color: $caption;
   }
 
   a {
@@ -116,8 +116,8 @@
 
 .punch {
   .db-btn {
-    color: $secondary;
-    border: 1px solid $secondary;
+    color: $primary;
+    border: 1px solid $primary;
   }
 }
 
@@ -129,7 +129,7 @@
   margin-left: -175px;
   text-align: center;
   height: 250px;
-  background-color: $dark-secondary;
+  background-color: $primary;
   text-transform: capitalize;
   font-size: 16px;
   border-radius: 50%;
@@ -152,8 +152,11 @@
   width: 100%;
   height: calc(100vh - 81px);
   position: absolute;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,.6);
   opacity: 0.45;
+  @media screen and (max-width:767px){
+    height: calc(100vh - 61px);
+  }
 }
 
 .zingo-desc {
@@ -180,6 +183,9 @@
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
+    &:hover{
+      color: $primary;
+    }
     @media screen and (max-width:992px) {
       font-size: 16px;
     }
@@ -200,7 +206,7 @@
 
     &:nth-child(2) {
       font-size: 32px;
-      margin: 30px 0 40px;
+      margin: 20px 0 20px;
       @media screen and (max-width:992px) {
         font-size: 26px;
         margin: 20px 0;
@@ -354,16 +360,22 @@
 }
 
 .login-fields {
-  height: 30px;
+  height: 40px;
   margin-bottom: 10px;
-  border-bottom: 0;
-  font-size: 16px;
-  padding: 0 10px;
+  // border-bottom: 0;
+  font-size: 13px;
+  padding: 0 20px;
   text-transform: capitalize;
+  border:1px solid $border;
+  border-radius: 20px;
+
+  &.login-link-url{
+    text-transform: lowercase;
+  }
 
   &:focus,
   &:valid {
-    border-bottom: 0;
+    border-color:$border;
   }
 }
 
@@ -407,8 +419,12 @@ span.log-imgUplaod {}
 }
 
 .ef-date {
-  input {
+  .datePkr-block {
     width: 45%;
+  }
+
+  .accord-body-list{
+    align-items: center;
   }
 
   span {
@@ -418,7 +434,7 @@ span.log-imgUplaod {}
       text-align: center;
       text-transform: capitalize;
       font-weight: bold;
-      padding: 0 10px;
+      padding: 5px 10px 0px 10px;
     }
   }
 }

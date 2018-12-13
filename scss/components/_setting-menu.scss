@@ -58,9 +58,9 @@
     @include dis-flex();
     padding: 0 30px 30px;
     text-transform: capitalize;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 26px;
     border-bottom: 1px solid $border;
+    font-weight: 300;
 
     span {
       &:last-child {
@@ -76,6 +76,9 @@
     .accord-container {
       overflow: auto;
       height: 85vh;
+      // .accord-item{
+      //   background-color: $bg-color;
+      // }
     }
   }
 }
@@ -90,7 +93,8 @@
     height: 55px;
     border-bottom: 1px solid $border;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 16px;
+    background-color:$light;
     @include dis-flex();
     color: $text;
     cursor: pointer;
@@ -115,6 +119,7 @@
     align-items: flex-start;
     align-content: flex-start;
     padding: 30px;
+    background-color: $light;
     // overflow: auto;
     // height: 670px;
     section {
@@ -174,7 +179,7 @@
   width: 48%;
   height: 110px;
   border: 1px solid #cccc;
-  margin-bottom: 20px;
+  margin: 10px 0;
   cursor: pointer;
 
   &.big-item {
@@ -220,8 +225,10 @@
 .login-page {
   .accord-container {
     .accord-item-body {
-      height: 300px;
+      min-height: 200px;
       overflow: auto;
+      height:auto;
+      max-height: 600px;
 
       .db-btn {
         width: 50%;
@@ -269,7 +276,7 @@
   width: 100%;
   bottom: 0px;
   left: 0;
-  background-color: $secondary;
+  background-color: $primary;
   z-index: 10;
 
   .link-btn {

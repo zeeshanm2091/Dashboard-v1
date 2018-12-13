@@ -9,48 +9,56 @@
   width: 100%;
   z-index: 1000;
   display: none;
-  &.active{
+
+  &.active {
     @include dis-flex();
     justify-content: center;
   }
 
-  &.error-popup{
-    .confirm-btn{
-      margin-top:20px;
+  &.error-popup {
+    .confirm-btn {
+      margin-top: 20px;
     }
   }
 
-  .db-btn{
+  .db-btn {
     font-size: 16px;
     font-weight: bold;
   }
 
   .dp-popup-content {
     background-color: #fff;
-    padding: 60px 30px 30px 30px;
+    padding: 60px 30px 30px;
     border-radius: 10px;
     position: relative;
-    width:350px;
-    .db-popup-head{
-      text-transform: capitalize;
+    width: 350px;
+    min-height: 230px;
+
+    .db-popup-head {
+    
       font-weight: bold;
       text-align: center;
+
+      h2 {
+        margin-bottom: 20px;
+        color:$title;
+      }
     }
   }
 }
 
 .info-icon {
-height: 100px;
-width: 100px;
-background-color: $secondary;
-border-radius: 50%;
-position: absolute;
-top:50%;
-margin-top:-140px;
-left: 50%;
-margin-left: -50px;
-color: #fff;
-font-size: 70px;
-text-align: center;
-line-height: 100px;
+  height: 80px;
+  width: 80px;
+  background-color: $primary;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -155px;
+  left: 50%;
+  margin-left: -40px;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  line-height: 80px;
 }

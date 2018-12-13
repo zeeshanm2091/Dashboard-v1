@@ -1493,7 +1493,7 @@ table {
 }
 /****scroll bar****/
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
   height: 20px;
 }
 
@@ -1502,7 +1502,7 @@ table {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d6d8d1;
+  background: #111;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1513,6 +1513,10 @@ table {
 body {
   font-size: 14px;
   font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 h1 {
@@ -1632,6 +1636,32 @@ h6 {
   }
 }
 
+.lang-sel {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+.lang-sel .dropdown-block {
+  height: 20px;
+}
+.lang-sel .dropdown-block .selected-item {
+  text-transform: capitalize;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-align: right;
+  padding-right: 20px;
+}
+.lang-sel .dropdown-block .dropdown-list {
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.lang-sel .dropdown-block .dropdown-list .dropdown-item {
+  padding: 0 10px;
+  border-bottom: none;
+}
+
 .dropdown-block {
   position: relative;
   cursor: pointer;
@@ -1667,7 +1697,7 @@ h6 {
   background-color: #ffffff;
   width: 150px;
   right: 0;
-  border: 1px solid #d6d8d1;
+  border: 1px solid #ddd;
   display: none;
   top: 20px;
   z-index: 100;
@@ -1678,7 +1708,7 @@ h6 {
   padding: 0 5px;
   text-transform: capitalize;
   line-height: 30px;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
   position: relative;
 }
 .dropdown-block .dropdown-list .dropdown-item:hover,
@@ -1695,7 +1725,7 @@ h6 {
 }
 
 .serach-box {
-  color: #777874;
+  color: #555;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
@@ -1796,24 +1826,24 @@ h6 {
 #__ph0,
 #__ph1 {
   z-index: 1000000;
-  border: 1px dashed #d6d8d1;
+  border: 1px dashed #ddd;
   margin-top: 30px;
   height: 250px;
 }
 
 #__ph3 {
-  border: 1px dashed #d6d8d1;
+  border: 1px dashed #ddd;
   background-color: transparent;
 }
 
 #__ph4 {
-  border: 1px dashed #d6d8d1;
+  border: 1px dashed #ddd;
   background-color: transparent;
   box-sizing: border-box;
 }
 
 .placeholder {
-  border: 1px dashed #d6d8d1;
+  border: 1px dashed #ddd;
   width: 100px;
 }
 
@@ -1841,7 +1871,7 @@ h6 {
   flex-wrap: wrap;
   align-content: flex-start;
   min-height: 800px;
-  border: 1px dashed #d6d8d1;
+  border: 1px dashed #ddd;
 }
 .left-list section,
 .right-list section {
@@ -1858,7 +1888,7 @@ h6 {
   height: 40px;
   width: 40px;
   text-align: center;
-  background-color: #d6d8d1;
+  background-color: #ddd;
   cursor: pointer;
   display: none;
 }
@@ -1881,13 +1911,9 @@ h6 {
   width: 100%;
 }
 
-* {
-  font-family: Arial;
-}
-
 input {
   border: none;
-  border-bottom: solid 1px #d6d8d1;
+  border-bottom: solid 1px #ddd;
   z-index: 10;
   width: 100%;
 }
@@ -1895,7 +1921,7 @@ input {
 input:focus,
 input:valid {
   transition: 0.3s ease-in-out all;
-  border-bottom: solid 1px #99cc33;
+  border-bottom: solid 1px #33cccc;
   outline: none;
 }
 
@@ -1957,8 +1983,8 @@ label {
 
 input:focus + label,
 input:valid + label {
-  color: #99cc33;
-  font-size: 10px;
+  color: #33cccc;
+  font-size: 11px;
   top: -10px;
   transition: 0.2s ease all;
 }
@@ -1981,7 +2007,7 @@ label:hover {
 
 .db-btn {
   height: 40px;
-  border: 1px solid #d6d8d1;
+  border: 1px solid #ddd;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -1993,12 +2019,13 @@ label:hover {
   cursor: pointer;
   position: relative;
 }
-.db-btn:hover {
-  opacity: 0.8;
-}
 
 .flat-btn {
   height: 30px;
+}
+
+.db-popup-body .btn-group {
+  margin-top: 40px;
 }
 
 .btn-group {
@@ -2031,6 +2058,7 @@ label:hover {
   border-radius: 20px;
 }
 .db-toggle-btn.active span.toggle-btn-in {
+  background-color: #99cc33;
   left: calc(100% - 20px);
 }
 .db-toggle-btn.active span.btn-txt-off {
@@ -2043,7 +2071,7 @@ label:hover {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #99cc33;
+  background-color: #ff6666;
   display: block;
   position: absolute;
   left: 0;
@@ -2067,16 +2095,28 @@ label:hover {
   padding-left: 8px;
 }
 
-.sub-btn {
+.login-block .sub-btn {
+  background-color: #33cccc;
+}
+.login-block .sub-btn:hover {
   background-color: #99cc33;
+}
+.login-block .db-btn:hover {
+  background-color: #99cc33;
+  color: #ffffff;
+  border-color: #99cc33;
+}
+
+.sub-btn {
+  background-color: #33cc80;
   color: #ffffff;
   border: none;
   font-size: 16px;
 }
 
 .btn-yes {
-  background-color: #99cc33;
-  border-color: #99cc33;
+  background-color: #33cc80;
+  border-color: #33cc80;
   color: #ffffff;
 }
 
@@ -2119,10 +2159,25 @@ label:hover {
   display: none;
 }
 
+.common-label {
+  display: block;
+  text-transform: capitalize;
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*****color pickr*****/
+.pcr-app {
+  top: -120px !important;
+  left: 40px !important;
+}
+
 /****components****/
 .db-head {
   background-color: #ffffff;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
 }
 .db-head .db-head-content {
   height: 80px;
@@ -2195,7 +2250,7 @@ label:hover {
 }
 .db-head .db-head-content .left-block .menu-tab .close-btn {
   font-size: 20px;
-  color: #777874;
+  color: #555;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -2238,7 +2293,7 @@ label:hover {
   border-radius: 50%;
 }
 .db-head .db-head-content .right-block .right-head-menu .menu-main-content {
-  border: 1px solid #d6d8d1;
+  border: 1px solid #ddd;
   background-color: #ffffff;
   position: absolute;
   z-index: 11;
@@ -2273,7 +2328,7 @@ label:hover {
 .db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item {
   padding: 0 10px;
   line-height: 30px;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
   cursor: pointer;
 }
 .db-head .db-head-content .right-block .right-head-menu .menu-main-content .more-menu-item .icon {
@@ -2314,7 +2369,7 @@ label:hover {
 .db-head .db-head-content .right-block .header-notification .noti-wrap:before {
   content: "";
   position: absolute;
-  border-bottom: 10px solid #d6d8d1;
+  border-bottom: 10px solid #ddd;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
   top: -10px;
@@ -2346,7 +2401,7 @@ label:hover {
 }
 .db-head .db-head-content .right-block .header-notification .noti-wrap .noti-header span:last-child {
   text-transform: uppercase;
-  color: #777874;
+  color: #555;
 }
 .db-head .db-head-content .right-block .header-notification .noti-wrap .noti-header span:last-child span.icon.icon-filter {
   font-size: 20px;
@@ -2356,7 +2411,7 @@ label:hover {
 .db-head .db-head-content .right-block .header-notification .noti-wrap .noti-footer {
   text-align: center;
   text-transform: uppercase;
-  color: #777874;
+  color: #555;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -2391,11 +2446,11 @@ label:hover {
 .noti-list .noti-item {
   padding: 0 20px;
   height: 80px;
-  color: #777874;
+  color: #555;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
 }
 .noti-list .noti-item .noti-item-left {
   display: flex;
@@ -2589,7 +2644,7 @@ label:hover {
 .setting-menu {
   width: 500px;
   position: fixed;
-  background-color: #f1f3ed;
+  background-color: #ffffff;
   left: -100%;
   height: 100vh;
   z-index: 99;
@@ -2613,9 +2668,9 @@ label:hover {
   align-items: center;
   padding: 0 30px 30px;
   text-transform: capitalize;
-  font-size: 30px;
-  font-weight: bold;
-  border-bottom: 1px solid #d6d8d1;
+  font-size: 26px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 300;
 }
 .setting-menu .setting-head span:last-child {
   cursor: pointer;
@@ -2635,13 +2690,14 @@ label:hover {
 .accord-container .accord-item-title {
   padding: 0 30px;
   height: 55px;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #777874;
+  color: #555;
   cursor: pointer;
 }
 .accord-container .active .accord-item-body {
@@ -2649,7 +2705,7 @@ label:hover {
 }
 .accord-container .accord-item-body {
   height: calc(100vh - 256px);
-  background-color: #f1f3ed;
+  background-color: #ffffff;
   display: none;
   overflow: auto;
 }
@@ -2661,6 +2717,7 @@ label:hover {
   align-items: flex-start;
   align-content: flex-start;
   padding: 30px;
+  background-color: #ffffff;
 }
 .accord-container .accord-body-list section {
   height: 170px;
@@ -2672,7 +2729,7 @@ label:hover {
 }
 .accord-container .accord-body-list section .widget-img {
   height: 120px;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
 }
 .accord-container .accord-body-list section .widget-img img {
   height: 100%;
@@ -2688,7 +2745,7 @@ label:hover {
   align-items: center;
   text-transform: capitalize;
   font-weight: bold;
-  color: #777874;
+  color: #555;
   justify-content: center;
   height: 50px;
   padding: 0 5px;
@@ -2705,7 +2762,7 @@ label:hover {
   width: 48%;
   height: 110px;
   border: 1px solid #cccc;
-  margin-bottom: 20px;
+  margin: 10px 0;
   cursor: pointer;
 }
 .theme-item.big-item {
@@ -2746,8 +2803,10 @@ label:hover {
 }
 
 .login-page .accord-container .accord-item-body {
-  height: 300px;
+  min-height: 200px;
   overflow: auto;
+  height: auto;
+  max-height: 600px;
 }
 .login-page .accord-container .accord-item-body .db-btn {
   width: 50%;
@@ -2763,7 +2822,7 @@ label:hover {
   justify-content: space-between;
   cursor: pointer;
   padding: 10px 0;
-  border-bottom: 1px solid #d6d8d1;
+  border-bottom: 1px solid #ddd;
 }
 .changeHistory .db-history-ListItem .history-item {
   display: flex;
@@ -2791,7 +2850,7 @@ label:hover {
   width: 100%;
   bottom: 0px;
   left: 0;
-  background-color: #99cc33;
+  background-color: #33cccc;
   z-index: 10;
 }
 .accord-item.app-changes .link-btn {
@@ -2804,7 +2863,7 @@ label:hover {
 .login-inputs .accord-body-list .bannerInput-group .banner-label {
   display: block;
   text-transform: capitalize;
-  color: #777874;
+  color: #555;
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
