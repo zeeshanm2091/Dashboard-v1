@@ -3,8 +3,6 @@
   .card-body{
     .card-left{
       span{
-        font-size: 60px;
-        color:$secondary;
         @media screen and (max-width:1200px){
           font-size: 40px;
         }
@@ -39,7 +37,7 @@
       position: relative;
       cursor: pointer;
       &.active{
-        border-bottom:1px solid #ccc;
+        border-bottom:2px solid $primary;
       }
       &.ctc-title {
         position: relative;

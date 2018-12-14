@@ -681,6 +681,34 @@ $(document).ready(function() {
 
   //**********************colorpicker*************************
 
+
+
+
+  var overlayColor;
+  $('.overlay-setup .sub-btn').click(function() {
+    overlayColor = $('.pcr-button').css("backgroundColor");
+    $('.db-overlay').css({
+      "background-color": overlayColor
+    })
+  })
+
+
+  $('.ctc-tab .card-head-title span').click(function() {
+    if ($(this).index() === 0) {
+      $(this).addClass('active')
+      $('.ctc-body').fadeIn();
+      $('.nonctc-body').fadeOut();
+      $(this).siblings().removeClass('active')
+    } else {
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active');
+      $('.nonctc-body').fadeIn();
+      $('.ctc-body').fadeOut();
+    }
+
+  });
+
+
   const pickr = new Pickr({
     el: '.color-picker',
     default: '#42445A',
@@ -700,15 +728,6 @@ $(document).ready(function() {
   });
 
 
-  var overlayColor;
-  $('.overlay-setup .sub-btn').click(function() {
-    overlayColor = $('.pcr-button').css("backgroundColor");
-    $('.db-overlay').css({
-      "background-color": overlayColor
-    })
-  })
-
-
 
 
 
@@ -721,22 +740,3 @@ $(document).ready(function() {
 //************************************************************************popup block*****************************************************//
 
 //***********************************************************************ctc tab *******************************************************//
-
-
-$('.ctc-tab .card-head-title span').click(function() {
-
-
-
-  if ($(this).index() === 0) {
-    $(this).addClass('active')
-    $('.ctc-body').fadeIn();
-    $('.nonctc-body').fadeOut();
-    $(this).siblings().removeClass('active')
-  } else {
-    $(this).addClass('active')
-    $(this).siblings().removeClass('active');
-    $('.nonctc-body').fadeIn();
-    $('.ctc-body').fadeOut();
-  }
-
-});

@@ -2,6 +2,9 @@
   padding: 0px;
   .card-head{
     padding: 20px 20px 0 20px;
+    @media screen and (max-width:1200px){
+      padding: 10px 10px 0 10px;
+    }
   }
   .card-body{
     height: auto;
@@ -26,9 +29,7 @@
         width: auto;
         background-color:transparent;
         border-radius: 0%;
-        margin-bottom: 15px;
-        color:$dark-secondary;
-        font-size:60px;
+        margin-bottom: 10px;
         @media screen and (max-width:1200px){
           font-size: 40px;
         }

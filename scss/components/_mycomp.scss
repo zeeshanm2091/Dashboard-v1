@@ -6,10 +6,7 @@
     .card-left {
       // width: 40%;
       text-align: center;
-
       span {
-        font-size: 60px;
-        color: $dark-secondary;
         @media screen and (max-width:1200px) {
           font-size: 40px;
         }
@@ -21,11 +18,7 @@
 
     .card-right {
       // width: 60%;
-      p {
-        text-transform: capitalize;
-        line-height: 20px;
-        color: $text;
-      }
+
     }
   }
 }

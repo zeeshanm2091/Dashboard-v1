@@ -225,10 +225,10 @@
 .login-page {
   .accord-container {
     .accord-item-body {
-      min-height: 200px;
+      height: 300px;
       overflow: auto;
-      height:auto;
-      max-height: 600px;
+      // height:auto;
+      // max-height: 600px;
 
       .db-btn {
         width: 50%;

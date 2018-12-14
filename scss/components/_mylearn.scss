@@ -5,6 +5,7 @@
     .learn-list {
       @include dis-flex();
       width:100%;
+      justify-content: space-evenly;
       @media screen and (max-width:767px){
         // flex-direction: column;
         flex-wrap:wrap;
@@ -12,14 +13,12 @@
       }
       .learn-item{
         @include dis-flex();
-        width: 33.33%;
+        width: 30%;
         @media screen and (max-width:767px){
           width:50%;
           margin-bottom: 20px;
         }
         .card-left{
-          font-size: 60px;
-          color:$secondary;
           @media screen and (max-width:1200px){
             font-size: 40px;
           }
@@ -30,10 +29,10 @@
         .card-right{
           color:$text;
           text-transform: capitalize;
+          margin-left: 10px;
           .learn-desc{
             .learn-top{
               font-weight: bold;
-              margin-bottom: 5px;
             }
             .learn-bottom{
               line-height:18px;

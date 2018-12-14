@@ -20,8 +20,12 @@
       }
 
       .attn-info {
-        span {
+        p {
           color:$text;
+          // &.attn-desc{
+          //
+          // }
+
 
           &.attn-count {
             font-size: 40px;

@@ -1511,12 +1511,14 @@ table {
 
 /******main content*****/
 body {
-  font-size: 14px;
+  font-size: 13px;
   font-family: sans-serif;
+  color: #555;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  line-height: 1.2em;
 }
 
 h1 {
@@ -1541,6 +1543,44 @@ h5 {
 
 h6 {
   font-size: 11px;
+}
+
+.primary-icon {
+  color: #33cccc !important;
+  font-size: 60px !important;
+}
+
+p {
+  text-transform: capitalize !important;
+  color: #555 !important;
+  line-height: 1.5em;
+  font-size: 13px;
+}
+
+.caption {
+  font-size: 11px !important;
+  color: #888 !important;
+  line-height: 0.85em;
+}
+
+.tn-sm {
+  height: 35px;
+  width: 35px;
+}
+
+.tn-md {
+  height: 50px;
+  width: 50px;
+}
+
+.tn-lg {
+  height: 80px;
+  width: 80px;
+}
+
+.tn-xl {
+  height: 120px;
+  width: 120px;
 }
 
 * {
@@ -1726,7 +1766,7 @@ h6 {
 
 .serach-box {
   color: #555;
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1741,8 +1781,8 @@ h6 {
   margin: 0;
   border: none;
   height: 20px;
-  width: 140px;
-  font-size: 14px;
+  width: 120px;
+  font-size: 13px;
   text-transform: capitalize;
   box-sizing: border-box;
 }
@@ -1759,7 +1799,7 @@ h6 {
   }
 }
 .serach-box input[type=text]:focus {
-  outline: none;
+  border-bottom: 1px solid #33cccc;
 }
 
 .divide-block {
@@ -1787,7 +1827,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 45px);
+  height: calc(100% - 65px);
   padding: 0 20px;
 }
 @media screen and (max-width: 1200px) {
@@ -2172,6 +2212,12 @@ label:hover {
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
+}
+
+.dropdown-block input {
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
 }
 
 /****components****/
@@ -2618,10 +2664,7 @@ label:hover {
   height: 25px;
   line-height: 25px;
   padding: 0 15px;
-  background: -webkit-linear-gradient(left, #61bd89 0%, #61bd89 40%, #83bd59 100%, #92bd4d 100%);
-  background: -moz-linear-gradient(left, #61bd89 0%, #61bd89 40%, #83bd59 100%, #92bd4d 100%);
-  background: -o-linear-gradient(left, #61bd89 0%, #61bd89 40%, #83bd59 100%, #92bd4d 100%);
-  background: linear-gradient(left, #61bd89 0%, #61bd89 40%, #83bd59 100%, #92bd4d 100%);
+  background-color: #33cccc;
   color: #ffffff;
   text-transform: capitalize;
   display: inline-block;
@@ -2639,8 +2682,6 @@ label:hover {
   font-weight: bold;
   text-transform: capitalize;
   line-height: 20px;
-  margin-bottom: 10px;
-  text-align: justify;
 }
 @media screen and (max-width: 1200px) {
   .newsCard .newsCard-content .newsCard-desc .newsCard-title {
@@ -2658,7 +2699,7 @@ label:hover {
   bottom: 0;
   right: 0;
   color: #99cc33;
-  font-size: 20px;
+  font-size: 20px !important;
   transition: all 0.2s ease-in-out;
 }
 .newsCard .newsCard-content .newsCard-desc .newsCard-link span:hover {
@@ -2884,9 +2925,6 @@ label:hover {
     font-size: 12px;
   }
 }
-.db-slider .slider-item-content .slider-bottom-block .emp-desg {
-  font-size: 11px;
-}
 .db-slider .slider-item-content .slider-bottom-block .emp-desg span {
   display: block;
   margin-bottom: 5px;
@@ -2960,7 +2998,7 @@ label:hover {
 }
 
 .db-arrow {
-  color: green;
+  color: #33cccc;
   font-size: 20px;
   background-image: none;
   height: 40px;
@@ -3085,14 +3123,19 @@ label:hover {
   flex-wrap: wrap;
   height: 110px;
   overflow-y: scroll;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .my-team .myteam-list {
+    padding: 0 10px;
+  }
 }
 .my-team .myteam-list .myteam-item {
   position: relative;
   margin: 0 5px 5px;
 }
 .my-team .myteam-list .myteam-item img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
   background-color: #000000;
   border-radius: 50%;
 }
@@ -3117,11 +3160,6 @@ label:hover {
 .mypms-card .card-body .card-left {
   text-align: center;
 }
-.mycomp-card .card-body .card-left span,
-.mypms-card .card-body .card-left span {
-  font-size: 60px;
-  color: #89b72e;
-}
 @media screen and (max-width: 1200px) {
   .mycomp-card .card-body .card-left span,
 .mypms-card .card-body .card-left span {
@@ -3134,18 +3172,16 @@ label:hover {
     font-size: 60px;
   }
 }
-.mycomp-card .card-body .card-right p,
-.mypms-card .card-body .card-right p {
-  text-transform: capitalize;
-  line-height: 20px;
-  color: #555;
-}
-
 .moreLink-card {
   padding: 0px;
 }
 .moreLink-card .card-head {
   padding: 20px 20px 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .moreLink-card .card-head {
+    padding: 10px 10px 0 10px;
+  }
 }
 .moreLink-card .card-body {
   height: auto;
@@ -3170,9 +3206,7 @@ label:hover {
   width: auto;
   background-color: transparent;
   border-radius: 0%;
-  margin-bottom: 15px;
-  color: #89b72e;
-  font-size: 60px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1200px) {
   .moreLink-card .db-slider .slider-item-content .slider-top-block {
@@ -3204,17 +3238,17 @@ label:hover {
 .atten-card .card-body .card-right .empConnect {
   margin-top: 0px;
 }
-.atten-card .card-body .card-right .attn-info span {
+.atten-card .card-body .card-right .attn-info p {
   color: #555;
 }
-.atten-card .card-body .card-right .attn-info span.attn-count {
+.atten-card .card-body .card-right .attn-info p.attn-count {
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 5px;
   display: block;
 }
 @media screen and (max-width: 1024px) {
-  .atten-card .card-body .card-right .attn-info span.attn-count {
+  .atten-card .card-body .card-right .attn-info p.attn-count {
     font-size: 30px;
   }
 }
@@ -3282,7 +3316,7 @@ label:hover {
   background-color: #99cc33;
 }
 .atten-card .attn-cal-list span.cal-date.cal-lapplied {
-  background-color: #666;
+  background-color: #888;
 }
 .atten-card .attn-cal-list span.cal-date.cal-lapproved {
   background-color: #6666cc;
@@ -3306,7 +3340,7 @@ label:hover {
   background-color: #99cc33;
 }
 .atten-card .attn-cal-list span.cal-date.cal-secLevApplied:after {
-  background-color: #666;
+  background-color: #888;
 }
 .atten-card .attn-cal-list span.cal-date.cal-secLevApproved:before {
   background-color: #99cc33;
@@ -3317,10 +3351,6 @@ label:hover {
 
 .ctc-card {
   color: #555;
-}
-.ctc-card .card-body .card-left span {
-  font-size: 60px;
-  color: #99cc33;
 }
 @media screen and (max-width: 1200px) {
   .ctc-card .card-body .card-left span {
@@ -3354,7 +3384,7 @@ label:hover {
   cursor: pointer;
 }
 .ctc-tab .card-head-title span.active {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #33cccc;
 }
 .ctc-tab .card-head-title span.ctc-title {
   position: relative;
@@ -3378,6 +3408,7 @@ label:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  justify-content: space-evenly;
 }
 @media screen and (max-width: 767px) {
   .mylearn-card .card-body .learn-list {
@@ -3389,17 +3420,13 @@ label:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 33.33%;
+  width: 30%;
 }
 @media screen and (max-width: 767px) {
   .mylearn-card .card-body .learn-list .learn-item {
     width: 50%;
     margin-bottom: 20px;
   }
-}
-.mylearn-card .card-body .learn-list .learn-item .card-left {
-  font-size: 60px;
-  color: #99cc33;
 }
 @media screen and (max-width: 1200px) {
   .mylearn-card .card-body .learn-list .learn-item .card-left {
@@ -3414,10 +3441,10 @@ label:hover {
 .mylearn-card .card-body .learn-list .learn-item .card-right {
   color: #555;
   text-transform: capitalize;
+  margin-left: 10px;
 }
 .mylearn-card .card-body .learn-list .learn-item .card-right .learn-desc .learn-top {
   font-weight: bold;
-  margin-bottom: 5px;
 }
 .mylearn-card .card-body .learn-list .learn-item .card-right .learn-desc .learn-bottom {
   line-height: 18px;
@@ -3471,15 +3498,6 @@ label:hover {
   margin-left: -21px;
   border-radius: 50%;
 }
-@media screen and (max-width: 1200px) {
-  .rnr-block .rnr-list .rnr-item:before {
-    height: 32px;
-    width: 32px;
-    top: -16px;
-    left: 50%;
-    margin-left: -16px;
-  }
-}
 @media screen and (max-width: 992px) {
   .rnr-block .rnr-list .rnr-item:before {
     height: 42px;
@@ -3502,7 +3520,7 @@ label:hover {
 }
 @media screen and (max-width: 1200px) {
   .rnr-block .rnr-list .rnr-item:after {
-    height: 16px;
+    height: 21px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -3561,8 +3579,6 @@ label:hover {
   color: #555;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top .rnr-img {
-  height: 40px;
-  width: 40px;
   margin-right: 10px;
 }
 .rnr-block .rnr-list .rnr-item .rnr-top .rnr-img img {
@@ -3780,10 +3796,8 @@ label:hover {
 }
 
 .login-page .accord-container .accord-item-body {
-  min-height: 200px;
+  height: 300px;
   overflow: auto;
-  height: auto;
-  max-height: 600px;
 }
 .login-page .accord-container .accord-item-body .db-btn {
   width: 50%;
@@ -4098,7 +4112,7 @@ label:hover {
 }
 .login-input-list .re-me {
   cursor: pointer;
-  color: #666;
+  color: #888;
 }
 .login-input-list .re-me.active {
   color: #33cc80;

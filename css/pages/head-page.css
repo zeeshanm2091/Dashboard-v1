@@ -1511,12 +1511,14 @@ table {
 
 /******main content*****/
 body {
-  font-size: 14px;
+  font-size: 13px;
   font-family: sans-serif;
+  color: #555;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  line-height: 1.2em;
 }
 
 h1 {
@@ -1541,6 +1543,44 @@ h5 {
 
 h6 {
   font-size: 11px;
+}
+
+.primary-icon {
+  color: #33cccc !important;
+  font-size: 60px !important;
+}
+
+p {
+  text-transform: capitalize !important;
+  color: #555 !important;
+  line-height: 1.5em;
+  font-size: 13px;
+}
+
+.caption {
+  font-size: 11px !important;
+  color: #888 !important;
+  line-height: 0.85em;
+}
+
+.tn-sm {
+  height: 35px;
+  width: 35px;
+}
+
+.tn-md {
+  height: 50px;
+  width: 50px;
+}
+
+.tn-lg {
+  height: 80px;
+  width: 80px;
+}
+
+.tn-xl {
+  height: 120px;
+  width: 120px;
 }
 
 * {
@@ -1726,7 +1766,7 @@ h6 {
 
 .serach-box {
   color: #555;
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1741,8 +1781,8 @@ h6 {
   margin: 0;
   border: none;
   height: 20px;
-  width: 140px;
-  font-size: 14px;
+  width: 120px;
+  font-size: 13px;
   text-transform: capitalize;
   box-sizing: border-box;
 }
@@ -1759,7 +1799,7 @@ h6 {
   }
 }
 .serach-box input[type=text]:focus {
-  outline: none;
+  border-bottom: 1px solid #33cccc;
 }
 
 .divide-block {
@@ -1787,7 +1827,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 45px);
+  height: calc(100% - 65px);
   padding: 0 20px;
 }
 @media screen and (max-width: 1200px) {
@@ -2172,6 +2212,12 @@ label:hover {
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
+}
+
+.dropdown-block input {
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
 }
 
 /****components****/
@@ -2803,10 +2849,8 @@ label:hover {
 }
 
 .login-page .accord-container .accord-item-body {
-  min-height: 200px;
+  height: 300px;
   overflow: auto;
-  height: auto;
-  max-height: 600px;
 }
 .login-page .accord-container .accord-item-body .db-btn {
   width: 50%;

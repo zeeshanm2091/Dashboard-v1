@@ -92,7 +92,7 @@
           height: 25px;
           line-height: 25px;
           padding: 0 15px;
-          @include gradient(left,$list1);
+          background-color: $primary;
           color: $white;
           text-transform: capitalize;
           display: inline-block;
@@ -112,8 +112,7 @@
         font-weight: bold;
         text-transform: capitalize;
         line-height: 20px;
-        margin-bottom: 10px;
-        text-align: justify;
+
         @media screen and (max-width: 1200px){
           font-size: 14px;
           line-height: 16px;
@@ -131,7 +130,7 @@
           bottom: 0;
           right: 0;
           color: $secondary;
-          font-size: 20px;
+          font-size: 20px !important;
           transition: all 0.2s ease-in-out;
           &:hover{
             transform: scale(1.05);
