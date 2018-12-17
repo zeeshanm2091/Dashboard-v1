@@ -2148,7 +2148,7 @@ label:hover {
 }
 
 .sub-btn {
-  background-color: #33cc80;
+  background-color: #33cccc;
   color: #ffffff;
   border: none;
   font-size: 16px;
@@ -3686,7 +3686,6 @@ label:hover {
   border-bottom: 1px solid #ddd;
   text-transform: capitalize;
   font-size: 16px;
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3749,6 +3748,14 @@ label:hover {
 }
 .accord-container .overlay-setup .accord-body-list {
   display: block;
+}
+.accord-container .overlay-setup .color-block {
+  height: 100px;
+  width: 100px;
+  margin: 10px 0 20px 0;
+}
+.accord-container .overlay-setup .pickr-child {
+  border-radius: 10px;
 }
 
 .theme-item {
@@ -3839,7 +3846,7 @@ label:hover {
 .accord-item.app-changes {
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   background-color: #33cccc;
   z-index: 10;
@@ -3858,6 +3865,53 @@ label:hover {
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.colour-setup .accord-body-list {
+  display: flex;
+  flex-direction: column;
+}
+.colour-setup .color-change-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+.colour-setup .color-change-block .common-label {
+  margin-bottom: 0px;
+}
+
+.pickr-child {
+  background-color: #33cccc;
+}
+
+.bc-var .pickr-child {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.hdBc-var .pickr-child {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.hdTxt-var .pickr-child {
+  background-color: #555;
+  border: 1px solid #555;
+}
+
+.titTxt-var .pickr-child {
+  background-color: #555;
+  border: 1px solid #555;
+}
+
+.txt-var .pickr-child {
+  background-color: #555;
+  border: 1px solid #555;
 }
 
 .db-basic-banner {
@@ -3988,7 +4042,7 @@ label:hover {
   }
 }
 .login-head .right-block .imp-link a {
-  color: #000000;
+  color: #555;
   text-transform: capitalize;
   font-size: 14px;
   text-decoration: none;
@@ -3998,7 +4052,7 @@ label:hover {
   text-decoration: underline;
 }
 .login-head .right-block .imp-link a .icon {
-  color: #33cccc;
+  color: #555;
   font-size: 25px;
   position: absolute;
   top: 50%;
@@ -4020,6 +4074,7 @@ label:hover {
   background-image: url("../../images/bg3.jpg");
   background-size: cover;
   height: 100vh;
+  left: 500px;
 }
 .login-page .setting-menu {
   webkit-box-shadow: 1px 2px 5px 0 #cccccc;

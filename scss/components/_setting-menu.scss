@@ -94,7 +94,7 @@
     border-bottom: 1px solid $border;
     text-transform: capitalize;
     font-size: 16px;
-    background-color:$light;
+    // background-color: $light;
     @include dis-flex();
     color: $text;
     cursor: pointer;
@@ -171,6 +171,14 @@
     .accord-body-list {
       display: block;
     }
+    .color-block{
+      height:100px;
+      width:100px;
+      margin:10px 0 20px 0;
+    }
+    .pickr-child{
+      border-radius:10px;
+    }
   }
 }
 //theme change list
@@ -229,7 +237,6 @@
       overflow: auto;
       // height:auto;
       // max-height: 600px;
-
       .db-btn {
         width: 50%;
       }
@@ -274,7 +281,7 @@
 .accord-item.app-changes {
   position: absolute;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   background-color: $primary;
   z-index: 10;
@@ -287,7 +294,8 @@
 .login-inputs {
   .accord-body-list {
     display: block;
-    .bannerInput-group{
+
+    .bannerInput-group {
       .banner-label {
         display: block;
         text-transform: capitalize;
@@ -298,6 +306,48 @@
         font-weight: bold;
       }
     }
-
   }
+}
+
+.colour-setup {
+  .accord-body-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .color-change-block {
+    @include dis-flex();
+    padding: 10px;
+    border: 1px solid $border;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    .common-label{
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.pickr-child{
+  background-color: $primary;
+}
+
+.bc-var .pickr-child{
+background-color: $white;
+border:1px solid $border;
+}
+.hdBc-var .pickr-child{
+background-color: $white;
+border:1px solid $border;
+}
+.hdTxt-var .pickr-child{
+background-color: $text;
+border:1px solid $text;
+}
+.titTxt-var .pickr-child{
+background-color: $text;
+border:1px solid $text;
+}
+.txt-var .pickr-child{
+background-color: $text;
+border:1px solid $text;
 }

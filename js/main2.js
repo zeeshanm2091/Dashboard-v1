@@ -684,13 +684,7 @@ $(document).ready(function() {
 
 
 
-  var overlayColor;
-  $('.overlay-setup .sub-btn').click(function() {
-    overlayColor = $('.pcr-button').css("backgroundColor");
-    $('.db-overlay').css({
-      "background-color": overlayColor
-    })
-  })
+
 
 
   $('.ctc-tab .card-head-title span').click(function() {
@@ -709,23 +703,167 @@ $(document).ready(function() {
   });
 
 
-  const pickr = new Pickr({
-    el: '.color-picker',
-    default: '#42445A',
-    components: {
-      preview: true,
-      opacity: true,
-      hue: true,
-      interaction: {
-        hex: true,
-        rgba: true,
-        hsva: true,
-        input: true,
-        clear: true,
-        save: true
-      }
-    }
+  // const pickr = new Pickr({
+  //   el: '.color-picker1',
+  //   default: '#42445A',
+  //   components: {
+  //     preview: true,
+  //     opacity: true,
+  //     hue: true,
+  //     interaction: {
+  //       hex: true,
+  //       rgba: true,
+  //       hsva: true,
+  //       input: true,
+  //       clear: true,
+  //       save: true
+  //     }
+  //   }
+  // });
+
+
+  var overlayColor;
+  $('.overlay-setup .sub-btn').click(function() {
+    overlayColor = $('.pickr-child').css("backgroundColor");
+    $('.db-overlay').css({
+      "background-color": overlayColor,
+    })
+
   });
+
+
+
+
+
+  $('.overlay-setup .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.overlay-setup .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+
+  $('.bc-var .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.bc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+  $('.hdBc-var .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.hdBc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+
+  $('.hdTxt-var .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.hdTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+
+  $('.titTxt-var .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.titTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+
+
+
+  $('.txt-var .color-block').ColorPicker({
+    // color: '#0000ff',
+    onShow: function(colpkr) {
+      $(colpkr).fadeIn(500);
+      return false;
+    },
+    onHide: function(colpkr) {
+      $(colpkr).fadeOut(500);
+      return false;
+    },
+      onChange: function(hsb, hex, rgb) {
+        $('.txt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+      }
+  });
+
+
+
+  $('.colour-setup .sub-btn').click(function(){
+    var bcvar = $('.bc-var .pickr-child').css('background-color');
+    var hdBcvar = $('.hdBc-var .pickr-child').css('background-color');
+    var hdTxtvar = $('.hdTxt-var .pickr-child').css('background-color');
+    var titTxtvar = $('.titTxt-var .pickr-child').css('background-color');
+    var txtvar = $('.txt-var .pickr-child').css('background-color');
+
+    var mainColors = {
+      "background":bcvar,
+      "headerBackground":hdBcvar,
+      "headerText":hdTxtvar,
+      "titleText":titTxtvar,
+      "text":txtvar
+    }
+
+    console.log(mainColors.background);
+
+    $('body').css("background-color",mainColors.background);
+    $('.db-head').css("background-color",mainColors.headerBackground);
+    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel').css("color",mainColors.headerText);
+    $('.dashboard-page h4,.loginTitle').css("color",mainColors.titleText);
+
+  })
+
+
+
+
+  $('login-body-block .input-group label').click(function(){
+    
+  })
+
 
 
 
