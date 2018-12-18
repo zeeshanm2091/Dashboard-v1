@@ -1958,10 +1958,15 @@ input {
   width: 100%;
 }
 
-input:focus,
-input:valid {
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: white !important;
+  background-image: none !important;
+}
+
+.login-body-block input:focus,
+.login-body-block input:valid {
   transition: 0.3s ease-in-out all;
-  border-bottom: solid 1px #33cccc;
+  border-bottom: solid 1px #33cccc !important;
   outline: none;
 }
 

@@ -85,7 +85,7 @@ $(document).ready(function() {
     $('.noti-wrap').fadeIn();
   });
 
-  $('.right-block .right-head-menu .menu-icon').click(function(){
+  $('.right-block .right-head-menu .menu-icon').click(function() {
     $('.right-block .menu-main-content').fadeIn()
   })
 
@@ -405,7 +405,7 @@ $(document).ready(function() {
 
   $('.login-inputs .accord-item-title').click(function() {
     for (var i = 0; i < langArr.length; i++) {
-      $('.login-inputs .accord-item-body .addonInput').append('<div class="theme-list accord-body-list'+" "+langArr[i]+'"> <div class="language-title">' + langArr[i] + '</div> <input type="text" class="login-fields login-title" placeholder="title"> <input type="text" class="login-fields login-subtitle" placeholder="subtitle"> <input type="text" class="login-fields login-link-input" placeholder="link text"> <input type="text" class="login-fields login-link-url" placeholder="link url"> <div class="db-error-mgs"> <span>*Please enter the required fields</span> </div> <div class="db-btn input-submit sub-btn"> <span>submit</span> </div> </div>')
+      $('.login-inputs .accord-item-body .addonInput').append('<div class="theme-list accord-body-list' + " " + langArr[i] + '"> <div class="language-title">' + langArr[i] + '</div> <input type="text" class="login-fields login-title" placeholder="title"> <input type="text" class="login-fields login-subtitle" placeholder="subtitle"> <input type="text" class="login-fields login-link-input" placeholder="link text"> <input type="text" class="login-fields login-link-url" placeholder="link url"> <div class="db-error-mgs"> <span>*Please enter the required fields</span> </div> <div class="db-btn input-submit sub-btn"> <span>submit</span> </div> </div>')
     }
   });
 
@@ -530,6 +530,7 @@ $(document).ready(function() {
       overlay: overlayColor,
       bgImg: $('.img-display-block > img').attr('src'),
       punch: punchInVal,
+      companyCode: ccVal,
       effDate: {
         StartDate: $('.esStDate').val(),
         EndDate: $('.esEdDate').val()
@@ -543,8 +544,19 @@ $(document).ready(function() {
       languages: langArr.toString()
 
     }];
+
+    var basicColor = {
+      "mainBgColor":$('body').css("background-color"),
+      "mainHdBgColor":$('.db-head').css("background-color"),
+      "mainHdText":$('.login-head .right-block .imp-link a').css("color"),
+      "mainTitleTxt":$('.dashboard-page h4,.loginTitle').css("color"),
+      "mainTxtColor":$('body').css("color")
+    }
+
+
+    console.log(basicColor);
+
     console.log(appArr);
-    console.log(langArr.length);
   })
 
   //*******************************************************************************Apply button****************************************************************//
@@ -648,7 +660,7 @@ $(document).ready(function() {
 
 
 
-  $('.pre-btn,.btn-yes,.history-btn > .flat-btn:first-child').click(function(){
+  $('.pre-btn,.btn-yes,.history-btn > .flat-btn:first-child').click(function() {
     $('.setting-menu').animate({
       left: "-500px"
     }, 300)
@@ -660,18 +672,30 @@ $(document).ready(function() {
     $('.setting-menu .setting-pull').addClass('active');
   })
 
-  $('.history-btn > .flat-btn').click(function(){
+  $('.history-btn > .flat-btn').click(function() {
     $('.db-history-ListItem').siblings().find('.history-btn > .flat-btn').removeClass('sub-btn');
     $(this).addClass("sub-btn");
   })
 
   var punchInVal = 1;
-  $('.login-btn').click(function() {})
+  var ccVal = 1;
+
+
   $('.db-toggle-btn').click(function() {
     $(this).toggleClass('active')
+  })
+
+  $('.punch-opt .db-toggle-btn').click(function() {
     $('.btn-group.punch').toggle(200);
     if ($(this).attr('class') === 'db-toggle-btn active') {
       punchInVal = 0
+    }
+  })
+
+  $('.cc-opt .db-toggle-btn').click(function() {
+    $('.input-group.com-code').toggle(200);
+    if ($(this).attr('class') === 'db-toggle-btn active') {
+      ccVal = 0
     }
   })
 
@@ -722,6 +746,11 @@ $(document).ready(function() {
   // });
 
 
+
+
+  /*****new code for color picker******/
+
+
   var overlayColor;
   $('.overlay-setup .sub-btn').click(function() {
     overlayColor = $('.pickr-child').css("backgroundColor");
@@ -731,12 +760,7 @@ $(document).ready(function() {
 
   });
 
-
-
-
-
   $('.overlay-setup .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -745,14 +769,13 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.overlay-setup .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.overlay-setup .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
 
 
   $('.bc-var .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -761,13 +784,12 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.bc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.bc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
 
   $('.hdBc-var .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -776,14 +798,12 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.hdBc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.hdBc-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
-
 
   $('.hdTxt-var .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -792,14 +812,12 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.hdTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.hdTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
-
 
   $('.titTxt-var .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -808,16 +826,12 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.titTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.titTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
-
-
-
 
   $('.txt-var .color-block').ColorPicker({
-    // color: '#0000ff',
     onShow: function(colpkr) {
       $(colpkr).fadeIn(500);
       return false;
@@ -826,47 +840,42 @@ $(document).ready(function() {
       $(colpkr).fadeOut(500);
       return false;
     },
-      onChange: function(hsb, hex, rgb) {
-        $('.txt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
-      }
+    onChange: function(hsb, hex, rgb) {
+      $('.txt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
+    }
   });
 
 
 
-  $('.colour-setup .sub-btn').click(function(){
+  $('.colour-setup .sub-btn').click(function() {
     var bcvar = $('.bc-var .pickr-child').css('background-color');
     var hdBcvar = $('.hdBc-var .pickr-child').css('background-color');
     var hdTxtvar = $('.hdTxt-var .pickr-child').css('background-color');
     var titTxtvar = $('.titTxt-var .pickr-child').css('background-color');
     var txtvar = $('.txt-var .pickr-child').css('background-color');
-
     var mainColors = {
-      "background":bcvar,
-      "headerBackground":hdBcvar,
-      "headerText":hdTxtvar,
-      "titleText":titTxtvar,
-      "text":txtvar
+      "background": bcvar,
+      "headerBackground": hdBcvar,
+      "headerText": hdTxtvar,
+      "titleText": titTxtvar,
+      "text": txtvar
     }
 
-    console.log(mainColors.background);
+    console.log(mainColors);
 
-    $('body').css("background-color",mainColors.background);
-    $('.db-head').css("background-color",mainColors.headerBackground);
-    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel').css("color",mainColors.headerText);
-    $('.dashboard-page h4,.loginTitle').css("color",mainColors.titleText);
-
+    $('body').css("background-color", mainColors.background);
+    $('.db-head').css("background-color", mainColors.headerBackground);
+    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel,.loginSubtitle,.login-link').css("color", mainColors.headerText);
+    $('.dashboard-page h4,.loginTitle').css("color", mainColors.titleText);
   })
 
-
-
-
-  $('login-body-block .input-group label').click(function(){
-    
+  $('.login-body-block .input-group input').focusout(function() {
+    $(this).css("border-color", "red")
   })
 
-
-
-
+  $('.disabled').click(function() {
+    $(this).off("click");
+  })
 
 
 

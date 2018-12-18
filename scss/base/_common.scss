@@ -511,12 +511,20 @@ input {
   width: 100%;
 }
 
-input:focus,
-input:valid {
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 255, 255) !important;
+    background-image: none !important;
+}
+
+.login-body-block input:focus,
+.login-body-block input:valid {
   transition: 0.3s ease-in-out all;
-  border-bottom: solid 1px $primary;
+  border-bottom: solid 1px $primary !important;
   outline: none;
 }
+
+
+
 
 input:focus::-webkit-input-placeholder,
 input:valid::-webkit-input-placeholder {
