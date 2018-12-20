@@ -53,13 +53,19 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
+
 body {
   font-size: 13px;
   font-family: sans-serif;
-  color:$text;
+  color: $text;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   line-height: 1.2em;
 }
@@ -74,7 +80,6 @@ h2 {
 
 h3 {
   font-size: 20px;
-
 }
 
 h4 {
@@ -89,8 +94,8 @@ h6 {
   font-size: 11px;
 }
 
-.primary-icon{
-  color:$primary !important;
+.primary-icon {
+  color: $primary !important;
   font-size: 60px !important;
 }
 
@@ -101,34 +106,31 @@ p {
   font-size: 13px;
 }
 
-.caption{
+.caption {
   font-size: 11px !important;
-  color:$caption !important;
+  color: $caption !important;
   line-height: 0.85em;
 }
 
-.tn-sm{
-height:35px;
-width:35px;
+.tn-sm {
+  height: 35px;
+  width: 35px;
 }
 
-.tn-md{
-height:50px;
-width:50px;
+.tn-md {
+  height: 50px;
+  width: 50px;
 }
 
-.tn-lg{
-height:80px;
-width:80px;
+.tn-lg {
+  height: 80px;
+  width: 80px;
 }
 
-.tn-xl{
-height:120px;
-width:120px;
+.tn-xl {
+  height: 120px;
+  width: 120px;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -222,18 +224,21 @@ width:120px;
   margin-top: -8px;
 
   .dropdown-block {
-    height:20px;
-    .selected-item{
+    height: 20px;
+
+    .selected-item {
       text-transform: capitalize;
       position: absolute;
-      right: 0px;
-      top:0px;
+      right: 0;
+      top: 0;
       text-align: right;
-      padding-right:20px;
+      padding-right: 20px;
     }
+
     .dropdown-list {
       padding: 10px 0;
       border-radius: 10px;
+
       .dropdown-item {
         padding: 0 10px;
         border-bottom: none;
@@ -309,7 +314,6 @@ width:120px;
 }
 
 .serach-box {
-
   color: $text;
   font-size: 14px;
   @include dis-flex();
@@ -337,7 +341,7 @@ width:120px;
 
     &:focus {
       // outline: none;
-      border-bottom:1px solid $primary;
+      border-bottom: 1px solid $primary;
     }
   }
 }
@@ -502,8 +506,6 @@ width:120px;
 // }
 //login input blocks
 
-
-
 input {
   border: none;
   border-bottom: solid 1px $border;
@@ -511,9 +513,11 @@ input {
   width: 100%;
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-    background-color: rgb(255, 255, 255) !important;
-    background-image: none !important;
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: rgb(255, 255, 255) !important;
+  background-image: none !important;
 }
 
 .login-body-block input:focus,
@@ -522,9 +526,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   border-bottom: solid 1px $primary !important;
   outline: none;
 }
-
-
-
 
 input:focus::-webkit-input-placeholder,
 input:valid::-webkit-input-placeholder {
@@ -585,7 +586,7 @@ label {
 
 input:focus + label,
 input:valid + label {
-  color: $primary;;
+  color: $primary;
   font-size: 11px;
   top: -10px;
   transition: 0.2s ease all;
@@ -627,7 +628,6 @@ label:hover {
   width: 100%;
   cursor: pointer;
   position: relative;
-
   // &:hover {
   //   opacity: 0.8;
   // }
@@ -637,10 +637,10 @@ label:hover {
   height: 30px;
 }
 
-.db-popup-body{
+.db-popup-body {
   .btn-group {
-  margin-top: 40px;
-}
+    margin-top: 40px;
+  }
 }
 
 .btn-group {
@@ -723,22 +723,23 @@ label:hover {
   }
 }
 
-.login-block{
+.login-block {
   .sub-btn {
     background-color: $primary;
-    &:hover{
+
+    &:hover {
       background-color: $secondary;
     }
   }
-  .db-btn{
-    &:hover{
+
+  .db-btn {
+    &:hover {
       background-color: $secondary;
-      color:$white;
-      border-color:$secondary;
+      color: $white;
+      border-color: $secondary;
     }
   }
 }
-
 
 .sub-btn {
   background-color: $primary;
@@ -773,6 +774,7 @@ label:hover {
   }
 }
 /***disabled****/
+
 .disabled {
   opacity: 0.5;
   position: relative;
@@ -786,6 +788,7 @@ label:hover {
   }
 }
 /*****error mgs *****/
+
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;
@@ -802,14 +805,73 @@ label:hover {
   font-weight: bold;
 }
 /*****color pickr*****/
+
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
 }
 
+.dropdown-block input {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+/****loader*****/
+.db-loader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100000;
+  @include dis-flex();
+  justify-content: center;
 
-.dropdown-block input{
-  border:none;
-  border-radius:0px;
+  .db-loader-img {
+    height: 200px;
+    width: 200px;
+    position: relative;
+
+  }
+}
+
+
+/*****range slider*****/
+
+.range-slider-container {
+  width: 100%;
+}
+
+.rangeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: $bg-color;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-bottom: 0px;
+}
+
+.rangeSlider:hover {
+  opacity: 1;
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: $primary;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.rangeSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
   cursor: pointer;
 }

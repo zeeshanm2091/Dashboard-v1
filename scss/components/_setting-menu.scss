@@ -171,13 +171,21 @@
     .accord-body-list {
       display: block;
     }
-    .color-block{
-      height:100px;
-      width:100px;
-      margin:10px 0 20px 0;
+
+    .color-block {
+      height: 100px;
+      width: 100px;
+      margin: 10px 0 20px;
     }
-    .pickr-child{
-      border-radius:10px;
+
+    .pickr-child {
+      border-radius: 10px;
+    }
+  }
+
+  .card-layout {
+    .accord-body-list {
+      flex-direction: column;
     }
   }
 }
@@ -314,6 +322,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .color-change-block {
     @include dis-flex();
     padding: 10px;
@@ -321,33 +330,78 @@
     margin-bottom: 10px;
     width: 100%;
     border-radius: 10px;
-    .common-label{
-      margin-bottom: 0px;
+
+    .common-label {
+      margin-bottom: 0;
     }
   }
 }
 
-.pickr-child{
+.pickr-child {
   background-color: $primary;
 }
 
-.bc-var .pickr-child{
-background-color: $white;
-border:1px solid $border;
+.bc-var .pickr-child {
+  background-color: $white;
+  border: 1px solid $border;
 }
-.hdBc-var .pickr-child{
-background-color: $white;
-border:1px solid $border;
+
+.hdBc-var .pickr-child {
+  background-color: $white;
+  border: 1px solid $border;
 }
-.hdTxt-var .pickr-child{
-background-color: $text;
-border:1px solid $text;
+
+.hdTxt-var .pickr-child {
+  background-color: $text;
+  border: 1px solid $text;
 }
-.titTxt-var .pickr-child{
-background-color: $text;
-border:1px solid $text;
+
+.titTxt-var .pickr-child {
+  background-color: $text;
+  border: 1px solid $text;
 }
-.txt-var .pickr-child{
-background-color: $text;
-border:1px solid $text;
+
+.txt-var .pickr-child {
+  background-color: $text;
+  border: 1px solid $text;
+}
+
+.card-layout-item {
+  width: 100%;
+  margin-bottom: 20px;
+  border:1px solid $border;
+  padding: 10px;
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
+
+  &.bx-shadow{
+    .action-box{
+    webkit-box-shadow: 0 0 10px 2px $border;
+    -moz-box-shadow: 0 0 10px 2px $border;
+    box-shadow: 0 0 10px 2px $border;
+    }
+  }
+
+  .card-action-block {
+    @include dis-flex();
+
+
+
+    .action-result {
+      width: 40%;
+
+      .action-box {
+        height: 50px;
+        width: 100px;
+        border: 1px solid $border;
+      }
+    }
+
+    .action-values {
+      width: 60%;
+
+    }
+  }
 }

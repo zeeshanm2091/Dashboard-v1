@@ -681,23 +681,48 @@ $(document).ready(function() {
   var ccVal = 1;
 
 
-  $('.db-toggle-btn').click(function() {
-    $(this).toggleClass('active')
-  })
+  // $('.db-toggle-btn').click(function() {
+  //
+  //   if($('.cc-opt.db-toggle-btn').attr('class').indexOf('disabled') > 0 ){
+  //     return false;
+  //   }
+  //   else {$(this).toggleClass('active')}
+  // })
+  //
+  //
+  //
+  // $('.punch-opt .db-toggle-btn').click(function() {
+  //   $('.btn-group.punch').toggle(200);
+  //   if ($(this).attr('class') === 'db-toggle-btn active') {
+  //     punchInVal = 0
+  //   }
+  // })
+  //
+  // $('.cc-opt .db-toggle-btn').click(function() {
+  //   $('.input-group.com-code').toggle(200);
+  //   if ($(this).attr('class') === 'db-toggle-btn active') {
+  //     ccVal = 0
+  //   }
+  // })
 
-  $('.punch-opt .db-toggle-btn').click(function() {
-    $('.btn-group.punch').toggle(200);
-    if ($(this).attr('class') === 'db-toggle-btn active') {
-      punchInVal = 0
+  $('.cc-opt .db-toggle-btn').click(function(){
+    if($('.db-toggle-btn').attr('class').indexOf('disabled') > 0){
+      return false
     }
-  })
-
-  $('.cc-opt .db-toggle-btn').click(function() {
+    $(this).toggleClass('active');
     $('.input-group.com-code').toggle(200);
-    if ($(this).attr('class') === 'db-toggle-btn active') {
-      ccVal = 0
-    }
   })
+
+
+
+  $('.punch-opt .db-toggle-btn').click(function(){
+    if($('.db-toggle-btn').attr('class').indexOf('disabled') < 0){
+      return false;
+    }
+    $(this).toggleClass('active');
+    $('.btn-group.punch').toggle(200);
+  })
+
 
   //****************************************************************************datepicker***************************************************************************
 
@@ -873,11 +898,43 @@ $(document).ready(function() {
     $(this).css("border-color", "red")
   })
 
-  $('.disabled').click(function() {
-    $(this).off("click");
-  })
+  // $('.disabled').click(function() {
+  //   $(this).removeClass('active')
+  //   $(this).off("click");
+  // })
+
+  $('.db-toggle-btn').on('click', function() {
+    if ( $(this).hasClass('active') ) {
+        // do whatever when it's active.
+    }
+    return false;
+});
+
+$('.box-radius').change(function(){
+  var radiusVal =  $(this).val();
+  $('.action-box').css({"border-radius":radiusVal + "px"})
+})
 
 
+//************************************************************************range slider*****************************************************//
+
+var radiusSlider = document.getElementById("radiusRange");
+  radiusSlider.oninput = function() {
+  radiusSlider.value = this.value;
+  $('.bx-radius .action-box').css({"border-radius":radiusSlider.value + "px"})
+}
+
+var shadowSlider = document.getElementById("shadowRange");
+  shadowSlider.oninput = function() {
+  shadowSlider.value = this.value;
+  $('.bx-shadow .action-box').css({"box-shadow":"0 0"+" "+shadowSlider.value+"px 2px"})
+}
+
+var borderSlider = document.getElementById("borderRange");
+  borderSlider.oninput = function() {
+  borderSlider.value = this.value;
+  $('.bx-border .action-box').css({"border-width":borderSlider.value + "px"})
+}
 
 })
 
