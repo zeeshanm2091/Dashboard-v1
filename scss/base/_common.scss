@@ -595,7 +595,7 @@ input:valid + label {
 label:hover {
   cursor: text;
 }
-//button css
+/****button css****/
 
 .btn-s {
   &.db-btn {
@@ -628,9 +628,7 @@ label:hover {
   width: 100%;
   cursor: pointer;
   position: relative;
-  // &:hover {
-  //   opacity: 0.8;
-  // }
+
 }
 
 .flat-btn {

@@ -368,19 +368,19 @@ $(document).ready(function() {
   var langArr = [];
   $('.selected-item').click(function() {
     $(this).parent().find('.dropdown-list').slideToggle();
-    // console.log($(this).text());
+
   })
 
   $('.single-select .dropdown-item').click(function() {
     var selTxt = $(this).html();
-    // console.log(selTxt);
+
     $(this).parent().parent().find('.selected-item').html(selTxt);
     $(this).parent().slideUp();
   })
 
   $('.multi-select .dropdown-item').click(function() {
     $(this).toggleClass('active');
-    // console.log($(this).attr('class'));
+
     if ($(this).attr('class') === "dropdown-item active") {
       langArr.push($(this).text());
       $('.language-select .selected-item').text(langArr.toString());
@@ -397,9 +397,7 @@ $(document).ready(function() {
   $(document).mouseup(function(e) {
     var container = $(".openList");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-      // console.log(langArr.length);
-      // console.log("this is old array");
-      // console.log(inputArr);
+
     }
   });
 
@@ -409,9 +407,6 @@ $(document).ready(function() {
     }
   });
 
-  // $('.lan-list').click(function() {
-  //   $('.addonInput').empty();
-  // })
 
 
 
@@ -574,11 +569,6 @@ $(document).ready(function() {
   var loginLinkTxt = $('.login-link').html();
   var loginLinkUrl = $('.login-link').attr('href');
 
-  // $('.login-title').attr('placeholder',loginTitle)
-  // $('.login-subtitle').attr('placeholder',loginSubtitle)
-  // $('.login-link-input').attr('placeholder',loginLinkTxt)
-  // $('.login-link-url').attr('placeholder',loginLinkUrl)
-
 
   console.log(loginTitle);
 
@@ -613,7 +603,6 @@ $(document).ready(function() {
   var imgName;
   $('input[type="file"]').change(function(e) {
     imgName = e.target.files[0].name;
-    // console.log(imgName);
     $('.img-display-block > img').attr('src', "../images/" + imgName);
     var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
     if ($.inArray(imgNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
@@ -681,29 +670,7 @@ $(document).ready(function() {
   var ccVal = 1;
 
 
-  // $('.db-toggle-btn').click(function() {
-  //
-  //   if($('.cc-opt.db-toggle-btn').attr('class').indexOf('disabled') > 0 ){
-  //     return false;
-  //   }
-  //   else {$(this).toggleClass('active')}
-  // })
-  //
-  //
-  //
-  // $('.punch-opt .db-toggle-btn').click(function() {
-  //   $('.btn-group.punch').toggle(200);
-  //   if ($(this).attr('class') === 'db-toggle-btn active') {
-  //     punchInVal = 0
-  //   }
-  // })
-  //
-  // $('.cc-opt .db-toggle-btn').click(function() {
-  //   $('.input-group.com-code').toggle(200);
-  //   if ($(this).attr('class') === 'db-toggle-btn active') {
-  //     ccVal = 0
-  //   }
-  // })
+
 
   $('.cc-opt .db-toggle-btn').click(function(){
     if($('.db-toggle-btn').attr('class').indexOf('disabled') > 0){
@@ -890,8 +857,8 @@ $(document).ready(function() {
 
     $('body').css("background-color", mainColors.background);
     $('.db-head').css("background-color", mainColors.headerBackground);
-    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel,.loginSubtitle,.login-link').css("color", mainColors.headerText);
-    $('.dashboard-page h4,.loginTitle').css("color", mainColors.titleText);
+    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel').css("color", mainColors.headerText);
+    $('.dashboard-page h4,.loginTitle,.loginSubtitle,.login-link').css("color", mainColors.titleText);
   })
 
   $('.login-body-block .input-group input').focusout(function() {
@@ -936,11 +903,26 @@ var borderSlider = document.getElementById("borderRange");
   $('.bx-border .action-box').css({"border-width":borderSlider.value + "px"})
 }
 
+
+//************************************************************************default colours of all the colour pickers*****************************************************//
+
+
+
+console.log($('.db-overlay').css('background-color'));
+
+
+$('.overlay-setup .pickr-child').css('background-color',$('.db-overlay').css('background-color'));
+
+
+
+
+
+$('.bc-var .pickr-child').css("background-color",$('body').css("background-color",));
+$('.hdBc-var .pickr-child').css("background-color",$('.db-head').css("background-color",))
+$('.hdTxt-var .pickr-child').css("color",$('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel,.loginSubtitle,.login-link').css("color",))
+$('.titTxt-var .pickr-child').css("color",$('.dashboard-page h4,.loginTitle').css("color",))
+$('.txt-var .pickr-child').css("color",)
+
+
+
 })
-
-
-
-
-//************************************************************************popup block*****************************************************//
-
-//***********************************************************************ctc tab *******************************************************//

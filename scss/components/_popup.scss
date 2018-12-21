@@ -1,3 +1,5 @@
+/*****popup css*****/
+
 .dp-popup {
   position: fixed;
   top: 0;
@@ -35,7 +37,7 @@
     min-height: 230px;
 
     .db-popup-head {
-    
+
       font-weight: bold;
       text-align: center;
 
@@ -53,8 +55,8 @@
   background-color: $primary;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  margin-top: -155px;
+  top: 0;
+  margin-top: -40px;
   left: 50%;
   margin-left: -40px;
   color: #fff;
