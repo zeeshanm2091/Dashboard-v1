@@ -7,25 +7,25 @@
   .right-block {
     min-width: 550px;
     position: relative;
-    padding-right: 110px;
-
-
-
+    padding-right: 100px;
     @media screen and (max-width:767px) {
-      min-width: 60%;
+      min-width: 50%;
       padding-right: 90px;
     }
 
-
-
     .imp-link {
       position: relative;
+      display: inline-block;
+      float: right;
+      padding-left: 50px;
       @media screen and (max-width:767px) {
-        span:last-child{
+        float:none;
+        padding-left: 40px;
+        vertical-align: middle;
+        span:last-child {
           display: none;
         }
       }
-
 
       a {
         color: $text;
@@ -34,24 +34,25 @@
         text-decoration: none;
         font-weight: 500;
 
-           &:hover{
-             text-decoration: underline;
-           }
+        &:hover {
+          text-decoration: underline;
+        }
 
         .icon {
           color: $text;
           font-size: 25px;
           position: absolute;
           top: 50%;
-          height:25px;
+          height: 25px;
           width: 30px;
           margin-top: -12px;
-          left: -35px;
-          &.icon-compensations{
+          left: 20px;
+
+          &.icon-compensations {
             font-size: 30px;
-              @media screen and (max-width:767px) {
-                margin-top:-14px;
-              }
+            @media screen and (max-width:767px) {
+              margin-top: -14px;
+            }
           }
         }
       }

@@ -217,9 +217,9 @@ $(document).ready(function() {
   $('.icon-setting').click(function() {
 
     var classArr = $('.main-container').attr('class').split(' ');
-    console.log(classArr);
+
     if ($.inArray(classArr, ['active']) == -1) {
-      console.log("working");
+
 
 
 
@@ -415,9 +415,12 @@ $(document).ready(function() {
 
   //************************************************************************theme change code**************************************************************************************************************//
 
-  $('.theme-item').click(function() {
+  $('.login-setup .theme-item').click(function() {
     var Childno = $(this).index();
-    $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno)
+    $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
+
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
   })
 
   //***********************************************************************closing div code ***********************************************************************//
@@ -499,13 +502,7 @@ $(document).ready(function() {
       $('.login-page .login-inputs').slideDown();
     }
 
-    if (logChild === 3) {
-      $('.login-page .punch-opt').slideUp();
-    } else {
-      {
-        $('.login-page .punch-opt').slideDown();
-      }
-    }
+
   });
 
 
@@ -601,7 +598,7 @@ $(document).ready(function() {
 
 
   var imgName;
-  $('input[type="file"]').change(function(e) {
+  $('.overlay-setup input[type="file"]').change(function(e) {
     imgName = e.target.files[0].name;
     $('.img-display-block > img').attr('src', "../images/" + imgName);
     var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
@@ -614,8 +611,25 @@ $(document).ready(function() {
         $('.login-page').css("background-image", "url(../images/" + imgName + ")");
       })
     }
-
   });
+
+
+  /******logo change ********/
+
+  var logoName;
+  $('.logo-setup input[type="file"]').change(function(e) {
+    logoName = e.target.files[0].name;
+    $('.logo-setup img').attr('src', "../images/" + logoName);
+    var logoNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
+    if ($.inArray(logoNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
+      $('.logo-setup > img').attr('src', "../images/" + "bg1.jpg");
+      alert("Please select the valid file format")
+    }
+    else {
+      $('.main-logo img').attr('src', "../images/" + logoName);
+    }
+  });
+
 
 
 
@@ -719,28 +733,13 @@ $(document).ready(function() {
   });
 
 
-  // const pickr = new Pickr({
-  //   el: '.color-picker1',
-  //   default: '#42445A',
-  //   components: {
-  //     preview: true,
-  //     opacity: true,
-  //     hue: true,
-  //     interaction: {
-  //       hex: true,
-  //       rgba: true,
-  //       hsva: true,
-  //       input: true,
-  //       clear: true,
-  //       save: true
-  //     }
-  //   }
-  // });
+
 
 
 
 
   /*****new code for color picker******/
+
 
 
   var overlayColor;
@@ -749,7 +748,6 @@ $(document).ready(function() {
     $('.db-overlay').css({
       "background-color": overlayColor,
     })
-
   });
 
   $('.overlay-setup .color-block').ColorPicker({
@@ -857,7 +855,7 @@ $(document).ready(function() {
 
     $('body').css("background-color", mainColors.background);
     $('.db-head').css("background-color", mainColors.headerBackground);
-    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel').css("color", mainColors.headerText);
+    $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon').css("color", mainColors.headerText);
     $('.dashboard-page h4,.loginTitle,.loginSubtitle,.login-link').css("color", mainColors.titleText);
   })
 
@@ -865,14 +863,8 @@ $(document).ready(function() {
     $(this).css("border-color", "red")
   })
 
-  // $('.disabled').click(function() {
-  //   $(this).removeClass('active')
-  //   $(this).off("click");
-  // })
-
   $('.db-toggle-btn').on('click', function() {
     if ( $(this).hasClass('active') ) {
-        // do whatever when it's active.
     }
     return false;
 });
@@ -919,9 +911,21 @@ $('.overlay-setup .pickr-child').css('background-color',$('.db-overlay').css('ba
 
 $('.bc-var .pickr-child').css("background-color",$('body').css("background-color",));
 $('.hdBc-var .pickr-child').css("background-color",$('.db-head').css("background-color",))
-$('.hdTxt-var .pickr-child').css("color",$('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel,.loginSubtitle,.login-link').css("color",))
+$('.hdTxt-var .pickr-child').css("color",$('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.loginSubtitle,.login-link').css("color",))
 $('.titTxt-var .pickr-child').css("color",$('.dashboard-page h4,.loginTitle').css("color",))
-$('.txt-var .pickr-child').css("color",)
+$('.txt-var .pickr-child').css("color",);
+
+
+/*****copy custom url *******/
+
+$('.cust-url .db-btn').click(function(){
+ var copyText =   $('.cust-url input').select();
+  document.execCommand("copy");
+  $('.copyNoti').fadeIn(1000);
+  $('.copyNoti').fadeOut(1000);
+})
+
+
 
 
 

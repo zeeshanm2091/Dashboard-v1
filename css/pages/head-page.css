@@ -1599,7 +1599,6 @@ p {
 }
 
 .main-container {
-  max-width: 1440px;
   margin: auto;
 }
 .main-container .widget-img-block {
@@ -1728,7 +1727,7 @@ p {
 }
 .dropdown-block:before {
   content: "";
-  border-top: 5px solid #ccc;
+  border-top: 5px solid #555;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
   position: absolute;
@@ -1962,6 +1961,12 @@ input {
   z-index: 10;
   width: 100%;
 }
+input:focus {
+  outline: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
 
 input:-webkit-autofill,
 select:-webkit-autofill,
@@ -2111,7 +2116,7 @@ label:hover {
   border-radius: 20px;
 }
 .db-toggle-btn.active span.toggle-btn-in {
-  background-color: #99cc33;
+  background-color: #ff6666;
   left: calc(100% - 20px);
 }
 .db-toggle-btn.active span.btn-txt-off {
@@ -2124,7 +2129,7 @@ label:hover {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #ff6666;
+  background-color: #33cc80;
   display: block;
   position: absolute;
   left: 0;
@@ -2291,6 +2296,42 @@ label:hover {
   cursor: pointer;
 }
 
+span.copyNoti {
+  position: absolute;
+  background-color: #fff;
+  height: 30px;
+  border: 1px solid #ccc;
+  z-index: 10;
+  padding: 10px;
+  line-height: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #ddd;
+  display: none;
+  top: 20px;
+  right: 50px;
+}
+
+/*****copy right******/
+.db-copyRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: bold;
+  position: fixed;
+  right: 10px;
+  color: #000;
+  bottom: 20px;
+}
+.db-copyRight span:first-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+.db-copyRight span:last-child {
+  padding-left: 5px;
+}
+
 /****components****/
 .db-head {
   background-color: #ffffff;
@@ -2385,11 +2426,6 @@ label:hover {
 }
 .db-head .db-head-content .left-block .main-logo span {
   display: none;
-}
-.db-head .db-head-content .right-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .db-head .db-head-content .right-block .right-head-menu {
   position: relative;
@@ -2834,6 +2870,7 @@ label:hover {
   align-content: flex-start;
   padding: 30px;
   background-color: #ffffff;
+  position: relative;
 }
 .accord-container .accord-body-list section {
   height: 170px;
@@ -2873,11 +2910,6 @@ label:hover {
 .accord-container .overlay-setup .accord-body-list {
   display: block;
 }
-.accord-container .overlay-setup .color-block {
-  height: 100px;
-  width: 100px;
-  margin: 10px 0 20px;
-}
 .accord-container .overlay-setup .pickr-child {
   border-radius: 10px;
 }
@@ -2891,6 +2923,12 @@ label:hover {
   border: 1px solid #cccc;
   margin: 10px 0;
   cursor: pointer;
+}
+.theme-item.active {
+  border: 3px solid #000000;
+  -webkit-box-shadow: 2px 2px 10px 2px #ddd;
+  -moz-box-shadow: 2px 2px 10px 2px #ddd;
+  box-shadow: 2px 2px 10px 2px #ddd;
 }
 .theme-item.big-item {
   width: 100%;
@@ -2908,11 +2946,12 @@ label:hover {
 .theme-item.big-item input:hover ~ span {
   opacity: 1;
 }
-.theme-item.big-item span {
+.theme-item.big-item span.img-select-overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -2923,6 +2962,12 @@ label:hover {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
+  text-align: center;
+  line-height: 30px;
+  padding: 20px;
+}
+.theme-item.big-item span.img-select-overlay span {
+  font-size: 13px;
 }
 .theme-item img {
   width: 100%;
@@ -2976,7 +3021,7 @@ label:hover {
   bottom: 0;
   left: 0;
   background-color: #33cccc;
-  z-index: 10;
+  z-index: 100;
 }
 .accord-item.app-changes .link-btn {
   color: #ffffff;
@@ -2998,7 +3043,8 @@ label:hover {
   display: flex;
   flex-direction: column;
 }
-.colour-setup .color-change-block {
+
+.color-change-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3008,7 +3054,7 @@ label:hover {
   width: 100%;
   border-radius: 10px;
 }
-.colour-setup .color-change-block .common-label {
+.color-change-block .common-label {
   margin-bottom: 0;
 }
 
@@ -3070,6 +3116,15 @@ label:hover {
 }
 .card-layout-item .card-action-block .action-values {
   width: 60%;
+}
+
+.cust-url input {
+  text-transform: none;
+}
+
+.logo-setup .img-display-block {
+  padding: 20px;
+  border: 1px solid #ddd;
 }
 
 /*****themes******/

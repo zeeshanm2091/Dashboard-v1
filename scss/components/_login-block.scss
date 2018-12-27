@@ -2,17 +2,19 @@
   background-image: url("../../images/bg3.jpg");
   background-size: cover;
   height: 100vh;
-  left:500px;
+  left: 500px;
+  @media screen and (max-width: 992px){
+    left:0px;
+  }
 
   .setting-menu {
     webkit-box-shadow: 1px 2px 5px 0 #cccccc;
     -moz-box-shadow: 1px 2px 5px 0 #cccccc;
     box-shadow: 1px 2px 5px 0 #cccccc;
-    left: 0px;
+    left: 0;
     @media screen and (max-width:992px) {
       display: none;
     }
-
   }
 }
 
@@ -23,10 +25,9 @@
   @media screen and (max-width:1366px) {
     padding: 0 50px;
   }
-
-  @media screen and (max-width:767px){
+  @media screen and (max-width:767px) {
     justify-content: center;
-    padding:0 20px;
+    padding: 0 20px;
   }
 
   .login-block {
@@ -34,7 +35,6 @@
     padding-top: 140px;
     width: 360px;
     height: 509px;
-
 
     .login-title-block {
       position: absolute;
@@ -79,7 +79,6 @@
       background-color: $white;
       padding: 40px;
       width: 100%;
-
     }
   }
 }
@@ -154,8 +153,8 @@
   height: calc(100vh - 81px);
   position: absolute;
   background-color: rgba(0,0,0,.6);
-  opacity: 0.45;
-  @media screen and (max-width:767px){
+  opacity: 0.2;
+  @media screen and (max-width:767px) {
     height: calc(100vh - 61px);
   }
 }
@@ -169,7 +168,7 @@
     @media screen and (max-width:992px) {
       padding-left: 50px;
     }
-    @media screen and (max-width:767px){
+    @media screen and (max-width:767px) {
       display: none;
     }
   }
@@ -184,7 +183,8 @@
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
-    &:hover{
+
+    &:hover {
       color: $primary;
     }
     @media screen and (max-width:992px) {
@@ -207,7 +207,7 @@
 
     &:nth-child(2) {
       font-size: 32px;
-      margin: 20px 0 20px;
+      margin: 20px 0;
       @media screen and (max-width:992px) {
         font-size: 26px;
         margin: 20px 0;
@@ -276,6 +276,37 @@
   .zingo-desc {
     display: none;
   }
+
+  .hdBc-var,
+  .lan-list,
+  .login-inputs,
+  .titTxt-var {
+    display: none;
+  }
+
+  .db-head {
+    background-color: transparent;
+    border-bottom: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    left: 0;
+  }
+
+  .login-body{
+    padding-top: 80px;
+  }
+
+  .db-btn {
+    color: $white;
+    background-color: $primary;
+  }
+
+  .db-overlay,
+  .login-body {
+    height: 100vh;
+  }
 }
 
 .screen-3 {
@@ -325,11 +356,9 @@
       }
     }
   }
-
-  .punch {
-    display: none;
-  }
-
+  // .punch {
+  //   display: none;
+  // }
   .login-input-list {
     a {
       color: $white;
@@ -367,16 +396,16 @@
   font-size: 13px;
   padding: 0 20px;
   text-transform: capitalize;
-  border:1px solid $border;
+  border: 1px solid $border;
   border-radius: 20px;
 
-  &.login-link-url{
+  &.login-link-url {
     text-transform: lowercase;
   }
 
   &:focus,
   &:valid {
-    border-color:$border;
+    border-color: $border;
   }
 }
 
@@ -424,7 +453,7 @@ span.log-imgUplaod {}
     width: 45%;
   }
 
-  .accord-body-list{
+  .accord-body-list {
     align-items: center;
   }
 
@@ -435,7 +464,7 @@ span.log-imgUplaod {}
       text-align: center;
       text-transform: capitalize;
       font-weight: bold;
-      padding: 5px 10px 0px 10px;
+      padding: 5px 10px 0;
     }
   }
 }
