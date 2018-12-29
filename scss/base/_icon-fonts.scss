@@ -38,42 +38,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-woman:before {
-  content: "\61";
-}
-.icon-man:before {
-  content: "\62";
-}
-.icon-thumbsup:before {
-  content: "\63";
-}
-.icon-thumbsdown:before {
-  content: "\64";
-}
-.icon-building:before {
-  content: "\65";
-}
-.icon-calendar:before {
-  content: "\66";
-}
-.icon-leave:before {
-  content: "\67";
-}
-.icon-holiday:before {
-  content: "\68";
-}
-.icon-handshake:before {
-  content: "\69";
-}
-.icon-discount:before {
-  content: "\6a";
-}
-.icon-expencesheet:before {
-  content: "\6b";
-}
-.icon-bothgender:before {
-  content: "\6c";
-}
 .icon-cheque:before {
   content: "\6d";
 }
@@ -1078,4 +1042,49 @@
 }
 .icon-wrong:before {
   content: "\e052";
+}
+.icon-save:before {
+  content: "\e0fd";
+}
+.icon-add-users:before {
+  content: "\e0fe";
+}
+.icon-woman:before {
+  content: "\61";
+}
+.icon-man:before {
+  content: "\62";
+}
+.icon-thumbsup:before {
+  content: "\63";
+}
+.icon-thumbsdown:before {
+  content: "\64";
+}
+.icon-building:before {
+  content: "\65";
+}
+.icon-calendar:before {
+  content: "\66";
+}
+.icon-leave:before {
+  content: "\67";
+}
+.icon-holiday:before {
+  content: "\68";
+}
+.icon-handshake:before {
+  content: "\69";
+}
+.icon-discount:before {
+  content: "\6a";
+}
+.icon-expensesheet:before {
+  content: "\6b";
+}
+.icon-bothgender:before {
+  content: "\6c";
+}
+.icon-ok-filled:before {
+  content: "\e0ff";
 }

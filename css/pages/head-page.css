@@ -36,54 +36,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-woman:before {
-  content: "a";
-}
-
-.icon-man:before {
-  content: "b";
-}
-
-.icon-thumbsup:before {
-  content: "c";
-}
-
-.icon-thumbsdown:before {
-  content: "d";
-}
-
-.icon-building:before {
-  content: "e";
-}
-
-.icon-calendar:before {
-  content: "f";
-}
-
-.icon-leave:before {
-  content: "g";
-}
-
-.icon-holiday:before {
-  content: "h";
-}
-
-.icon-handshake:before {
-  content: "i";
-}
-
-.icon-discount:before {
-  content: "j";
-}
-
-.icon-expencesheet:before {
-  content: "k";
-}
-
-.icon-bothgender:before {
-  content: "l";
-}
-
 .icon-cheque:before {
   content: "m";
 }
@@ -1424,6 +1376,66 @@
   content: "";
 }
 
+.icon-save:before {
+  content: "";
+}
+
+.icon-add-users:before {
+  content: "";
+}
+
+.icon-woman:before {
+  content: "a";
+}
+
+.icon-man:before {
+  content: "b";
+}
+
+.icon-thumbsup:before {
+  content: "c";
+}
+
+.icon-thumbsdown:before {
+  content: "d";
+}
+
+.icon-building:before {
+  content: "e";
+}
+
+.icon-calendar:before {
+  content: "f";
+}
+
+.icon-leave:before {
+  content: "g";
+}
+
+.icon-holiday:before {
+  content: "h";
+}
+
+.icon-handshake:before {
+  content: "i";
+}
+
+.icon-discount:before {
+  content: "j";
+}
+
+.icon-expensesheet:before {
+  content: "k";
+}
+
+.icon-bothgender:before {
+  content: "l";
+}
+
+.icon-ok-filled:before {
+  content: "";
+}
+
 /*****reset css*****/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1494,7 +1506,7 @@ table {
 /****scroll bar****/
 ::-webkit-scrollbar {
   width: 3px;
-  height: 20px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1724,6 +1736,15 @@ p {
   position: relative;
   height: 100%;
   width: 100%;
+}
+.dropdown-block .sel-down-arrow {
+  border-top: 5px solid #555;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  right: 3px;
+  top: 7px;
+  z-index: 1;
 }
 .dropdown-block:before {
   content: "";
@@ -1978,7 +1999,7 @@ textarea:-webkit-autofill {
 .login-body-block input:focus,
 .login-body-block input:valid {
   transition: 0.3s ease-in-out all;
-  border-bottom: solid 1px #33cccc !important;
+  border-bottom: solid 1px #33cccc;
   outline: none;
 }
 
@@ -2156,13 +2177,10 @@ label:hover {
 .login-block .sub-btn {
   background-color: #33cccc;
 }
-.login-block .sub-btn:hover {
-  background-color: #99cc33;
-}
 .login-block .db-btn:hover {
-  background-color: #99cc33;
-  color: #ffffff;
-  border-color: #99cc33;
+  webkit-box-shadow: 0px 2px 10px 2px #ddd;
+  -moz-box-shadow: 0px 2px 10px 2px #ddd;
+  box-shadow: 0px 2px 10px 2px #ddd;
 }
 
 .sub-btn {
@@ -2835,11 +2853,9 @@ span.copyNoti {
 .setting-menu .setting-body .accord-container {
   overflow: auto;
   height: 85vh;
-}
-
-.accord-container .accord-item:last-child {
   padding-bottom: 60px;
 }
+
 .accord-container .accord-item-title {
   padding: 0 30px;
   height: 55px;
@@ -2977,6 +2993,7 @@ span.copyNoti {
 .login-page .accord-container .accord-item-body {
   height: 300px;
   overflow: auto;
+  border-bottom: 1px solid #ddd;
 }
 .login-page .accord-container .accord-item-body .db-btn {
   width: 50%;

@@ -687,7 +687,7 @@ $(document).ready(function() {
 
 
   $('.cc-opt .db-toggle-btn').click(function(){
-    if($('.db-toggle-btn').attr('class').indexOf('disabled') > 0){
+    if($('.db-toggle-btn').attr('class').indexOf('disabled') < 0){
       return false
     }
     $(this).toggleClass('active');
@@ -859,9 +859,9 @@ $(document).ready(function() {
     $('.dashboard-page h4,.loginTitle,.loginSubtitle,.login-link').css("color", mainColors.titleText);
   })
 
-  $('.login-body-block .input-group input').focusout(function() {
-    $(this).css("border-color", "red")
-  })
+  // $('.login-body-block .input-group input').focusout(function() {
+  //   $(this).css("border-color", "red")
+  // })
 
   $('.db-toggle-btn').on('click', function() {
     if ( $(this).hasClass('active') ) {

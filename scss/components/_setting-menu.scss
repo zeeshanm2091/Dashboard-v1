@@ -76,6 +76,7 @@
     .accord-container {
       overflow: auto;
       height: 85vh;
+      padding-bottom:60px;
       // .accord-item{
       //   background-color: $bg-color;
       // }
@@ -84,9 +85,9 @@
 }
 
 .accord-container {
-  .accord-item:last-child {
-    padding-bottom: 60px;
-  }
+  // .accord-item:last-child {
+  //   padding-bottom: 60px;
+  // }
 
   .accord-item-title {
     padding: 0 30px;
@@ -257,6 +258,7 @@
     .accord-item-body {
       height: 300px;
       overflow: auto;
+      border-bottom: 1px solid $border;
       // height:auto;
       // max-height: 600px;
       .db-btn {
@@ -379,6 +381,8 @@
   background-color: $text;
   border: 1px solid $text;
 }
+
+
 
 .card-layout-item {
   width: 100%;

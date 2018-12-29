@@ -3,8 +3,9 @@
   background-size: cover;
   height: 100vh;
   left: 500px;
-  @media screen and (max-width: 992px){
-    left:0px;
+  overflow: hidden;
+  @media screen and (max-width: 992px) {
+    left: 0;
   }
 
   .setting-menu {
@@ -123,8 +124,8 @@
 
 .login-footer {
   width: 350px;
-  position: fixed;
-  bottom: -160px;
+  position: absolute;
+  bottom: -150px;
   left: 50%;
   margin-left: -175px;
   text-align: center;
@@ -145,8 +146,35 @@
     margin-top: 10px;
     font-size: 24px;
     cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
+
+.login-footer.footer-3 {
+  display: none;
+}
+
+.screen-3 {
+  .login-footer {
+    display: none;
+
+    &.footer-3 {
+      display: flex;
+    }
+  }
+}
+// .login-footer.footer-3{
+//   display: none;
+// }
+//
+// .screen-3 .footer-3{
+//   display: flex;
+//   position: static;
+// }
 
 .db-overlay {
   width: 100%;
@@ -285,7 +313,7 @@
   }
 
   .db-head {
-    background-color: transparent;
+    background-color: transparent !important;
     border-bottom: none;
     position: absolute;
     width: 100%;
@@ -294,13 +322,13 @@
     left: 0;
   }
 
-  .login-body{
+  .login-body {
     padding-top: 80px;
   }
 
-  .db-btn {
+  .punch .db-btn {
     color: $white;
-    background-color: $primary;
+    background-color: transparent !important;
   }
 
   .db-overlay,
@@ -310,6 +338,15 @@
 }
 
 .screen-3 {
+  .dropdown-block{
+    &:before{
+      border-top: 5px solid $white;
+    }
+  }
+  .login-footer {
+    background-color: transparent !important;
+  }
+
   .login-body {
     justify-content: center;
     align-items: flex-start;
@@ -319,7 +356,7 @@
         background-color: transparent;
 
         span {
-          color: $black;
+          color: $white;
         }
       }
 
@@ -345,7 +382,7 @@
     color: $white;
   }
 
-  input {
+  .login-body-block input {
     background-color: transparent;
     border-color: $white;
     color: $white;
