@@ -8,9 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="../images/icon.png">
+
+  <link rel="stylesheet" href="../css/pages/login-page.css">
+
+
 </head>
 
 <body>
+  <div class="db-overlay"></div>
   <div class="main-content login-page screen-4">
     <section>
       <div class="db-head login-head">
@@ -225,7 +230,7 @@
                                           <div class="dropdown-block multi-select language-select">
                                             <span class="selected-item">Select your languages</span>
                                             <div class="openList" style="display: none;">
-                                              <div class="dropdown-item">hindi <span class="db-check"></span></div>
+                                              <div class="dropdown-item always-active">hindi <span class="db-check"></span></div>
                                               <div class="dropdown-item">marathi <span class="db-check"></span></div>
                                               <div class="dropdown-item">punjabi <span class="db-check"></span></div>
                                             </div>
@@ -447,7 +452,7 @@
 
     </section>
     <section>
-      <div class="db-overlay"></div>
+
       <div class="login-body main-container ot-pd">
         <div class="login-block">
           <div class="login-title-block">
@@ -600,15 +605,15 @@
     <!-- *****fancy box**** -->
     <script src="../js/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="../js/jquery.fancybox.min.js" charset="utf-8"></script>
+
     <!-- *****slider***** -->
     <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/swiper.min.js" charset="utf-8"></script>
+
     <!-- /****main css file****/ -->
     <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
-
     <script src="../js/touch-dnd.js"></script>
-
-    <link rel="stylesheet" href="../css/pages/login-page.css">
+    <!-- <link rel="stylesheet" href="../css/pages/login-page.css"> -->
     <script src="../js/main.js" charset="utf-8"></script>
 
     <!-- date picker  -->
@@ -616,11 +621,9 @@
     <script src="../js/extra/datepicker/datepicker.js"></script>
     <link rel="stylesheet" href="../css/extra/datepicker/datepicker.css">
 
-
     <!-- colour picker  -->
     <script src="../js/extra/colorpicker/colorpicker.js"></script>
     <link rel="stylesheet" href="../css/extra/colorpicker/colorpicker.css">
-
 
     <script>
       $('#datepair .date').datepicker({

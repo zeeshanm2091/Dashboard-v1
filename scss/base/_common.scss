@@ -226,7 +226,6 @@ p {
   .dropdown-block {
     height: 20px;
 
-
     .selected-item {
       text-transform: capitalize;
       position: absolute;
@@ -269,7 +268,7 @@ p {
     width: 100%;
   }
 
-  .sel-down-arrow{
+  .sel-down-arrow {
     // content: "";
     border-top: 5px solid $text;
     border-right: 5px solid transparent;
@@ -325,8 +324,6 @@ p {
   display: block !important;
 }
 
-
-
 .serach-box {
   color: $text;
   font-size: 14px;
@@ -334,7 +331,6 @@ p {
   @media screen and (max-width:1024px) {
     font-size: 16px;
   }
-
 
   input[type="text"] {
     padding: 0 5px;
@@ -521,17 +517,25 @@ p {
 // }
 //login input blocks
 
+.screen-3 .login-block input {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  }
+}
+
 input {
   border: none;
   border-bottom: solid 1px $border;
   z-index: 10;
   width: 100%;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
+
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $white inset;
-}
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+  }
 }
 
 input:-webkit-autofill,
@@ -649,7 +653,6 @@ label:hover {
   width: 100%;
   cursor: pointer;
   position: relative;
-
 }
 
 .flat-btn {
@@ -748,15 +751,14 @@ label:hover {
 
     &:hover {
       // background-color: $secondary;
-
     }
   }
 
   .db-btn {
     &:hover {
-      webkit-box-shadow: 0px 2px 10px 2px #ddd;
-      -moz-box-shadow: 0px 2px 10px 2px #ddd;
-      box-shadow: 0px 2px 10px 2px #ddd;
+      webkit-box-shadow: 0 2px 10px 2px #ddd;
+      -moz-box-shadow: 0 2px 10px 2px #ddd;
+      box-shadow: 0 2px 10px 2px #ddd;
       // background-color: $secondary;
       // color: $white;
       // border-color: $secondary;
@@ -790,7 +792,8 @@ label:hover {
   border-radius: 2px;
 }
 
-.active {
+.active,
+.always-active {
   .db-check {
     background-color: $success;
     border-color: $success;
@@ -855,11 +858,8 @@ label:hover {
     height: 200px;
     width: 200px;
     position: relative;
-
   }
 }
-
-
 /*****range slider*****/
 
 .range-slider-container {
@@ -873,9 +873,9 @@ label:hover {
   background: $bg-color;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  border-bottom: 0px;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-bottom: 0;
 }
 
 .rangeSlider:hover {
@@ -900,20 +900,19 @@ label:hover {
 }
 
 span.copyNoti {
-    position: absolute;
-    background-color: #fff;
-    height: 30px;
-    border: 1px solid #ccc;
-    z-index: 10;
-    padding: 10px;
-    line-height: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 2px #ddd;
-    display: none;
-    top: 20px;
-    right: 50px;
+  position: absolute;
+  background-color: #fff;
+  height: 30px;
+  border: 1px solid #ccc;
+  z-index: 10;
+  padding: 10px;
+  line-height: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #ddd;
+  display: none;
+  top: 20px;
+  right: 50px;
 }
-
 /*****copy right******/
 .db-copyRight {
   @include dis-flex();
@@ -924,13 +923,14 @@ span.copyNoti {
   right: 10px;
   color: #000;
   bottom: 20px;
-  span{
 
-    &:first-child{
+  span {
+    &:first-child {
       font-size: 16px;
       font-weight: bold;
     }
-    &:last-child{
+
+    &:last-child {
       padding-left: 5px;
     }
   }

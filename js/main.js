@@ -1,9 +1,13 @@
 var API_Path = "../../route/";
 var str = document.referrer;
-var companycode = str.substring(
+var companyCode = str.substring(
     str.lastIndexOf(".com/") + 5
 );
-companycode = companycode.replace("/", "");
+companyCode = companyCode.replace("/", "");
+if (companyCode.indexOf('ErrorPage.aspx') >= 1) {
+    alert('Please enter valid custom URL,\n' + document.location.origin + '/companycode');
+    window.location = '' + document.location.origin + '/companycode';
+}
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const d = new Date();
 $('#lblPayslip').text('Download payslip for the month of ' + monthNames[d.getMonth()] + '');
@@ -63,37 +67,16 @@ $(document).ready(function () {
             disabled: true
         })
     })
-
     $('.accord-item-title').click(function () {
         $('.accord-item-title span.icon').toggleClass('icon-up');
         $(this).parent().siblings().find('.accord-item-title span.icon').removeClass('icon-up');
         $(this).parent().find('.accord-item-body').slideToggle();
         $(this).parent().siblings().find('.accord-item-body').slideUp();
     });
-
     $('.header-notification').click(function () {
         $('.noti-wrap').fadeIn();
     });
     //****************************************************************************attendance block******************************************************************//
-    // var monthDays = {
-    //   1: 31,
-    //   2: 29,
-    //   3: 31,
-    //   4: 30,
-    //   5: 31,
-    //   6: 30,
-    //   7: 31,
-    //   8: 31,
-    //   9: 30,
-    //   10: 31,
-    //   11: 30,
-    //   12: 31
-    // };
-    // var currMonth = (new Date()).getMonth() + 1;
-    // for (var i = 1; i <= monthDays[currMonth]; i++) {
-    //   $('.attn-cal-list').append('<span class="cal-date"></span>')
-    // }
-
     //****************************************************************************swiper code**********************************************************************//
     var swiper = new Swiper('.swiper-container', {
         navigation: {
@@ -107,7 +90,6 @@ $(document).ready(function () {
         },
         simulateTouch: false,
     });
-
     var swiper = new Swiper('.empConnect .swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -119,8 +101,6 @@ $(document).ready(function () {
         autoHeight: true,
         simulateTouch: false,
     });
-
-
     var swiper = new Swiper('.small-card .swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -132,7 +112,6 @@ $(document).ready(function () {
         autoHeight: true,
         simulateTouch: false,
     });
-
     var swiper = new Swiper('.moreLink-card .swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -144,7 +123,6 @@ $(document).ready(function () {
         autoHeight: true,
         simulateTouch: false,
     });
-
     if ($(window).width() < 767) {
         var swiper = new Swiper('.moreLink-card .swiper-container', {
             slidesPerView: 3,
@@ -153,7 +131,6 @@ $(document).ready(function () {
 
         });
     }
-
     if ($(window).width() > 992 && $(window).width() < 1200) {
         var swiper = new Swiper('.small-card .swiper-container', {
             navigation: {
@@ -180,7 +157,6 @@ $(document).ready(function () {
         });
     }
     //****************************************************************************drag and drop code*************************************************************************//
-
     $('.icon-setting').click(function () {
         var classArr = $('.main-container').attr('class').split(' ');
         console.log(classArr);
@@ -268,9 +244,7 @@ $(document).ready(function () {
             $('.delete-btn').hide()
         }
     })
-
     //****************************************************************************delete btn code*******************************************************************//
-
     $('.delete-btn').click(function () {
         $(this).parent().remove();
         if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
@@ -281,29 +255,24 @@ $(document).ready(function () {
             }
         }
     });
-
     var widLength = $('.widget-list > section').length;
     var newArr = [];
     for (var i = 1; i < widLength + 1; i++) {
         console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
     }
-
     var mainListLeft = $('.left-list > section').length;
     var mainListRight = $('.right-list > section').length;
     var ListArr = [];
     for (var i = 1; i < mainListLeft + 1; i++) {
         console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
     }
-
     for (var i = 1; i < mainListRight + 1; i++) {
         console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
     }
     //*************************************************************************drop down code***************************************************************************************************************//
-   // langArr = [];
     $('.selected-item').click(function () {
         $(this).parent().find('.dropdown-list').slideToggle();
     })
-
     $('.single-select .dropdown-item').click(function () {
         var selTxt = $(this).html();
         $(this).parent().parent().find('.selected-item').html(selTxt);
@@ -311,9 +280,17 @@ $(document).ready(function () {
 
     })
 
-    $('.multi-select .dropdown-item').click(function () {
+    var langArr = [];
 
+    $('.multi-select .dropdown-item').click(function () {
         $(this).toggleClass('active');
+
+
+
+        // if($(this).index() > 0)){
+        //
+        // }
+
         if ($(this).attr('class') === "dropdown-item active") {
             langArr.push($(this).text());
             $('.language-select .selected-item').text(langArr.toString());
@@ -323,13 +300,11 @@ $(document).ready(function () {
             $('.language-select .selected-item').text(langArr.toString());
         }
     })
-
     var inputArr = [];
     $(document).mouseup(function (e) {
         var container = $(".openList");
         if (!container.is(e.target) && container.has(e.target).length === 0) { }
     });
-
     $('.login-inputs .accord-item-title').click(function () {
         for (var i = 0; i < langArr.length; i++) {
             if (langArr[i].toLowerCase() == "english") {
@@ -345,8 +320,6 @@ $(document).ready(function () {
         }
 
     });
-
-
     $('.lan-list').click(function () {
         if ($('.language-select .selected-item').text().split(' ').join('').toLowerCase() == "arabic") {
             $('.addonInput').find('.English').remove();
@@ -354,19 +327,19 @@ $(document).ready(function () {
         else if ($('.language-select .selected-item').text().split(' ').join('').toLowerCase() == "english") {
             $('.addonInput').find('.Arabic').remove();
         }
-       // $('.addonInput').empty();
     })
     //************************************************************************theme change code**************************************************************************************************************//
-
     $('.login-setup .theme-item').click(function () {
         var Childno = $(this).index();
         $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno+'');
         var clr = rgb2hex($('.titTxt-var .color-block .pickr-child').css('background-color'));
-        var primclr = rgb2hex($('.txt-var .color-block .pickr-child').css('background-color'));
+        //var primclr = rgb2hex($('.txt-var .color-block .pickr-child').css('background-color'));
         if (parseInt(Childno + 1) == 3) {
-            $('.login-footer a,.login-content-block > span').css("color", "#ffffff");
-             $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon, .lang-sel .dropdown-block .selected-item').css("color","#ffffff");
-             $('.sel-down-arrow').css("border-top-color","#fff");
+            //$('.login-footer a,.login-content-block > span').css("color", primclr);
+            // $('.login-footer a,.login-content-block > span').css("color", "#ffffff");
+            $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon, .lang-sel .dropdown-block .selected-item,label').css("color", "#ffffff");
+            $('.sel-down-arrow').css("border-top-color", "#fff");
+
         }
         else {
             $('.login-footer a,.login-content-block > span').css("color", clr);
@@ -375,7 +348,6 @@ $(document).ready(function () {
         $(this).siblings().removeClass('active');
     })
     //***********************************************************************closing div code ***********************************************************************//
-
     $(document).mouseup(function (e) {
         var container = $(".dropdown-list");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -397,7 +369,6 @@ $(document).ready(function () {
         $('.tab-content:nth-child(' + tabNo + ')').fadeIn();
     })
     //*****************************************login page*************************//
-
     $('.re-me').click(function () {
         $(this).find('.icon-ok').toggleClass('icon-ok-filled');
     });
@@ -411,7 +382,6 @@ $(document).ready(function () {
         }
     })
     //login page setting page
-
     $('.login-setting-icon').click(function () {
         $(this).parent().find('.setting-menu').animate({
             left: "0%"
@@ -420,9 +390,7 @@ $(document).ready(function () {
             left: "500px"
         }, 300)
     });
-
     var logChild = 1;
-
     $('.login-setup .theme-item').click(function () {
         logChild = $(this).index() + 1;
         $('.login-page').attr('class', 'main-content login-page screen-' + logChild);
@@ -432,13 +400,6 @@ $(document).ready(function () {
         } else {
             $('.login-page .login-inputs').slideDown();
         }
-        //if (logChild === 3) {
-        //    $('.login-page .punch-opt').slideUp();
-        //} else {
-        //    {
-        //        $('.login-page .punch-opt').slideDown();
-        //    }
-        //}
     });
     //*******************************************************************************Apply button****************************************************************//
     $('.app-btn').click(function () {
@@ -461,67 +422,22 @@ $(document).ready(function () {
             $('.login-link').html($('.login-link-input').val());
             $('.login-link').attr('href', $('.login-link-url').val());
         }
-        // console.log(selTxt);
         $(this).parent().parent().find('.selected-item').html(selTxt);
         $(this).parent().slideUp();
     })
-
-    //$('.confirm-popup .confirm-btn .btn-yes').click(function () {
-    //    var appArr = [{
-    //        screen: "screen-" + logChild,
-    //        overlay: overlayColor,
-    //        bgImg: $('.img-display-block > img').attr('src'),
-    //        punch: punchInVal,
-    //        effDate: {
-    //            StartDate: $('.esStDate').val(),
-    //            EndDate: $('.esEdDate').val()
-    //        },
-    //        inputFields: {
-    //            title: loginTitle,
-    //            subTitle: loginSubtitle,
-    //            linkText: loginLinkTxt,
-    //            linkUrl: loginLinkUrl
-    //        },
-    //        languages: langArr.toString()
-    //    }];
-    //    SaveThemeSetup();
-    //})
     $('.confirm-popup .confirm-btn .btn-yes').click(function () {
-        //var appArr = [{
-        //    screen: "screen-" + logChild,
-        //    overlay: overlayColor,
-        //    bgImg: $('.img-display-block > img').attr('src'),
-        //    punch: punchInVal,
-        //    companyCode: ccVal,
-        //    effDate: {
-        //        StartDate: $('.esStDate').val(),
-        //        EndDate: $('.esEdDate').val()
-        //    },
-        //    inputFields: {
-        //        title: loginTitle,
-        //        subTitle: loginSubtitle,
-        //        linkText: loginLinkTxt,
-        //        linkUrl: loginLinkUrl
-        //    },
-        //    languages: langArr.toString()
-
-        //}];
-        //console.log(appArr);
         SaveThemeSetup();
     })
-
     //*******************************************************************************Apply button****************************************************************//
     $('.overlay-setup .theme-item').click(function () {
         var logChild = $(this).index() + 1;
         $('.db-overlay').attr('class', 'db-overlay type-' + logChild)
     });
-    //login input content
     var loginTitle = $('.zingo-content .loginTitle').html();
     var loginSubtitle = $('.zingo-content .loginSubtitle').html();
     var loginLinkTxt = $('.login-link').html();
     var loginLinkUrl = $('.login-link').attr('href');
     $(document).on('click', '.input-submit', function () {
-    //$('.input-submit').click(function () {
         loginTitle = $('.login-title').val();
         loginSubtitle = $('.login-subtitle').val();
         loginLinkTxt = $('.login-link-input').val();
@@ -530,7 +446,7 @@ $(document).ready(function () {
             $('.zingo-content .loginTitle').html(loginTitle)
             $('.zingo-content .loginSubtitle').html(loginSubtitle);
             $('.login-link').html(loginLinkTxt);
-            $('.login-link').attr('href', "https://"+loginLinkUrl);
+            $('.login-link').attr('href', "https://" + loginLinkUrl);
             $('.login-inputs input').css({
                 "border": "0px solid"
             });
@@ -543,9 +459,6 @@ $(document).ready(function () {
             })
         }
     });
-    //$('#save-arabic').click(function (event) {
-    //    alert($(event.target).html()); //alerts directFilter
-    //});
     $(document).on('click', '.save-arabic', function () {
         loginTitleA = $('#loginTitleArabic').val();
         loginSubtitleA = $('#loginSubTitleArabic').val();
@@ -572,10 +485,7 @@ $(document).ready(function () {
         Loading('show');
         imgName = e.target.files[0].name;
         var imgNameExt1 = imgName.split('.').pop().toLowerCase();
-        //$('.Profileimg-display-block img').attr('src', "../images/" + imgName);
-       // var imgNameExt1 = $('.Profileimg-display-block img').attr('src').split('.').pop().toLowerCase();
         if ($.inArray(imgNameExt1, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
-           // $('.img-display-block > img').attr('src', "../images/" + "bg1.jpg");
             alert("Please select the valid file format");
             Loading('hide');
             return false;
@@ -588,7 +498,6 @@ $(document).ready(function () {
             Loading('hide');
             return false;
         }
-
         //Upload Image File
         var file_data = $("#myFile1").prop("files")[0];
         var form_data = new FormData();
@@ -618,10 +527,7 @@ $(document).ready(function () {
         Loading('show');
         imgName = e.target.files[0].name;
         var imgNameExt = imgName.split('.').pop().toLowerCase();
-        //$('.img-display-block > img').attr('src', "../images/" + imgName);
-        //var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
         if ($.inArray(imgNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
-            //$('.img-display-block > img').attr('src', "../images/" + "bg1.jpg");
             alert("Please select the valid file format"); Loading('hide'); return false;
         } else {
             $('.login-page').css("background-image", "url(../images/" + imgName + ")");
@@ -637,7 +543,6 @@ $(document).ready(function () {
             Loading('hide');
             return false;
         }
-
         //Upload Image File
         var file_data = $("#myFile").prop("files")[0];
         var form_data = new FormData();
@@ -684,7 +589,6 @@ $(document).ready(function () {
             $(this).find('.icon').addClass('icon-setting')
         }
     });
-
     $('.pre-btn,.btn-yes,.history-btn > .flat-btn:first-child').click(function () {
         $('.setting-menu').animate({
             left: "-500px"
@@ -696,17 +600,8 @@ $(document).ready(function () {
         $('.setting-menu .setting-pull').find('.icon').addClass('icon-setting');
         $('.setting-menu .setting-pull').addClass('active');
     })
-
-    //$('.history-btn > .flat-btn').click(function () {
-    //    $('.db-history-ListItem').siblings().find('.history-btn > .flat-btn').removeClass('sub-btn');
-    //    $(this).addClass("sub-btn");
-    //})
-
     var punchInVal = 1;
     var ccVal = 1;
-    //$('.db-toggle-btn').click(function () {
-    //    if ($('.cc-opt .db-toggle-btn').attr('class').indexOf('disabled') >= 1) { return false; }
-    //})
     $('.punch-opt .db-toggle-btn').click(function () {
         if ($('.punch-opt .db-toggle-btn').attr('class').indexOf('disabled') >= 1) { return false; }
         $('.punch-opt .db-toggle-btn').toggleClass('active');
@@ -723,18 +618,7 @@ $(document).ready(function () {
             ccVal = 0
         }
     })
-
     //****************************************************************************datepicker***************************************************************************
-
-    //**********************colorpicker*************************
-
-    //var overlayColor = "rgba(162, 163, 174, 0.4)";
-    //$('.overlay-setup .db-btn').click(function () {
-    //    overlayColor = $('.pcr-button').css("backgroundColor");
-    //    $('.db-overlay').css({
-    //        "background-color": overlayColor
-    //    })
-    //})
     //***********************************************************************ctc tab *******************************************************//
     $('.ctc-tab .card-head-title span').click(function () {
         if ($(this).index() === 0) {
@@ -749,19 +633,8 @@ $(document).ready(function () {
             $('.ctc-body').fadeOut();
         }
     });
-
     /*****new code for color picker******/
-
-    //var overlayColor;
-    //$('.overlay-setup .sub-btn').click(function () {
-    //    overlayColor = $('.pickr-child').css("backgroundColor");
-    //    $('.db-overlay').css({
-    //        "background-color": overlayColor,
-    //    })
-    //});
-
     $('.overlay-setup .color-block').ColorPicker({
-       //var xx = rgb2hex($('.overlay-setup .color-block .pickr-child').css('background-color'));
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
             var clr = rgb2hex($('.overlay-setup .color-block .pickr-child').css('background-color'));
@@ -779,8 +652,6 @@ $(document).ready(function () {
         },
         color: rgb2hex($('.overlay-setup .color-block .pickr-child').css('background-color'))
     });
-
-
     $('.bc-var .color-block').ColorPicker({
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
@@ -799,7 +670,6 @@ $(document).ready(function () {
         },
         color: rgb2hex($('.bc-var .color-block .pickr-child').css('background-color'))
     });
-
     $('.hdBc-var .color-block').ColorPicker({
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
@@ -818,7 +688,6 @@ $(document).ready(function () {
         },
         color: rgb2hex($('.hdBc-var .color-block .pickr-child').css('background-color'))
     });
-
     $('.hdTxt-var .color-block').ColorPicker({
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
@@ -834,11 +703,10 @@ $(document).ready(function () {
         onChange: function (hsb, hex, rgb) {
             $('.hdTxt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
             $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon, .lang-sel .dropdown-block .selected-item').css("color", '#' + hex);
-            $('.sel-down-arrow').css("border-top-color",'#' + hex)
+            $('.sel-down-arrow').css("border-top-color", '#' + hex);
         },
         color: rgb2hex($('.hdTxt-var .color-block .pickr-child').css('background-color'))
     });
-
     $('.titTxt-var .color-block').ColorPicker({
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
@@ -857,13 +725,12 @@ $(document).ready(function () {
         },
         color: rgb2hex($('.titTxt-var .color-block .pickr-child').css('background-color'))
     });
-
     $('.txt-var .color-block').ColorPicker({
         onShow: function (colpkr) {
             $(colpkr).fadeIn(500);
             var clr = rgb2hex($('.txt-var .color-block .pickr-child').css('background-color'));
             $('.colorpicker .colorpicker_new_color').css('backgroundColor', clr);
-            $('.colorpicker .colorpicker_hex input').val(clr)
+            $('.colorpicker .colorpicker_hex input').val(clr);
             return false;
         },
         onHide: function (colpkr) {
@@ -874,10 +741,14 @@ $(document).ready(function () {
             $('.txt-var .color-block .pickr-child').css('backgroundColor', '#' + hex);
             if ($('.login-page').attr('class').indexOf('screen-3')>1) {
                 $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-content-block > span,.login-input-list .re-me,.login-input-list a').css("color", '#' + hex);
+                $('.screen-3 .login-body-block input').css('border-color', '#' + hex);
+
             }
             else {
-                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-input-list .re-me,.login-input-list a').css("color", '#' + hex);
+                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.pass-eye,.screen-3 .login-footer a,.login-input-list .re-me,.login-input-list a').css("color", '#' + hex);
+                $('.login-body-block input').css('border-color', '#' + hex);
             }
+
             $('.login-block .sub-btn,.login-footer').css("background-color", '#' + hex);
             $('.punch .db-btn,.login-body-block input:focus, .login-body-block input:valid').css("border-color", '#' + hex);
 
@@ -885,7 +756,6 @@ $(document).ready(function () {
         color: rgb2hex($('.txt-var .color-block .pickr-child').css('background-color'))
     });
     $('.login-body-block .input-group input').focusout(function () {
-        //$(this).css("border-color", "red")
     })
     /*****copy custom url *******/
     $('.cust-url .db-btn').click(function(){
@@ -895,15 +765,12 @@ $(document).ready(function () {
       $('.copyNoti').fadeOut(1000);
     })
 
+    /******last moment changes*****/
 
-    console.log($('.login-page').attr('class').split(' ').pop().substr(-1));
-    $('.theme-item:nth-child('+$('.login-page').attr('class').split(' ').pop().substr(-1)+')').addClass('active');
+
 })
-
 //************************************************************************popup block*****************************************************//
-
 //*********************************************API Request Login Page ***********************************************
-
 function SaveThemeSetup() {
     Loading('show');
     var filename = "";
@@ -925,7 +792,6 @@ function SaveThemeSetup() {
     objParam.SubTitle= $('.loginSubtitle').text();
     objParam.LinkText = $('.login-link').text();
     objParam.LinkUrl = $('.login-link').attr('href');
-    ////Arabic
     objParam.loginTitleArabic = $('#loginTitleArabic').val();
     objParam.loginSubTitleArabic = $('#loginSubTitleArabic').val();
     objParam.loginLinkTextArabic = $('#loginLinkTextArabic').val();
@@ -959,18 +825,11 @@ function SaveThemeSetup() {
         filename1 = filename1.split('?')[0];
     }
     objParam.logoName = filename1;
-
-    //"mainBgColor":$('body').css("background-color"),
-    //  "mainHdBgColor":$('.db-head').css("background-color"),
-    //  "mainHdText":$('.login-head .right-block .imp-link a').css("color"),
-    //  "mainTitleTxt":$('.dashboard-page h4,.loginTitle').css("color"),
-    //  "mainTxtColor":$('body').css("color")
     var isCompanyCode = 0;
     if ($('.cc-opt .db-toggle-btn').attr('class').indexOf('active') >= 1) {
         isCompanyCode = 1;
     }
     objParam.IsCompanyCode = isCompanyCode;
-   // IsCompanyCode
     CallAjaxAsync("POST", SaveThemeSetupSuccess, APIError, API_Path + "DashboardV1/SaveThemeSetup", objParam);
 }
 function SaveThemeSetupSuccess(data, status) {
@@ -980,18 +839,17 @@ function SaveThemeSetupSuccess(data, status) {
     }
     else if (data.Code == "1") {
         if (data.Message = "Success") {
-            //alert('Theme setup save successfully !'); return false;
             Loading('hide');
             return false;
         }
     }
 }
 function APIError(data, status) {
-    //Loading('hide');
+    Loading('hide');
 }
 function getThemeSetup() {
    Loading('show');
-   var DbName = companycode.replace('/', '');
+   var DbName = companyCode.replace('/', '');
     CallAjaxAsync("GET", GetThemeSetupSuccess, APIError, API_Path + "DashboardV1/GetThemeSetup?TransType="+DbName+"", '');
 }
 function GetThemeSetupSuccess(data, status) {
@@ -1001,6 +859,7 @@ function GetThemeSetupSuccess(data, status) {
             var imageUrl = '';
             $('.login-page').attr('class', 'main-content login-page screen-' + data.LoginPageName);
             $('.theme-item.screen-' + data.LoginPageName + '').addClass('active');
+            //$('.theme-item:nth-child(' + $('.login-page').attr('class').split(' ').pop().substr(-1) + ')').addClass('active');
             if (data.LoginPageName == "3") {
                 $('.punch-opt').css('display', 'true');
                 if (window.location.pathname.split('/').slice(-1)[0].toLowerCase() == "zing.aspx") {
@@ -1019,6 +878,7 @@ function GetThemeSetupSuccess(data, status) {
             $('.esEdDate').val(data.EffectiveEndDate.split(' ')[0]);
             $('.imgEdDate').val(data.BackgroundImageEndDate.split(' ')[0]);
             var language = "";
+            var isLan = false;
             if (data.LanguageID.length > 0) {
                 language = data.LanguageID.split(',');
                 for (var i = 0; i < language.length; i++) {
@@ -1026,6 +886,7 @@ function GetThemeSetupSuccess(data, status) {
                         $('.dropdown-item').eq(0).addClass('active');
                         langArr.push('English');
                         addBannerText();
+                        isLan = true;
                         ////English----------
                         $('.login-title').val(data.InputFieldTitle);
                         $('.login-subtitle').val(data.InputFieldSubTitle);
@@ -1035,7 +896,7 @@ function GetThemeSetupSuccess(data, status) {
                         $('.loginTitle').text(data.Title);
                         $('.loginSubtitle').text(data.SubTitle);
                         $('.login-link').text(data.LinkText)
-                        $('.login-link-url').val(data.LinkUrl);
+                        $('.English .login-link-url').val(data.LinkUrl);
                     }
                     else if (language[i].toLowerCase() == 'arabic') {
                         $('.dropdown-item').eq(1).addClass('active');
@@ -1045,6 +906,12 @@ function GetThemeSetupSuccess(data, status) {
                         $('#loginSubTitleArabic').val(data.InputFieldSubTitle_Arabic);
                         $('#loginLinkTextArabic').val(data.InputFieldLinkText_Arabic);
                         $('#loginLinkUrlArabic').val(data.InputFieldLinkUrl_Arabic);
+                        if (!isLan) {
+                            $('.loginTitle').text(data.InputFieldTitle_Arabic);
+                            $('.loginSubtitle').text(data.InputFieldSubTitle_Arabic);
+                            $('.login-link').text(data.InputFieldLinkText_Arabic)
+                            $('.Arabic .login-link-url').val('https://'+ data.InputFieldLinkUrl_Arabic);
+                        }
                     }
                 }
             }
@@ -1065,13 +932,13 @@ function GetThemeSetupSuccess(data, status) {
             else {
                 $('.punch-opt').removeClass('disabled');
                 if (data.IsPunchOption == true) {
-                    $('.punch-opt .db-toggle-btn').addClass('active');
+                    $('.punch-opt .db-toggle-btn').removeClass('active');
                 }
                 else {
                     $('.punch-opt .db-toggle-btn').click();
-                    $('.punch-opt .db-toggle-btn').removeClass('active');
+                    $('.punch-opt .db-toggle-btn').addClass('active');
                     if (window.location.pathname.split('/').slice(-1)[0].toLowerCase() == "zing.aspx") {
-                        $('.btn-group').css('display', 'none');
+                        $('.btn-group.punch').css('display', 'none');
                     }
                 }
             }
@@ -1085,12 +952,13 @@ function GetThemeSetupSuccess(data, status) {
             }
             $('#themeHistory').empty().append(HistoryStr);
             if (data.IsCompanyCode.toLowerCase() == "true") {
-                $('.cc-opt .db-toggle-btn').addClass('active');
+                $('.cc-opt .db-toggle-btn').removeClass('active');
+
             }
             else {
                 //$('.cc-opt .db-toggle-btn').addClass('disabled');
                 $('.cc-opt .db-toggle-btn').click();
-                $('.cc-opt .db-toggle-btn').removeClass('active');
+                $('.cc-opt .db-toggle-btn').addClass('active');
                 if (window.location.pathname.split('/').slice(-1)[0].toLowerCase() == "zing.aspx") {
                     $('.com-code').css('display', 'none');
                 }
@@ -1102,24 +970,26 @@ function GetThemeSetupSuccess(data, status) {
             $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.lang-sel .dropdown-block .selected-item').css("color", data.colourHeaderText);
             $('.dashboard-page h4,.loginTitle,.loginSubtitle,.login-link,.login-footer a,.login-content-block > span').css("color", data.colourTitleText);
             if ($('.login-page').attr('class').indexOf('screen-3') > 1) {
-                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-content-block > span,.login-input-list .re-me').css("color", '#' + hex);
+                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-content-block > span,.login-input-list .re-me,.login-input-list a').css("color", '#' + hex);
+                $('.screen-3 .login-body-block input').css('border-color', data.colourText);
             }
             else {
-                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-input-list .re-me').css("color", '#' + hex);
+                $('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-input-list .re-me,.login-input-list a').css("color", '#' + hex);
             }
-            //$('.punch .db-btn,.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,input:focus + label, input:valid + label,.login-input-list .re-me.active,lable,input + label, input + label,.logincolor,.screen-3 .login-input-list a,.screen-3 .pass-eye,.screen-3 .login-footer a,.login-content-block > span,.login-input-list .re-me').css("color", data.colourText);
             $('.login-block .sub-btn,.login-footer').css("background-color", data.colourText);
             $('.punch .db-btn ,.login-body-block input:focus, .login-body-block input:valid,.login-body-block input, .login-body-block input:valid').css("border-color", data.colourText);
-            //$('.dashboard-page h4').css("color", data.colourText);
-
             $('.bc-var .color-block .pickr-child').css('backgroundColor', data.colourBackground);
             $('.hdBc-var .color-block .pickr-child').css('backgroundColor', data.colourHeaderBackground);
             $('.hdTxt-var .color-block .pickr-child').css('backgroundColor', data.colourHeaderText);
             $('.titTxt-var .color-block .pickr-child').css('backgroundColor', data.colourTitleText);
             $('.txt-var .color-block .pickr-child').css('backgroundColor', data.colourText);
+
             $('.overlay-setup .pickr-child').css("backgroundColor", data.LayOverColorCode);
 
-            $('.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt').css("color", '#' + data.colourText);
+            $('.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,.login-body-block label').css("color", '#' + data.colourText);
+            $('.login-body .login-block .login-title-block span.icon-lock,.login-body .login-block .login-title-block span.login-txt,.punch .db-btn').css('color', rgb2hex($('.txt-var .color-block .pickr-child').css('background-color')));
+            $('.sel-down-arrow').css("border-top-color", data.colourText);
+
             if (data.logoName == null || data.logoName == undefined || data.logoName == " " || data.logoName == "") {
             }
             else {
@@ -1149,9 +1019,8 @@ function GetThemeSetupSuccess(data, status) {
             }
         }
         $('#themeHistory').empty().append("No Data Found !");
-        $('.btn-group').css('display', 'none');
+        $('.btn-group.punch ').css('display', 'none');
         $('.punch-opt .db-toggle-btn').removeClass('active');
-        //$('.cc-opt .db-toggle-btn').addClass('active');
         $('.img-display-block img').attr("src", '../../App_Themes/Images/DashboardV1/bg1.jpg');
         $('.login-page').css('background-image', 'url(' + '../../App_Themes/Images/DashboardV1/bg1.jpg' + ')');
         $('.Profileimg-display-block img').attr("src", '../../App_Themes/Images/DashboardV1/zing-logo.png');
@@ -1159,6 +1028,9 @@ function GetThemeSetupSuccess(data, status) {
         $('.titTxt-var .pickr-child').css('backgroundColor', '#ffffff');
         $('.txt-var .pickr-child').css('backgroundColor', '#33cccc');
         $('.com-code').css('display', 'none');
+        $('.main-content.login-page').addClass('Screen-1');
+        $('.theme-item:nth-child(' + $('.login-page').attr('class').split(' ').pop().substr(-1) + ')').addClass('active');
+        $('.login-link').attr('href', "https://www.zinghr.com");
     }
     Loading('hide');
 }
@@ -1166,13 +1038,11 @@ function componentToHex(c) {
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
 }
-
 function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 var hexDigits = new Array
         ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
-
 //Function to convert rgb color to hex format
 function rgb2hex(rgb) {
     if (rgb != undefined) {
@@ -1186,7 +1056,6 @@ function rgb2hex(rgb) {
 function hex(x) {
     return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
 }
-
 function PreviewTheme(evt) {
     Loading('show');
     $('.login-title').val(evt.dataset.inputfieldtitle);
@@ -1239,7 +1108,6 @@ function PreviewTheme(evt) {
     $('.db-head').css("background-color", evt.dataset.colourHeaderBackground);
     $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon').css("color", evt.dataset.colourHeaderText);
     $('.dashboard-page h4,.loginTitle,.loginSubtitle,.login-link').css("color", evt.dataset.colourTitleText);
-    //$(evt).addClass("sub-btn");
     $(evt).closest(".flat-btn").addClass("sub-btn");
     Loading('hide');
     return false;
@@ -1251,35 +1119,13 @@ function ApplyTheme(evt) {
     $('.app-btn').click();
     Loading('hide');
     return false;
-
-    //var id = evt.dataset.id;
-    //var LoginPageName = evt.dataset.loginpagename;
-    //var LayOverColorCode = evt.dataset.layovercolorcode;
-    //var InputFieldTitle = evt.dataset.inputfieldtitle;
-    //var InputFieldSubTitle = evt.dataset.inputfieldsubtitle;
-    //var InputFieldLinkText = evt.dataset.inputfieldlinktext;
-    //var InputFieldLinkUrl = evt.dataset.inputfieldlinkurl;
-    //var BackgroundImageName = GetBackGroundUrl(evt.dataset.backgroundimagename);
-    //$('.img-display-block img').attr("src", BackgroundImageName);
-    //$('.login-page').css("background-image", "url(" + BackgroundImageName + ")");
-    //var EffectiveStartDate = evt.dataset.effectivestartdate;
-    //var EffectiveEndDate = evt.dataset.effectiveenddate;
-    //var LanguageID = evt.dataset.languageid;
-    //var IsPunchOption = evt.dataset.ispunchoption;
-    //var UpdatedDate = evt.dataset.updateddate;
-    //var BackgroundImageEndDate = evt.dataset.backgroundimageenddate;
-    //var InputFieldTitle_Arabic = evt.dataset.inputfieldtitle_arabic;
-    //var InputFieldSubTitle_Arabic = evt.dataset.inputfieldsubtitle_arabic;
-    //var InputFieldLinkText_Arabic = evt.dataset.inputfieldlinktext_arabic;
-    //var InputFieldLinkUrl_Arabic = evt.dataset.inputfieldlinkurl_arabic;
-
 }
 function GetSasUrl(filename) {
     filename = "/Documents/Themes/ThemesIcon/" + filename;
     var mangtug =
     {
         "filename": filename,
-        "SubscriptionName": companycode
+        "SubscriptionName": companyCode
     }
     var objSas = CallAjaxWithReturnVal("POST", API_Path + "DashboardV1/GetSASUrl", mangtug);
     if (objSas != null) {
@@ -1295,7 +1141,7 @@ function GetLogoUrl(filename) {
     var mangtug =
     {
         "filename": filename,
-        "SubscriptionName": companycode
+        "SubscriptionName": companyCode
     }
     var objSas = CallAjaxWithReturnVal("POST", API_Path + "DashboardV1/GetSASUrl", mangtug);
     if (objSas != null) {
@@ -1325,8 +1171,6 @@ function CallAjaxWithReturnVal(type, url, param) {
     param.Token = getCookie("AuthToken");
     param.TokenValue = getCookie("AuthToken");
     param.SubscriptionName = getCookie("TokenValue");
-    //objHome.Token = getCookie("Token");// localStorage.getItem("Token");
-    //objHome.TokenValue = getCookie("AuthToken");//localStorage.getItem("TokenValue");
     var returnVal;
     if (param != '') {
         param = JSON.stringify(param)
@@ -1344,8 +1188,6 @@ function CallAjaxWithReturnVal(type, url, param) {
     return returnVal;
 }
 function CallAjaxAsync(type, FuncSuccess, FuncError, url, param) {
-    //param.Token = localStorage.getItem("Token");//getCookie("AuthToken");
-    //param.TokenValue = localStorage.getItem("TokenValue");//getCookie("TokenValue");
     param.Token = getCookie("AuthToken");
     param.TokenValue = getCookie("AuthToken");
     param.SubscriptionName = getCookie("TokenValue");
@@ -1383,10 +1225,8 @@ function addBannerText() {
     }
 }
 function ValidURL(str) {
-    // /(http[s]?:\/\/)(www[\w]?\.)[\w]*\.[\w]{2,3}(\.[\w]{2})?$/;
     var regex = /(http(s)?:\\)?([\w-]+\.)+[\w-]+[.com|.in|.org]+(\[\?%&=]*)?/
     if (!regex.test(str)) {
-        //alert("Please enter valid URL.");
         $('.db-error-mgs').slideDown();
         $('.login-inputs .login-link-url').css({
             "border": "1px solid red"
@@ -1397,7 +1237,6 @@ function ValidURL(str) {
         $('.login-inputs .login-link-url').css({
             "border": "none"
         })
-        //alert("Valid URL.");
         return true;
     }
 }
@@ -1514,19 +1353,14 @@ function arabicValue(txt) {
     $('.login-link').attr('href', $('#loginLinkUrlArabic').val());
 }
 //*********************************************API Request Login page End ***********************************************
-
 /* function creates cooke with random key */
 function setCookie(inputs) {
-    /* cookie name */
     var name = (inputs[0]) ? inputs[0] : "key" + document.cookie.length;
-    /* cookie expire in 120 seconds */
     var date = new Date();
     date.setTime(date.getTime() + (120 * 1000));
     var expires = "; expires=" + date.toGMTString();
-    /* sets cookie */
     document.cookie = name + "=" + inputs[1] + expires;
 };
-
 /* get the cookie based on input */
 function getCookie(input) {
     input = input.toLowerCase();
@@ -1542,7 +1376,6 @@ function getCookie(input) {
     }
     return "";
 };
-
 // API Request Dashboard page //
 function DashboardWidgetSuccess(data, status) {
     if (data.Code == "0") {
@@ -1668,17 +1501,6 @@ function BindRNRGrid(DOBadge) {
     }
     $('#rnr-widget').empty().append(rnr_str);
 }
-//function onbdayDateSelected(val, EmpSocial_dt) {
-//    EmpSocial_valDtN = val.split('/');
-//    EmpSocial_valDt = new Date();
-//    EmpSocial_valDate = new Date(EmpSocial_valDtN[2], EmpSocial_valDtN[1] - 1, EmpSocial_valDtN[0]);
-//    $("#mydateCal").datepicker("setDate", EmpSocial_valDt);
-//    $('#tempSpan').html('');
-//    $('#tempSpan').html(moment(EmpSocial_valDate).format("MMMM D, YYYY"));
-//    $(".ui-datepicker-trigger").remove();
-//    $("#mydateCal").toggle();
-//    OnExistingCustomClick(EmpSocial_valDate);
-//}
 function getMyTeam() {
     var API_Path = "../../route/";
     CallAjaxAsync("GET", GetMyTeamSuccess, APIError, API_Path + "DashboardV1/GetMyTeam?TransType=MGR", '');
@@ -1817,7 +1639,6 @@ function GetDownloadPaySlip(finYear, finMonth) {
     return Pay_Href;
 }
 function GetAttributeBasedOnMoudle(ModuleCode, SubModuleCode, ActionCode, ReasonCode) {
-
     objParamAttribute.ModuleCode = ModuleCode;
     objParamAttribute.SubModuleCode = SubModuleCode.toUpperCase();
     objParamAttribute.ActionCode = ActionCode;
@@ -1900,5 +1721,4 @@ function Loading(Mode) {
         $('.db-loader').hide();
     }
 }
-
 // API Request Dashboard page end here //
