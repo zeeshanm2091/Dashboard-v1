@@ -19,6 +19,7 @@
   border-top-right-radius: 120px;
   border-bottom-right-radius: 120px;
   cursor: pointer;
+  display: none;
 
   span.icon {
     position: absolute;
@@ -89,7 +90,7 @@
   //   padding-bottom: 60px;
   // }
 
-  .accord-item-title {
+  .accord-item-title,.setting-btns {
     padding: 0 30px;
     height: 55px;
     border-bottom: 1px solid $border;
@@ -122,8 +123,27 @@
     padding: 30px;
     background-color: $light;
     position: relative;
+
     // overflow: auto;
     // height: 670px;
+
+    .dropdown-block{
+      &:before{
+        display:none;
+      }
+      &.multi-select{
+        &.language-select{
+          height: auto;
+          padding: 0px;
+          .selected-item{
+            height:30px;
+          }
+          .openList{
+            position: static;
+          }
+        }
+      }
+    }
     section {
       height: 170px;
       border: 1px solid #ccc;
@@ -174,7 +194,7 @@
       display: block;
     }
     .pickr-child {
-      border-radius: 10px;
+      border-radius: 5px;
     }
   }
 
@@ -240,6 +260,7 @@
 
         span{
           font-size: 13px;
+          text-transform: none;
         }
 
       }
@@ -302,7 +323,7 @@
   }
 }
 
-.accord-item.app-changes {
+.app-changes {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -314,21 +335,26 @@
   }
 }
 
-.login-inputs {
+.lan-list {
   .accord-body-list {
     display: block;
 
-    .bannerInput-group {
-      .banner-label {
-        display: block;
-        text-transform: capitalize;
-        color: $text;
-        margin-bottom: 5px;
-        // padding: 0 10px;
-        font-size: 16px;
-        font-weight: bold;
+    .sel-lang-block{
+      padding-top: 30px;
+      .bannerInput-group {
+        .banner-label {
+          display: block;
+          text-transform: capitalize;
+          color: $text;
+          margin-bottom: 5px;
+          // padding: 0 10px;
+          font-size: 16px;
+          font-weight: bold;
+        }
       }
     }
+
+
   }
 }
 
@@ -347,7 +373,7 @@
   border: 1px solid $border;
   margin-bottom: 10px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   .common-label {
     margin-bottom: 0;
   }
@@ -355,6 +381,7 @@
 
 .pickr-child {
   background-color: $primary;
+  border:1px solid $black;
 }
 
 .bc-var .pickr-child {
@@ -364,7 +391,7 @@
 
 .hdBc-var .pickr-child {
   background-color: $white;
-  border: 1px solid $border;
+  border: 1px solid $black;
 }
 
 .hdTxt-var .pickr-child {
@@ -431,6 +458,14 @@
 }
 
 .logo-setup{
+  img{
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width:auto;
+  }
   .img-display-block{
     padding: 20px;
     border: 1px solid $border;

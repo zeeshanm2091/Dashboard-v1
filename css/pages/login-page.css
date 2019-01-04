@@ -1705,13 +1705,13 @@ p {
   text-transform: capitalize;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 2px;
   text-align: right;
   padding-right: 20px;
 }
 .lang-sel .dropdown-block .dropdown-list {
   padding: 10px 0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .lang-sel .dropdown-block .dropdown-list .dropdown-item {
   padding: 0 10px;
@@ -1976,8 +1976,21 @@ p {
   width: 100%;
 }
 
-.screen-3 .login-block input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+@-webkit-keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+.screen-3 .login-block input:-webkit-autofill, .screen-3 .login-block input:-webkit-autofill:active, .screen-3 .login-block input:-webkit-autofill:focus, .screen-3 .login-block input:-webkit-autofill:hover {
+  -webkit-animation: autofill 0s forwards;
+  animation: autofill 0s forwards;
 }
 
 input {
@@ -2044,12 +2057,12 @@ input::placeholder {
 }
 
 label {
-  color: #999;
+  color: #555;
   font-size: 13px;
   position: absolute;
   left: 0;
   margin-top: -2px;
-  z-index: 0;
+  z-index: 11;
   transition: 0.2s ease all;
   top: 0;
   text-transform: capitalize;
@@ -2091,7 +2104,7 @@ label:hover {
 .db-btn {
   height: 40px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -2130,7 +2143,7 @@ label:hover {
   height: 20px;
   width: 20px;
   text-align: right;
-  color: #d6d8d1;
+  color: #555;
 }
 
 .db-toggle-btn {
@@ -2138,7 +2151,7 @@ label:hover {
   width: 50px;
   background-color: #fff;
   position: relative;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .db-toggle-btn.active span.toggle-btn-in {
   background-color: #ff6666;
@@ -2268,7 +2281,7 @@ label:hover {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
   z-index: 100000;
   display: flex;
   justify-content: space-between;
@@ -2327,7 +2340,7 @@ span.copyNoti {
   z-index: 10;
   padding: 10px;
   line-height: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 10px 2px #ddd;
   display: none;
   top: 20px;
@@ -2355,6 +2368,8 @@ span.copyNoti {
   padding-left: 5px;
 }
 
+/****screen-3 big changes*****/
+/****screen-3 big changes ends here*****/
 /****components****/
 .db-head {
   background-color: #ffffff;
@@ -2728,6 +2743,7 @@ span.copyNoti {
   border-top-right-radius: 120px;
   border-bottom-right-radius: 120px;
   cursor: pointer;
+  display: none;
 }
 .setting-pull span.icon {
   position: absolute;
@@ -2784,7 +2800,7 @@ span.copyNoti {
   padding-bottom: 60px;
 }
 
-.accord-container .accord-item-title {
+.accord-container .accord-item-title, .accord-container .setting-btns {
   padding: 0 30px;
   height: 55px;
   border-bottom: 1px solid #ddd;
@@ -2815,6 +2831,19 @@ span.copyNoti {
   padding: 30px;
   background-color: #ffffff;
   position: relative;
+}
+.accord-container .accord-body-list .dropdown-block:before {
+  display: none;
+}
+.accord-container .accord-body-list .dropdown-block.multi-select.language-select {
+  height: auto;
+  padding: 0px;
+}
+.accord-container .accord-body-list .dropdown-block.multi-select.language-select .selected-item {
+  height: 30px;
+}
+.accord-container .accord-body-list .dropdown-block.multi-select.language-select .openList {
+  position: static;
 }
 .accord-container .accord-body-list section {
   height: 170px;
@@ -2855,7 +2884,7 @@ span.copyNoti {
   display: block;
 }
 .accord-container .overlay-setup .pickr-child {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .accord-container .card-layout .accord-body-list {
   flex-direction: column;
@@ -2912,6 +2941,7 @@ span.copyNoti {
 }
 .theme-item.big-item span.img-select-overlay span {
   font-size: 13px;
+  text-transform: none;
 }
 .theme-item img {
   width: 100%;
@@ -2960,7 +2990,7 @@ span.copyNoti {
   width: 45%;
 }
 
-.accord-item.app-changes {
+.app-changes {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -2968,14 +2998,17 @@ span.copyNoti {
   background-color: #33cccc;
   z-index: 100;
 }
-.accord-item.app-changes .link-btn {
+.app-changes .link-btn {
   color: #ffffff;
 }
 
-.login-inputs .accord-body-list {
+.lan-list .accord-body-list {
   display: block;
 }
-.login-inputs .accord-body-list .bannerInput-group .banner-label {
+.lan-list .accord-body-list .sel-lang-block {
+  padding-top: 30px;
+}
+.lan-list .accord-body-list .sel-lang-block .bannerInput-group .banner-label {
   display: block;
   text-transform: capitalize;
   color: #555;
@@ -2997,7 +3030,7 @@ span.copyNoti {
   border: 1px solid #ddd;
   margin-bottom: 10px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .color-change-block .common-label {
   margin-bottom: 0;
@@ -3005,6 +3038,7 @@ span.copyNoti {
 
 .pickr-child {
   background-color: #33cccc;
+  border: 1px solid #000000;
 }
 
 .bc-var .pickr-child {
@@ -3014,7 +3048,7 @@ span.copyNoti {
 
 .hdBc-var .pickr-child {
   background-color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
 }
 
 .hdTxt-var .pickr-child {
@@ -3067,6 +3101,14 @@ span.copyNoti {
   text-transform: none;
 }
 
+.logo-setup img {
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 20px;
+  width: auto;
+}
 .logo-setup .img-display-block {
   padding: 20px;
   border: 1px solid #ddd;
@@ -3106,7 +3148,7 @@ span.copyNoti {
 .login-head .right-block .imp-link a {
   color: #555;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   font-weight: 500;
 }
@@ -3138,6 +3180,7 @@ span.copyNoti {
   height: 100vh;
   left: 500px;
   overflow: hidden;
+  min-height: 750px;
 }
 @media screen and (max-width: 992px) {
   .login-page {
@@ -3179,7 +3222,7 @@ span.copyNoti {
   padding-top: 140px;
   width: 360px;
   height: 509px;
-  z-index: 10;
+  z-index: 11;
 }
 @media screen and (max-width: 767px) {
   .login-body .login-block {
@@ -3221,22 +3264,6 @@ span.copyNoti {
 .login-body .login-block .login-title-block span {
   display: block;
 }
-.login-body .login-block .login-title-block span.icon-lock {
-  font-size: 40px;
-  color: #33cccc;
-  padding: 30px 0 10px;
-}
-@media screen and (max-width: 992px) {
-  .login-body .login-block .login-title-block span.icon-lock {
-    font-size: 30px;
-    padding: 20px 0 10px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .login-body .login-block .login-title-block span.icon-lock {
-    padding: 20px 10px 10px 10px;
-  }
-}
 .login-body .login-block .login-title-block span.login-txt {
   text-transform: capitalize;
   font-size: 16px;
@@ -3246,9 +3273,25 @@ span.copyNoti {
     padding-bottom: 10px;
   }
 }
+.login-body .login-block .icon-lock {
+  font-size: 40px;
+  color: #33cccc;
+  padding: 30px 0 10px;
+}
+@media screen and (max-width: 992px) {
+  .login-body .login-block .icon-lock {
+    font-size: 30px;
+    padding: 20px 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .login-body .login-block .icon-lock {
+    padding: 20px 10px 10px 10px;
+  }
+}
 .login-body .login-block .login-body-block {
   position: absolute;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #ffffff;
   padding: 40px;
   width: 100%;
@@ -3257,6 +3300,28 @@ span.copyNoti {
   .login-body .login-block .login-body-block {
     padding: 20px;
   }
+}
+
+.small-height-screen .login-block .login-title-block {
+  position: relative;
+  top: 5px;
+  left: 0px;
+  margin-left: auto;
+  height: auto;
+  width: auto;
+  border-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.small-height-screen .login-block .icon-lock {
+  padding: 20px 0 10px;
+}
+.small-height-screen .login-block span.login-txt {
+  height: 30px;
+}
+.small-height-screen .login-block .login-footer {
+  padding-top: 20px;
+  bottom: -170px;
 }
 
 .login-input-list {
@@ -3269,7 +3334,7 @@ span.copyNoti {
 }
 .login-input-list .re-me {
   cursor: pointer;
-  color: #888;
+  color: #555;
 }
 .login-input-list .re-me.active {
   color: #33cc80;
@@ -3282,7 +3347,7 @@ span.copyNoti {
 }
 .login-input-list a {
   text-decoration: none;
-  color: #000000;
+  color: #555;
 }
 .login-input-list a:hover {
   text-decoration: underline;
@@ -3339,13 +3404,14 @@ span.copyNoti {
 
 .db-overlay {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.2;
   z-index: 10;
   top: 0px;
   left: 0px;
+  min-height: 750px;
 }
 .zingo-desc {
   position: relative;
@@ -3460,7 +3526,6 @@ span.copyNoti {
   display: none;
 }
 .screen-3 .hdBc-var,
-.screen-3 .lan-list,
 .screen-3 .login-inputs,
 .screen-3 .titTxt-var {
   display: none;
@@ -3522,9 +3587,6 @@ span.copyNoti {
   border-color: #ffffff;
   color: #ffffff;
 }
-.screen-3 .login-body-block input:focus + label {
-  color: #ffffff;
-}
 .screen-3 .login-input-list a {
   color: #ffffff;
 }
@@ -3543,6 +3605,7 @@ span.copyNoti {
   height: auto;
   background-color: transparent;
   border-radius: 0;
+  color: #ffffff;
 }
 
 .login-setting-icon {
@@ -3556,7 +3619,7 @@ span.copyNoti {
   padding: 0 20px;
   text-transform: capitalize;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 .login-fields.login-link-url {
   text-transform: lowercase;

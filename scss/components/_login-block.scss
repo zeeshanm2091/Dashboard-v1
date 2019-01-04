@@ -4,6 +4,7 @@
   height: 100vh;
   left: 500px;
   overflow: hidden;
+  min-height: 750px;
   // z-index: 10;
   @media screen and (max-width: 992px) {
     left: 0;
@@ -37,10 +38,12 @@
     padding-top: 140px;
     width: 360px;
     height: 509px;
-    z-index: 10;
+    z-index: 11;
     @media screen and (max-width:767px) {
       padding-top: 50px;
     }
+
+
 
     .login-title-block {
       position: absolute;
@@ -74,19 +77,7 @@
       span {
         display: block;
 
-        &.icon-lock {
-          font-size: 40px;
-          color: $primary;
-          padding: 30px 0 10px;
-          @media screen and (max-width:992px) {
-            font-size: 30px;
-            padding: 20px 0 10px;
-          }
 
-          @media screen and (max-width:767px) {
-            padding:20px 10px 10px 10px;
-          }
-        }
 
         &.login-txt {
           text-transform: capitalize;
@@ -98,9 +89,23 @@
       }
     }
 
+    .icon-lock {
+      font-size: 40px;
+      color: $primary;
+      padding: 30px 0 10px;
+      @media screen and (max-width:992px) {
+        font-size: 30px;
+        padding: 20px 0 10px;
+      }
+
+      @media screen and (max-width:767px) {
+        padding:20px 10px 10px 10px;
+      }
+    }
+
     .login-body-block {
       position: absolute;
-      border-radius: 10px;
+      border-radius: 5px;
       background-color: $white;
       padding: 40px;
       width: 100%;
@@ -110,6 +115,36 @@
     }
   }
 }
+
+
+.small-height-screen{
+  .login-block{
+    .login-title-block {
+      position: relative;
+      top:5px;
+      left:0px;
+      margin-left: auto;
+      height:auto;
+      width: auto;
+      border-radius: 0px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    .icon-lock {
+      padding: 20px 0 10px;
+    }
+    span.login-txt{
+      height: 30px;
+    }
+    .login-footer{
+      padding-top:20px;
+      bottom: -170px;
+    }
+  }
+
+}
+
+
 
 .login-input-list {
   margin: 20px 0 15px;
@@ -129,12 +164,12 @@
       top: 3px;
       font-size: 16px;
     }
-    color: $caption;
+    color: $text;
   }
 
   a {
     text-decoration: none;
-    color: $black;
+    color: $text;
 
     &:hover {
       text-decoration: underline;
@@ -206,13 +241,14 @@
 
 .db-overlay {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   background-color: rgba(0,0,0,.6);
   opacity: 0.2;
   z-index: 10;
   top:0px;
   left: 0px;
+  min-height:750px;
   @media screen and (max-width:767px) {
     // height: calc(100vh - 61px);
   }
@@ -339,7 +375,6 @@
   }
 
   .hdBc-var,
-  .lan-list,
   .login-inputs,
   .titTxt-var {
     display: none;
@@ -420,11 +455,11 @@
     border-color: $white;
     color: $white;
 
-    &:focus {
-      &+ label {
-        color: $white;
-      }
-    }
+    // &:focus {
+    //   &+ label {
+    //     color: $white;
+    //   }
+    // }
   }
   // .punch {
   //   display: none;
@@ -452,6 +487,7 @@
     height: auto;
     background-color: transparent;
     border-radius: 0;
+    color:$white;
   }
 }
 
@@ -467,7 +503,7 @@
   padding: 0 20px;
   text-transform: capitalize;
   border: 1px solid $border;
-  border-radius: 20px;
+  border-radius: 5px;
 
   &.login-link-url {
     text-transform: lowercase;

@@ -45,6 +45,7 @@
                   </div>
                   <div class="setting-head">
                     <span>login page setup</span>
+                    <span class="icon icon-wrong"></span>
 
                   </div>
                   <div class="setting-body">
@@ -85,7 +86,7 @@
                                       <img src="../images/bg4.jpg" alt="">
                                       <input type="file">
                                       <span class="img-select-overlay">select logo to upload
-                                        <span>logo size should not more then 100 kb</span>
+                                        <span>logo size should not more than 100 kb</span>
                                       </span>
                                     </div>
                                   </div>
@@ -104,7 +105,9 @@
                                     <div class="theme-item big-item img-display-block">
                                       <img src="../images/bg4.jpg" alt="">
                                       <input type="file">
-                                      <span class="img-select-overlay">select image to upload</span>
+                                      <span class="img-select-overlay">select image to upload
+                                        <span>logo size should not more than 500 kb</span>
+                                      </span>
                                     </div>
                                     <div class="color-change-block">
                                       <div class="common-label">overlay</div>
@@ -222,18 +225,77 @@
 
                                     <div class="accord-item lan-list">
                                       <div class="accord-item-title">
-                                        <span>Language</span>
+                                        <span>Language & banner text</span>
                                         <span class="icon icon-down"></span>
                                       </div>
-                                      <div class="accord-item-body">
+                                      <div class="accord-item-body" style="display:block !important">
                                         <div class="accord-body-list">
                                           <div class="dropdown-block multi-select language-select">
-                                            <span class="selected-item">Select your languages</span>
+                                            <span class="selected-item">english</span>
                                             <div class="openList" style="display: none;">
-                                              <div class="dropdown-item always-active">hindi <span class="db-check"></span></div>
-                                              <div class="dropdown-item">marathi <span class="db-check"></span></div>
+                                              <div class="dropdown-item always-active">english <span class="db-check"></span></div>
+                                              <div class="dropdown-item">arabic <span class="db-check"></span></div>
                                               <div class="dropdown-item">punjabi <span class="db-check"></span></div>
                                             </div>
+                                          </div>
+                                          <div class="addonInput">
+                                            <div class="sel-lang-block english">
+                                             <div class="language-title">
+                                                english
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">title</span>
+                                                <input type="text" class="login-fields login-title" placeholder="title">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">subtitle</span>
+                                                <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">link text</span>
+                                                <input type="text" class="login-fields login-link-input" placeholder="link text">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">link url</span>
+                                                <input type="text" class="login-fields login-link-url" placeholder="link url">
+                                             </div>
+                                             <div class="db-error-mgs">
+                                                <span>*Please enter the required fields</span>
+                                             </div>
+                                             <div class="db-btn input-submit sub-btn">
+                                                <span>Click to Preview</span>
+                                             </div>
+                                            </div>
+
+                                            <!-- <div class="sel-lang-block">
+                                             <div class="language-title">
+                                                english
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">title</span>
+                                                <input type="text" class="login-fields login-title" placeholder="title">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">subtitle</span>
+                                                <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">link text</span>
+                                                <input type="text" class="login-fields login-link-input" placeholder="link text">
+                                             </div>
+                                             <div class="bannerInput-group">
+                                                <span class="banner-label">link url</span>
+                                                <input type="text" class="login-fields login-link-url" placeholder="link url">
+                                             </div>
+                                             <div class="db-error-mgs">
+                                                <span>*Please enter the required fields</span>
+                                             </div>
+                                             <div class="db-btn input-submit sub-btn">
+                                                <span>Click to Preview</span>
+                                             </div>
+                                            </div> -->
+
+
                                           </div>
                                         </div>
                                       </div>
@@ -251,19 +313,19 @@
                                           <div class="bannerInput-group">
                                             <span class="banner-label">title</span>
                                             <input type="text" class="login-fields login-title" placeholder="title">
-                            </div>
+                                          </div>
                                             <div class="bannerInput-group">
                                               <span class="banner-label">subtitle</span>
                                               <input type="text" class="login-fields login-subtitle" placeholder="subtitle">
-                            </div>
+                                            </div>
                                               <div class="bannerInput-group">
                                                 <span class="banner-label">link text</span>
                                                 <input type="text" class="login-fields login-link-input" placeholder="link text">
-                            </div>
+                                              </div>
                                                 <div class="bannerInput-group">
                                                   <span class="banner-label">link url</span>
                                                   <input type="text" class="login-fields login-link-url" placeholder="link url">
-                            </div>
+                                                </div>
                                                   <div class="db-error-mgs">
                                                     <span>*Please enter the required fields</span>
                                                   </div>
@@ -296,8 +358,8 @@
                                                 </div>
                                               </div>
                                             </div>
-                                            <div class="accord-item app-changes">
-                                              <div class="accord-item-title btn-s">
+                                            <div class="accord-ite app-changes">
+                                              <div class="setting-btns btn-s">
                                                 <div class="link-btn pre-btn">
                                                   <i class="icon icon-visibility"></i>
                                                   <span>preview</span>

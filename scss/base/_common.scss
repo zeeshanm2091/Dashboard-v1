@@ -230,14 +230,14 @@ p {
       text-transform: capitalize;
       position: absolute;
       right: 0;
-      top: 0;
+      top: 2px;
       text-align: right;
       padding-right: 20px;
     }
 
     .dropdown-list {
       padding: 10px 0;
-      border-radius: 10px;
+      border-radius: 5px;
 
       .dropdown-item {
         padding: 0 10px;
@@ -516,10 +516,26 @@ p {
 //   width: 48%;
 // }
 //login input blocks
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
+@-webkit-keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}
 
 .screen-3 .login-block input {
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  &:-webkit-autofill,
+  &:-webkit-autofill:active,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:hover {
+    -webkit-animation: autofill 0s forwards;
+    animation: autofill 0s forwards;
   }
 }
 
@@ -589,12 +605,12 @@ input::placeholder {
 }
 
 label {
-  color: #999;
+  color: $text;
   font-size: 13px;
   position: absolute;
   left: 0;
   margin-top: -2px;
-  z-index: 0;
+  z-index: 11;
   transition: 0.2s ease all;
   top: 0;
   text-transform: capitalize;
@@ -643,7 +659,7 @@ label:hover {
 .db-btn {
   height: 40px;
   border: 1px solid $border;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -683,7 +699,7 @@ label:hover {
   height: 20px;
   width: 20px;
   text-align: right;
-  color: $disabled;
+  color: $text;
 }
 
 .db-toggle-btn {
@@ -691,7 +707,7 @@ label:hover {
   width: 50px;
   background-color: #fff;
   position: relative;
-  border-radius: 20px;
+  border-radius: 5px;
 
   &.active {
     span {
@@ -849,7 +865,7 @@ label:hover {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,1);
   z-index: 100000;
   @include dis-flex();
   justify-content: center;
@@ -907,7 +923,7 @@ span.copyNoti {
   z-index: 10;
   padding: 10px;
   line-height: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 10px 2px #ddd;
   display: none;
   top: 20px;
@@ -935,3 +951,72 @@ span.copyNoti {
     }
   }
 }
+/****screen-3 big changes*****/
+
+  // .screen-3-login{
+
+  // .login-body{
+  //     .login-block {
+  //       .login-title-block {
+  //         .login-txt,
+  //         span.icon-lock {
+  //           color: red;
+  //         }
+  //       }
+  //
+  //       .login-body-block {
+  //         .punch .db-btn,
+  //         input {
+  //           border-color: red;
+  //         }
+  //         .pass-eye,
+  //         .punch .db-btn,
+  //         .re-me,
+  //         a,
+  //         label {
+  //           color: red;
+  //         }
+  //
+  //         .sub-btn {
+  //           background-color: red;
+  //         }
+  //       }
+  //     }
+  // }
+  //
+  // .login-footer {
+  //   background-color:red;
+  //   span{
+  //     color: red;
+  //   }
+  //   .down-links {
+  //     a {
+  //     }
+  //   }
+  // }
+// }
+
+
+
+
+// .sn-3-clr{
+//   color: red;
+// }
+//
+// .sn-3-bgclr{
+//   background-color: red;
+// }
+//
+// .sn-3-borclr{
+//   border-color: red;
+// }
+
+
+
+
+
+
+
+
+
+/****screen-3 big changes ends here*****/
