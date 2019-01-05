@@ -1568,8 +1568,8 @@ h6 {
 }
 
 p {
-  text-transform: capitalize !important;
-  color: #555 !important;
+  text-transform: capitalize;
+  color: #555;
   line-height: 1.5em;
   font-size: 13px;
 }
@@ -2376,6 +2376,13 @@ span.copyNoti {
   position: relative;
   z-index: 100;
   top: 0px;
+}
+.db-head.login-head.setting-screen:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
 }
 .db-head .db-head-content {
   height: 80px;
@@ -3412,6 +3419,23 @@ span.copyNoti {
   top: 0px;
   left: 0px;
   min-height: 750px;
+}
+.db-overlay.setting-screen {
+  z-index: 12;
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.db-overlay.setting-screen:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.db-overlay.setting-screen p {
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: none;
 }
 .zingo-desc {
   position: relative;

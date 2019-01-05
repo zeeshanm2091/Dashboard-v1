@@ -5,6 +5,19 @@
   left: 500px;
   overflow: hidden;
   min-height: 750px;
+
+    // &:before{
+    //   content:"";
+    //   position: absolute;
+    //   left: 0px;
+    //   top:0px;
+    //   height: 100%;
+    //   width:100%;
+    //   background-color: rgba(0,0,0,0.4);
+    //   z-index: 105;
+    // }
+
+
   // z-index: 10;
   @media screen and (max-width: 992px) {
     left: 0;
@@ -249,6 +262,23 @@
   top:0px;
   left: 0px;
   min-height:750px;
+  &.setting-screen{
+    z-index: 12;
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    &:hover{
+      background-color: rgba(0,0,0,0.2);
+      opacity: 1;
+    }
+    p{
+      color: $white;
+      font-size: 20px;
+      text-transform: none;
+    }
+  }
   @media screen and (max-width:767px) {
     // height: calc(100vh - 61px);
   }
