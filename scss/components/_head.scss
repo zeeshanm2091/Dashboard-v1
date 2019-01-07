@@ -2,20 +2,26 @@
   background-color: $white;
   position: relative;
   z-index: 100;
-  top:0px;
-  &.login-head.setting-screen:before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-}
-  // border-bottom: 1px solid $border;
+  top: 0;
+  &.login-head {
+    &.setting-screen {
+      &:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        opacity: 1;
+      }
+    }
+  }
 
+
+  // border-bottom: 1px solid $border;
   .db-head-content {
     height: 80px;
-    @media screen and (max-width:767px){
-      height:60px;
+    @media screen and (max-width:767px) {
+      height: 60px;
     }
     @include dis-flex();
 
@@ -104,7 +110,6 @@
 
     .right-block {
       // @include dis-flex();
-
       .right-head-menu {
         position: relative;
 
@@ -164,12 +169,12 @@
             border-bottom: 1px solid $border;
             cursor: pointer;
 
-            .icon{
+            .icon {
               padding-right: 10px;
-              &:before{
-                line-height:40px;
-              }
 
+              &:before {
+                line-height: 40px;
+              }
             }
 
             &:hover {

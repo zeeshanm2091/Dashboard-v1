@@ -19,9 +19,10 @@
       float: right;
       padding-left: 50px;
       @media screen and (max-width:767px) {
-        float:none;
+        float: none;
         padding-left: 40px;
         vertical-align: middle;
+
         span:last-child {
           display: none;
         }
@@ -58,4 +59,20 @@
       }
     }
   }
+}
+
+.setting-page {
+    .right-block {
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 60px;
+        width: 100%;
+        z-index: 10;
+        content: "";
+        margin-top: -30px;
+        opacity: 0;
+      }
+    }
 }

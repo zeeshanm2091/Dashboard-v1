@@ -85,6 +85,10 @@ $(document).ready(function () {
             left: "0px"
         }, 300)
         $('.setting-pull').fadeIn();
+
+        //changes 07
+
+        $('.no-action.setting-screen p').css({"margin-left":"0px"})
     })
     $('.accord-item-title').click(function () {
         $('.accord-item-title span.icon').toggleClass('icon-up');
@@ -370,6 +374,19 @@ $(document).ready(function () {
     //})
     //************************************************************************theme change code**************************************************************************************************************//
     $('.login-setup .theme-item').click(function () {
+        logChild = $(this).index() + 1;
+        $('.login-page').attr('class', 'main-content login-page screen-' + logChild);
+
+        if (logChild === 2 | logChild === 3) {
+            $('.login-page .login-inputs').slideUp();
+            $('.addonInput').css("display", "none");
+        } else {
+            $('.login-page .login-inputs').slideDown();
+            $('.addonInput').css("display", "block");
+        }
+    });
+
+    $('.login-setup .theme-item').click(function () {
         var Childno = $(this).index();
         $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno+'');
         //var clr = rgb2hex($('.titTxt-var .color-block .pickr-child').css('background-color'));
@@ -391,6 +408,14 @@ $(document).ready(function () {
 
             $('.login-content-block span').css('color', $('span.loginTitle').css('color'));
             //$('#btnLogin').css('color', $('.re-me').css('color'));
+
+            //changes 07
+
+            $('.login-head').css({"background-color":$('.hdBc-var .pickr-child').css("background-color")});
+            $('.login-head .right-block .imp-link a,'
+            +'.login-head .right-block .imp-link a .icon,'
+            +'.lang-sel .dropdown-block .selected-item').css({"color":$('.hdTxt-var .pickr-child').css("background-color")});
+            $('.dropdown-block .sel-down-arrow').css({"border-top-color":$('.hdTxt-var .pickr-child').css("background-color")});
 
         }
         $(this).addClass('active');
@@ -448,18 +473,7 @@ $(document).ready(function () {
         }, 300)
     });
     var logChild = 1;
-    $('.login-setup .theme-item').click(function () {
-        logChild = $(this).index() + 1;
-        $('.login-page').attr('class', 'main-content login-page screen-' + logChild);
 
-        if (logChild === 2 | logChild === 3) {
-            $('.login-page .login-inputs').slideUp();
-            $('.addonInput').css("display", "none");
-        } else {
-            $('.login-page .login-inputs').slideDown();
-            $('.addonInput').css("display", "block");
-        }
-    });
     //*******************************************************************************Apply button****************************************************************//
     $('.app-btn').click(function () {
         $('.confirm-popup').addClass('active');
@@ -640,6 +654,7 @@ $(document).ready(function () {
             left: "500px"
         }, 300)
         $(this).fadeOut(500);
+        $('.no-action.setting-screen p').css({"margin-left":"0px"})
     });
     $('.pre-btn,.btn-yes,.history-btn > .flat-btn:first-child').click(function () {
         $('.setting-menu').animate({
@@ -1845,5 +1860,23 @@ $(document).ready(function(){
 $('.error-popup .btn-yes').click(function(){
   $('.dp-popup').fadeOut();
 });
+
+
+
+
+/************************only preview**********************************/
+
+if(($('.main-content').attr('class').indexOf('setting-page')) > 0){
+  $('.no-action').addClass('setting-screen');
+  $(this).hover(function(){
+    $('.login-head').toggleClass('setting-screen');
+  })
+  $('.setting-menu').hover(function(){
+    $('.login-head').toggleClass('setting-screen');
+  });
+}
+
+
+
 
 })

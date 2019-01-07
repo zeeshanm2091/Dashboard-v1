@@ -1568,7 +1568,6 @@ h6 {
 }
 
 p {
-  text-transform: capitalize;
   color: #555;
   line-height: 1.5em;
   font-size: 13px;
@@ -2375,14 +2374,15 @@ span.copyNoti {
   background-color: #ffffff;
   position: relative;
   z-index: 100;
-  top: 0px;
+  top: 0;
 }
 .db-head.login-head.setting-screen:before {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
+  opacity: 1;
 }
 .db-head .db-head-content {
   height: 80px;
