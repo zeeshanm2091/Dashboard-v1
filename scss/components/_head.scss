@@ -368,3 +368,9 @@
     }
   }
 }
+
+.dashboard-page{
+  .right-block{
+    @include dis-flex();
+  }
+}

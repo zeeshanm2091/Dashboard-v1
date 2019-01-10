@@ -1877,6 +1877,44 @@ if(($('.main-content').attr('class').indexOf('setting-page')) > 0){
 }
 
 
+//scroll to top accordion
+
+$('.accord-item').click(function(){
+  var accNo = (($(this).index())+1)
+  if(accNo > 2 && accNo < 4 ){
+    $('.accord-container').animate({ scrollTop: 110 }, 1000);
+  }
+  else if(accNo > 4 && accNo < 6 ){
+    $('.accord-container').animate({ scrollTop: 220 }, 1000);
+  }
+  else if(accNo > 6 && accNo < 8 ){
+    $('.accord-container').animate({ scrollTop: 330 }, 1000);
+  }
+  else if (accNo >= 8){
+    $('.accord-container').animate({ scrollTop: 1000 }, 1000);
+  }
+})
+
+
+$('.db-history-ListItem .flat-btn').click(function() {
+  $('.db-history-ListItem').siblings().find('.history-btn > .flat-btn').removeClass('sub-btn');
+  $(this).addClass("sub-btn");
+  $(this).parent().parent().addClass('active');
+})
+
+
+if ($(window).width() < 992) {
+  $('#Li1').css("display","inline-block")
+}
+
+
+
+
+
+
+
+
+
 
 
 })

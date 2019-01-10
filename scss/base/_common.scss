@@ -951,65 +951,24 @@ span.copyNoti {
     }
   }
 }
-/****screen-3 big changes*****/
-
-  // .screen-3-login{
-
-  // .login-body{
-  //     .login-block {
-  //       .login-title-block {
-  //         .login-txt,
-  //         span.icon-lock {
-  //           color: red;
-  //         }
-  //       }
-  //
-  //       .login-body-block {
-  //         .punch .db-btn,
-  //         input {
-  //           border-color: red;
-  //         }
-  //         .pass-eye,
-  //         .punch .db-btn,
-  //         .re-me,
-  //         a,
-  //         label {
-  //           color: red;
-  //         }
-  //
-  //         .sub-btn {
-  //           background-color: red;
-  //         }
-  //       }
-  //     }
-  // }
-  //
-  // .login-footer {
-  //   background-color:red;
-  //   span{
-  //     color: red;
-  //   }
-  //   .down-links {
-  //     a {
-  //     }
-  //   }
-  // }
-// }
 
 
-
-
-// .sn-3-clr{
-//   color: red;
-// }
-//
-// .sn-3-bgclr{
-//   background-color: red;
-// }
-//
-// .sn-3-borclr{
-//   border-color: red;
-// }
+/**********card block***********/
+.card-block {
+  height: 180px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px;
+  &.big{
+    height:390px
+  }
+  .card-head-title{
+    text-transform: capitalize;
+    margin-bottom:10px;
+  }
+}
 
 
 

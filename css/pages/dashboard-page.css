@@ -2367,7 +2367,23 @@ span.copyNoti {
   padding-left: 5px;
 }
 
-/****screen-3 big changes*****/
+/**********card block***********/
+.card-block {
+  height: 180px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.card-block.big {
+  height: 390px;
+}
+.card-block .card-head-title {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
 /****screen-3 big changes ends here*****/
 /****components****/
 .db-nav {
@@ -3684,6 +3700,7 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   width: 40%;
   text-transform: capitalize;
 }
@@ -4022,10 +4039,16 @@ span.copyNoti {
   align-items: center;
   justify-content: space-evenly;
   height: calc(100vh - 120px);
+  max-width: 80%;
 }
 @media screen and (max-width: 1366px) {
   .login-body {
     padding: 0 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .login-body {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4040,11 +4063,6 @@ span.copyNoti {
   width: 360px;
   height: 509px;
   z-index: 11;
-}
-@media screen and (max-width: 767px) {
-  .login-body .login-block {
-    padding-top: 50px;
-  }
 }
 .login-body .login-block .login-title-block {
   position: absolute;
@@ -4065,19 +4083,6 @@ span.copyNoti {
     margin-left: -95px;
   }
 }
-@media screen and (max-width: 767px) {
-  .login-body .login-block .login-title-block {
-    height: auto;
-    width: 100%;
-    position: relative;
-    left: auto;
-    top: 10px;
-    margin-left: auto;
-    border-radius: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-}
 .login-body .login-block .login-title-block span {
   display: block;
 }
@@ -4093,7 +4098,7 @@ span.copyNoti {
 .login-body .login-block .icon-lock {
   font-size: 40px;
   color: #33cccc;
-  padding: 30px 0 10px;
+  padding: 25px 0 10px;
 }
 @media screen and (max-width: 992px) {
   .login-body .login-block .icon-lock {
@@ -4103,7 +4108,7 @@ span.copyNoti {
 }
 @media screen and (max-width: 767px) {
   .login-body .login-block .icon-lock {
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 10px;
   }
 }
 .login-body .login-block .login-body-block {
@@ -4115,18 +4120,18 @@ span.copyNoti {
 }
 @media screen and (max-width: 767px) {
   .login-body .login-block .login-body-block {
-    padding: 20px;
+    padding: 30px 20px;
   }
 }
 
 .small-height-screen .login-block .login-title-block {
   position: relative;
   top: 5px;
-  left: 0px;
+  left: 0;
   margin-left: auto;
   height: auto;
   width: auto;
-  border-radius: 0px;
+  border-radius: 0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -4219,18 +4224,20 @@ span.copyNoti {
   display: flex;
 }
 
-.db-overlay, .no-action {
+.db-overlay,
+.no-action {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.2;
   z-index: 10;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   min-height: 750px;
 }
-.db-overlay.setting-screen, .no-action.setting-screen {
+.db-overlay.setting-screen,
+.no-action.setting-screen {
   z-index: 12;
   opacity: 0;
   cursor: pointer;
@@ -4238,15 +4245,17 @@ span.copyNoti {
   align-items: center;
   justify-content: center;
 }
-.db-overlay.setting-screen:hover, .no-action.setting-screen:hover {
+.db-overlay.setting-screen:hover,
+.no-action.setting-screen:hover {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
-.db-overlay.setting-screen p, .no-action.setting-screen p {
+.db-overlay.setting-screen p,
+.no-action.setting-screen p {
   color: #ffffff;
   font-size: 20px;
   text-transform: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .no-action {
   background-color: rgba(0, 0, 0, 0.6);
@@ -4254,17 +4263,15 @@ span.copyNoti {
 
 .zingo-desc {
   position: relative;
-  max-width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 10;
+  width: calc(100% - 360px);
 }
-@media screen and (max-width: 992px) {
-  .zingo-desc .zingo-content {
-    padding-left: 50px;
-  }
+.zingo-desc .zingo-content {
+  padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
   .zingo-desc .zingo-content {
@@ -4855,6 +4862,12 @@ span.copyNoti {
   line-height: 23px;
 }
 
+.dashboard-page .right-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*****popup css*****/
 .dp-popup {
   position: fixed;
@@ -4912,6 +4925,146 @@ span.copyNoti {
   font-size: 60px;
   text-align: center;
   line-height: 80px;
+}
+
+.personal-blog .card-body {
+  height: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.personal-blog .card-left {
+  width: calc(60% - 20px);
+  height: 100%;
+  border: 1px solid #ddd;
+  background-color: #eef1e9;
+}
+.personal-blog .card-right {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.personal-blog .blog-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.personal-blog .blog-desc {
+  margin-bottom: 20px;
+  position: relative;
+}
+.personal-blog .blog-desc p {
+  height: 115px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 30px;
+  text-align: justify;
+}
+.personal-blog .blog-desc a {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  text-transform: capitalize;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #33cccc;
+}
+.personal-blog .blog-desc a span {
+  position: absolute;
+  font-size: 16px;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+.personal-blog .blog-user {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.personal-blog .blog-user .blog-user-img {
+  margin-right: 10px;
+}
+.personal-blog .blog-user .blog-user-img img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.personal-blog .blog-action-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.personal-blog .blog-action-list .blog-action-item {
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.personal-blog .blog-action-list .blog-action-item span.icon {
+  font-size: 25px;
+}
+.personal-blog .blog-action-list .blog-action-item span.icon:before {
+  font-weight: bold !important;
+}
+.personal-blog .blog-action-list .blog-action-item span.action-count {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #33cccc;
+}
+.personal-blog .swiper-container img {
+  height: 100%;
+}
+.personal-blog .gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.personal-blog .gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.personal-blog .gallery-thumbs .swiper-slide img {
+  width: 100%;
+}
+.personal-blog .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.personal-blog .swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.personal-blog .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.personal-blog .gallery-top {
+  height: 80%;
+  width: 100%;
 }
 
 /*****themes******/

@@ -454,7 +454,7 @@
                                                 <div id="datepair" class="accord-body-list">
                                                   <div class="datePkr-block">
                                                     <div class="common-label">start date</div>
-                                                    <input type="text" class="login-fields date esStDate" placeholder="Start Date">
+                                                    <input type="text" class="login-fields date esStDate" placeholder="Start Date" data-date-format="dd/mm/yyyy">
                                                   </div>
                                                     <span class="dateTo">
                                                       <div class="common-label"></div>
@@ -462,7 +462,7 @@
                                                     </span>
                                                     <div class="datePkr-block">
                                                       <div class="common-label">end date</div>
-                                                      <input type="text" class="login-fields date esEdDate" placeholder="End Date">
+                                                      <input type="text" class="login-fields date esEdDate" placeholder="End Date" data-date-format="dd/mm/yyyy">
                                                     </div>
                                                     </div>
                                                   </div>
@@ -699,10 +699,19 @@
     <link rel="stylesheet" href="../css/extra/colorpicker/colorpicker.css">
 
     <script>
-      $('#datepair .date').datepicker({
-        'format': 'd/m/yyyy',
-        'autoclose': true
+      // $('#datepair .date').datepicker({
+      //   'format': 'd/m/yyyy',
+      //   'autoclose': true
+      // });
+
+      var now = Date.now();
+
+      $(".esStDate,.esEdDate").datepicker({
+          isDisabled: function(date) {
+              return date.valueOf() < now ? true : false;
+          }
       });
+
     </script>
 
 

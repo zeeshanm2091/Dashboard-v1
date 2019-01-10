@@ -2367,7 +2367,34 @@ span.copyNoti {
   padding-left: 5px;
 }
 
-/****screen-3 big changes*****/
+/**********card block***********/
+.card-block {
+  height: 180px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.card-block.big {
+  height: 390px;
+}
+.card-block .card-head-title {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.card-block .card-body {
+  height: auto;
+}
+.card-block .card-left {
+  width: 70%;
+  height: 100%;
+}
+.card-block .card-right {
+  width: 30%;
+  height: 100%;
+}
+
 /****screen-3 big changes ends here*****/
 /****components****/
 .db-head {
@@ -2700,6 +2727,12 @@ span.copyNoti {
 }
 .noti-list .noti-item .noti-item-right .noti-actions span:before {
   line-height: 23px;
+}
+
+.dashboard-page .right-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .db-nav {
@@ -3069,6 +3102,7 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   width: 40%;
   text-transform: capitalize;
 }

@@ -313,6 +313,7 @@
 
     .history-btn {
       @include dis-flex();
+      justify-content: flex-end;
       width: 40%;
       text-transform: capitalize;
 

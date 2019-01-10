@@ -2367,7 +2367,23 @@ span.copyNoti {
   padding-left: 5px;
 }
 
-/****screen-3 big changes*****/
+/**********card block***********/
+.card-block {
+  height: 180px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.card-block.big {
+  height: 390px;
+}
+.card-block .card-head-title {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
 /****screen-3 big changes ends here*****/
 /****components****/
 .db-head {
@@ -2700,6 +2716,12 @@ span.copyNoti {
 }
 .noti-list .noti-item .noti-item-right .noti-actions span:before {
   line-height: 23px;
+}
+
+.dashboard-page .right-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .db-nav {
@@ -4016,6 +4038,7 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   width: 40%;
   text-transform: capitalize;
 }
@@ -4354,10 +4377,16 @@ span.copyNoti {
   align-items: center;
   justify-content: space-evenly;
   height: calc(100vh - 120px);
+  max-width: 80%;
 }
 @media screen and (max-width: 1366px) {
   .login-body {
     padding: 0 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .login-body {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4372,11 +4401,6 @@ span.copyNoti {
   width: 360px;
   height: 509px;
   z-index: 11;
-}
-@media screen and (max-width: 767px) {
-  .login-body .login-block {
-    padding-top: 50px;
-  }
 }
 .login-body .login-block .login-title-block {
   position: absolute;
@@ -4397,19 +4421,6 @@ span.copyNoti {
     margin-left: -95px;
   }
 }
-@media screen and (max-width: 767px) {
-  .login-body .login-block .login-title-block {
-    height: auto;
-    width: 100%;
-    position: relative;
-    left: auto;
-    top: 10px;
-    margin-left: auto;
-    border-radius: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-}
 .login-body .login-block .login-title-block span {
   display: block;
 }
@@ -4425,7 +4436,7 @@ span.copyNoti {
 .login-body .login-block .icon-lock {
   font-size: 40px;
   color: #33cccc;
-  padding: 30px 0 10px;
+  padding: 25px 0 10px;
 }
 @media screen and (max-width: 992px) {
   .login-body .login-block .icon-lock {
@@ -4435,7 +4446,7 @@ span.copyNoti {
 }
 @media screen and (max-width: 767px) {
   .login-body .login-block .icon-lock {
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 10px;
   }
 }
 .login-body .login-block .login-body-block {
@@ -4447,18 +4458,18 @@ span.copyNoti {
 }
 @media screen and (max-width: 767px) {
   .login-body .login-block .login-body-block {
-    padding: 20px;
+    padding: 30px 20px;
   }
 }
 
 .small-height-screen .login-block .login-title-block {
   position: relative;
   top: 5px;
-  left: 0px;
+  left: 0;
   margin-left: auto;
   height: auto;
   width: auto;
-  border-radius: 0px;
+  border-radius: 0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -4551,18 +4562,20 @@ span.copyNoti {
   display: flex;
 }
 
-.db-overlay, .no-action {
+.db-overlay,
+.no-action {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.2;
   z-index: 10;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   min-height: 750px;
 }
-.db-overlay.setting-screen, .no-action.setting-screen {
+.db-overlay.setting-screen,
+.no-action.setting-screen {
   z-index: 12;
   opacity: 0;
   cursor: pointer;
@@ -4570,15 +4583,17 @@ span.copyNoti {
   align-items: center;
   justify-content: center;
 }
-.db-overlay.setting-screen:hover, .no-action.setting-screen:hover {
+.db-overlay.setting-screen:hover,
+.no-action.setting-screen:hover {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
-.db-overlay.setting-screen p, .no-action.setting-screen p {
+.db-overlay.setting-screen p,
+.no-action.setting-screen p {
   color: #ffffff;
   font-size: 20px;
   text-transform: none;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .no-action {
   background-color: rgba(0, 0, 0, 0.6);
@@ -4586,17 +4601,15 @@ span.copyNoti {
 
 .zingo-desc {
   position: relative;
-  max-width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 10;
+  width: calc(100% - 360px);
 }
-@media screen and (max-width: 992px) {
-  .zingo-desc .zingo-content {
-    padding-left: 50px;
-  }
+.zingo-desc .zingo-content {
+  padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
   .zingo-desc .zingo-content {
