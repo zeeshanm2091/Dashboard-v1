@@ -2,6 +2,59 @@
   // &.card-block{
   //   padding: 0;
   // }
+  //slider
+  // height: 300px;
+  // width: 300px;
+  .card-left {
+    &:hover {
+      .db-arrow {
+        opacity: 1;
+      }
+    }
+  }
+
+  .swiper-slide {
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding-top: 5px;
+  }
+
+  .gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
   .card-body {
     height: auto;
     padding: 0;
@@ -11,8 +64,6 @@
   .card-left {
     width: calc(60% - 20px);
     height: 100%;
-    border: 1px solid $border;
-    background-color: $bg-color;
   }
 
   .card-right {
@@ -101,10 +152,19 @@
     .blog-action-item {
       width: 25%;
       height: 50px;
+      position: relative;
       @include dis-flex();
       justify-content: center;
       flex-direction: column;
       cursor: pointer;
+
+      &.active {
+        span {
+          &.icon {
+            color: $primary;
+          }
+        }
+      }
 
       span {
         &.icon {
@@ -122,42 +182,35 @@
           color: $primary;
         }
       }
-    }
-  }
 
-  .swiper-container{
-    img{
-      height: 100%;
+      .more-option-block {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid $border;
+        padding: 10px;
+        bottom: 40px;
+        width: 200px;
+        right: 30px;
+        display: none;
+
+        .more-option-list {
+          .more-opt-item {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $border;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            background-color: $bg-color;
+            color: $black;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
-  }
-  .gallery-thumbs {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
-  .gallery-thumbs .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-    img{
-      width: 100%;
-    }
-  }
-  .gallery-thumbs .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-   .swiper-container {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
-  .gallery-top {
-    height: 80%;
-    width: 100%;
   }
 }

@@ -117,7 +117,7 @@ $(document).ready(function() {
 
   //****************************************************************************swiper code**********************************************************************//
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.db-slider', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -129,6 +129,35 @@ $(document).ready(function() {
     },
     simulateTouch: false,
   });
+
+
+  /**************personal blog code ******************/
+  //travel blog slider
+
+  var galleryThumbs = new Swiper('.personal-blog .gallery-thumbs', {
+    spaceBetween: 3,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+
+
+  var galleryTop = new Swiper('.personal-blog .gallery-top', {
+    spaceBetween: 5,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+
+
+
+
 
   var swiper = new Swiper('.empConnect .swiper-container', {
     navigation: {
@@ -538,11 +567,11 @@ $(document).ready(function() {
     }];
 
     var basicColor = {
-      "mainBgColor":$('body').css("background-color"),
-      "mainHdBgColor":$('.db-head').css("background-color"),
-      "mainHdText":$('.login-head .right-block .imp-link a').css("color"),
-      "mainTitleTxt":$('.dashboard-page h4,.loginTitle').css("color"),
-      "mainTxtColor":$('body').css("color")
+      "mainBgColor": $('body').css("background-color"),
+      "mainHdBgColor": $('.db-head').css("background-color"),
+      "mainHdText": $('.login-head .right-block .imp-link a').css("color"),
+      "mainTitleTxt": $('.dashboard-page h4,.loginTitle').css("color"),
+      "mainTxtColor": $('body').css("color")
     }
 
 
@@ -624,8 +653,7 @@ $(document).ready(function() {
     if ($.inArray(logoNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
       $('.logo-setup > img').attr('src', "../images/" + "bg1.jpg");
       alert("Please select the valid file format")
-    }
-    else {
+    } else {
       $('.main-logo img').attr('src', "../images/" + logoName);
     }
   });
@@ -686,8 +714,8 @@ $(document).ready(function() {
 
 
 
-  $('.cc-opt .db-toggle-btn').click(function(){
-    if($('.db-toggle-btn').attr('class').indexOf('disabled') < 0){
+  $('.cc-opt .db-toggle-btn').click(function() {
+    if ($('.db-toggle-btn').attr('class').indexOf('disabled') < 0) {
       return false
     }
     $(this).toggleClass('active');
@@ -696,8 +724,8 @@ $(document).ready(function() {
 
 
 
-  $('.punch-opt .db-toggle-btn').click(function(){
-    if($('.db-toggle-btn').attr('class').indexOf('disabled') < 0){
+  $('.punch-opt .db-toggle-btn').click(function() {
+    if ($('.db-toggle-btn').attr('class').indexOf('disabled') < 0) {
       return false;
     }
     $(this).toggleClass('active');
@@ -864,69 +892,73 @@ $(document).ready(function() {
   // })
 
   $('.db-toggle-btn').on('click', function() {
-    if ( $(this).hasClass('active') ) {
-    }
+    if ($(this).hasClass('active')) {}
     return false;
-});
+  });
 
-$('.box-radius').change(function(){
-  var radiusVal =  $(this).val();
-  $('.action-box').css({"border-radius":radiusVal + "px"})
-})
+  $('.box-radius').change(function() {
+    var radiusVal = $(this).val();
+    $('.action-box').css({
+      "border-radius": radiusVal + "px"
+    })
+  })
 
 
-//************************************************************************range slider*****************************************************//
+  //************************************************************************range slider*****************************************************//
 
-var radiusSlider = document.getElementById("radiusRange");
+  var radiusSlider = document.getElementById("radiusRange");
   radiusSlider.oninput = function() {
-  radiusSlider.value = this.value;
-  $('.bx-radius .action-box').css({"border-radius":radiusSlider.value + "px"})
-}
+    radiusSlider.value = this.value;
+    $('.bx-radius .action-box').css({
+      "border-radius": radiusSlider.value + "px"
+    })
+  }
 
-var shadowSlider = document.getElementById("shadowRange");
+  var shadowSlider = document.getElementById("shadowRange");
   shadowSlider.oninput = function() {
-  shadowSlider.value = this.value;
-  $('.bx-shadow .action-box').css({"box-shadow":"0 0"+" "+shadowSlider.value+"px 2px"})
-}
+    shadowSlider.value = this.value;
+    $('.bx-shadow .action-box').css({
+      "box-shadow": "0 0" + " " + shadowSlider.value + "px 2px"
+    })
+  }
 
-var borderSlider = document.getElementById("borderRange");
+  var borderSlider = document.getElementById("borderRange");
   borderSlider.oninput = function() {
-  borderSlider.value = this.value;
-  $('.bx-border .action-box').css({"border-width":borderSlider.value + "px"})
-}
+    borderSlider.value = this.value;
+    $('.bx-border .action-box').css({
+      "border-width": borderSlider.value + "px"
+    })
+  }
 
 
-//************************************************************************default colours of all the colour pickers*****************************************************//
-
-
-
-console.log($('.db-overlay').css('background-color'));
-
-
-$('.overlay-setup .pickr-child').css('background-color',$('.db-overlay').css('background-color'));
+  //************************************************************************default colours of all the colour pickers*****************************************************//
 
 
 
+  console.log($('.db-overlay').css('background-color'));
 
 
-$('.bc-var .pickr-child').css("background-color",$('body').css("background-color",));
-$('.hdBc-var .pickr-child').css("background-color",$('.db-head').css("background-color",))
-$('.hdTxt-var .pickr-child').css("color",$('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.loginSubtitle,.login-link').css("color",))
-$('.titTxt-var .pickr-child').css("color",$('.dashboard-page h4,.loginTitle').css("color",))
-$('.txt-var .pickr-child').css("color",);
-
-
-/*****copy custom url *******/
-
-$('.cust-url .db-btn').click(function(){
- var copyText =   $('.cust-url input').select();
-  document.execCommand("copy");
-  $('.copyNoti').fadeIn(1000);
-  $('.copyNoti').fadeOut(1000);
-})
+  $('.overlay-setup .pickr-child').css('background-color', $('.db-overlay').css('background-color'));
 
 
 
+
+
+  $('.bc-var .pickr-child').css("background-color", $('body').css("background-color", ));
+  $('.hdBc-var .pickr-child').css("background-color", $('.db-head').css("background-color", ))
+  $('.hdTxt-var .pickr-child').css("color", $('.login-head .right-block .imp-link a,.login-head .right-block .imp-link a .icon,.loginSubtitle,.login-link').css("color", ))
+  $('.titTxt-var .pickr-child').css("color", $('.dashboard-page h4,.loginTitle').css("color", ))
+  $('.txt-var .pickr-child').css("color", );
+
+
+  /*****copy custom url *******/
+
+  $('.cust-url .db-btn').click(function() {
+    var copyText = $('.cust-url input').select();
+    document.execCommand("copy");
+    $('.copyNoti').fadeIn(1000);
+    $('.copyNoti').fadeOut(1000);
+  })
 
 
 })
