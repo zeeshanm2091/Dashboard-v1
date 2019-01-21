@@ -1503,6 +1503,17 @@ table {
     transform: scale(1);
   }
 }
+@keyframes fadeOutEffect {
+  0% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 50%;
+  }
+  0% {
+    opacity: 100%;
+  }
+}
 /****scroll bar****/
 ::-webkit-scrollbar {
   width: 3px;
@@ -1692,10 +1703,9 @@ p {
 }
 
 .lang-sel {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -8px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
 }
 .lang-sel .dropdown-block {
   height: 20px;
@@ -1854,6 +1864,12 @@ p {
   height: calc(100% - 65px);
   padding: 0 20px;
 }
+.card-body.ctc-body, .card-body.nonctc-body {
+  display: none;
+}
+.card-body.ctc-body.active, .card-body.nonctc-body.active {
+  display: flex;
+}
 @media screen and (max-width: 1200px) {
   .card-body {
     padding: 0 10px;
@@ -1937,14 +1953,13 @@ p {
   min-height: 800px;
   border: 1px dashed #ddd;
 }
-.left-list section,
-.right-list section {
+
+section {
   position: relative;
   width: 100%;
   margin-bottom: 0 !important;
 }
-.left-list section .delete-btn,
-.right-list section .delete-btn {
+section .delete-btn {
   z-index: 11;
   position: absolute;
   right: 0;
@@ -1956,17 +1971,14 @@ p {
   cursor: pointer;
   display: none;
 }
-.left-list section .delete-btn:before,
-.right-list section .delete-btn:before {
+section .delete-btn:before {
   line-height: 40px;
 }
-.left-list section.sec-50,
-.right-list section.sec-50 {
+section.sec-50 {
   width: 48%;
 }
 @media screen and (max-width: 767px) {
-  .left-list section.sec-50,
-.right-list section.sec-50 {
+  section.sec-50 {
     width: 100%;
   }
 }
@@ -2375,16 +2387,23 @@ span.copyNoti {
   overflow: hidden;
   background-color: #ffffff;
   padding: 20px;
+  position: relative;
 }
 .card-block.big {
-  height: 390px;
+  height: 350px;
 }
 .card-block .card-head-title {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
 
-/****screen-3 big changes ends here*****/
+.blog-bm {
+  cursor: pointer;
+}
+.blog-bm.active {
+  color: #33cccc;
+}
+
 /****components****/
 .db-head {
   background-color: #ffffff;
@@ -2486,6 +2505,11 @@ span.copyNoti {
 .db-head .db-head-content .left-block .main-logo img {
   height: 60px;
   width: auto;
+}
+@media screen and (max-width: 992px) {
+  .db-head .db-head-content .left-block .main-logo img {
+    height: 50px;
+  }
 }
 .db-head .db-head-content .left-block .main-logo span {
   display: none;
@@ -3855,7 +3879,8 @@ span.copyNoti {
   padding-bottom: 60px;
 }
 
-.accord-container .accord-item-title, .accord-container .setting-btns {
+.accord-container .accord-item-title,
+.accord-container .setting-btns {
   padding: 0 30px;
   height: 55px;
   border-bottom: 1px solid #ddd;
@@ -3892,7 +3917,7 @@ span.copyNoti {
 }
 .accord-container .accord-body-list .dropdown-block.multi-select.language-select {
   height: auto;
-  padding: 0px;
+  padding: 0;
 }
 .accord-container .accord-body-list .dropdown-block.multi-select.language-select .selected-item {
   height: 30px;
@@ -3997,6 +4022,7 @@ span.copyNoti {
 .theme-item.big-item span.img-select-overlay span {
   font-size: 13px;
   text-transform: none;
+  line-height: 20px;
 }
 .theme-item img {
   width: 100%;
@@ -4129,7 +4155,7 @@ span.copyNoti {
   padding: 10px;
 }
 .card-layout-item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .card-layout-item.bx-shadow .action-box {
   webkit-box-shadow: 0 0 10px 2px #ddd;
@@ -4279,20 +4305,18 @@ span.copyNoti {
   color: #555;
 }
 .login-head .right-block {
-  min-width: 550px;
   position: relative;
-  padding-right: 100px;
 }
 @media screen and (max-width: 767px) {
   .login-head .right-block {
     min-width: 50%;
-    padding-right: 90px;
+    padding-right: 10px;
+    text-align: right;
   }
 }
 .login-head .right-block .imp-link {
   position: relative;
   display: inline-block;
-  float: right;
   padding-left: 50px;
 }
 @media screen and (max-width: 767px) {
@@ -4520,7 +4544,7 @@ span.copyNoti {
 
 .login-footer {
   width: 350px;
-  position: absolute;
+  position: fixed;
   bottom: -150px;
   left: 50%;
   margin-left: -175px;
@@ -4565,7 +4589,7 @@ span.copyNoti {
 .db-overlay,
 .no-action {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0.2;
@@ -4608,6 +4632,11 @@ span.copyNoti {
   z-index: 10;
   width: calc(100% - 360px);
 }
+@media screen and (max-width: 767px) {
+  .zingo-desc {
+    display: none;
+  }
+}
 .zingo-desc .zingo-content {
   padding-left: 50px;
 }
@@ -4637,11 +4666,10 @@ span.copyNoti {
 .zingo-desc span {
   display: block;
   color: #ffffff;
-  text-transform: capitalize;
   font-weight: bold;
 }
 .zingo-desc span:first-child {
-  font-size: 62px;
+  font-size: 52px;
 }
 @media screen and (max-width: 992px) {
   .zingo-desc span:first-child {

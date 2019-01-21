@@ -134,26 +134,40 @@ $(document).ready(function() {
   /**************personal blog code ******************/
   //travel blog slider
 
-  var galleryThumbs = new Swiper('.personal-blog .gallery-thumbs', {
-    spaceBetween: 3,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-  });
+  // var galleryThumbs = new Swiper('.personal-blog .gallery-thumbs', {
+  //   spaceBetween: 3,
+  //   slidesPerView: 4,
+  //   freeMode: true,
+  //   watchSlidesVisibility: true,
+  //   watchSlidesProgress: true,
+  // });
 
 
-  var galleryTop = new Swiper('.personal-blog .gallery-top', {
-    spaceBetween: 5,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-      swiper: galleryThumbs
-    }
-  });
+  // var galleryTop = new Swiper('.personal-blog .gallery-top', {
+  //   spaceBetween: 5,
+  //   loop: true,
+  //   effect: 'fade',
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  //   thumbs: {
+  //     swiper: galleryThumbs
+  //   }
+  // });
+
+  // var swiper = new Swiper('.personal-blog-container.db-slider', {
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  //   loop: true,
+  //   autoHeight: true,
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //   },
+  //   simulateTouch: false,
+  // });
 
 
 
@@ -251,8 +265,9 @@ $(document).ready(function() {
 
 
 
+      //dashboard-changes
 
-      $('.active .left-list,.right-list').sortable({
+      $('.active .left-list,.active .right-list').sortable({
         items: 'section',
         cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
         forcePlaceholderSize: true,
@@ -278,6 +293,10 @@ $(document).ready(function() {
         disabled: true
       })
 
+      //dashboard-changes
+
+
+
 
       if ($(window).width() < 992) {
         $('.left-list,.right-list,.divide-block,.widget-list').sortable({
@@ -287,11 +306,12 @@ $(document).ready(function() {
       }
 
 
+      //dashboard-changes
 
       $(function() {
-        $('active .left-list,.right-list').sortable()
+        $('.active .left-list,.active .right-list').sortable()
           .on('sortable:receive', function(e, ui) {
-            var swiper = new Swiper('.swiper-container', {
+            var swiper = new Swiper('db-slider.swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -316,6 +336,45 @@ $(document).ready(function() {
               spaceBetween: 20,
               simulateTouch: false,
             });
+            // dashboard-changes
+
+            var myswiper = new Swiper('.swiper-container.personal-blog-container', {
+              navigation: {
+                nextEl: '.personal-arrow-next',
+                prevEl: '.personal-arrow-back',
+              },
+              loop: true,
+              autoplay: {
+                delay: 2000,
+              }
+            });
+
+            $(".swiper-container").mouseenter(function() {
+              myswiper.autoplay.stop();
+            });
+
+            $(".swiper-container").mouseleave(function() {
+              myswiper.autoplay.start();
+            });
+
+            var swiper = new Swiper('.swiper-container.gallery-thumbs', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 4,
+              loop: true,
+              spaceBetween: 2
+
+            });
+
+            $('.img-click').click(function() {
+              $(this).addClass('active');
+              $(this).siblings().removeClass('active');
+              $(this).parent().parent().parent().find('.img-display').find('img').attr('src', $(this).find('img').attr('src'));
+
+            });
+
           })
 
       })
@@ -324,9 +383,10 @@ $(document).ready(function() {
 
 
       $(function() {
-        $('active .left-list,.right-list').sortable()
+        $('.active .left-list,.active .right-list').sortable()
           .on('sortable:activate', function(e, ui) {
-            $('section').css("z-index", "10");
+            //changes
+            // $('section').css("z-index", "10");
             $('.delete-btn').click(function() {
               $(this).parent().remove();
               if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
@@ -745,20 +805,44 @@ $(document).ready(function() {
 
 
 
+  // $('.ctc-tab .card-head-title span').click(function() {
+  //   if ($(this).index() === 0) {
+  //     $(this).addClass('active')
+  //     $('.ctc-body').fadeIn();
+  //     $('.nonctc-body').fadeOut();
+  //     $(this).siblings().removeClass('active')
+  //   } else {
+  //     $(this).addClass('active')
+  //     $(this).siblings().removeClass('active');
+  //     $('.nonctc-body').fadeIn();
+  //     $('.ctc-body').fadeOut();
+  //   }
+  //
+  // });
+
   $('.ctc-tab .card-head-title span').click(function() {
-    if ($(this).index() === 0) {
-      $(this).addClass('active')
-      $('.ctc-body').fadeIn();
-      $('.nonctc-body').fadeOut();
-      $(this).siblings().removeClass('active')
+
+
+    var ctcNo = $(this).index();
+    console.log(ctcNo);
+
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+
+    if (ctcNo === 0) {
+      $('.nonctc-body').removeClass('active');
+      $('.ctc-body').addClass('active');
+
     } else {
-      $(this).addClass('active')
-      $(this).siblings().removeClass('active');
-      $('.nonctc-body').fadeIn();
-      $('.ctc-body').fadeOut();
+      $('.ctc-body').removeClass('active');
+      $('.nonctc-body').addClass('active');
+
     }
 
-  });
+
+
+
+  })
 
 
 
@@ -959,6 +1043,15 @@ $(document).ready(function() {
     $('.copyNoti').fadeIn(1000);
     $('.copyNoti').fadeOut(1000);
   })
+
+
+  if (($('#textfield3').val().length) === 0) {
+    $('.pas-code label').css({
+      "top": "-10px"
+    })
+  }
+
+  console.log($('#textfield3').length);
 
 
 })

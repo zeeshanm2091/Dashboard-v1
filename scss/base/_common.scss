@@ -25,6 +25,19 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
     transform: scale(1);
   }
 }
+@keyframes fadeOutEffect {
+  0% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 50%;
+  }
+
+  0% {
+    opacity: 100%;
+  }
+}
 /****scroll bar****/
 ::-webkit-scrollbar {
   width: 3px;
@@ -218,10 +231,13 @@ p {
 }
 
 .lang-sel {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -8px;
+  // position: absolute;
+  // right: 0;
+  // top: 50%;
+  // margin-top: -8px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
 
   .dropdown-block {
     height: 20px;
@@ -377,6 +393,15 @@ p {
   @include dis-flex();
   height: calc(100% - 65px);
   padding: 0 20px;
+
+  &.ctc-body,
+  &.nonctc-body {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
   @media screen and (max-width:1200px) {
     padding: 0 10px;
   }
@@ -457,42 +482,38 @@ p {
   align-content: flex-start;
   min-height: 800px;
   border: 1px dashed $border;
+}
 
-  section {
-    position: relative;
-    width: 100%;
-    margin-bottom: 0 !important;
-    // &:hover .delete-btn {
-    //   display: block;
-    //   @media screen and (max-width:992px) {
-    //     display: none;
-    //   }
-    // }
-    .delete-btn {
-      z-index: 11;
-      position: absolute;
-      right: 0;
-      top: 30px;
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      background-color: $border;
-      cursor: pointer;
-      display: none;
+section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0 !important;
 
-      &:before {
-        line-height: 40px;
-      }
+  .delete-btn {
+    z-index: 11;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    background-color: $border;
+    cursor: pointer;
+    display: none;
+
+    &:before {
+      line-height: 40px;
     }
+  }
 
-    &.sec-50 {
-      width: 48%;
-      @media screen and (max-width:767px) {
-        width: 100%;
-      }
+  &.sec-50 {
+    width: 48%;
+    @media screen and (max-width:767px) {
+      width: 100%;
     }
   }
 }
+// }
 
 .db-full-width {
   width: 100%;
@@ -951,8 +972,6 @@ span.copyNoti {
     }
   }
 }
-
-
 /**********card block***********/
 .card-block {
   height: 180px;
@@ -961,21 +980,26 @@ span.copyNoti {
   overflow: hidden;
   background-color: #ffffff;
   padding: 20px;
-  &.big{
-    height:390px
+  position: relative;
+
+  &.big {
+    height: 350px;
   }
-  .card-head-title{
+
+  .card-head-title {
     text-transform: capitalize;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 }
 
+.blog-bm {
+  // position: absolute;
+  // top: -3px;
+  // right: 20px;
+  // font-size: 30px;
+  cursor: pointer;
 
-
-
-
-
-
-
-
-/****screen-3 big changes ends here*****/
+  &.active {
+    color: $primary;
+  }
+}

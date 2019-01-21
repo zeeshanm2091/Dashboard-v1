@@ -1503,6 +1503,17 @@ table {
     transform: scale(1);
   }
 }
+@keyframes fadeOutEffect {
+  0% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 50%;
+  }
+  0% {
+    opacity: 100%;
+  }
+}
 /****scroll bar****/
 ::-webkit-scrollbar {
   width: 3px;
@@ -1692,10 +1703,9 @@ p {
 }
 
 .lang-sel {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -8px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
 }
 .lang-sel .dropdown-block {
   height: 20px;
@@ -1854,6 +1864,12 @@ p {
   height: calc(100% - 65px);
   padding: 0 20px;
 }
+.card-body.ctc-body, .card-body.nonctc-body {
+  display: none;
+}
+.card-body.ctc-body.active, .card-body.nonctc-body.active {
+  display: flex;
+}
 @media screen and (max-width: 1200px) {
   .card-body {
     padding: 0 10px;
@@ -1937,14 +1953,13 @@ p {
   min-height: 800px;
   border: 1px dashed #ddd;
 }
-.left-list section,
-.right-list section {
+
+section {
   position: relative;
   width: 100%;
   margin-bottom: 0 !important;
 }
-.left-list section .delete-btn,
-.right-list section .delete-btn {
+section .delete-btn {
   z-index: 11;
   position: absolute;
   right: 0;
@@ -1956,17 +1971,14 @@ p {
   cursor: pointer;
   display: none;
 }
-.left-list section .delete-btn:before,
-.right-list section .delete-btn:before {
+section .delete-btn:before {
   line-height: 40px;
 }
-.left-list section.sec-50,
-.right-list section.sec-50 {
+section.sec-50 {
   width: 48%;
 }
 @media screen and (max-width: 767px) {
-  .left-list section.sec-50,
-.right-list section.sec-50 {
+  section.sec-50 {
     width: 100%;
   }
 }
@@ -2375,27 +2387,23 @@ span.copyNoti {
   overflow: hidden;
   background-color: #ffffff;
   padding: 20px;
+  position: relative;
 }
 .card-block.big {
-  height: 390px;
+  height: 350px;
 }
 .card-block .card-head-title {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
-.card-block .card-body {
-  height: auto;
+
+.blog-bm {
+  cursor: pointer;
 }
-.card-block .card-left {
-  width: 70%;
-  height: 100%;
-}
-.card-block .card-right {
-  width: 30%;
-  height: 100%;
+.blog-bm.active {
+  color: #33cccc;
 }
 
-/****screen-3 big changes ends here*****/
 /****components****/
 .db-head {
   background-color: #ffffff;
@@ -2497,6 +2505,11 @@ span.copyNoti {
 .db-head .db-head-content .left-block .main-logo img {
   height: 60px;
   width: auto;
+}
+@media screen and (max-width: 992px) {
+  .db-head .db-head-content .left-block .main-logo img {
+    height: 50px;
+  }
 }
 .db-head .db-head-content .left-block .main-logo span {
   display: none;
@@ -2919,7 +2932,8 @@ span.copyNoti {
   padding-bottom: 60px;
 }
 
-.accord-container .accord-item-title, .accord-container .setting-btns {
+.accord-container .accord-item-title,
+.accord-container .setting-btns {
   padding: 0 30px;
   height: 55px;
   border-bottom: 1px solid #ddd;
@@ -2956,7 +2970,7 @@ span.copyNoti {
 }
 .accord-container .accord-body-list .dropdown-block.multi-select.language-select {
   height: auto;
-  padding: 0px;
+  padding: 0;
 }
 .accord-container .accord-body-list .dropdown-block.multi-select.language-select .selected-item {
   height: 30px;
@@ -3061,6 +3075,7 @@ span.copyNoti {
 .theme-item.big-item span.img-select-overlay span {
   font-size: 13px;
   text-transform: none;
+  line-height: 20px;
 }
 .theme-item img {
   width: 100%;
@@ -3193,7 +3208,7 @@ span.copyNoti {
   padding: 10px;
 }
 .card-layout-item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .card-layout-item.bx-shadow .action-box {
   webkit-box-shadow: 0 0 10px 2px #ddd;

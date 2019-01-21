@@ -39,7 +39,7 @@
   @media screen and (max-width:1366px) {
     padding: 0 50px;
   }
-  @media screen and (max-width:992px){
+  @media screen and (max-width:992px) {
     max-width: 100%;
   }
   @media screen and (max-width:767px) {
@@ -191,7 +191,7 @@
 
 .login-footer {
   width: 350px;
-  position: absolute;
+  position: fixed;
   bottom: -150px;
   left: 50%;
   margin-left: -175px;
@@ -247,7 +247,7 @@
 .db-overlay,
 .no-action {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   background-color: rgba(0,0,0,.6);
   opacity: 0.2;
@@ -292,6 +292,9 @@
   position: relative;
   z-index: 10;
   width: calc(100% - 360px);
+  @media screen and (max-width:767px) {
+    display: none;
+  }
 
   .zingo-content {
     padding-left: 50px;
@@ -322,11 +325,10 @@
   span {
     display: block;
     color: $white;
-    text-transform: capitalize;
     font-weight: bold;
 
     &:first-child {
-      font-size: 62px;
+      font-size: 52px;
       @media screen and (max-width:992px) {
         font-size: 42px;
       }
