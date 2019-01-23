@@ -66,7 +66,6 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
-
 body {
   font-size: 13px;
   font-family: sans-serif;
@@ -165,7 +164,7 @@ p {
 
   .widget-list {
     .delete-btn {
-      display: none;
+      // display: none;
     }
 
     .widget-img-block {
@@ -487,8 +486,7 @@ p {
 section {
   position: relative;
   width: 100%;
-  margin-bottom: 0 !important;
-
+  // margin-bottom: 0 !important;
   .delete-btn {
     z-index: 11;
     position: absolute;
@@ -658,7 +656,6 @@ label:hover {
   cursor: text;
 }
 /****button css****/
-
 .btn-s {
   &.db-btn {
     width: 30% !important;
@@ -837,7 +834,6 @@ label:hover {
   }
 }
 /***disabled****/
-
 .disabled {
   opacity: 0.5;
   position: relative;
@@ -851,7 +847,6 @@ label:hover {
   }
 }
 /*****error mgs *****/
-
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;
@@ -868,7 +863,6 @@ label:hover {
   font-weight: bold;
 }
 /*****color pickr*****/
-
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
@@ -880,6 +874,7 @@ label:hover {
   cursor: pointer;
 }
 /****loader*****/
+
 .db-loader {
   position: fixed;
   left: 0;
@@ -898,7 +893,6 @@ label:hover {
   }
 }
 /*****range slider*****/
-
 .range-slider-container {
   width: 100%;
 }
@@ -951,6 +945,7 @@ span.copyNoti {
   right: 50px;
 }
 /*****copy right******/
+
 .db-copyRight {
   @include dis-flex();
   text-transform: capitalize;
@@ -973,6 +968,7 @@ span.copyNoti {
   }
 }
 /**********card block***********/
+
 .card-block {
   height: 180px;
   border: 1px solid #ccc;
@@ -1001,5 +997,25 @@ span.copyNoti {
 
   &.active {
     color: $primary;
+  }
+}
+
+.widget-setting {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  z-index: 40;
+  height: 40px;
+  width: 40px;
+  background-color: $border;
+  color: $text;
+  text-align: center;
+  vertical-align: middle;
+  right: 0;
+  line-height: 40px;
+  cursor: pointer;
+
+  &:before {
+    line-height: 40px;
   }
 }

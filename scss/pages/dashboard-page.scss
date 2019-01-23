@@ -1,36 +1,30 @@
-@import'../base/variables';
-@import'../base/icon-fonts';
-@import'../base/reset';
-@import'../base/common';
-
-
-/****components****/
-  @import'../components/nav';
-  @import'../components/newsCard';
-  @import'../components/empConnect';
-  @import'../components/empBday';
-  @import'../components/slider';
-  @import'../components/optionList';
-  @import'../components/myteam';
-  @import'../components/mycomp';
-  @import'../components/moreLink';
-  @import'../components/attendence';
-  @import'../components/ctc';
-  @import'../components/mylearn';
-  @import'../components/rnr';
-  @import'../components/setting-menu';
-  @import'../components/all-dnd';
-  @import'../components/basic';
-  @import'../components/basic2';
-  @import'../components/tab';
-  @import'../components/login-head';
-  @import'../components/login-block';
-  @import'../components/head';
-  @import'../components/popup';
-  @import'../components/travel-blog';
-
-
-/*****themes******/
-
-  @import'../themes/theme-icon-v1.scss';
-  @import'../themes/theme-icon-v2.scss';
+@import '../base/variables';
+@import '../base/icon-fonts';
+@import '../base/reset';
+@import '../base/common'; /****components****/
+@import '../components/nav';
+@import '../components/newsCard';
+@import '../components/empConnect';
+@import '../components/empBday';
+@import '../components/slider';
+@import '../components/optionList';
+@import '../components/myteam';
+@import '../components/mycomp';
+@import '../components/moreLink';
+@import '../components/attendence';
+@import '../components/ctc';
+@import '../components/mylearn';
+@import '../components/rnr'; // @import '../components/setting-menu';
+@import '../components/db-settingMenu';
+@import '../components/all-dnd';
+@import '../components/basic';
+@import '../components/basic2';
+@import '../components/tab';
+@import '../components/login-head';
+@import '../components/login-block';
+@import '../components/head';
+@import '../components/popup';
+@import '../components/widget-popup';
+@import '../components/travel-blog'; /*****themes******/
+@import '../themes/theme-icon-v1.scss';
+@import '../themes/theme-icon-v2.scss';
