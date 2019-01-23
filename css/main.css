@@ -4941,9 +4941,12 @@ span.copyNoti {
   background-color: #fff;
   padding: 60px 30px 30px;
   border-radius: 10px;
-  position: relative;
   width: 350px;
   min-height: 230px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .dp-popup .dp-popup-content .db-popup-head {
   font-weight: bold;

@@ -1,9 +1,13 @@
-.setting-widget-popup {
+.widget-common-popup {
   .dp-popup-content {
     min-height: 80%;
     width: 80%;
     padding: 0;
     border-radius: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 
     .db-popup-head {
       background-color: $primary;
@@ -13,7 +17,8 @@
         color: $white;
         line-height: 50px;
         text-align: left;
-        padding-left: 20px;
+        padding: 0 20px;
+        margin-bottom: 0;
 
         span {
           font-size: 20px;
@@ -35,5 +40,329 @@
     &:before {
       line-height: 50px;
     }
+  }
+
+  .db-popup-body {
+    padding: 30px;
+  }
+
+  .db-popup-bodyContent {
+    @include dis-flex();
+    align-items: flex-start;
+  }
+
+  .db-popup-left {
+    width: 30%;
+  }
+
+  .db-popup-right {
+    width: 65%;
+  }
+
+  .newsArti-title {
+    margin-bottom: 10px;
+  }
+
+  .add-news-title,
+  .newsArti-title {
+    position: relative;
+
+    input {
+      height: 40px;
+      // margin-bottom: 10px;
+      font-size: 13px;
+      padding: 0 50px 0 10px;
+      // text-transform: capitalize;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  }
+
+  .news-title-inputBlock {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .add-btn-block {
+    background-color: $primary;
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    @include dis-flex();
+    justify-content: center;
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .icon {
+      position: relative;
+      top: -1px;
+
+      &:before {
+        font-weight: bold !important;
+        font-size: 10px;
+        padding-left: 2px;
+      }
+    }
+  }
+  //}
+}
+
+.add-topic-history {
+  // border: 1px solid $border;
+}
+
+.topic-history-item {
+  @include dis-flex();
+  border: 1px solid $border;
+  border-top: none;
+  height: 40px;
+  padding: 0 10px;
+
+  &:hover {
+    background-color: $bg-color;
+  }
+
+  &:first-child {
+    border-top: 1px solid $border;
+  }
+
+  .topic-his-left {
+    width: 80%;
+    position: relative;
+
+    input {
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      left: 0;
+      display: none;
+    }
+  }
+
+  .topic-his-right {
+    width: 20%;
+    @include dis-flex();
+    justify-content: space-around;
+  }
+
+  .his-delete-btn,
+  .his-edit-btn {
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.newsArti-body {
+  textarea {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid $border;
+    width: 100%;
+    font-family: sans-serif;
+  }
+}
+
+.newsArti-upload-block {
+  @include dis-flex();
+  border: 1px solid $border;
+  border-radius: 5px;
+  height: 40px;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  width: 50%;
+
+  .add-btn-block {
+    top: -1px;
+    right: -1px;
+    width: 100px;
+
+    .icon {
+      padding-left: 5px;
+
+      &:before {
+        font-size: 16px;
+      }
+    }
+  }
+
+  input[type="file"] {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.db-attri-btn,
+.db-publ-btn {
+  @include dis-flex();
+  height: 40px;
+  line-height: 40px;
+  // border: 1px solid;
+  text-align: center;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: $primary;
+  color: $white;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.db-attri-btn {
+  font-size: 20px;
+}
+
+.db-popup-bodyAction {
+  @include dis-flex();
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+/****attribute btn css****/
+
+.db-attribute-list {
+  @include dis-flex();
+  flex-wrap: wrap;
+}
+
+.db-attri-item {
+  margin: 5px;
+  height: 40px;
+  border: 1px solid #ccc;
+  width: 200px;
+  @include dis-flex();
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 5px;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &.active {
+    .attri-radio {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .attri-radio {
+    height: 12px;
+    width: 12px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 10px;
+    border: 1px solid $border;
+  }
+}
+
+.attributes-popup,
+.attributesUnit-popup {
+  .db-popup-bodyAction {
+    justify-content: center;
+  }
+}
+/*****attribute unit popup*******/
+
+.attr-unit-item {
+  width: 200px;
+  margin: 10px;
+}
+
+.db-attributeUnit-list {
+  @include dis-flex();
+  justify-content: flex-start;
+}
+
+.attr-unit-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+/****common select box*****/
+
+.db-dropdown {
+  position: relative;
+}
+
+.attr-unit-item {
+  .db-attri-item {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    border-top: none;
+    height: 40px;
+    width: 100%;
+  }
+}
+
+.db-dropdown-list {
+  border: 1px solid $border;
+  background-color: $white;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  height: 240px;
+  overflow-y: scroll;
+}
+
+.db-dropdown-item {
+  &:last-child {
+    .db-attri-item {
+      border-bottom: none;
+    }
+  }
+}
+
+.db-select-item {
+  height: 40px;
+  border: 1px solid $border;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 30px 0 10px;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    border-top: 6px solid black;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
   }
 }
