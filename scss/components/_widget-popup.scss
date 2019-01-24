@@ -147,6 +147,7 @@
       margin-top: -15px;
       left: 0;
       display: none;
+      padding-right: 10px;
     }
   }
 
@@ -244,7 +245,6 @@
   margin-top: 10px;
 }
 /****attribute btn css****/
-
 .db-attribute-list {
   @include dis-flex();
   flex-wrap: wrap;
@@ -289,7 +289,6 @@
   }
 }
 /*****attribute unit popup*******/
-
 .attr-unit-item {
   width: 200px;
   margin: 10px;
@@ -307,7 +306,6 @@
   display: block;
 }
 /****common select box*****/
-
 .db-dropdown {
   position: relative;
 }

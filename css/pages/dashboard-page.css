@@ -4868,6 +4868,7 @@ span.copyNoti {
   margin-top: -15px;
   left: 0;
   display: none;
+  padding-right: 10px;
 }
 .topic-history-item .topic-his-right {
   width: 20%;
