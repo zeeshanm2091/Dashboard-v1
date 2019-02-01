@@ -1,5 +1,5 @@
 .newsCard {
-  border: 1px solid $border;
+  // border: 1px solid $border;
   height: 180px;
   @media screen and (max-width:767px){
     height:auto;
@@ -15,7 +15,7 @@
 
   background-color: $black;
   box-sizing: border-box;
-  margin-top: 30px;
+  // margin-top: 30px;
   background-color: $white;
 
   .newsCard-content {

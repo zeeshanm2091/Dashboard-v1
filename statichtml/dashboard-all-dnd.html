@@ -21,6 +21,10 @@
 
   <script src="../js/extra/datepicker/datepicker.js"></script>
   <link rel="stylesheet" href="../css/extra/datepicker/datepicker.css">
+  <!-- colour picker  -->
+  <script src="../js/extra/colorpicker/colorpicker.js"></script>
+  <link rel="stylesheet" href="../css/extra/colorpicker/colorpicker.css">
+
   <!-- /****main css file****/ -->
   <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="../css/pages/dashboard-page.css">
@@ -1241,10 +1245,10 @@
                 <div class="setting-icon">
                   <span class="icon icon-setting"></span>
                 </div>
-                <div class="setting-menu">
+                <!-- <div class="setting-menu">
                   <div class="setting-head">
-                    <span>theme setup</span>
                     <span class="icon icon-wrong"></span>
+                    <div class="db-btn flat-btn"><span>Publish Changes</span></div>
                   </div>
                   <div class="setting-body">
                     <div class="accord-container">
@@ -1291,8 +1295,196 @@
                         </div>
                         <div class="accord-item-body">
                           <div class="accord-body-list widget-list">
+                            <div class="widget-block-item my-goals-item active">
+                              <div class="sp-widget-img">
+                                <span class="icon icon-goals"></span>
+                              </div>
+                              <div class="sp-widget-title">
+                                <h4>My Goals</h4>
+                              </div>
+                              <span class="icon icon-ok-filled"></span>
+                            </div>
+                            <div class="widget-block-item my-learning-item active">
+                              <div class="sp-widget-img">
+                                <span class="icon icon-learning"></span>
+                              </div>
+                              <div class="sp-widget-title">
+                                <h4>My Learning</h4>
+                              </div>
+                              <span class="icon icon-ok-filled"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="setting-menu">
+                  <div class="setting-head">
+                    <span class="icon icon-wrong"></span>
+                    <div class="db-btn flat-btn"><span>Publish Changes</span></div>
+                  </div>
+                  <div class="setting-body">
 
+                    <div class="accord-container">
+                      <div class="setting-page-title">
+                        <h5>You are customising</h5>
+                        <h4>Portal Home Page</h4>
+                      </div>
+                      <div class="setting-page-title theme-change-block">
+                        <div class="theme-left">
+                          <h5>Active theme</h5>
+                          <h4>Mini Paradise</h4>
+                        </div>
+                        <div class="theme-right">
+                          <div class="db-btn"><span>Change</span></div>
+                        </div>
 
+                      </div>
+
+                      <div class="accord-item widget-btn">
+                        <div class="accord-item-title">
+                          <span>widgets</span>
+                          <span class="icon icon-next"></span>
+                        </div>
+                        <div class="accord-item-body">
+                          <div class="accord-body-list widget-list">
+
+                            <div class="widget-block-item my-goals-item active">
+                              <div class="sp-widget-img">
+                                <span class="icon icon-goals"></span>
+                              </div>
+                              <div class="sp-widget-title">
+                                <h4>My Goals</h4>
+                              </div>
+                              <span class="icon icon-ok-filled"></span>
+                            </div>
+                            <div class="widget-block-item my-learning-item active">
+                              <div class="sp-widget-img">
+                                <span class="icon icon-learning"></span>
+                              </div>
+                              <div class="sp-widget-title">
+                                <h4>My Learning</h4>
+                              </div>
+                              <span class="icon icon-ok-filled"></span>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accord-item body-color">
+                        <div class="accord-item-title">
+                          <span>Colour</span>
+                          <span class="icon icon-next"></span>
+                        </div>
+                        <div class="accord-item-body">
+                          <!-- <div class="accord-body-list">
+                            <div class="color-change-block">
+                              <div class="common-label">body colour</div>
+                              <div class="color-block">
+                                <div class="pickr-child"></div>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="accord-item sp-banner">
+                        <div class="accord-item-title">
+                          <span>Banner Image</span>
+                          <span class="icon icon-next"></span>
+                        </div>
+                        <div class="accord-item-body">
+                          <div class="bgImg-list accord-body-list">
+                            <div class="theme-item big-item img-display-block">
+                              <img src="../images/bg4.jpg" alt="">
+                              <input type="file">
+                              <span class="img-select-overlay">select image to upload
+                                <span>logo size should not more than 500 kb</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accord-item banner-card">
+                        <div class="accord-item-title">
+                          <span>banner card</span>
+                          <span class="icon icon-next"></span>
+                        </div>
+                        <div class="accord-item-body">
+                          <div class="accord-body-list">
+                            <div class="cardInput-group sp-card-title">
+                              <span class="card-label">title</span>
+                              <input type="text" class="sp-input">
+                            </div>
+                            <div class="cardInput-group sp-card-content">
+                              <span class="card-label">content of the banner card</span>
+                              <textarea name="arti-content" rows="8" cols="80"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accord-item card-layout">
+                        <div class="accord-item-title">
+                          <span>customise card layout</span>
+                          <span class="icon icon-next"></span>
+                        </div>
+                        <div class="accord-item-body">
+                          <div class="accord-body-list">
+                            <div class="card-layout-item bx-shadow">
+                              <div class="common-label">box shadow</div>
+                              <div class="card-action-block">
+                                <div class="action-result">
+                                  <div class="action-box"></div>
+                                </div>
+                                <div class="action-values">
+                                  <div class="range-slider-container">
+                                    <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-layout-item bx-radius">
+                              <div class="common-label">box radius</div>
+                              <div class="card-action-block">
+                                <div class="action-result">
+                                  <div class="action-box"></div>
+                                </div>
+                                <div class="action-values">
+                                  <div class="range-slider-container">
+                                    <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-layout-item bx-border">
+                              <div class="common-label">box border</div>
+                              <div class="card-action-block">
+                                <div class="action-result">
+                                  <div class="action-box"></div>
+                                </div>
+                                <div class="action-values">
+                                  <div class="range-slider-container">
+                                    <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accorrd-main-body">
+                        <div class="accord-closing">
+                          <span class="icon icon-back"></span>
+                          <div class="widget-click-desc">
+                            <h5>You are customising</h5>
+                            <h4>Widgets</h4>
+                          </div>
+                        </div>
+                        <div class="accord-main-content">
+                          <div class="accord-content-info">
+                            <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p>
+                          </div>
+                          <div class="accord-content">
                           </div>
                         </div>
                       </div>
@@ -1435,1547 +1627,430 @@
       <div class="db-body main-container ot-pd">
         <div class="db-left">
           <section class="left-list">
-            <!-- <section>
-              <div class="widget-img-block">
 
-              </div>
-              <div class="main-markup">
-
-              </div>
-            </section> -->
-            <section>
+            <section class="my-common-widget">
               <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/TNA.png" alt="">
-                </div>
-                <div class="widget-title">
-                  time &amp; attendance
-                </div>
-              </div>
-              <div class="main-markup">
+              <div class="newsCard">
+                <div class="db-slider swiper-container">
+                  <div class="slider-list swiper-wrapper">
+                    <div class="slider-item swiper-slide">
+                      <a href="javascript:;">
+                        <div class="slider-item-content">
+                          <div class="newsCard-content">
+                            <div class="newsCard-img-block">
+                              <a href="#myVideo" data-fancybox>
+                                <img src="../images/news.jpg">
+                                <div class="newsCard-play-btn icon icon-play"> </div>
+                                <video width="80%" height="90%" controls id="myVideo" style="display:none;">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
+                                  Your browser doesn't support HTML5 video tag.
+                                </video>
+                              </a>
+                            </div>
+                            <div class="newsCard-desc">
+                              <div class="newsCard-name">
+                                <h5><span>company news</span></h5>
 
-                <div class="newsCard">
-                  <div class="db-slider swiper-container">
-                    <div class="slider-list swiper-wrapper">
-                      <div class="slider-item swiper-slide">
-                        <a href="javascript:;">
-                          <div class="slider-item-content">
-                            <div class="newsCard-content">
-                              <div class="newsCard-img-block">
-                                <a href="#myVideo" data-fancybox>
-                                  <img src="../images/news.jpg">
-                                  <div class="newsCard-play-btn icon icon-play"> </div>
-                                  <video width="80%" height="90%" controls id="myVideo" style="display:none;">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
-                                    Your browser doesn't support HTML5 video tag.
-                                  </video>
-                                </a>
                               </div>
-                              <div class="newsCard-desc">
-                                <div class="newsCard-name">
-                                  <h5><span>company news</span></h5>
-
-                                </div>
-                                <div class="newsCard-title">
-                                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-                                </div>
-                                <div class="newsCard-text">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
-                                </div>
-                                <div class="newsCard-link">
-                                  <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
-                                </div>
+                              <div class="newsCard-title">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                              </div>
+                              <div class="newsCard-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
+                              </div>
+                              <div class="newsCard-link">
+                                <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
                               </div>
                             </div>
                           </div>
-                        </a>
-                      </div>
-                      <div class="slider-item swiper-slide">
-                        <a href="javascript:;">
-                          <div class="slider-item-content">
-                            <div class="newsCard-content">
-                              <div class="newsCard-img-block">
-                                <a href="#myVideo" data-fancybox>
-                                  <img src="../images/news.jpg">
-                                  <div class="newsCard-play-btn icon icon-play"> </div>
-                                  <video width="80%" height="90%" controls id="myVideo" style="display:none;">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
-                                    Your browser doesn't support HTML5 video tag.
-                                  </video>
-                                </a>
-                              </div>
-                              <div class="newsCard-desc">
-                                <div class="newsCard-name">
-                                  <h5><span>company news</span></h5>
-                                </div>
-                                <div class="newsCard-title">
-                                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-                                </div>
-                                <div class="newsCard-text">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
-                                </div>
-                                <div class="newsCard-link">
-                                  <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slider-item swiper-slide">
-                        <a href="javascript:;">
-                          <div class="slider-item-content">
-                            <div class="newsCard-content">
-                              <div class="newsCard-img-block">
-                                <a href="#myVideo" data-fancybox>
-                                  <img src="../images/news.jpg">
-                                  <div class="newsCard-play-btn icon icon-play"> </div>
-                                  <video width="80%" height="90%" controls id="myVideo" style="display:none;">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
-                                    <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
-                                    Your browser doesn't support HTML5 video tag.
-                                  </video>
-                                </a>
-                              </div>
-                              <div class="newsCard-desc">
-                                <div class="newsCard-name">
-                                  <h5><span>company news</span></h5>
-                                </div>
-                                <div class="newsCard-title">
-                                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-                                </div>
-                                <div class="newsCard-text">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
-                                </div>
-                                <div class="newsCard-link">
-                                  <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
+                        </div>
+                      </a>
                     </div>
-                    <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
-                    <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-
-
-            <section>
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/myteam.png" alt="">
-                </div>
-                <div class="widget-title">
-                  my team attendance
-                </div>
-              </div>
-              <div class="main-markup">
-
-                <div class="empConnect my-team">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-employee-master"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4><span>my team</span></h4>
-
-                        </div>
-                      </div>
-                      <div class="card-right">
-                        <div class="emp-card-filters">
-                          <div class="emp-filteList">
-                            <div class="emp-filter-item">
-                              <div class="serach-box">
-                                <span class="search-icon icon icon-search">
-                                </span>
-                                <input type="text" placeholder="Search Employee">
+                    <div class="slider-item swiper-slide">
+                      <a href="javascript:;">
+                        <div class="slider-item-content">
+                          <div class="newsCard-content">
+                            <div class="newsCard-img-block">
+                              <a href="#myVideo" data-fancybox>
+                                <img src="../images/news.jpg">
+                                <div class="newsCard-play-btn icon icon-play"> </div>
+                                <video width="80%" height="90%" controls id="myVideo" style="display:none;">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
+                                  Your browser doesn't support HTML5 video tag.
+                                </video>
+                              </a>
+                            </div>
+                            <div class="newsCard-desc">
+                              <div class="newsCard-name">
+                                <h5><span>company news</span></h5>
+                              </div>
+                              <div class="newsCard-title">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                              </div>
+                              <div class="newsCard-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
+                              </div>
+                              <div class="newsCard-link">
+                                <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
-                    <div class="myteam-list">
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/1.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
+                    <div class="slider-item swiper-slide">
+                      <a href="javascript:;">
+                        <div class="slider-item-content">
+                          <div class="newsCard-content">
+                            <div class="newsCard-img-block">
+                              <a href="#myVideo" data-fancybox>
+                                <img src="../images/news.jpg">
+                                <div class="newsCard-play-btn icon icon-play"> </div>
+                                <video width="80%" height="90%" controls id="myVideo" style="display:none;">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+                                  <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type="video/ogg">
+                                  Your browser doesn't support HTML5 video tag.
+                                </video>
+                              </a>
+                            </div>
+                            <div class="newsCard-desc">
+                              <div class="newsCard-name">
+                                <h5><span>company news</span></h5>
+                              </div>
+                              <div class="newsCard-title">
+                                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                              </div>
+                              <div class="newsCard-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repudiandae nam commodi molestias eius rerum velit est</p>
+                              </div>
+                              <div class="newsCard-link">
+                                <a href="javascript:;"><span class="icon icon-next-arrow primary-icon"></span></a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/2.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/3.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/4.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/5.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/6.jpg" alt="">
-                        <div class="attn-status attn-abs">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/7.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/8.jpg" alt="">
-                        <div class="attn-status attn-abs">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/9.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/10.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/11.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/12.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
-                      <div class="myteam-item tn-md">
-                        <img src="../images/user/13.jpg" alt="">
-                        <div class="attn-status">
-                          <span></span>
-                        </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
+                  <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
+                  <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
                 </div>
               </div>
             </section>
 
-            <section>
+
+
+            <section class="my-common-widget">
               <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-
-                <div class="widget-img">
-                  <img src="../images/bday.png" alt="">
-                </div>
-                <div class="widget-title">
-                  birthdays &amp; anniversary
-                </div>
-              </div>
-              <div class="main-markup">
-                <div class="main-bday-block">
-                  <ul class="divide-block">
-                    <li class="empConnect empBday divide-left small-card small-card-slider">
-                      <div class="empConnect-content">
-                        <div class="card-head">
-                          <div class="card-left">
-                            <div class="card-head-icon">
-                              <span class="icon icon-birthday"></span>
-                            </div>
-                            <div class="card-head-title">
-                              <h4><span>birthday</span></h4>
-
-                            </div>
-                          </div>
-                          <div class="card-right">
-                            <div class="emp-card-filters">
-                              <div class="emp-filteList">
-                                <div class="emp-filter-item">
-                                  <div class="dropdown-block single-select" id="bday-select">
-                                    <!-- <span class="selected-item">today</span>
-                            <div class="dropdown-list">
-                              <div class="dropdown-item">15 mar</div>
-                              <div class="dropdown-item">16 mar</div>
-                              <div class="dropdown-item">17 mar</div>
-                            </div> -->
-                                    <div id="datepair" class="bgImg-list accord-body-list">
-                                      <input type="text" class="login-fields date" placeholder="today">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="db-slider swiper-container">
-                          <div class="slider-list swiper-wrapper" id="bday-slider">
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/11.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/12.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/13.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/14.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/15.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/6.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/17.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/18.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
-                          <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="empConnect empBday empAnni divide-right small-card small-card-slider">
-
-                      <div class="empConnect-content">
-                        <div class="card-head">
-                          <div class="card-left">
-                            <div class="card-head-icon">
-                              <span class="icon icon-birthday"></span>
-                            </div>
-                            <div class="card-head-title">
-                              <h4><span>anniversary</span></h4>
-
-                            </div>
-                          </div>
-                          <div class="card-right">
-                            <div class="emp-card-filters">
-                              <div class="emp-filteList">
-                                <div class="emp-filter-item">
-                                  <div class="dropdown-block single-select" id="anni-select">
-                                    <!-- <span class="selected-item">today</span>
-                            <div class="dropdown-list">
-                              <div class="dropdown-item">15 mar</div>
-                              <div class="dropdown-item">16 mar</div>
-                              <div class="dropdown-item">17 mar</div>
-                            </div> -->
-                                    <div id="datepair" class="bgImg-list accord-body-list">
-                                      <input type="text" class="login-fields date esStDate" placeholder="Today">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="db-slider swiper-container">
-                          <div class="slider-list swiper-wrapper" id="anni-slider">
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/1.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/12.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/13.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/14.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/15.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/16.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/17.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="slider-item swiper-slide">
-                              <a href="javascript:;">
-                                <div class="slider-item-content">
-                                  <div class="slider-top-block tn-md">
-                                    <img src="../images/user/18.jpg" alt="">
-                                  </div>
-                                  <div class="slider-bottom-block">
-                                    <div class="emp-desc">
-                                      <div class="emp-name">
-                                        <p>zeeshan ali</p>
-                                      </div>
-                                      <div class="emp-desg caption">
-                                        <span class="emp-desg-txt">ux engineer</span>
-                                        <span class="join-date">15 mar</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                          <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
-                          <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section>
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/rnr.png" alt="">
-                </div>
-                <div class="widget-title">
-                  rewards &amp; Recognition
-                </div>
-              </div>
-              <div class="main-markup">
-
-                <div class="empConnect rnr-block">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-employee-master"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4><span><em>RNR </em>leaderboard</span></h4>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="rnr-list">
-
-                      <div class="rnr-item">
-                        <div class="rnr-award-img">
-                          <img src="../images/badges/superstar.png" alt="">
-                        </div>
-                        <div class="rnr-top">
-                          <div class="rnr-img tn-sm">
-                            <img src="../images/user/1.jpg" alt="">
-                          </div>
-                          <div class="rnr-userprofile">
-                            <span class="userName">Zeeshan Ali</span>
-                            <span class="emp-desg caption">Ux Engineer</span>
-                          </div>
-
-                        </div>
-                        <div class="rnr-bottom">
-                          <div class="rnr-desc caption">
-                            <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="rnr-item">
-                        <div class="rnr-award-img">
-                          <img src="../images/badges/thunderbolt.png" alt="">
-                        </div>
-                        <div class="rnr-top">
-                          <div class="rnr-img tn-sm">
-                            <img src="../images/user/2.jpg" alt="">
-                          </div>
-                          <div class="rnr-userprofile">
-                            <span class="userName">Zeeshan Ali</span>
-                            <span class="emp-desg caption">Ux Engineer</span>
-                          </div>
-
-                        </div>
-                        <div class="rnr-bottom">
-                          <div class="rnr-desc caption">
-                            <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="rnr-item">
-                        <div class="rnr-award-img">
-                          <img src="../images/badges/helping-hand.png" alt="">
-                        </div>
-                        <div class="rnr-top">
-                          <div class="rnr-img tn-sm">
-                            <img src="../images/user/3.jpg" alt="">
-                          </div>
-                          <div class="rnr-userprofile">
-                            <span class="userName">Zeeshan Ali</span>
-                            <span class="emp-desg caption">Ux Engineer</span>
-                          </div>
-
-                        </div>
-                        <div class="rnr-bottom">
-                          <div class="rnr-desc caption">
-                            <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </section>
-
-        </div>
-        <div class="db-right">
-          <section class="right-list">
-            <section>
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/learning.png" alt="">
-                </div>
-                <div class="widget-title">
-                  my travel blog
-                </div>
-              </div>
-              <div class="main-markup">
-
-                <div class="personal-blog-block">
+              <div class="empConnect my-team">
+                <div class="empConnect-content">
                   <div class="card-head">
-                    <div class="card-head-title">
-                      <h4>
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-employee-master"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4><span>my team</span></h4>
 
-                        <span>my activity blog</span>
-                        <span class="icon icon-next"></span>
-
-
-                      </h4>
+                      </div>
+                    </div>
+                    <div class="card-right">
+                      <div class="emp-card-filters">
+                        <div class="emp-filteList">
+                          <div class="emp-filter-item">
+                            <div class="serach-box">
+                              <span class="search-icon icon icon-search">
+                              </span>
+                              <input type="text" placeholder="Search Employee">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="personal-blog-container swiper-container">
-                    <div class="personal-blog-wrapper swiper-wrapper">
-                      <div class="swiper-slide card-block big personal-blog">
-                        <div class="card-wrap">
-                          <!-- <div class="card-head">
-                            <div class="card-head-title">
-                              <h4>
-                                <span>my travel blog</span>
-                              </h4>
-                            </div>
-                          </div> -->
-                          <div class="card-body">
-                            <div class="card-left">
-                              <div class="">
-                                <div class="gallery-top">
-                                  <div class="">
-                                    <div class="img-display">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
+                  <div class="myteam-list">
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/1.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/2.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/3.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/4.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/5.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/6.jpg" alt="">
+                      <div class="attn-status attn-abs">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/7.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/8.jpg" alt="">
+                      <div class="attn-status attn-abs">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/9.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/10.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/11.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/12.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="myteam-item tn-md">
+                      <img src="../images/user/13.jpg" alt="">
+                      <div class="attn-status">
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="my-common-widget bdayAnn">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="main-bday-block">
+                <ul class="divide-block">
+                  <li class="empConnect empBday divide-left small-card small-card-slider">
+                    <div class="empConnect-content">
+                      <div class="card-head">
+                        <div class="card-left">
+                          <div class="card-head-icon">
+                            <span class="icon icon-birthday"></span>
+                          </div>
+                          <div class="card-head-title">
+                            <h4><span>birthday</span></h4>
+
+                          </div>
+                        </div>
+                        <div class="card-right">
+                          <div class="emp-card-filters">
+                            <div class="emp-filteList">
+                              <div class="emp-filter-item">
+                                <div class="dropdown-block single-select" id="bday-select">
+                                  <!-- <span class="selected-item">today</span>
+                            <div class="dropdown-list">
+                              <div class="dropdown-item">15 mar</div>
+                              <div class="dropdown-item">16 mar</div>
+                              <div class="dropdown-item">17 mar</div>
+                            </div> -->
+                                  <div id="datepair" class="bgImg-list accord-body-list">
+                                    <input type="text" class="login-fields date" placeholder="today">
                                   </div>
-                                </div>
-                                <div class="swiper-container gallery-thumbs">
-                                  <div class="img-click-block swiper-wrapper">
-                                    <div class="swiper-slide img-click active">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
-                                    </div>
-                                  </div>
-                                  <div class="swiper-button-next db-arrow icon icon-next"></div>
-                                  <div class="swiper-button-prev db-arrow icon icon-back"></div>
-                                </div>
-
-
-                              </div>
-                            </div>
-                            <div class="card-right">
-                              <div class="blog-user">
-                                <div class="blog-user-img">
-                                  <img src="../images/user/7.jpg" alt="">
-                                </div>
-                                <div class="blog-user-name">
-                                  <h3>sahil Hamirani</h3>
-                                  <span class="emp-desg caption">Business Analyst</span>
-                                </div>
-
-                              </div>
-                              <div class="blog-title">
-                                <h3>trip to goa</h3>
-                              </div>
-                              <div class="blog-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
-                                  cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
-                                  Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
-                                <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
-
-                              </div>
-                              <div class="blog-action-list">
-                                <div class="blog-action-item like-count">
-                                  <span class="icon icon-thumbsup"></span>
-                                  <span class="action-count">196</span>
-                                </div>
-                                <div class="blog-action-item view-count">
-                                  <span class="icon icon-visibility"></span>
-                                  <span class="action-count">230</span>
-                                </div>
-                                <div class="blog-action-item share-count">
-                                  <span class="icon icon-share"></span>
-                                  <span class="action-count">86</span>
-                                  <div class="more-option-block">
-                                    <div class="more-option-list">
-                                      <div class="more-opt-item">
-                                        <span>share with my team</span>
-                                      </div>
-                                      <div class="more-opt-item">
-                                        <span>share the link</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="blog-action-item bm-count">
-                                  <span class="blog-bm icon icon-bookmark"></span>
-                                  <span class="action-count">107</span>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- <span class="blog-bm icon icon-bookmark"></span> -->
                       </div>
-                      <div class="swiper-slide card-block big personal-blog">
-                        <div class="card-wrap">
-                          <!-- <div class="card-head">
-                            <div class="card-head-title">
-                              <h4>
-                                <span>my travel blog</span>
-                              </h4>
-                            </div>
-                          </div> -->
-                          <div class="card-body">
-                            <div class="card-left">
-                              <div class="">
-                                <div class="gallery-top">
-                                  <div class="">
-                                    <div class="img-display">
-                                      <img src="../images/t1.jpg" alt="">
+                      <div class="db-slider swiper-container">
+                        <div class="slider-list swiper-wrapper" id="bday-slider">
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/11.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="swiper-container gallery-thumbs">
-                                  <div class="img-click-block swiper-wrapper">
-                                    <div class="swiper-slide img-click active">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
-                                    </div>
-                                  </div>
-                                  <div class="swiper-button-next db-arrow icon icon-next"></div>
-                                  <div class="swiper-button-prev db-arrow icon icon-back"></div>
-                                </div>
-
-
                               </div>
-                            </div>
-                            <div class="card-right">
-                              <div class="blog-user">
-                                <div class="blog-user-img">
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/12.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/13.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/14.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/15.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
                                   <img src="../images/user/6.jpg" alt="">
                                 </div>
-                                <div class="blog-user-name">
-                                  <h3>sahil Hamirani</h3>
-                                  <span class="emp-desg caption">Business Analyst</span>
-                                </div>
-
-                              </div>
-                              <div class="blog-title">
-                                <h3>trip to goa</h3>
-                              </div>
-                              <div class="blog-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
-                                  cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
-                                  Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
-                                <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
-
-                              </div>
-                              <div class="blog-action-list">
-                                <div class="blog-action-item like-count">
-                                  <span class="icon icon-thumbsup"></span>
-                                  <span class="action-count">196</span>
-                                </div>
-                                <div class="blog-action-item view-count">
-                                  <span class="icon icon-visibility"></span>
-                                  <span class="action-count">230</span>
-                                </div>
-                                <div class="blog-action-item share-count">
-                                  <span class="icon icon-share"></span>
-                                  <span class="action-count">86</span>
-                                  <div class="more-option-block">
-                                    <div class="more-option-list">
-                                      <div class="more-opt-item">
-                                        <span>share with my team</span>
-                                      </div>
-                                      <div class="more-opt-item">
-                                        <span>share the link</span>
-                                      </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="blog-action-item bm-count">
-                                  <span class="blog-bm icon icon-bookmark"></span>
-                                  <span class="action-count">107</span>
-                                </div>
                               </div>
-                            </div>
+                            </a>
                           </div>
-                        </div>
-                        <!-- <span class="blog-bm icon icon-bookmark"></span> -->
-                      </div>
-                      <div class="swiper-slide card-block big personal-blog">
-                        <div class="card-wrap">
-                          <!-- <div class="card-head">
-                            <div class="card-head-title">
-                              <h4>
-                                <span>my travel blog</span>
-                              </h4>
-                            </div>
-                          </div> -->
-                          <div class="card-body">
-                            <div class="card-left">
-                              <div class="">
-                                <div class="gallery-top">
-                                  <div class="">
-                                    <div class="img-display">
-                                      <img src="../images/t1.jpg" alt="">
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/17.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="swiper-container gallery-thumbs">
-                                  <div class="img-click-block swiper-wrapper">
-                                    <div class="swiper-slide img-click active">
-                                      <img src="../images/t1.jpg" alt="">
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/18.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
                                     </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide img-click">
-                                      <img src="../images/t4.jpg" alt="">
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
                                     </div>
                                   </div>
-                                  <div class="swiper-button-next db-arrow icon icon-next"></div>
-                                  <div class="swiper-button-prev db-arrow icon icon-back"></div>
-                                </div>
-
-
-                              </div>
-                            </div>
-                            <div class="card-right">
-                              <div class="blog-user">
-                                <div class="blog-user-img">
-                                  <img src="../images/user/8.jpg" alt="">
-                                </div>
-                                <div class="blog-user-name">
-                                  <h3>sahil Hamirani</h3>
-                                  <span class="emp-desg caption">Business Analyst</span>
-                                </div>
-
-                              </div>
-                              <div class="blog-title">
-                                <h3>trip to goa</h3>
-                              </div>
-                              <div class="blog-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
-                                  cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
-                                  Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
-                                <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
-
-                              </div>
-                              <div class="blog-action-list">
-                                <div class="blog-action-item like-count">
-                                  <span class="icon icon-thumbsup"></span>
-                                  <span class="action-count">196</span>
-                                </div>
-                                <div class="blog-action-item view-count">
-                                  <span class="icon icon-visibility"></span>
-                                  <span class="action-count">230</span>
-                                </div>
-                                <div class="blog-action-item share-count">
-                                  <span class="icon icon-share"></span>
-                                  <span class="action-count">86</span>
-                                  <div class="more-option-block">
-                                    <div class="more-option-list">
-                                      <div class="more-opt-item">
-                                        <span>share with my team</span>
-                                      </div>
-                                      <div class="more-opt-item">
-                                        <span>share the link</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="blog-action-item bm-count">
-                                  <span class="blog-bm icon icon-bookmark"></span>
-                                  <span class="action-count">107</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- <span class="blog-bm icon icon-bookmark"></span> -->
-                      </div>
-                    </div>
-                    <div class="swiper-button-next db-arrow icon icon-next personal-arrow-next"></div>
-                    <div class="swiper-button-prev db-arrow icon icon-back personal-arrow-back"></div>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-            <section class="sec-50">
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/TNA.png" alt="">
-                </div>
-                <div class="widget-title">
-                  time &amp; attendance
-                </div>
-              </div>
-              <div class="main-markup">
-                <div class="empConnect divide-left small-card atten-card">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-birthday"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4><span>time & attendance</span></h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="card-left">
-                        <div class="attn-cal-list">
-
-                        </div>
-                      </div>
-                      <div class="card-right">
-                        <div class="attn-info">
-                          <h1 class="attn-count">3.0</h1>
-                          <p class="attn-desc">Absences in this month</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="sec-50">
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/claims.png" alt="">
-                </div>
-                <div class="widget-title">
-                  claims
-                </div>
-              </div>
-              <div class="main-markup">
-                <div class="empConnect divide-right small-card ctc-card">
-                  <div class="empConnect-content ctc-tab">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-birthday"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4>
-                            <span class="ctc-title active">CTC</span>
-                            <span class="non-ctc-title">Non CTC Claims</span>
-                          </h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body ctc-body active">
-                      <div class="card-left">
-                        <span class="icon icon-claims primary-icon"></span>
-                      </div>
-                      <div class="card-right">
-                        <div class="claim-desc">
-                          <div class="claim-title">
-                            <p>local travel</p>
-                          </div>
-                          <div class="claim-txt caption">
-                            <p>70000 claimed from 50,000</p>
-                          </div>
-                        </div>
-                        <div class="claim-desc">
-                          <div class="claim-title">
-                            <p>food reimbursment</p>
-                          </div>
-                          <div class="claim-txt caption">
-                            <span>5000 claimed from 20,000</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body nonctc-body">
-                      <div class="card-left">
-                        <span class="icon icon-claims primary-icon"></span>
-                      </div>
-                      <div class="card-right">
-                        <div class="claim-desc">
-                          <div class="claim-title">
-                            <p>local travel</p>
-                          </div>
-                          <div class="claim-txt caption">
-                            <span>70000 claimed from 50,000</span>
-                          </div>
-                        </div>
-                        <div class="claim-desc">
-                          <div class="claim-title">
-                            <p>food reimbursment</p>
-                          </div>
-                          <div class="claim-txt caption">
-                            <span>5000 claimed from 20,000</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="sec-50">
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/compen.png" alt="">
-                </div>
-                <div class="widget-title">
-                  compensation
-                </div>
-              </div>
-              <div class="main-markup">
-                <div class="empConnect divide-left small-card mycomp-card">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-birthday"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4>
-                            <span>my compensations</span>
-                          </h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="card-left">
-                        <span class="icon icon-compensations primary-icon"></span>
-                      </div>
-                      <div class="card-right">
-                        <p>download january month payslip</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="sec-50">
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/pms.png" alt="">
-                </div>
-                <div class="widget-title">
-                  goals &amp; performance
-                </div>
-              </div>
-              <div class="main-markup">
-                <div class="empConnect divide-right small-card mypms-card">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-birthday"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4>
-                            <span>my PMS </span>
-                          </h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="card-left">
-                        <span class="icon icon-goals primary-icon"></span>
-                      </div>
-                      <div class="card-right">
-                        <p>complete your q3 performance evaluation</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section>
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/learning.png" alt="">
-                </div>
-                <div class="widget-title">
-                  my learning
-                </div>
-              </div>
-              <div class="main-markup">
-
-                <div class="empConnect divide-left mylearn-card">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-
-                        </div>
-                        <div class="card-head-title">
-                          <h4>
-                            <span>my learning</span>
-                          </h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="learn-list">
-                        <div class="learn-item">
-                          <div class="card-left">
-                            <span class="icon icon-medallions primary-icon"></span>
-                          </div>
-                          <div class="card-right">
-                            <div class="learn-desc">
-                              <div class="learn-top">
-                                <h1>5</h1>
-                              </div>
-                              <div class="learn-bottom">
-                                <p>Completed courses</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="learn-item">
-                          <div class="card-left">
-                            <span class="icon icon-degree primary-icon"></span>
-                          </div>
-                          <div class="card-right">
-                            <div class="learn-desc">
-                              <div class="learn-top">
-                                <h1>12</h1>
-                              </div>
-                              <div class="learn-bottom">
-                                <p>Courses To Do</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="learn-item">
-                          <div class="card-left">
-                            <span class="icon icon-time primary-icon"></span>
-                          </div>
-                          <div class="card-right">
-                            <div class="learn-desc">
-                              <div class="learn-top">
-                                <h1>5</h1>
-                              </div>
-                              <div class="learn-bottom">
-                                <p>Overdue courses</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <span class="delete-btn icon icon-wrong"> </span>
-              <span class="widget-setting icon icon-setting"></span>
-              <div class="widget-img-block">
-                <div class="widget-img">
-                  <img src="../images/more-links.png" alt="">
-                </div>
-                <div class="widget-title">
-                  more links
-                </div>
-              </div>
-
-              <div class="main-markup">
-
-                <div class="empConnect divide-left moreLink-card">
-                  <div class="empConnect-content">
-                    <div class="card-head">
-                      <div class="card-left">
-                        <div class="card-head-icon">
-                          <span class="icon icon-birthday"></span>
-                        </div>
-                        <div class="card-head-title">
-                          <h4>
-                            <span>more links</span>
-                          </h4>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="db-slider swiper-container">
-                        <div class="slider-list swiper-wrapper">
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-travel primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>travel</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-employee-search primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>job openings</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-jobapplication primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>company policy</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-faq primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>FAQs</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-travel primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>travel</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-travel primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>travel</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-travel primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>travel</p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="slider-item swiper-slide">
-                            <a href="javascript:;">
-                              <div class="slider-item-content">
-                                <div class="slider-top-block tn-md">
-                                  <span class="icon icon-travel primary-icon"></span>
-                                </div>
-                                <div class="slider-bottom-block">
-                                  <p>travel</p>
                                 </div>
                               </div>
                             </a>
@@ -2985,10 +2060,996 @@
                         <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
                       </div>
                     </div>
+                  </li>
+                  <li class="empConnect empBday empAnni divide-right small-card small-card-slider">
+
+                    <div class="empConnect-content">
+                      <div class="card-head">
+                        <div class="card-left">
+                          <div class="card-head-icon">
+                            <span class="icon icon-birthday"></span>
+                          </div>
+                          <div class="card-head-title">
+                            <h4><span>anniversary</span></h4>
+
+                          </div>
+                        </div>
+                        <div class="card-right">
+                          <div class="emp-card-filters">
+                            <div class="emp-filteList">
+                              <div class="emp-filter-item">
+                                <div class="dropdown-block single-select" id="anni-select">
+                                  <!-- <span class="selected-item">today</span>
+                            <div class="dropdown-list">
+                              <div class="dropdown-item">15 mar</div>
+                              <div class="dropdown-item">16 mar</div>
+                              <div class="dropdown-item">17 mar</div>
+                            </div> -->
+                                  <div id="datepair" class="bgImg-list accord-body-list">
+                                    <input type="text" class="login-fields date esStDate" placeholder="Today">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="db-slider swiper-container">
+                        <div class="slider-list swiper-wrapper" id="anni-slider">
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/1.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/12.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/13.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/14.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/15.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/16.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/17.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="slider-item swiper-slide">
+                            <a href="javascript:;">
+                              <div class="slider-item-content">
+                                <div class="slider-top-block tn-md">
+                                  <img src="../images/user/18.jpg" alt="">
+                                </div>
+                                <div class="slider-bottom-block">
+                                  <div class="emp-desc">
+                                    <div class="emp-name">
+                                      <p>zeeshan ali</p>
+                                    </div>
+                                    <div class="emp-desg caption">
+                                      <span class="emp-desg-txt">ux engineer</span>
+                                      <span class="join-date">15 mar</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
+                        <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect rnr-block">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-employee-master"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4><span><em>RNR </em>leaderboard</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rnr-list">
+
+                    <div class="rnr-item">
+                      <span class="rnr-before"></span>
+                      <div class="rnr-award-img">
+                        <img src="../images/badges/superstar.png" alt="">
+                      </div>
+                      <div class="rnr-top">
+                        <div class="rnr-img tn-sm">
+                          <img src="../images/user/1.jpg" alt="">
+                        </div>
+                        <div class="rnr-userprofile">
+                          <span class="userName">Zeeshan Ali</span>
+                          <span class="emp-desg caption">Ux Engineer</span>
+                        </div>
+
+                      </div>
+                      <div class="rnr-bottom">
+                        <div class="rnr-desc caption">
+                          <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
+                        </div>
+                      </div>
+                      <span class="rnr-after"></span>
+                    </div>
+
+                    <div class="rnr-item">
+                      <span class="rnr-before"></span>
+                      <div class="rnr-award-img">
+                        <img src="../images/badges/thunderbolt.png" alt="">
+                      </div>
+                      <div class="rnr-top">
+                        <div class="rnr-img tn-sm">
+                          <img src="../images/user/2.jpg" alt="">
+                        </div>
+                        <div class="rnr-userprofile">
+                          <span class="userName">Zeeshan Ali</span>
+                          <span class="emp-desg caption">Ux Engineer</span>
+                        </div>
+
+                      </div>
+                      <div class="rnr-bottom">
+                        <div class="rnr-desc caption">
+                          <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
+                        </div>
+                      </div>
+                      <span class="rnr-after"></span>
+                    </div>
+                    <div class="rnr-item">
+                      <span class="rnr-before"></span>
+                      <div class="rnr-award-img">
+                        <img src="../images/badges/helping-hand.png" alt="">
+                      </div>
+                      <div class="rnr-top">
+                        <div class="rnr-img tn-sm">
+                          <img src="../images/user/3.jpg" alt="">
+                        </div>
+                        <div class="rnr-userprofile">
+                          <span class="userName">Zeeshan Ali</span>
+                          <span class="emp-desg caption">Ux Engineer</span>
+                        </div>
+
+                      </div>
+                      <div class="rnr-bottom">
+                        <div class="rnr-desc caption">
+                          <span>Awarded Applaud badge by <em>nikhil mishra</em> on 21 Jun 18</span>
+                        </div>
+                      </div>
+                      <span class="rnr-after"></span>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
+
+
+          </section>
+
+        </div>
+        <div class="db-right">
+          <section class="right-list">
+            <section class="my-common-widget">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="personal-blog-block">
+                <div class="card-head">
+                  <div class="card-head-title">
+                    <h4>
+                      <span>my activity blog</span>
+                      <span class="icon icon-next"></span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="personal-blog-container swiper-container">
+                  <div class="personal-blog-wrapper swiper-wrapper">
+                    <div class="swiper-slide card-block big personal-blog">
+                      <div class="card-wrap">
+                        <div class="card-body">
+                          <div class="card-left">
+                            <div class="">
+                              <div class="gallery-top">
+                                <div class="">
+                                  <div class="img-display">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-container gallery-thumbs">
+                                <div class="img-click-block swiper-wrapper">
+                                  <div class="swiper-slide img-click active">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next db-arrow icon icon-next"></div>
+                                <div class="swiper-button-prev db-arrow icon icon-back"></div>
+                              </div>
+
+
+                            </div>
+                          </div>
+                          <div class="card-right">
+                            <div class="blog-user">
+                              <div class="blog-user-img">
+                                <img src="../images/user/7.jpg" alt="">
+                              </div>
+                              <div class="blog-user-name">
+                                <h3>sahil Hamirani</h3>
+                                <span class="emp-desg caption">Business Analyst</span>
+                              </div>
+
+                            </div>
+                            <div class="blog-title">
+                              <h3>trip to goa</h3>
+                            </div>
+                            <div class="blog-desc">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
+                                cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
+                                Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
+                              <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
+
+                            </div>
+                            <div class="blog-action-list">
+                              <div class="blog-action-item like-count">
+                                <span class="icon icon-thumbsup"></span>
+                                <span class="action-count">196</span>
+                              </div>
+                              <div class="blog-action-item view-count">
+                                <span class="icon icon-visibility"></span>
+                                <span class="action-count">230</span>
+                              </div>
+                              <div class="blog-action-item share-count">
+                                <span class="icon icon-share"></span>
+                                <span class="action-count">86</span>
+                                <div class="more-option-block">
+                                  <div class="more-option-list">
+                                    <div class="more-opt-item">
+                                      <span>share with my team</span>
+                                    </div>
+                                    <div class="more-opt-item">
+                                      <span>share the link</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="blog-action-item bm-count">
+                                <span class="blog-bm icon icon-bookmark"></span>
+                                <span class="action-count">107</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <span class="blog-bm icon icon-bookmark"></span> -->
+                    </div>
+                    <div class="swiper-slide card-block big personal-blog">
+                      <div class="card-wrap">
+                        <!-- <div class="card-head">
+                            <div class="card-head-title">
+                              <h4>
+                                <span>my travel blog</span>
+                              </h4>
+                            </div>
+                          </div> -->
+                        <div class="card-body">
+                          <div class="card-left">
+                            <div class="">
+                              <div class="gallery-top">
+                                <div class="">
+                                  <div class="img-display">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-container gallery-thumbs">
+                                <div class="img-click-block swiper-wrapper">
+                                  <div class="swiper-slide img-click active">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next db-arrow icon icon-next"></div>
+                                <div class="swiper-button-prev db-arrow icon icon-back"></div>
+                              </div>
+
+
+                            </div>
+                          </div>
+                          <div class="card-right">
+                            <div class="blog-user">
+                              <div class="blog-user-img">
+                                <img src="../images/user/6.jpg" alt="">
+                              </div>
+                              <div class="blog-user-name">
+                                <h3>sahil Hamirani</h3>
+                                <span class="emp-desg caption">Business Analyst</span>
+                              </div>
+
+                            </div>
+                            <div class="blog-title">
+                              <h3>trip to goa</h3>
+                            </div>
+                            <div class="blog-desc">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
+                                cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
+                                Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
+                              <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
+
+                            </div>
+                            <div class="blog-action-list">
+                              <div class="blog-action-item like-count">
+                                <span class="icon icon-thumbsup"></span>
+                                <span class="action-count">196</span>
+                              </div>
+                              <div class="blog-action-item view-count">
+                                <span class="icon icon-visibility"></span>
+                                <span class="action-count">230</span>
+                              </div>
+                              <div class="blog-action-item share-count">
+                                <span class="icon icon-share"></span>
+                                <span class="action-count">86</span>
+                                <div class="more-option-block">
+                                  <div class="more-option-list">
+                                    <div class="more-opt-item">
+                                      <span>share with my team</span>
+                                    </div>
+                                    <div class="more-opt-item">
+                                      <span>share the link</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="blog-action-item bm-count">
+                                <span class="blog-bm icon icon-bookmark"></span>
+                                <span class="action-count">107</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <span class="blog-bm icon icon-bookmark"></span> -->
+                    </div>
+                    <div class="swiper-slide card-block big personal-blog">
+                      <div class="card-wrap">
+                        <!-- <div class="card-head">
+                            <div class="card-head-title">
+                              <h4>
+                                <span>my travel blog</span>
+                              </h4>
+                            </div>
+                          </div> -->
+                        <div class="card-body">
+                          <div class="card-left">
+                            <div class="">
+                              <div class="gallery-top">
+                                <div class="">
+                                  <div class="img-display">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-container gallery-thumbs">
+                                <div class="img-click-block swiper-wrapper">
+                                  <div class="swiper-slide img-click active">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t1.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t2.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t3.jpg" alt="">
+                                  </div>
+                                  <div class="swiper-slide img-click">
+                                    <img src="../images/t4.jpg" alt="">
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next db-arrow icon icon-next"></div>
+                                <div class="swiper-button-prev db-arrow icon icon-back"></div>
+                              </div>
+
+
+                            </div>
+                          </div>
+                          <div class="card-right">
+                            <div class="blog-user">
+                              <div class="blog-user-img">
+                                <img src="../images/user/8.jpg" alt="">
+                              </div>
+                              <div class="blog-user-name">
+                                <h3>sahil Hamirani</h3>
+                                <span class="emp-desg caption">Business Analyst</span>
+                              </div>
+
+                            </div>
+                            <div class="blog-title">
+                              <h3>trip to goa</h3>
+                            </div>
+                            <div class="blog-desc">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dignissimos quae,
+                                cupiditate placeat corporis porro minima assumenda? Obcaecati incidunt quae, fugiat magni.
+                                Suscipit aspernatur excepturi, laborum rerum delectus molestiae sapiente.</p>
+                              <a href="javascript:;"><span class="blog-more-btn icon icon-plus"></span></a>
+
+                            </div>
+                            <div class="blog-action-list">
+                              <div class="blog-action-item like-count">
+                                <span class="icon icon-thumbsup"></span>
+                                <span class="action-count">196</span>
+                              </div>
+                              <div class="blog-action-item view-count">
+                                <span class="icon icon-visibility"></span>
+                                <span class="action-count">230</span>
+                              </div>
+                              <div class="blog-action-item share-count">
+                                <span class="icon icon-share"></span>
+                                <span class="action-count">86</span>
+                                <div class="more-option-block">
+                                  <div class="more-option-list">
+                                    <div class="more-opt-item">
+                                      <span>share with my team</span>
+                                    </div>
+                                    <div class="more-opt-item">
+                                      <span>share the link</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="blog-action-item bm-count">
+                                <span class="blog-bm icon icon-bookmark"></span>
+                                <span class="action-count">107</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <span class="blog-bm icon icon-bookmark"></span> -->
+                    </div>
+                  </div>
+                  <div class="swiper-button-next db-arrow icon icon-next personal-arrow-next"></div>
+                  <div class="swiper-button-prev db-arrow icon icon-back personal-arrow-back"></div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget sec-50">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-left small-card atten-card">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-birthday"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4><span>time & attendance</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-left">
+                      <div class="attn-cal-list">
+
+                      </div>
+                    </div>
+                    <div class="card-right">
+                      <div class="attn-info">
+                        <h1 class="attn-count">3.0</h1>
+                        <p class="attn-desc">Absences in this month</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget sec-50">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-right small-card ctc-card">
+                <div class="empConnect-content ctc-tab">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-birthday"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4>
+                          <span class="ctc-title active">CTC</span>
+                          <span class="non-ctc-title">Non CTC Claims</span>
+                        </h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body ctc-body active">
+                    <div class="card-left">
+                      <span class="icon icon-claims primary-icon"></span>
+                    </div>
+                    <div class="card-right">
+                      <div class="claim-desc">
+                        <div class="claim-title">
+                          <p>local travel</p>
+                        </div>
+                        <div class="claim-txt caption">
+                          <p>70000 claimed from 50,000</p>
+                        </div>
+                      </div>
+                      <div class="claim-desc">
+                        <div class="claim-title">
+                          <p>food reimbursment</p>
+                        </div>
+                        <div class="claim-txt caption">
+                          <span>5000 claimed from 20,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body nonctc-body">
+                    <div class="card-left">
+                      <span class="icon icon-claims primary-icon"></span>
+                    </div>
+                    <div class="card-right">
+                      <div class="claim-desc">
+                        <div class="claim-title">
+                          <p>local travel</p>
+                        </div>
+                        <div class="claim-txt caption">
+                          <span>70000 claimed from 50,000</span>
+                        </div>
+                      </div>
+                      <div class="claim-desc">
+                        <div class="claim-title">
+                          <p>food reimbursment</p>
+                        </div>
+                        <div class="claim-txt caption">
+                          <span>5000 claimed from 20,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget sec-50">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-left small-card mycomp-card">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-birthday"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4>
+                          <span>my compensations</span>
+                        </h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-left">
+                      <span class="icon icon-compensations primary-icon"></span>
+                    </div>
+                    <div class="card-right">
+                      <p>download january month payslip</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget sec-50">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-right small-card mypms-card">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-birthday"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4>
+                          <span>my PMS </span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-left">
+                      <span class="icon icon-goals primary-icon"></span>
+                    </div>
+                    <div class="card-right">
+                      <p>complete your q3 performance evaluation</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="my-common-widget">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-left mylearn-card">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                      </div>
+                      <div class="card-head-title">
+                        <h4>
+                          <span>my learning</span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="learn-list">
+                      <div class="learn-item">
+                        <div class="card-left">
+                          <span class="icon icon-medallions primary-icon"></span>
+                        </div>
+                        <div class="card-right">
+                          <div class="learn-desc">
+                            <div class="learn-top">
+                              <h1>5</h1>
+                            </div>
+                            <div class="learn-bottom">
+                              <p>Completed courses</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="learn-item">
+                        <div class="card-left">
+                          <span class="icon icon-degree primary-icon"></span>
+                        </div>
+                        <div class="card-right">
+                          <div class="learn-desc">
+                            <div class="learn-top">
+                              <h1>12</h1>
+                            </div>
+                            <div class="learn-bottom">
+                              <p>Courses To Do</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="learn-item">
+                        <div class="card-left">
+                          <span class="icon icon-time primary-icon"></span>
+                        </div>
+                        <div class="card-right">
+                          <div class="learn-desc">
+                            <div class="learn-top">
+                              <h1>5</h1>
+                            </div>
+                            <div class="learn-bottom">
+                              <p>Overdue courses</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="my-common-widget">
+              <span class="delete-btn icon icon-wrong"> </span>
+              <div class="empConnect divide-left moreLink-card">
+                <div class="empConnect-content">
+                  <div class="card-head">
+                    <div class="card-left">
+                      <div class="card-head-icon">
+                        <span class="icon icon-birthday"></span>
+                      </div>
+                      <div class="card-head-title">
+                        <h4>
+                          <span>more links</span>
+                        </h4>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="db-slider swiper-container">
+                      <div class="slider-list swiper-wrapper">
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-travel primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>travel</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-employee-search primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>job openings</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-jobapplication primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>company policy</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-faq primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>FAQs</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-travel primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>travel</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-travel primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>travel</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-travel primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>travel</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="slider-item swiper-slide">
+                          <a href="javascript:;">
+                            <div class="slider-item-content">
+                              <div class="slider-top-block tn-md">
+                                <span class="icon icon-travel primary-icon"></span>
+                              </div>
+                              <div class="slider-bottom-block">
+                                <p>travel</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="db-arrow db-next swiper-button-next icon icon-next"></div>
+                      <div class="db-arrow db-prev swiper-button-prev icon icon-back"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
           </section>
         </div>
       </div>
@@ -3327,25 +3388,7 @@
   </script>
 
 
-  <script>
-    // var galleryThumbs = new Swiper('.personal-blog .gallery-thumbs', {
-    //   spaceBetween: 5,
-    //   slidesPerView: 4,
-    //   freeMode: true,
-    //   watchSlidesVisibility: true,
-    //   watchSlidesProgress: true,
-    // });
-    // var galleryTop = new Swiper('.personal-blog .gallery-top', {
-    //   spaceBetween: 5,
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    //   thumbs: {
-    //     swiper: galleryThumbs
-    //   }
-    // });
-  </script>
+
 
 
 

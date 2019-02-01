@@ -90,7 +90,7 @@
   }
 
   .card-body {
-    height: 320px;
+    height: 314px;
     padding: 0;
     @include dis-flex();
   }
@@ -294,8 +294,8 @@
 }
 
 .personal-blog-block {
-  border: 1px solid $border;
-  margin-top: 30px;
+  // border: 1px solid $border;
+  // margin-top: 30px;
 
   .card-head {
     text-transform: capitalize;

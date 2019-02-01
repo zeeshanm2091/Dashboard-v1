@@ -3,6 +3,7 @@
   position: relative;
   z-index: 100;
   top: 0;
+  border-bottom: 1px solid $border;
 
   &.login-head {
     &.setting-screen {

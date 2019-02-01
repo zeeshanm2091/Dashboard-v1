@@ -8,14 +8,13 @@
 }
 
 .setting-menu {
-  width: 500px;
+  width: 350px;
   position: fixed;
   background-color: $light;
   left: -100%;
   height: 100vh;
   z-index: 99;
   top: 0;
-  padding-top: 30px;
   -webkit-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   -moz-box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
   box-shadow: 7px 2px 34px 0 rgba(204,204,204,1);
@@ -29,11 +28,20 @@
 
   .setting-head {
     @include dis-flex();
-    padding: 0 30px 30px;
+    padding: 20px;
     text-transform: capitalize;
     font-size: 26px;
     border-bottom: 1px solid $border;
     font-weight: 300;
+    .db-btn {
+      height: 40px;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 170px;
+      background-color: $primary;
+      color: $white;
+
+    }
 
     span {
       &:last-child {
@@ -60,7 +68,7 @@
   // }
   .accord-item-title,
   .setting-btns {
-    padding: 0 30px;
+    padding: 0 20px;
     height: 55px;
     border-bottom: 1px solid $border;
     text-transform: capitalize;
@@ -89,7 +97,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    padding: 30px;
+    padding: 20px;
     background-color: $light;
     position: relative;
     // overflow: auto;
@@ -115,50 +123,90 @@
       }
     }
 
-    section {
-      height: 170px;
-      border: 1px solid #ccc;
-      width: 48%;
-      margin-bottom: 20px;
-      background-color: $white;
-      cursor: move;
+    // .widget-img-block {
+    //   height: 170px;
+    //   border: 1px solid #ccc;
+    //   width: 48%;
+    //   margin-bottom: 20px;
+    //   background-color: $white;
+    //   cursor: move;
+    //
+    //   .widget-img {
+    //     height: 120px;
+    //     border-bottom: 1px solid $border;
+    //
+    //     img {
+    //       height: 100%;
+    //       width: 100%;
+    //       padding: 10px;
+    //     }
+    //
+    //     &.full-width {
+    //       img {
+    //         padding: 0;
+    //       }
+    //     }
+    //   }
+    //
+    //   .widget-title {
+    //     @include dis-flex();
+    //     // span{
+    //     //   display: block;
+    //     // }
+    //     text-transform: capitalize;
+    //     font-weight: bold;
+    //     color: $text;
+    //     justify-content: center;
+    //     height: 50px;
+    //     padding: 0 5px;
+    //     text-align: center;
+    //   }
+    //
+    //   .main-markup {
+    //     display: none;
+    //   }
+    // }
+  }
 
-      .widget-img {
-        height: 120px;
-        border-bottom: 1px solid $border;
-
-        img {
-          height: 100%;
-          width: 100%;
-          padding: 10px;
-        }
-
-        &.full-width {
-          img {
-            padding: 0;
-          }
-        }
-      }
-
-      .widget-title {
-        @include dis-flex();
-        // span{
-        //   display: block;
-        // }
-        text-transform: capitalize;
-        font-weight: bold;
-        color: $text;
-        justify-content: center;
-        height: 50px;
-        padding: 0 5px;
-        text-align: center;
-      }
-
-      .main-markup {
-        display: none;
-      }
+  .widget-block-item {
+  cursor: pointer;
+  width: calc(50% - 10px);
+  height: 100px;
+  border: 1px solid $border;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .sp-widget-img {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .sp-widget-title{
+    text-align: center;
+  }
+  &.active {
+    border-color: $success;
+    .icon-ok-filled{
+      display: block;
+    }
+    .sp-widget-img,.sp-widget-title {
+      color: $success;
     }
   }
+  .icon-ok-filled{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    color: $success;
+    background-color: $white;
+    display: none;
+  }
+}
 
   .overlay-setup {
     .accord-body-list {
@@ -178,7 +226,7 @@
 }
 
 .theme-item {
-  width: 48%;
+  width: calc(50% - 10px);
   height: 110px;
   border: 1px solid #cccc;
   margin: 10px 0;

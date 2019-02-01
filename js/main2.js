@@ -1012,6 +1012,8 @@ borderSlider.oninput = function() {
 }
 
 
+
+
 //************************************************************************default colours of all the colour pickers*****************************************************//
 
 
@@ -1049,6 +1051,3 @@ if (($('#textfield3').val().length) === 0) {
 }
 
 console.log($('#textfield3').length);
-
-
-})

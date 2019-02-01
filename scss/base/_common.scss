@@ -178,7 +178,7 @@ p {
 }
 
 .ot-pd {
-  padding: 0 30px;
+  padding: 0 20px;
   @media screen and (max-width:992px) {
     padding: 0 10px;
   }
@@ -191,6 +191,7 @@ p {
 .db-body {
   @include dis-flex();
   align-items: flex-start;
+  margin-top:20px;
   // align-items: flex-start;
   position: relative;
   flex-wrap: wrap;
@@ -473,6 +474,13 @@ p {
   }
 }
 
+.active{
+  .left-list,
+  .right-list{
+    border: 1px dashed $border;
+  }
+}
+
 .left-list,
 .right-list {
   @include dis-flex();
@@ -480,7 +488,14 @@ p {
   flex-wrap: wrap;
   align-content: flex-start;
   min-height: 800px;
-  border: 1px dashed $border;
+
+  .my-common-widget{
+    // &:last-child{
+    //   margin-bottom: 0px;
+    // }
+
+  }
+
 }
 
 section {
@@ -491,7 +506,7 @@ section {
     z-index: 11;
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 0px;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -979,7 +994,7 @@ span.copyNoti {
   position: relative;
 
   &.big {
-    height: 350px;
+    height: auto;
   }
 
   .card-head-title {
@@ -1018,4 +1033,11 @@ span.copyNoti {
   &:before {
     line-height: 40px;
   }
+}
+
+.my-common-widget {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: $white;
 }

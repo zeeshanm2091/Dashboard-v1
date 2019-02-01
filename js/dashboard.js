@@ -37,7 +37,7 @@ $(document).ready(function() {
       left: "0px"
     }, 300);
     $('.main-content').animate({
-      left: "500px"
+      left: "350px"
     }, 300);
     $('.left-block .menu-main-content').animate({
       left: "-50%"
@@ -70,13 +70,181 @@ $(document).ready(function() {
 
   })
 
-  $('.accord-item-title').click(function() {
-    $('.accord-item-title span.icon').toggleClass('icon-up');
-    $(this).parent().siblings().find('.accord-item-title span.icon').removeClass('icon-up');
+  /***************setting accordion********************/
 
-    $(this).parent().find('.accord-item-body').slideToggle();
-    $(this).parent().siblings().find('.accord-item-body').slideUp();
+  // $('.accord-item-title').click(function() {
+  //   $('.accord-item-title span.icon').toggleClass('icon-up');
+  //   $(this).parent().siblings().find('.accord-item-title span.icon').removeClass('icon-up');
+  //
+  //   $(this).parent().find('.accord-item-body').slideToggle();
+  //   $(this).parent().siblings().find('.accord-item-body').slideUp();
+  // });
+
+
+  $('.accord-item-title').click(function() {
+    $('.accorrd-main-body').css({
+      "right": "0px"
+    })
+  })
+
+  $('.accord-closing .icon-back').click(function() {
+    $(this).parent().parent().css({
+      "right": "-350px"
+    });
+    $('.accord-content').empty();
+  })
+
+
+
+  /*****widget tab item******/
+
+  $('.widget-btn').click(function() {
+    $('.accord-content').append('<div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div>')
+  })
+
+
+
+  $('.body-color').click(function() {
+    $('.accord-content').append('<div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div>')
+  })
+
+  $('.sp-banner').click(function() {
+    $('.accord-content').append('<div class="theme-item big-item img-display-block"> <img src="../images/bg4.jpg" alt=""> <input type="file"> <span class="img-select-overlay">select image to upload <span>logo size should not more than 500 kb</span> </span> </div>');
+  })
+
+  $('.banner-card').click(function() {
+    $('.accord-content').append('<div class="accord-body-list"> <div class="cardInput-group sp-card-title"> <span class="card-label">title</span> <input type="text" class="sp-input"> </div> <div class="cardInput-group sp-card-content"> <span class="card-label">content of the banner card</span> <textarea name="arti-content" rows="8" cols="80"></textarea> </div> </div>');
+  })
+
+  $('.card-layout').click(function() {
+    $('.accord-content').append('<div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="common-label">box shadow</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> </div> </div> </div> <div class="card-layout-item bx-radius"> <div class="common-label">box radius</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> </div> </div> </div> <div class="card-layout-item bx-border"> <div class="common-label">box border</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div>')
+  })
+
+
+  /************************************widget btn action***********************************/
+
+  $('.setting-menu').on('click', '.widget-block-item', function() {
+    $(this).toggleClass('active');
+  })
+
+  //   $('.setting-menu').on('click', '.my-goals-item', function() {
+  //     $('.my-goals').fadeToggle();
+  //   })
+  //
+  //   $('.setting-menu').on('click', '.my-learning-item', function() {
+  //     $('.my-learning').fadeToggle();
+  //   })
+  // })
+
+
+
+  //************************************************************************range slider*****************************************************//
+
+  $('.dashboard-page').on('input', '#shadowRange', function() {
+    $('.bx-shadow .action-box,.my-common-widget,.newsCard,.small-card').css({
+      "box-shadow": "0 0" + " " + this.value + "px 0px"
+    })
+    $('.bdayAnn').css({
+      "box-shadow": "none"
+    })
   });
+
+  $('.dashboard-page').on('input', '#radiusRange', function() {
+    $('.bx-radius .action-box,.my-common-widget,.newsCard,.small-card').css({
+      "border-radius": this.value + "px"
+    })
+    $('.bdayAnn').css({
+      "border-radius": "0px"
+    })
+  });
+
+  $('.dashboard-page').on('input', '#borderRange', function() {
+    $('.bx-border .action-box,.my-common-widget,.newsCard,.small-card').css({
+      "border-width": this.value + "px"
+    })
+    $('.bdayAnn').css({
+      "border-width": "0px"
+    })
+  });
+
+  /*****************************color picker code *****************************************/
+
+  $('.dashboard-page').on('click', '.body-color', function() {
+    $('.body-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.body-color .body-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
+        $('.dashboard-page').css('backgroundColor', '#' + hex);
+      }
+    })
+
+    $('.card-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.body-color .card-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
+        $('.dashboard-page .my-common-widget,.card-block,.small-card,.my-common-widget input[type=text],.rnr-award-img,.rnr-after,.newsCard').css('backgroundColor', '#' + hex);
+        $('.my-common-widget.bdayAnn').css('backgroundColor', 'transparent');
+      }
+    })
+
+
+
+  })
+
+
+  /********************************banner image block**************************************/
+
+  var imgName;
+  $('.dashboard-page').on('change', '.accorrd-main-body input[type="file"]', function(e) {
+    imgName = e.target.files[0].name;
+    var imgSize = parseFloat((e.target.files[0].size / 1000).toPrecision(4));
+
+    $('.img-display-block > img').attr('src', "../images/" + imgName);
+    var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
+    if ($.inArray(imgNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
+      $('.img-display-block > img').attr('src', "../images/" + "bg1.jpg");
+      alert("Please select the valid file format");
+      if (imgSize < 500) {
+        alert("Image size should not be more the 500kb.Your mage size is" + " " + imgSize + "Kb");
+      }
+    } else {
+      $('.banner-list-item img').attr("src", "../images/" + imgName)
+    }
+  })
+
+
+  /******************************card content change********************************************/
+
+  $('.dashboard-page').on('keyup', '.sp-card-title input', function() {
+    var titVal = $(this).val();
+    $('.newsCard-title').html(titVal);
+  })
+
+  $('.dashboard-page').on('keyup', '.sp-card-content textarea', function() {
+    var conVal = $(this).val();
+    $('.newsCard-text p').html(conVal);
+  })
+
+
+
+
+
+  /***************notification tab code***************/
+
 
   $('.header-notification').click(function() {
     $('.noti-wrap').fadeIn();
@@ -236,25 +404,25 @@ $(document).ready(function() {
       //dashboard-changes
 
       $('.active .left-list,.active .right-list').sortable({
-        items: 'section',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
+        items: '.my-common-widget',
+        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item',
         forcePlaceholderSize: true,
         connectWith: '.left-list,.right-list',
         disabled: false
       })
 
-      $('.divide-block').sortable({
-        items: 'li',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head,div',
-        forcePlaceholderSize: true,
-      })
+      // $('.divide-block').sortable({
+      //   items: 'li',
+      //   cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head,div',
+      //   forcePlaceholderSize: true,
+      // })
 
-      $('.widget-list').sortable({
-        items: 'section',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
-        forcePlaceholderSize: true,
-        connectWith: '.left-list,.right-list'
-      });
+      // $('.widget-list').sortable({
+      //   items: 'section',
+      //   cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
+      //   forcePlaceholderSize: true,
+      //   connectWith: '.left-list,.right-list'
+      // });
 
 
       $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
@@ -365,52 +533,48 @@ $(document).ready(function() {
 
 
       //
-      var widLength = $('.widget-list > section').length;
-      var newArr = [];
+      // var widLength = $('.widget-list > section').length;
+      // var newArr = [];
+      //
+      // console.log(widLength);
+      //
+      // console.log(newArr);
+      // for (var i = 1; i < widLength; i++) {
+      //   console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+      // }
 
-      console.log(widLength);
-
-      console.log(newArr);
-      for (var i = 1; i < widLength; i++) {
-        console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      }
-
-      $('.delete-btn').click(function() {
-
-        // $('.widget-list section').find('.main-markup > div').each(function(index) {
-        //   if (index > 0) {
-        //     $(this).remove();
-        //     // alert("working")
-        //   }
-        // });
-
-
-
-
-
-        $(this).parent().remove();
-        if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
-          if ($(this).parent().attr('class') === "sec-50") {
-            $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-          } else {
-            $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-          }
-        }
-      });
+      // $('.delete-btn').click(function() {
+      //
+      //   // $('.widget-list section').find('.main-markup > div').each(function(index) {
+      //   //   if (index > 0) {
+      //   //     $(this).remove();
+      //   //     // alert("working")
+      //   //   }
+      //   // });
+      //
+      //   $(this).parent().remove();
+      //   if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
+      //     if ($(this).parent().attr('class') === "sec-50") {
+      //       $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
+      //     } else {
+      //       $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
+      //     }
+      //   }
+      // });
 
 
-      var mainListLeft = $('.left-list > section').length;
-      var mainListRight = $('.right-list > section').length;
-
-      var ListArr = [];
-
-      for (var i = 1; i < mainListLeft + 1; i++) {
-        console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      }
-
-      for (var i = 1; i < mainListRight + 1; i++) {
-        console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      }
+      // var mainListLeft = $('.left-list > section').length;
+      // var mainListRight = $('.right-list > section').length;
+      //
+      // var ListArr = [];
+      //
+      // for (var i = 1; i < mainListLeft + 1; i++) {
+      //   console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+      // }
+      //
+      // for (var i = 1; i < mainListRight + 1; i++) {
+      //   console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
+      // }
 
 
 
@@ -573,6 +737,12 @@ $(document).ready(function() {
     }
 
   });
+
+
+  /************************************widget block***********************************/
+  $('.widget-block-item').click(function() {
+    $(this).toggleClass('active');
+  })
 
 
 
