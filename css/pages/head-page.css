@@ -3003,6 +3003,8 @@ span.copyNoti {
 
 .accord-main-content {
   padding: 20px;
+  height: 100%;
+  overflow-y: scroll;
 }
 .accord-main-content .accord-content-info {
   margin-bottom: 20px;
