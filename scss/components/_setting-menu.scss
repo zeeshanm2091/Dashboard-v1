@@ -128,6 +128,7 @@
           }
           h4{
             color:$text;
+            text-transform: capitalize;
           }
 
         }
@@ -138,7 +139,7 @@
 
 .accord-main-content {
     padding: 20px;
-    height:100%;
+    height:80%;
     overflow-y: scroll;
     .accord-content-info{
       margin-bottom: 20px;

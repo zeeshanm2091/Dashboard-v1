@@ -107,8 +107,28 @@ h6 {
 }
 
 .primary-icon {
-  color: $primary !important;
-  font-size: 60px !important;
+  color: $primary;
+  font-size: 60px;
+}
+
+.primary-font{
+  color:$primary;
+}
+
+.primary-border{
+  border-color: $primary;
+}
+
+.primary-head-bg{
+  background-color: $white;
+}
+
+.primary-head-text{
+  color:$black;
+}
+
+.primary-bg{
+  background-color: $primary;
 }
 
 p {

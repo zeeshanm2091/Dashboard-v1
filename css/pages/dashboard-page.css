@@ -1574,8 +1574,28 @@ h6 {
 }
 
 .primary-icon {
-  color: #33cccc !important;
-  font-size: 60px !important;
+  color: #33cccc;
+  font-size: 60px;
+}
+
+.primary-font {
+  color: #33cccc;
+}
+
+.primary-border {
+  border-color: #33cccc;
+}
+
+.primary-head-bg {
+  background-color: #ffffff;
+}
+
+.primary-head-text {
+  color: #000000;
+}
+
+.primary-bg {
+  background-color: #33cccc;
 }
 
 p {
@@ -2545,7 +2565,6 @@ span.copyNoti {
   height: 25px;
   line-height: 25px;
   padding: 0 15px;
-  background-color: #33cccc;
   color: #ffffff;
   text-transform: capitalize;
   display: inline-block;
@@ -2577,9 +2596,9 @@ span.copyNoti {
   position: absolute;
   text-align: center;
   line-height: 40px;
-  bottom: 0;
-  right: 0;
-  color: #99cc33;
+  bottom: 5px;
+  right: 5px;
+  color: #33cccc;
   font-size: 20px !important;
   transition: all 0.2s ease-in-out;
 }
@@ -3605,11 +3624,12 @@ span.copyNoti {
 }
 .setting-menu .setting-body .accord-container .accord-closing .widget-click-desc h4 {
   color: #555;
+  text-transform: capitalize;
 }
 
 .accord-main-content {
   padding: 20px;
-  height: 100%;
+  height: 80%;
   overflow-y: scroll;
 }
 .accord-main-content .accord-content-info {
@@ -5682,6 +5702,7 @@ textarea {
   text-transform: capitalize;
   background-color: #eef1e9;
   color: #000000;
+  font-size: 16px;
 }
 .personal-blog-block .blog-action-list .blog-action-item .more-option-block .more-option-list .more-opt-item:hover {
   background-color: #33cccc;

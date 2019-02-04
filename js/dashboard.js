@@ -85,6 +85,7 @@ $(document).ready(function() {
     $('.accorrd-main-body').css({
       "right": "0px"
     })
+    $('.widget-click-desc h4').html($(this).text());
   })
 
   $('.accord-closing .icon-back').click(function() {
@@ -99,13 +100,13 @@ $(document).ready(function() {
   /*****widget tab item******/
 
   $('.widget-btn').click(function() {
-    $('.accord-content').append('<div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr active"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam active"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news active"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten active"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-anny active"> <div class="sp-widget-img"> <span class="icon icon-anniversary"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim active"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday active"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip active"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink active"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div>')
+    $('.accord-content').append('<div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr active"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>Rewards & Recognition</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam active"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Team</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news active"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>Company News</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten active"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>Attendance</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim active"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>Claims</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday active"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>Birthdays & Anniversary</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip active"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>Payslips</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink active"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>More Links</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Blog</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div>');
   })
 
 
 
   $('.body-color').click(function() {
-    $('.accord-content').append('<div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div>')
+    $('.accord-content').append('<div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div>')
   })
 
   $('.sp-banner').click(function() {
@@ -126,6 +127,62 @@ $(document).ready(function() {
   $('.setting-menu').on('click', '.widget-block-item', function() {
     $(this).toggleClass('active');
   })
+
+  $('.setting-menu').on('click', '.my-learning-item', function() {
+    $('.mylearn-card').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-rnr', function() {
+    $('.rnr-block').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-myTeam', function() {
+    $('.my-team').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-news', function() {
+    $('.newsCard').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-atten', function() {
+    $('.atten-card').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-claim', function() {
+    $('.ctc-card').parent().fadeToggle();
+  })
+
+
+
+  $('.setting-menu').on('click', '.my-goals-item', function() {
+    $('.mypms-card').parent().fadeToggle();
+  })
+
+
+
+  $('.setting-menu').on('click', '.wt-payslip', function() {
+    $('.mycomp-card').parent().fadeToggle();
+  })
+
+
+
+  $('.setting-menu').on('click', '.wt-moreLink', function() {
+    $('.moreLink-card').parent().fadeToggle();
+  })
+
+
+
+
+  $('.setting-menu').on('click', '.wt-perBlog', function() {
+    $('.personal-blog-block').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-bday', function() {
+    $('.bdayAnn').fadeToggle();
+  })
+
+
+
 
   //   $('.setting-menu').on('click', '.my-goals-item', function() {
   //     $('.my-goals').fadeToggle();
@@ -153,8 +210,8 @@ $(document).ready(function() {
     $('.bx-radius .action-box,.my-common-widget,.newsCard,.small-card').css({
       "border-radius": this.value + "px"
     })
-    $('.bdayAnn').css({
-      "border-radius": "0px"
+    $('.bdayAnn .delete-btn').css({
+      "border-top-right-radius": this.value + "px"
     })
   });
 
@@ -169,7 +226,37 @@ $(document).ready(function() {
 
   /*****************************color picker code *****************************************/
 
+
+
   $('.dashboard-page').on('click', '.body-color', function() {
+
+    //initial colors
+    $('.body-col-cng .pickr-child').css({
+      "background": $('.dashboard-page').css("background-color")
+    })
+
+    $('.header-col-cng .pickr-child').css({
+      "background": $('.db-head').css("background-color")
+    })
+
+    $('.headerTxt-col-cng .pickr-child').css({
+      "background": $('.primary-head-bg').css("background-color")
+    })
+
+    $('.card-col-cng .pickr-child').css({
+      "background": $('.my-common-widget').css("background-color")
+    })
+
+    $('.cardBorder-col-cng .pickr-child').css({
+      "background": $('.my-common-widget').css("border-color")
+    })
+
+
+    $('.main-col-cng .pickr-child').css({
+      "background": $('.primary-icon').css("color")
+    })
+
+
     $('.body-col-cng .color-block').ColorPicker({
       onShow: function(colpkr) {
         $(colpkr).fadeIn(500);
@@ -182,6 +269,39 @@ $(document).ready(function() {
       onChange: function(hsb, hex, rgb) {
         $('.body-color .body-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
         $('.dashboard-page').css('backgroundColor', '#' + hex);
+        $('.body-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    })
+
+    $('.header-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.db-head').css('backgroundColor', '#' + hex);
+        $('.db-head').css('border-color', '#' + hex)
+        $('.header-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    })
+
+    $('.headerTxt-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.primary-head-text').css('color', '#' + hex);
+        $('.primary-head-bg').css('backgroundColor', '#' + hex);
+        $('.headerTxt-col-cng .pickr-child').css('backgroundColor', '#' + hex);
       }
     })
 
@@ -198,8 +318,44 @@ $(document).ready(function() {
         $('.body-color .card-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
         $('.dashboard-page .my-common-widget,.card-block,.small-card,.my-common-widget input[type=text],.rnr-award-img,.rnr-after,.newsCard').css('backgroundColor', '#' + hex);
         $('.my-common-widget.bdayAnn').css('backgroundColor', 'transparent');
+        $('.card-col-cng .pickr-child').css('backgroundColor', '#' + hex);
       }
-    })
+    });
+
+    $('.cardBorder-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.my-common-widget').css('border-color', '#' + hex);
+        $('.cardBorder-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    });
+
+    $('.main-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        // $('.body-color .card-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
+        // $('.dashboard-page .my-common-widget,.card-block,.small-card,.my-common-widget input[type=text],.rnr-award-img,.rnr-after,.newsCard').css('backgroundColor', '#' + hex);
+        // $('.my-common-widget.bdayAnn').css('backgroundColor', 'transparent');
+        $('.primary-icon,.primary-font').css('color', '#' + hex);
+        $('.primary-bg').css('backgroundColor', '#' + hex);
+        $('.primary-border').css('border-color', '#' + hex);
+        $('.main-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    });
 
 
 
@@ -404,8 +560,8 @@ $(document).ready(function() {
       //dashboard-changes
 
       $('.active .left-list,.active .right-list').sortable({
-        items: '.my-common-widget',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item',
+        items: '.my-common-widget,.bdayAnn',
+        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .my-common-widget',
         forcePlaceholderSize: true,
         connectWith: '.left-list,.right-list',
         disabled: false
@@ -796,10 +952,10 @@ $(document).ready(function() {
     },
     slidesPerView: 4,
     loop: true,
-    spaceBetween: 2
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    spaceBetween: 2,
+    autoplay: {
+      delay: 2000,
+    },
   });
 
   var myswiper = new Swiper('.swiper-container.personal-blog-container', {
@@ -808,9 +964,9 @@ $(document).ready(function() {
       prevEl: '.personal-arrow-back',
     },
     loop: true,
-    autoplay: {
-      delay: 2000,
-    }
+    // autoplay: {
+    //   delay: 2000,
+    // }
   });
 
   $(".swiper-container").mouseenter(function() {

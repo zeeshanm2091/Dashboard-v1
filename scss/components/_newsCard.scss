@@ -92,7 +92,7 @@
           height: 25px;
           line-height: 25px;
           padding: 0 15px;
-          background-color: $primary;
+          // background-color: $primary;
           color: $white;
           text-transform: capitalize;
           display: inline-block;
@@ -127,9 +127,9 @@
           position: absolute;
           text-align: center;
           line-height: 40px;
-          bottom: 0;
-          right: 0;
-          color: $secondary;
+          bottom: 5px;
+          right: 5px;
+          color: $primary;
           font-size: 20px !important;
           transition: all 0.2s ease-in-out;
           &:hover{
