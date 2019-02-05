@@ -2003,6 +2003,10 @@ section.sec-50 {
   }
 }
 
+.sec-50 {
+  width: 48%;
+}
+
 .db-full-width {
   width: 100%;
 }
@@ -2626,6 +2630,7 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
   padding: 20px 20px 0 20px;
 }
@@ -2695,6 +2700,8 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   position: relative;
   z-index: 10;
 }
@@ -2777,6 +2784,11 @@ span.copyNoti {
   .empConnect.empBday .db-slider {
     padding: 10px 10px 10px 0;
   }
+}
+
+.main-bday-block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .db-slider a {
@@ -2966,7 +2978,7 @@ span.copyNoti {
 .option-list .option-list-item .option-icon-block {
   font-size: 50px;
   margin-bottom: 10px;
-  color: #99cc33;
+  color: #33cccc;
 }
 .option-list .option-list-item .option-icon-block .svg-option-icon {
   border-radius: 50%;
@@ -5835,36 +5847,6 @@ textarea {
 }
 .theme-v2 .setting-icon {
   color: #ffffff;
-}
-.theme-v2 .option-list .option-list-item .option-icon-block span {
-  height: 80px;
-  width: 80px;
-  background-color: #fff;
-  display: inline-block;
-  border-radius: 50%;
-  font-size: 0;
-  -webkit-box-shadow: 0 0 10px 2px #cccccc;
-  -moz-box-shadow: 0 0 10px 2px #cccccc;
-  box-shadow: 0 0 10px 2px #cccccc;
-  display: none;
-}
-.theme-v2 .option-list .option-list-item .option-icon-block .svg-option-icon {
-  display: inline-block;
-  -webkit-box-shadow: 0 0 10px 2px #cccccc;
-  -moz-box-shadow: 0 0 10px 2px #cccccc;
-  box-shadow: 0 0 10px 2px #cccccc;
-}
-.theme-v2 .empConnect,
-.theme-v2 .newsCard {
-  border: none;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px 2px #cccccc;
-  -moz-box-shadow: 0 0 10px 2px #cccccc;
-  box-shadow: 0 0 10px 2px #cccccc;
-}
-.theme-v2 .newsCard .newsCard-content .newsCard-img-block img {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 .theme-v2 .db-head {
   background-color: #89b72e;

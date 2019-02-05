@@ -17,6 +17,7 @@
 
   .card-head {
     @include dis-flex();
+    align-items: flex-start;
     margin-bottom: 10px;
     padding: 20px 20px 0 20px;
     @media screen and (max-width:1200px){
@@ -71,6 +72,8 @@
 
       .emp-filteList {
         @include dis-flex();
+        justify-content: flex-end;
+        align-items: flex-start;
         position: relative;
         z-index: 10;
 

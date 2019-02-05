@@ -4,52 +4,52 @@
   .setting-icon{
     color:$white;
   }
-  
-  .option-list {
-    .option-list-item {
-      .option-icon-block {
-        span {
-          height: 80px;
-          width: 80px;
-          background-color: #fff;
-          display: inline-block;
-          border-radius: 50%;
-          font-size: 0;
-          -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-          -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-          box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-          display: none;
-        }
 
-        .svg-option-icon {
-          display: inline-block;
-          -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-          -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-          box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-        }
-      }
-    }
-  }
+  // .option-list {
+  //   .option-list-item {
+  //     .option-icon-block {
+  //       span {
+  //         height: 80px;
+  //         width: 80px;
+  //         background-color: #fff;
+  //         display: inline-block;
+  //         border-radius: 50%;
+  //         font-size: 0;
+  //         -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //         -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //         box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //         display: none;
+  //       }
+  //
+  //       .svg-option-icon {
+  //         display: inline-block;
+  //         -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //         -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //         box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //       }
+  //     }
+  //   }
+  // }
 
-  .empConnect,
-  .newsCard {
-    border: none;
-    @include border-radius(5px);
-    -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-    -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-    box-shadow: 0 0 10px 2px rgba(204,204,204,1);
-  }
+  // .empConnect,
+  // .newsCard {
+  //   border: none;
+  //   @include border-radius(5px);
+  //   -webkit-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //   -moz-box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  //   box-shadow: 0 0 10px 2px rgba(204,204,204,1);
+  // }
 
-  .newsCard {
-    .newsCard-content {
-      .newsCard-img-block {
-        img {
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-        }
-      }
-    }
-  }
+  // .newsCard {
+  //   .newsCard-content {
+  //     .newsCard-img-block {
+  //       img {
+  //         border-top-left-radius: 5px;
+  //         border-bottom-left-radius: 5px;
+  //       }
+  //     }
+  //   }
+  // }
 
   .db-head {
     background-color: $dark-secondary;
