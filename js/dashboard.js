@@ -1,6 +1,20 @@
 $(document).ready(function() {
 
 
+  /*******top banner slider*****/
+  var swiper = new Swiper('.basic-banner-slider .swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // autoHeight: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  });
+
+
   //****************************************************************************head menu code*******************************************************************//
   $('.menu-tab .menu-icon').click(function() {
     $(this).parent().find('.menu-main-content').animate({
@@ -446,47 +460,9 @@ $(document).ready(function() {
   });
 
 
+
   /**************personal blog code ******************/
   //travel blog slider
-
-  // var galleryThumbs = new Swiper('.personal-blog .gallery-thumbs', {
-  //   spaceBetween: 3,
-  //   slidesPerView: 4,
-  //   freeMode: true,
-  //   watchSlidesVisibility: true,
-  //   watchSlidesProgress: true,
-  // });
-
-
-  // var galleryTop = new Swiper('.personal-blog .gallery-top', {
-  //   spaceBetween: 5,
-  //   loop: true,
-  //   effect: 'fade',
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   thumbs: {
-  //     swiper: galleryThumbs
-  //   }
-  // });
-
-  // var swiper = new Swiper('.personal-blog-container.db-slider', {
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   loop: true,
-  //   autoHeight: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //   },
-  //   simulateTouch: false,
-  // });
-
-
-
-
 
   var swiper = new Swiper('.empConnect .swiper-container', {
     navigation: {
@@ -892,6 +868,19 @@ $(document).ready(function() {
   for (var i = 1; i <= monthDays[currMonth]; i++) {
     $('.attn-cal-list').append('<span class="cal-date"></span>')
   }
+
+
+  /*****************************************dropdown code****************************************************/
+
+  $('.selected-item').click(function() {
+    $(this).parent().find('.dropdown-list').slideToggle();
+  })
+
+  $('.dropdown-item').click(function() {
+    var selTxt = $(this).html();
+    $(this).parent().parent().find('.selected-item').html(selTxt);
+    $(this).parent().slideUp();
+  })
 
 
   //***********************************************************************closing div code ***********************************************************************//

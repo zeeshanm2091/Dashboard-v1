@@ -215,7 +215,7 @@ p {
 .db-body {
   @include dis-flex();
   align-items: flex-start;
-  margin-top:20px;
+  // margin-top:20px;
   // align-items: flex-start;
   position: relative;
   flex-wrap: wrap;
@@ -326,7 +326,7 @@ p {
     border-left: 5px solid transparent;
     position: absolute;
     right: 3px;
-    top: 7px;
+    top: 5px;
     z-index: 1;
   }
 
@@ -1068,4 +1068,8 @@ span.copyNoti {
     margin-bottom: 20px;
     overflow: hidden;
     background-color: $white;
+}
+
+.dashboard-page .db-body{
+  margin-top: 20px;
 }

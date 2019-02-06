@@ -12,10 +12,7 @@
     left:0px;
   }
 
-
-  background-color: $black;
   box-sizing: border-box;
-  // margin-top: 30px;
   background-color: $white;
 
   .newsCard-content {
@@ -96,6 +93,7 @@
           color: $white;
           text-transform: capitalize;
           display: inline-block;
+          background-color: $primary;
         }
       }
 

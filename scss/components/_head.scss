@@ -4,6 +4,7 @@
   z-index: 100;
   top: 0;
   border-bottom: 1px solid $border;
+  // margin-bottom:20px;
 
   &.login-head {
     &.setting-screen {
@@ -20,6 +21,9 @@
   // border-bottom: 1px solid $border;
   .db-head-content {
     height: 80px;
+    .right-block{
+      @include dis-flex();
+    }
     @media screen and (max-width:767px) {
       height: 60px;
     }
@@ -304,7 +308,7 @@
 
 .noti-list {
   .noti-item {
-    padding: 0 20px;
+    margin: 0 20px;
     height: 80px;
     color: $text;
     @include dis-flex();
@@ -333,7 +337,7 @@
           &.noti-date,
           &.noti-desc {
             text-transform: capitalize;
-            font-weight: bold;
+            // font-weight: bold;
             margin-bottom: 5px;
           }
         }

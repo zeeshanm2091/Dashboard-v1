@@ -73,11 +73,12 @@
       .emp-filteList {
         @include dis-flex();
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items:center;
         position: relative;
         z-index: 10;
 
         .emp-filter-item {
+          margin-right:15px;
           text-transform: capitalize;
           color: $text;
           cursor: pointer;

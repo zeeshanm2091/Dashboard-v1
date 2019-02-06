@@ -454,12 +454,10 @@ for (var i = 1; i < mainListRight + 1; i++) {
 var langArr = [];
 $('.selected-item').click(function() {
   $(this).parent().find('.dropdown-list').slideToggle();
-
 })
 
 $('.single-select .dropdown-item').click(function() {
   var selTxt = $(this).html();
-
   $(this).parent().parent().find('.selected-item').html(selTxt);
   $(this).parent().slideUp();
 })

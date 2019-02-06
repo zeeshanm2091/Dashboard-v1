@@ -1,8 +1,25 @@
-
 /****tab block****/
-
 .tab-block {
   .tab-head {
+    position: relative;
+    @include dis-flex();
+
+    .noti-filter {
+      font-size: 16px;
+      span{
+        cursor: pointer;
+        &:first-child{
+          margin-right: 5px;
+        }
+
+        .icon{
+          &:before{
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
     .tab-title-list {
       @include dis-flex();
       justify-content: flex-start;
@@ -23,13 +40,24 @@
         background-color: $secondary;
         color: $white;
 
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
+        @media screen and (max-width:767px) {
+          width: 50%;
+        }
+
         &:last-child {
           border-right: 1px solid $border;
         }
 
         &.active {
-          color:$black;
-          background-color:$white;
+          color: $black;
+          background-color: $white;
         }
       }
     }
@@ -38,14 +66,31 @@
   .tab-body {
     border: 1px solid #ccc;
     background-color: $white;
-    height: 480px;
+    height: 400px;
     overflow: hidden;
+    border-radius: 10px;
 
     .tab-content {
-      height: 480px;
+      height: 400px;
       overflow-y: auto;
     }
   }
-}
 
+  .noti-content {
+    padding-right: 10px;
+  }
+
+  .noti-desc {
+    @media screen and (max-width:767px) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .noti-list {
+    .noti-item {
+      height: 90px;
+    }
+  }
+}
 /****tab block end****/
