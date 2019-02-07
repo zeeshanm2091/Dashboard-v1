@@ -1,7 +1,8 @@
 @import '../base/variables';
 @import '../base/icon-fonts';
 @import '../base/reset';
-@import '../base/common'; /****components****/
+@import '../base/common';
+ /****components****/
 @import '../components/nav';
 @import '../components/newsCard';
 @import '../components/empConnect';
@@ -14,7 +15,8 @@
 @import '../components/attendence';
 @import '../components/ctc';
 @import '../components/mylearn';
-@import '../components/rnr'; // @import '../components/setting-menu';
+@import '../components/rnr';
+// @import '../components/setting-menu';
 @import '../components/setting-menu';
 @import '../components/all-dnd';
 @import '../components/basic';
@@ -25,6 +27,8 @@
 @import '../components/head';
 @import '../components/popup';
 @import '../components/widget-popup';
-@import '../components/travel-blog'; /*****themes******/
+@import '../components/travel-blog';
+@import '../components/myGoal'; 
+/*****themes******/
 @import '../themes/theme-icon-v1.scss';
 @import '../themes/theme-icon-v2.scss';

@@ -11,21 +11,16 @@
 }
 
 .__basic {
-  // .db-left{
-  //   padding-left: 30px;
-  // }
-  //
-  // .db-right{
-  //   padding-right: 30px;
-  // }
+
   .option-list .option-list-item{
     width: 25%;
   }
 
   .option-list{
-    // @media screen and (max-width:767px){
-    //   margin-top:20px;
-    // }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:585px;
   }
 }
 

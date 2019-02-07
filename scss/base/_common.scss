@@ -525,7 +525,14 @@ p {
 section {
   position: relative;
   width: 100%;
+  margin-bottom: 20px;
   // margin-bottom: 0 !important;
+  .bdayAnn{
+    margin-bottom: 0px;
+    .my-common-widget{
+      height:182px;
+    }
+  }
   .delete-btn {
     z-index: 11;
     position: absolute;
@@ -1072,4 +1079,27 @@ span.copyNoti {
 
 .dashboard-page .db-body{
   margin-top: 20px;
+}
+
+.xl-block{
+  height:588px;
+  overflow: hidden;
+  @include dis-flex();
+  .wt-inbox{
+
+  }
+}
+
+.l-block{
+  height:382px;
+  overflow: hidden;
+}
+
+.wt-fullWidth{
+  height:500px;
+  display: flex;
+  justify-content: center;
+  .option-list{
+    width:100%;
+  }
 }

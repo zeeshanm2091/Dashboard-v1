@@ -84,6 +84,7 @@
           cursor: pointer;
           position: relative;
           font-size: 14px;
+
           &:last-child{
             width:70px;
           }
@@ -126,7 +127,7 @@
               content: "";
               height: 1px;
               width: 100%;
-              background-color: #ccc;
+              background-color: $primary;
               position: absolute;
               bottom: -5px;
               right: 0;

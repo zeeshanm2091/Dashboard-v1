@@ -5973,11 +5973,6 @@ textarea {
 .my-goal-head .goal-btn {
   width: 90px;
 }
-.my-goal-head .goal-btn .db-btn {
-  background-color: #33cccc;
-  color: #ffffff;
-  border-color: #33cccc;
-}
 .my-goal-head .my-goal-title {
   color: #000000;
 }
@@ -6137,9 +6132,6 @@ textarea {
 .sp-tab-item .sp-pb-desc {
   padding: 0 20px;
   width: calc(100% - 130px);
-}
-.sp-tab-item .sp-pb-desc .pb-title {
-  color: #000000;
 }
 @media screen and (max-width: 767px) {
   .sp-tab-item .sp-pb-desc {

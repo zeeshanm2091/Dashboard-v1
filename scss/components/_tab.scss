@@ -1,5 +1,6 @@
 /****tab block****/
 .tab-block {
+  width:100%;
   .tab-head {
     position: relative;
     @include dis-flex();
@@ -66,15 +67,17 @@
   .tab-body {
     border: 1px solid #ccc;
     background-color: $white;
-    height: 400px;
+    height: 550px;
     overflow: hidden;
     border-radius: 10px;
 
     .tab-content {
-      height: 400px;
+      height: 547px;
       overflow-y: auto;
     }
   }
+
+
 
   .noti-content {
     padding-right: 10px;
@@ -92,5 +95,15 @@
       height: 90px;
     }
   }
+}
+
+.wt-inbox{
+  border:none;
+  height:590px;
+  .xl-block{
+  }
+  .tab-block{
+  }
+
 }
 /****tab block end****/

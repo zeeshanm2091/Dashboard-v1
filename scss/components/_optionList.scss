@@ -1,16 +1,13 @@
 .option-list {
-  @include dis-flex();
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 30px;
-
+  align-items: center;
 
   .option-list-item {
     width: 25%;
     text-align: center;
     // padding-bottom: 90px;
-
     transition: all 0.2s ease-in-out;
     @media screen and (max-width:992px) {
       margin-bottom: 50px;
@@ -49,7 +46,7 @@
           left: 50%;
           margin-left: -30px;
 
-          &> rect {
+          & > rect {
             display: none;
           }
         }
@@ -70,18 +67,21 @@
   .option-list {
     .option-list-item {
       width: 100px;
-      height:100px;
+      height: 100px;
       margin-bottom: 20px;
       @media screen and (max-width:767px) {
-        height:80px;
-        width:33.33%;
+        height: 80px;
+        width: 33.33%;
       }
     }
   }
 }
 
-.db-body{
+.db-body {
   .option-list-item {
-    height: 200px;
+    height: 33.33% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

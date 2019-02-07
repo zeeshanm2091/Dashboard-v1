@@ -11,6 +11,9 @@ $(document).ready(function() {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
+    },
+    autoplay: {
+      delay: 2000,
     }
   });
 
@@ -256,6 +259,16 @@ $(document).ready(function() {
     })
   });
 
+  /***********************************emp select code***********************************/
+
+  $('.empConnect').on('click', '.sin-select', function() {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  })
+
+
+
+
   /*****************************color picker code *****************************************/
 
 
@@ -444,6 +457,23 @@ $(document).ready(function() {
 
 
 
+  /***************inbox tab code***************/
+  $('.tab-title-item').click(function() {
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+    var tabNo = $(this).index() + 1;
+    $('.tab-content').siblings().fadeOut();
+    $('.tab-content:nth-child(' + tabNo + ')').fadeIn();
+  })
+
+  $('.wt-fullWidth').parent().css({
+    "border": "none"
+  })
+
+
+
+
+
   //****************************************************************************swiper code**********************************************************************//
 
   var swiper = new Swiper('.db-slider', {
@@ -555,7 +585,7 @@ $(document).ready(function() {
 
       $('.active .left-list,.active .right-list').sortable({
         items: '.my-common-widget,.bdayAnn',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .my-common-widget',
+        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .my-common-widget,.option-list a,.noti-item-left,.noti-item-right',
         forcePlaceholderSize: true,
         connectWith: '.left-list,.right-list',
         disabled: false
@@ -575,9 +605,14 @@ $(document).ready(function() {
       // });
 
 
-      $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
-        disabled: true
-      })
+      // $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
+      //   disabled: true
+      // })
+      //
+      // $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
+      //   disabled: true
+      // })
+
 
       //dashboard-changes
 
@@ -597,6 +632,7 @@ $(document).ready(function() {
       $(function() {
         $('.active .left-list,.active .right-list').sortable()
           .on('sortable:receive', function(e, ui) {
+
             var swiper = new Swiper('.db-slider', {
               navigation: {
                 nextEl: '.swiper-button-next',
@@ -609,6 +645,7 @@ $(document).ready(function() {
               },
               simulateTouch: false,
             });
+
             var swiper = new Swiper('db-slider.swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
@@ -616,7 +653,21 @@ $(document).ready(function() {
               },
               simulateTouch: false,
             });
-            var swiper = new Swiper('.small-card .swiper-container', {
+
+            var swiper = new Swiper('.empConnect .swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 6,
+              spaceBetween: 20,
+              loop: true,
+              autoHeight: true,
+              simulateTouch: false,
+            });
+
+
+            var swiper = new Swiper('.empConnect.small-card .swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -626,6 +677,8 @@ $(document).ready(function() {
               simulateTouch: false,
               loop: true
             });
+
+
             var swiper = new Swiper('.moreLink-card .swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
@@ -636,6 +689,11 @@ $(document).ready(function() {
               simulateTouch: false,
               loop: true
             });
+
+
+
+
+
             // dashboard-changes
 
             var myswiper = new Swiper('.swiper-container.personal-blog-container', {
@@ -812,13 +870,13 @@ $(document).ready(function() {
       })
 
       $(function() {
-        $('.option-list').sortable()
-          .on('sortable:activate', function(e, ui) {
-            $('li').css("z-index", "10")
-          })
+        // $('.option-list').sortable()
+        //   .on('sortable:activate', function(e, ui) {
+        //     $('li').css("z-index", "10")
+        //   })
       })
     } else {
-      $('.delete-btn').hide()
+      // $('.delete-btn').hide()
     }
 
 
@@ -831,16 +889,16 @@ $(document).ready(function() {
 
   //************************************************************************theme change code**************************************************************************************************************//
 
-  $('.theme-item').click(function() {
-    var Childno = $(this).index();
-    $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
-  })
+  // $('.theme-item').click(function() {
+  //   var Childno = $(this).index();
+  //   // $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
+  //   $(this).addClass('active');
+  //   $(this).siblings().removeClass('active');
+  // })
 
   $('.setting-menu').on('click', '.theme-item', function() {
     var Childno = $(this).index();
-    $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
+    // $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
   })
@@ -874,6 +932,7 @@ $(document).ready(function() {
 
   $('.selected-item').click(function() {
     $(this).parent().find('.dropdown-list').slideToggle();
+    $('.sin-select').siblings().removeClass('active');
   })
 
   $('.dropdown-item').click(function() {
