@@ -2476,11 +2476,6 @@ span.copyNoti {
 .md-block {
   height: 380px;
 }
-@media screen and (max-width: 992px) {
-  .md-block {
-    height: auto;
-  }
-}
 
 .lg-block {
   width: 100%;
