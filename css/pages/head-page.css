@@ -2863,6 +2863,11 @@ span.copyNoti {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .option-list {
+    height: 100%;
+  }
+}
 .option-list .option-list-item {
   width: 120px;
   text-align: center;
@@ -2871,11 +2876,6 @@ span.copyNoti {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 992px) {
-  .option-list .option-list-item {
-    margin-bottom: 50px;
-  }
 }
 .option-list .option-list-item:hover {
   transform: scale(1.02);
@@ -2939,6 +2939,11 @@ span.copyNoti {
   justify-content: center;
   align-items: center;
   width: 100px;
+}
+@media screen and (max-width: 992px) {
+  .db-body .option-list-item {
+    width: 120px;
+  }
 }
 
 .setting-icon {
