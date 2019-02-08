@@ -225,7 +225,7 @@ p {
 
   .db-left,
   .db-right {
-    width: 49%;
+    width: calc(50% - 10px);
     @media screen and (max-width:992px) {
       width: 100%;
 
@@ -246,7 +246,7 @@ p {
 
   .db-right {
     @media screen and (max-width:992px) {
-      margin-top: 30px;
+      // margin-top: 30px;
     }
     @media screen and (max-width:767px) {
       margin-top: 0;
@@ -525,13 +525,13 @@ p {
 section {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   // margin-bottom: 0 !important;
   .bdayAnn{
     margin-bottom: 0px;
-    .my-common-widget{
-      height:182px;
-    }
+    // .my-common-widget{
+    //   height:182px;
+    // }
   }
   .delete-btn {
     z-index: 11;
@@ -550,17 +550,15 @@ section {
     }
   }
 
-  &.sec-50 {
-    width: 48%;
-    @media screen and (max-width:767px) {
-      width: 100%;
-    }
-  }
+
 }
 // }
 
 .sec-50 {
-  width: 48%;
+  width: calc(50% - 10px);
+  @media screen and (max-width:767px) {
+    width: 100%;
+  }
 }
 
 .db-full-width {
@@ -1075,31 +1073,61 @@ span.copyNoti {
     margin-bottom: 20px;
     overflow: hidden;
     background-color: $white;
+    height:180px;
+    @media screen and (max-width:992px){
+      margin-bottom: 10px;
+    }
 }
 
 .dashboard-page .db-body{
   margin-top: 20px;
 }
 
-.xl-block{
-  height:588px;
-  overflow: hidden;
-  @include dis-flex();
-  .wt-inbox{
+// .xl-block{
+//   height:588px;
+//   overflow: hidden;
+//   @include dis-flex();
+//   .wt-inbox{
+//
+//   }
+// }
 
+// .l-block{
+//   height:382px;
+//   overflow: hidden;
+// }
+
+// .wt-fullWidth{
+//   border: none;
+//   .option-list{
+//     height:400px;
+//     // display: none;
+//   }
+// }
+
+/**************widget height and width*******************/
+
+.xs-block{
+  height:180px;
+  width: calc(50% - 10px);
+  @media screen and (max-width:992px){
+    width: calc(50% - 5px)
   }
 }
 
-.l-block{
-  height:382px;
-  overflow: hidden;
+.sm-block{
+  height:180px;
 }
 
-.wt-fullWidth{
-  height:500px;
-  display: flex;
-  justify-content: center;
-  .option-list{
-    width:100%;
+.md-block{
+  height:380px;
+  @media screen and (max-width:992px){
+    height:auto;
   }
+}
+
+.lg-block{
+  width:100%;
+  height:auto;
+  border: none;
 }

@@ -1682,7 +1682,7 @@ p {
 }
 .db-body .db-left,
 .db-body .db-right {
-  width: 49%;
+  width: calc(50% - 10px);
 }
 @media screen and (max-width: 992px) {
   .db-body .db-left,
@@ -1705,11 +1705,6 @@ p {
 .db-body .db-left .ctc-card,
 .db-body .db-right .atten-card,
 .db-body .db-right .ctc-card {
-    margin-top: 30px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .db-body .db-right {
     margin-top: 30px;
   }
 }
@@ -1977,13 +1972,9 @@ p {
 section {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
 }
 section .bdayAnn {
   margin-bottom: 0px;
-}
-section .bdayAnn .my-common-widget {
-  height: 182px;
 }
 section .delete-btn {
   z-index: 11;
@@ -2000,17 +1991,14 @@ section .delete-btn {
 section .delete-btn:before {
   line-height: 40px;
 }
-section.sec-50 {
-  width: 48%;
-}
-@media screen and (max-width: 767px) {
-  section.sec-50 {
-    width: 100%;
-  }
-}
 
 .sec-50 {
-  width: 48%;
+  width: calc(50% - 10px);
+}
+@media screen and (max-width: 767px) {
+  .sec-50 {
+    width: 100%;
+  }
 }
 
 .db-full-width {
@@ -2458,31 +2446,46 @@ span.copyNoti {
   margin-bottom: 20px;
   overflow: hidden;
   background-color: #ffffff;
+  height: 180px;
+}
+@media screen and (max-width: 992px) {
+  .my-common-widget {
+    margin-bottom: 10px;
+  }
 }
 
 .dashboard-page .db-body {
   margin-top: 20px;
 }
 
-.xl-block {
-  height: 588px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/**************widget height and width*******************/
+.xs-block {
+  height: 180px;
+  width: calc(50% - 10px);
 }
-.l-block {
-  height: 382px;
-  overflow: hidden;
+@media screen and (max-width: 992px) {
+  .xs-block {
+    width: calc(50% - 5px);
+  }
 }
 
-.wt-fullWidth {
-  height: 500px;
-  display: flex;
-  justify-content: center;
+.sm-block {
+  height: 180px;
 }
-.wt-fullWidth .option-list {
+
+.md-block {
+  height: 380px;
+}
+@media screen and (max-width: 992px) {
+  .md-block {
+    height: auto;
+  }
+}
+
+.lg-block {
   width: 100%;
+  height: auto;
+  border: none;
 }
 
 /****components****/
@@ -2866,9 +2869,13 @@ span.copyNoti {
   align-items: center;
 }
 .option-list .option-list-item {
-  width: 25%;
+  width: 120px;
   text-align: center;
   transition: all 0.2s ease-in-out;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 992px) {
   .option-list .option-list-item {
@@ -2936,6 +2943,7 @@ span.copyNoti {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100px;
 }
 
 .setting-icon {
@@ -3436,6 +3444,7 @@ span.copyNoti {
   align-items: center;
   flex-direction: column;
   background-color: #ffffff;
+  padding: 0 5px;
 }
 .widget-block-item .sp-widget-img {
   font-size: 40px;

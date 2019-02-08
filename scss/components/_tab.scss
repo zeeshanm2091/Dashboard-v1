@@ -40,14 +40,6 @@
         border-right: none;
         background-color: $secondary;
         color: $white;
-
-        &:first-child {
-          border-top-left-radius: 10px;
-        }
-
-        &:last-child {
-          border-top-right-radius: 10px;
-        }
         @media screen and (max-width:767px) {
           width: 50%;
         }
@@ -67,9 +59,8 @@
   .tab-body {
     border: 1px solid #ccc;
     background-color: $white;
-    height: 550px;
+    height: calc(100% - 40px);
     overflow: hidden;
-    border-radius: 10px;
 
     .tab-content {
       height: 547px;
@@ -97,9 +88,9 @@
   }
 }
 
-.wt-inbox{
+.my-inbox{
   border:none;
-  height:590px;
+  // height:590px;
   .xl-block{
   }
   .tab-block{
