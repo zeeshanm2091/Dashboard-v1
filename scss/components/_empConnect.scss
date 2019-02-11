@@ -66,6 +66,10 @@
         width: 65%;
       }
 
+      @media screen and (max-width:767px){
+        width: 50%;
+      }
+
       .emp-card-filters {
         width: 100%;
       }
@@ -101,6 +105,13 @@
             font-size: 14px;
             &:last-child{
               width:90px;
+            }
+          }
+
+          @media screen and (max-width:767px){
+            margin-right:0px;
+            &.sin-select{
+              display: none;
             }
           }
 

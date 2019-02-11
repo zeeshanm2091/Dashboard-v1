@@ -137,9 +137,15 @@
   }
 }
 
+.no-pd{
+  .accord-main-content {
+    padding: 0px;
+  }
+}
+
 .accord-main-content {
     padding: 20px;
-    height:80%;
+    height:75%;
     overflow-y: scroll;
     .accord-content-info{
       margin-bottom: 20px;

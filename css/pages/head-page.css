@@ -1577,6 +1577,11 @@ h6 {
   color: #33cccc;
   font-size: 60px;
 }
+@media screen and (max-width: 767px) {
+  .primary-icon {
+    font-size: 40px;
+  }
+}
 
 .primary-font {
   color: #33cccc;
@@ -1652,6 +1657,10 @@ p {
 
 .main-container-fluid {
   max-width: 100%;
+}
+
+.no-pd {
+  padding: 0px;
 }
 
 .ot-pd {
@@ -1743,6 +1752,11 @@ p {
   position: relative;
   cursor: pointer;
   width: 80px;
+}
+@media screen and (max-width: 767px) {
+  .dropdown-block {
+    width: auto;
+  }
 }
 .dropdown-block .login-fields {
   height: 20px;
@@ -1885,11 +1899,6 @@ p {
 @media screen and (max-width: 1200px) {
   .card-body {
     padding: 0 10px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .card-body {
-    height: auto;
   }
 }
 .card-body .card-left {
@@ -2468,6 +2477,11 @@ span.copyNoti {
     width: calc(50% - 5px);
   }
 }
+@media screen and (max-width: 767px) {
+  .xs-block {
+    width: 100%;
+  }
+}
 
 .sm-block {
   height: 180px;
@@ -2863,11 +2877,6 @@ span.copyNoti {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 992px) {
-  .option-list {
-    height: 100%;
-  }
-}
 .option-list .option-list-item {
   width: 120px;
   text-align: center;
@@ -2876,6 +2885,11 @@ span.copyNoti {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .option-list .option-list-item {
+    height: 100px;
+  }
 }
 .option-list .option-list-item:hover {
   transform: scale(1.02);
@@ -2919,6 +2933,12 @@ span.copyNoti {
 .option-list .option-list-item .option-item-name {
   font-size: 14px;
   line-height: 18px;
+}
+
+@media screen and (max-width: 992px) {
+  .md-block .option-list {
+    height: 100%;
+  }
 }
 
 .menu-main-content .option-list .option-list-item {
@@ -3069,9 +3089,13 @@ span.copyNoti {
   text-transform: capitalize;
 }
 
+.no-pd .accord-main-content {
+  padding: 0px;
+}
+
 .accord-main-content {
   padding: 20px;
-  height: 80%;
+  height: 75%;
   overflow-y: scroll;
 }
 .accord-main-content .accord-content-info {

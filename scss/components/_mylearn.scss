@@ -4,38 +4,54 @@
 
     .learn-list {
       @include dis-flex();
-      width:100%;
+      width: 100%;
       justify-content: space-evenly;
-      @media screen and (max-width:767px){
+      @media screen and (max-width:767px) {
         // flex-direction: column;
-        flex-wrap:wrap;
-        justify-content:center;
+        flex-wrap: wrap;
+        justify-content: center;
       }
-      .learn-item{
+
+      .learn-item {
         @include dis-flex();
         width: 30%;
-        @media screen and (max-width:767px){
-          width:50%;
-          margin-bottom: 20px;
+        position: relative;
+        @media screen and (max-width:767px) {
+          width: 33.33%;
         }
-        .card-left{
-          @media screen and (max-width:1200px){
+
+        .card-left {
+          @media screen and (max-width:1200px) {
             font-size: 40px;
           }
-          @media screen and (max-width:992px){
+          @media screen and (max-width:992px) {
             font-size: 60px;
           }
+          @media screen and (max-width:767px) {
+            width: 50%;
+          }
         }
-        .card-right{
-          color:$text;
+
+        .card-right {
+          color: $text;
           text-transform: capitalize;
           margin-left: 10px;
-          .learn-desc{
-            .learn-top{
+          @media screen and (max-width:767px) {
+            width: 50%;
+          }
+
+          .learn-desc {
+            .learn-top {
               font-weight: bold;
             }
-            .learn-bottom{
-              line-height:18px;
+
+            .learn-bottom {
+              line-height: 18px;
+              @media screen and (max-width:767px) {
+                position: absolute;
+                left: 0;
+                top: 45px;
+              }
             }
           }
         }

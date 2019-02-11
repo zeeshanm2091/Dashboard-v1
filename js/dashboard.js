@@ -2,20 +2,20 @@ $(document).ready(function() {
 
 
   /*******top banner slider*****/
-  var swiper = new Swiper('.basic-banner-slider .swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // autoHeight: true,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    autoplay: {
-      delay: 2000,
-    }
-  });
+  // var swiper = new Swiper('.basic-banner-slider .swiper-container', {
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  //   // autoHeight: true,
+  //   loop: true,
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //   },
+  //   autoplay: {
+  //     delay: 2000,
+  //   }
+  // });
 
 
   //****************************************************************************head menu code*******************************************************************//
@@ -120,7 +120,8 @@ $(document).ready(function() {
     $(this).parent().parent().css({
       "right": "-350px"
     });
-    $('.accord-content').empty();
+    $('.accord-main-content').empty();
+    $(this).parent().parent().removeClass('no-pd')
   })
 
 
@@ -128,30 +129,30 @@ $(document).ready(function() {
   /*****widget tab item******/
 
   $('.widget-btn').click(function() {
-    $('.accord-content').append('<div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr active"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>Rewards &amp; Recognition</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam active"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Team</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news active"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>Company News</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten active"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>Attendance</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim active"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>Claims</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday active"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>Birthdays &amp; Anniversary</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip active"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>Payslips</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink active"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>More Links</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Blog</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-inbox active"> <div class="sp-widget-img"> <span class="icon icon-email"></span> </div> <div class="sp-widget-title"> <h4>My Inbox</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-empCont active"> <div class="sp-widget-img"> <span class="icon icon-networking"></span> </div> <div class="sp-widget-title"> <h4>Employee Connect</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div>');
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr active"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>Rewards &amp; Recognition</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam active"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Team</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news active"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>Company News</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten active"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>Attendance</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim active"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>Claims</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday active"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>Birthdays &amp; Anniversary</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip active"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>Payslips</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink active"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>More Links</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Blog</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-inbox active"> <div class="sp-widget-img"> <span class="icon icon-email"></span> </div> <div class="sp-widget-title"> <h4>My Inbox</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-empCont active"> <div class="sp-widget-img"> <span class="icon icon-networking"></span> </div> <div class="sp-widget-title"> <h4>Employee Connect</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div></div>');
   })
 
 
 
   $('.body-color').click(function() {
-    $('.accord-content').append('<div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div>')
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div></div>')
   })
 
-  $('.sp-banner').click(function() {
-    $('.accord-content').append('<div class="theme-item big-item img-display-block"> <img src="../images/bg4.jpg" alt=""> <input type="file"> <span class="img-select-overlay">select image to upload <span>logo size should not more than 500 kb</span> </span> </div>');
-  })
+  // $('.sp-banner').click(function() {
+  //   $('.accord-content').append('<div class="theme-item big-item img-display-block"> <img src="../images/bg4.jpg" alt=""> <input type="file"> <span class="img-select-overlay">select image to upload <span>logo size should not more than 500 kb</span> </span> </div>');
+  // })
 
-  $('.banner-card').click(function() {
-    $('.accord-content').append('<div class="accord-body-list"> <div class="cardInput-group sp-card-title"> <span class="card-label">title</span> <input type="text" class="sp-input"> </div> <div class="cardInput-group sp-card-content"> <span class="card-label">content of the banner card</span> <textarea name="arti-content" rows="8" cols="80"></textarea> </div> </div>');
-  })
+  // $('.banner-card').click(function() {
+  //   $('.accord-content').append('<div class="accord-body-list"> <div class="cardInput-group sp-card-title"> <span class="card-label">title</span> <input type="text" class="sp-input"> </div> <div class="cardInput-group sp-card-content"> <span class="card-label">content of the banner card</span> <textarea name="arti-content" rows="8" cols="80"></textarea> </div> </div>');
+  // })
 
   $('.card-layout').click(function() {
-    $('.accord-content').append('<div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="common-label">box shadow</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> </div> </div> </div> <div class="card-layout-item bx-radius"> <div class="common-label">box radius</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> </div> </div> </div> <div class="card-layout-item bx-border"> <div class="common-label">box border</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div>')
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="common-label">box shadow</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> </div> </div> </div> <div class="card-layout-item bx-radius"> <div class="common-label">box radius</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> </div> </div> </div> <div class="card-layout-item bx-border"> <div class="common-label">box border</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div></div>')
   })
 
 
   $('.theme-change-block .db-btn').click(function() {
-    $('.accord-content').append('<div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/theme4.png" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-4"> <img src="../images" alt=""> </div> <div class="theme-item theme-5"> <img src="../images" alt=""> </div> </div></div>');
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/theme4.png" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-4"> <img src="../images" alt=""> </div> <div class="theme-item theme-5"> <img src="../images" alt=""> </div> </div></div></div>');
   })
 
 
@@ -460,23 +461,32 @@ $(document).ready(function() {
 
   /********************************banner image block**************************************/
 
+
   var imgName;
-  $('.dashboard-page').on('change', '.accorrd-main-body input[type="file"]', function(e) {
+  $('.dashboard-page').on('change', '.slide-img-display input[type="file"]', function(e) {
     imgName = e.target.files[0].name;
     var imgSize = parseFloat((e.target.files[0].size / 1000).toPrecision(4));
-
-    $('.img-display-block > img').attr('src', "../images/" + imgName);
-    var imgNameExt = $('.img-display-block > img').attr('src').split('.').pop().toLowerCase();
+    $('.slide-img-display').css('background-image', 'url(../images/' + imgName + ')');
+    var imgNameExt = imgName.split(".").pop();
+    console.log(imgNameExt);
     if ($.inArray(imgNameExt, ['gif', 'png', 'jpg', 'jpeg', 'bmp']) == -1) {
-      $('.img-display-block > img').attr('src', "../images/" + "bg1.jpg");
+      $('.slide-img-display').css('background-image', 'url(../images/bg1.jpg)');
       alert("Please select the valid file format");
-      if (imgSize < 500) {
+      if (imgSize > 500) {
         alert("Image size should not be more the 500kb.Your mage size is" + " " + imgSize + "Kb");
       }
     } else {
-      $('.banner-list-item img').attr("src", "../images/" + imgName)
+      $('.banner-img').css('background-image', 'url(../images/' + imgName + ')')
     }
+
   })
+
+
+
+
+
+
+
 
 
   /******************************card content change********************************************/
@@ -609,6 +619,30 @@ $(document).ready(function() {
     });
   } else if ($(window).width() < 992 && $(window).width() > 767) {
     var swiper = new Swiper('.small-card .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      simulateTouch: false,
+    });
+
+    var swiper = new Swiper('.empConnect .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 6,
+      spaceBetween: 20,
+      loop: true,
+      autoHeight: true,
+      simulateTouch: false,
+    });
+  } else {
+    var swiper = new Swiper('.empConnect .swiper-container', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -1163,6 +1197,43 @@ $(document).ready(function() {
 
 
   /******************************theme change code*************************************/
+
+
+
+
+
+  /*************************************banner layout changes code **********************/
+
+  $('.banner-layout').click(function() {
+    $('.accorrd-main-body').addClass('no-pd');
+    $('.accord-main-content ').append('<div class="accord-content"><div class="slide-accord"> <div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">1</span> </h4> <span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"><input type="file"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div> </div> <div class="slider-add-btn ot-pd"> <h4> <span class="icon icon-plus"></span> <span>Add Slider</span> </h4> </div></div>')
+  })
+
+
+
+  $('.setting-menu').on('click', '.slide-accort-title', function() {
+    $(this).parent().find('.slide-accord-body').slideToggle();
+    $(this).parent().toggleClass('active');
+
+    $(this).parent().siblings().find('.slide-accord-body').slideUp();
+    $(this).parent().siblings().removeClass('active');
+  });
+
+
+
+  $('.setting-menu').on('click', '.slider-add-btn', function() {
+    var slideNo = $('.slide-accord .slide-accord-item').length + 1;
+    if (slideNo < 6) {
+      $('.slide-accord').append('<div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">' + slideNo + '</span> </h4><span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div>');
+    } else {
+      alert("you can only add five slides")
+    }
+  })
+
+
+  $('.setting-menu').on('click', '.slide-remove', function() {
+    $(this).parent().parent().remove();
+  })
 
 
 

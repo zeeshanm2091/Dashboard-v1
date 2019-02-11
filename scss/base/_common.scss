@@ -109,6 +109,9 @@ h6 {
 .primary-icon {
   color: $primary;
   font-size: 60px;
+  @media screen and (max-width:767px){
+    font-size: 40px;
+  }
 }
 
 .primary-font{
@@ -201,6 +204,10 @@ p {
   max-width: 100%;
 }
 
+.no-pd{
+  padding: 0px;
+}
+
 .ot-pd {
   padding: 0 20px;
   @media screen and (max-width:992px) {
@@ -291,6 +298,10 @@ p {
   position: relative;
   cursor: pointer;
   width: 80px;
+
+  @media screen and (max-width:767px){
+    width: auto;
+  }
 
   .login-fields {
     height: 20px;
@@ -429,9 +440,9 @@ p {
   @media screen and (max-width:1200px) {
     padding: 0 10px;
   }
-  @media screen and (max-width:767px) {
-    height: auto;
-  }
+  // @media screen and (max-width:767px) {
+  //   height: auto;
+  // }
 
   .card-left {
     width: 40%;
@@ -1112,6 +1123,9 @@ span.copyNoti {
   width: calc(50% - 10px);
   @media screen and (max-width:992px){
     width: calc(50% - 5px)
+  }
+  @media screen and (max-width: 767px){
+    width: 100%;
   }
 }
 
