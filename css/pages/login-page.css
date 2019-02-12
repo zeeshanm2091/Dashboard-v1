@@ -2463,6 +2463,12 @@ span.copyNoti {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .widget-autoHeight {
+    height: auto;
+  }
+}
+
 .dashboard-page .db-body {
   margin-top: 20px;
 }

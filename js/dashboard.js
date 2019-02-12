@@ -2,20 +2,19 @@ $(document).ready(function() {
 
 
   /*******top banner slider*****/
-  // var swiper = new Swiper('.basic-banner-slider .swiper-container', {
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   // autoHeight: true,
-  //   loop: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //   },
-  //   autoplay: {
-  //     delay: 2000,
-  //   }
-  // });
+  var swiper = new Swiper('.basic-banner-slider .swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    pagination: {
+      el: '.banner-pagination',
+    },
+    // autoplay: {
+    //   delay: 2000,
+    // }
+  });
 
 
   //****************************************************************************head menu code*******************************************************************//
@@ -138,21 +137,13 @@ $(document).ready(function() {
     $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div></div>')
   })
 
-  // $('.sp-banner').click(function() {
-  //   $('.accord-content').append('<div class="theme-item big-item img-display-block"> <img src="../images/bg4.jpg" alt=""> <input type="file"> <span class="img-select-overlay">select image to upload <span>logo size should not more than 500 kb</span> </span> </div>');
-  // })
-
-  // $('.banner-card').click(function() {
-  //   $('.accord-content').append('<div class="accord-body-list"> <div class="cardInput-group sp-card-title"> <span class="card-label">title</span> <input type="text" class="sp-input"> </div> <div class="cardInput-group sp-card-content"> <span class="card-label">content of the banner card</span> <textarea name="arti-content" rows="8" cols="80"></textarea> </div> </div>');
-  // })
-
   $('.card-layout').click(function() {
     $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="common-label">box shadow</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> </div> </div> </div> <div class="card-layout-item bx-radius"> <div class="common-label">box radius</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> </div> </div> </div> <div class="card-layout-item bx-border"> <div class="common-label">box border</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div></div>')
   })
 
 
   $('.theme-change-block .db-btn').click(function() {
-    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/theme4.png" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/theme1.png" alt=""> </div> <div class="theme-item theme-4"> <img src="../images" alt=""> </div> <div class="theme-item theme-5"> <img src="../images" alt=""> </div> </div></div></div>');
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/themes/dahsboard-theme1.jpg" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/themes/dahsboard-theme2.jpg" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/themes/dahsboard-theme3.jpg" alt=""> </div> <div class="theme-item theme-4"> <img src="../images/themes/dahsboard-theme4.jpg" alt=""> </div> <div class="theme-item theme-5"> <img src="../images/themes/dahsboard-theme5.jpg" alt=""> </div><div class="theme-item theme-6"> <img src="../images/themes/dahsboard-theme6.jpg" alt=""> </div> </div></div></div>');
   })
 
 
@@ -482,27 +473,22 @@ $(document).ready(function() {
   })
 
 
+  /******************************banner card content change********************************************/
 
-
-
-
-
-
-
-  /******************************card content change********************************************/
-
-  $('.dashboard-page').on('keyup', '.sp-card-title input', function() {
+  $('.dashboard-page').on('keyup', '.banner-card-title textarea', function() {
     var titVal = $(this).val();
-    $('.newsCard-title').html(titVal);
+    $('.banner-title h2').html(titVal);
   })
 
-  $('.dashboard-page').on('keyup', '.sp-card-content textarea', function() {
-    var conVal = $(this).val();
-    $('.newsCard-text p').html(conVal);
+  $('.dashboard-page').on('keyup', '.banner-card-text textarea', function() {
+    var txtVal = $(this).val();
+    $('.banner-text p').html(txtVal);
   })
 
-
-
+  $('.dashboard-page').on('keyup', '.banner-card-link input', function() {
+    var linkVal = $(this).val();
+    $('.banner-desc-wrap').attr('href', "https://" + linkVal);
+  })
 
 
   /***************notification tab code***************/
@@ -537,16 +523,16 @@ $(document).ready(function() {
 
   //****************************************************************************swiper code**********************************************************************//
 
-  var swiper = new Swiper('.db-slider', {
+  var swiper = new Swiper('.db-slider.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     loop: true,
     autoHeight: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
     simulateTouch: false,
   });
 
@@ -555,7 +541,7 @@ $(document).ready(function() {
   /**************personal blog code ******************/
   //travel blog slider
 
-  var swiper = new Swiper('.empConnect .swiper-container', {
+  var swiper = new Swiper('.emp-mainBlock .swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -618,6 +604,19 @@ $(document).ready(function() {
       simulateTouch: false,
     });
   } else if ($(window).width() < 992 && $(window).width() > 767) {
+
+
+    var swiper = new Swiper('.emp-mainBlock .swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 6,
+      spaceBetween: 20,
+      loop: true,
+      autoHeight: true,
+      simulateTouch: false,
+    });
     var swiper = new Swiper('.small-card .swiper-container', {
       navigation: {
         nextEl: '.swiper-button-next',
@@ -629,20 +628,8 @@ $(document).ready(function() {
       autoHeight: true,
       simulateTouch: false,
     });
-
-    var swiper = new Swiper('.empConnect .swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      slidesPerView: 6,
-      spaceBetween: 20,
-      loop: true,
-      autoHeight: true,
-      simulateTouch: false,
-    });
-  } else {
-    var swiper = new Swiper('.empConnect .swiper-container', {
+  } else if ($(window).width() < 767) {
+    var swiper = new Swiper('.emp-mainBlock .swiper-container', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -654,6 +641,25 @@ $(document).ready(function() {
       simulateTouch: false,
     });
   }
+
+
+
+  //rnr swiper code
+
+  if ($(window).width() < 767) {
+    var swiper = new Swiper('.rnr-container.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.rnr-next',
+        prevEl: '.rnr-prev',
+      },
+      // loop: true,
+      autoHeight: false
+    });
+  }
+
+
 
 
 
@@ -987,15 +993,84 @@ $(document).ready(function() {
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
 
-    // $('.dashboard-page').attr('class');
-    // console.log(($('.dashboard-page').attr('class').split(" ").pop()).split("").pop());
+    //theme 1
+
     if (Childno === 1) {
-      $('.basic-banner-slider').hide();
-      $('.db-basic-banner').show();
-    } else if (Childno === 2) {
-      $('.db-basic-banner').hide();
-      $('.basic-banner-slider').show();
+      $('.basic-banner-slider').slideUp();
+      $('.lg-block').find('.option-list').slideUp();
+      $('.db-body').slideDown();
+      $('.db-body section').slideDown();
     }
+
+    //theme 2
+
+    if (Childno === 2) {
+      $('.basic-banner-slider').slideUp();
+      $('.lg-block').find('.option-list').slideUp();
+      // $('.md-block').find('.option-list').parent().css({
+      //   "height": "calc(180px * 3 + 40px)"
+      // })
+      //
+      // $('.md-block').find('.option-list-item').css({
+      //   "width": "25%"
+      // })
+
+
+
+
+      //ritght widgets
+      for (var i = 0; i < $('.right-list section').length; i++) {
+        var newI = i + 1;
+        if ($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop() !== 'option-list') {
+          $('.right-list section:nth-child(' + newI + ') > *').parent().slideUp();
+        }
+      }
+      //left widgets
+      for (var i = 0; i < $('.left-list section').length; i++) {
+        var newI = i + 1;
+        // if ($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop() !== 'newsCard') {
+        if ($.inArray($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'rnr-block', 'main-bday-block']) === -1) {
+          $('.left-list section:nth-child(' + newI + ') > *').parent().slideUp();
+        }
+      }
+    }
+
+
+
+
+    //theme 3
+
+    if (Childno === 3) {
+      $('.basic-banner-slider').slideDown();
+      $('.db-body').slideUp();
+      $('.lg-block').find('.option-list').slideDown();
+      $('.banner-desc-wrap').show();
+    }
+
+    //theme 4
+
+    if (Childno === 4) {
+      $('.db-body').slideDown();
+      $('.lg-block').find('.option-list').slideUp();
+      $('.banner-desc-wrap').slideUp();
+      $('.my-inbox').slideDown();
+
+      for (var i = 0; i < $('.left-list section').length; i++) {
+        var newI = i + 1;
+        if ($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop() !== 'my-inbox') {
+          $('.left-list section:nth-child(' + newI + ') > *').parent().hide();
+        }
+      }
+
+      for (var i = 0; i < $('.right-list section').length; i++) {
+        var newI = i + 1;
+        if ($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop() !== 'option-list') {
+          $('.right-list section:nth-child(' + newI + ') > *').parent().hide();
+        }
+      }
+    }
+
+
   })
 
 
@@ -1166,24 +1241,19 @@ $(document).ready(function() {
 
   var widgetRightlist = [];
   var rightListLen = $('.right-list .my-common-widget').length;
-
-
-
-
-
   for (var i = 1; i <= rightListLen; i++) {
-    widgetRightlist.push($('.right-list .my-common-widget:nth-child(' + i + ') > div:nth-child(1)').attr('class').split(" ").pop());
+    widgetRightlist.push($('.right-list .my-common-widget:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
   }
+
+
   var widgetLeftlist = [];
   var leftListLen = $('.left-list .my-common-widget').length;
-
   for (var i = 1; i <= leftListLen; i++) {
-    if ($('.left-list .my-common-widget:nth-child(' + i + ') > div:nth-child(1)').attr('class') === undefined) {
+    if ($('.left-list .my-common-widget:nth-child(' + i + ') > *:nth-child(1)').attr('class') === undefined) {
       widgetLeftlist.push($('.left-list .bdayAnn').attr('class'))
     } else {
       widgetLeftlist.push($('.left-list .my-common-widget:nth-child(' + i + ') > div:nth-child(1)').attr('class').split(" ").pop());
     }
-
   }
 
 
@@ -1206,7 +1276,7 @@ $(document).ready(function() {
 
   $('.banner-layout').click(function() {
     $('.accorrd-main-body').addClass('no-pd');
-    $('.accord-main-content ').append('<div class="accord-content"><div class="slide-accord"> <div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">1</span> </h4> <span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"><input type="file"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div> </div> <div class="slider-add-btn ot-pd"> <h4> <span class="icon icon-plus"></span> <span>Add Slider</span> </h4> </div></div>')
+    $('.accord-main-content ').append('<div class="accord-content"><div class="slide-accord"> <div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">1</span> </h4> <span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"><input type="file"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock banner-card-title"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-text"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-link"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div> </div> <div class="slider-add-btn ot-pd"> <h4> <span class="icon icon-plus"></span> <span>Add Slider</span> </h4> </div></div>')
   })
 
 
@@ -1224,7 +1294,7 @@ $(document).ready(function() {
   $('.setting-menu').on('click', '.slider-add-btn', function() {
     var slideNo = $('.slide-accord .slide-accord-item').length + 1;
     if (slideNo < 6) {
-      $('.slide-accord').append('<div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">' + slideNo + '</span> </h4><span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div>');
+      $('.slide-accord').append('<div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">' + slideNo + '</span> </h4><span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock banner-card-title"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-text"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-link"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div>');
     } else {
       alert("you can only add five slides")
     }

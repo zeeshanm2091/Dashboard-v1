@@ -22,6 +22,14 @@
 
   .goal-btn {
     width: 120px;
+    .db-btn{
+      &:hover{
+        background-color: $primary;
+        border-color:$primary;
+        color:$white;
+      }
+    }
+
   }
 
   .my-goal-title {

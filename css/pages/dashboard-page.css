@@ -2463,6 +2463,12 @@ span.copyNoti {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .widget-autoHeight {
+    height: auto;
+  }
+}
+
 .dashboard-page .db-body {
   margin-top: 20px;
 }
@@ -3010,6 +3016,10 @@ span.copyNoti {
   text-align: left;
 }
 
+.db-body .option-list {
+  height: 100%;
+}
+
 .option-list {
   display: flex;
   flex-wrap: wrap;
@@ -3258,6 +3268,7 @@ span.copyNoti {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 80%;
+  max-width: 126px;
 }
 @media screen and (max-width: 1024px) {
   .atten-card .attn-cal-list {
@@ -3466,17 +3477,29 @@ span.copyNoti {
   }
 }
 
+.rnr-block .rnr-container {
+  padding: 0 20px;
+}
+.rnr-block .rnr-arrow {
+  top: 50%;
+  position: absolute;
+  margin-top: -40px;
+  display: none;
+}
+.rnr-block .rnr-arrow:focus {
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .rnr-block .rnr-arrow {
+    display: block;
+  }
+}
 .rnr-block .rnr-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  margin-top: 30px;
-}
-@media screen and (max-width: 1200px) {
-  .rnr-block .rnr-list {
-    padding: 0 10px;
-  }
+  align-items: flex-start;
+  margin-top: 20px;
 }
 @media screen and (max-width: 992px) {
   .rnr-block .rnr-list {
@@ -3485,7 +3508,7 @@ span.copyNoti {
 }
 @media screen and (max-width: 767px) {
   .rnr-block .rnr-list {
-    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .rnr-block .rnr-list .rnr-item {
@@ -3493,14 +3516,14 @@ span.copyNoti {
   padding: 20px 10px 10px;
   width: 31%;
   position: relative;
+  height: auto;
 }
 @media screen and (max-width: 767px) {
   .rnr-block .rnr-list .rnr-item {
     width: 100%;
-    margin-bottom: 30px;
   }
   .rnr-block .rnr-list .rnr-item:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 .rnr-block .rnr-list .rnr-item .rnr-before {
@@ -4259,7 +4282,7 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   .basic-banner-slider .db-arrow {
-    top: 20%;
+    top: 50%;
   }
 }
 .basic-banner-slider .db-arrow.db-prev {
@@ -4267,7 +4290,7 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   .basic-banner-slider .db-arrow.db-prev {
-    right: 10px;
+    left: 5px;
   }
 }
 .basic-banner-slider .db-arrow.db-next {
@@ -4275,7 +4298,7 @@ textarea {
 }
 @media screen and (max-width: 767px) {
   .basic-banner-slider .db-arrow.db-next {
-    right: 10px;
+    right: 5px;
   }
 }
 .basic-banner-slider:hover .db-arrow {
@@ -4287,48 +4310,66 @@ textarea {
 }
 .banner-list-item .banner-img {
   height: 350px;
-  background-image: url(../../images/bg1.jpg);
+  background-image: url("../../images/bg1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .banner-list-item .banner-img {
-    height: 120px;
+    height: 350px;
   }
 }
 .banner-list-item .banner-desc-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
-  top: 50%;
-  margin-top: -100px;
-  right: 100px;
-  width: 400px;
-}
-@media screen and (max-width: 767px) {
-  .banner-list-item .banner-desc-block {
-    position: static;
-    top: auto;
-    margin-top: auto;
-    right: 100px;
-    width: 100%;
-    background-color: #000;
-  }
-}
-.banner-list-item .banner-desc-block .newsCard {
-  height: auto;
-  border: none;
-  margin-top: 0;
-  border-radius: 5px;
-}
-@media screen and (max-width: 767px) {
-  .banner-list-item .banner-desc-block .newsCard {
-    border-radius: 0px;
-    border-bottom: 1px solid #ddd;
-  }
-}
-.banner-list-item .banner-desc-block .newsCard .newsCard-desc {
+  height: 100%;
   width: 100%;
-  padding: 20px 20px 40px;
+  top: 0;
+  left: 0;
+}
+.banner-list-item .banner-desc-block a {
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 30px;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 992px) {
+  .banner-list-item .banner-desc-block a {
+    padding-bottom: 30px;
+  }
+}
+.banner-list-item .banner-desc-block a .banner-title {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .banner-list-item .banner-desc-block a .banner-title {
+    margin-bottom: 0px;
+  }
+}
+.banner-list-item .banner-desc-block a .banner-text,
+.banner-list-item .banner-desc-block a .banner-title {
+  max-width: 60%;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .banner-list-item .banner-desc-block a .banner-text,
+.banner-list-item .banner-desc-block a .banner-title {
+    max-width: 90%;
+  }
+}
+.banner-list-item .banner-desc-block a .banner-text h2,
+.banner-list-item .banner-desc-block a .banner-text p,
+.banner-list-item .banner-desc-block a .banner-title h2,
+.banner-list-item .banner-desc-block a .banner-title p {
+  color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
@@ -6029,6 +6070,11 @@ textarea {
 .my-goal-head .goal-btn {
   width: 120px;
 }
+.my-goal-head .goal-btn .db-btn:hover {
+  background-color: #33cccc;
+  border-color: #33cccc;
+  color: #ffffff;
+}
 .my-goal-head .my-goal-title {
   color: #000000;
 }
@@ -6412,7 +6458,7 @@ textarea {
   transform: rotate(-180deg);
 }
 .slide-accord .slide-accord-item.active .slide-accort-title {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .slide-accord .slide-accort-title {
   border-top: 1px solid #ddd;
@@ -6470,8 +6516,8 @@ textarea {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
 .slide-accord .slide-accord-body .slide-img .slide-img-upload .slide-upload-info {
@@ -6505,6 +6551,8 @@ textarea {
 .slide-accord .slide-accord-body .slide-card-inputBlock input {
   height: 40px;
   border: 1px solid #ddd;
+  margin: 0;
+  padding: 0 10px;
 }
 
 .slider-add-btn {
@@ -6522,5 +6570,11 @@ textarea {
 }
 
 /*****themes******/
+.theme-v2 .md-block {
+  height: 580px;
+}
+.theme-v2 .md-block .option-list .option-list-item {
+  width: 25%;
+}
 
 /*# sourceMappingURL=dashboard-page.css.map */

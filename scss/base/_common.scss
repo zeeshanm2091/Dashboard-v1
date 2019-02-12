@@ -1090,6 +1090,12 @@ span.copyNoti {
     }
 }
 
+.widget-autoHeight{
+  @media screen and (max-width:767px){
+    height:auto;
+  }
+}
+
 .dashboard-page .db-body{
   margin-top: 20px;
 }
