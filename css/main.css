@@ -1577,7 +1577,7 @@ h6 {
   color: #33cccc;
   font-size: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .primary-icon {
     font-size: 40px;
   }
@@ -1600,6 +1600,10 @@ h6 {
 }
 
 .primary-bg {
+  background-color: #33cccc;
+}
+
+.primary-hover:hover {
   background-color: #33cccc;
 }
 
@@ -1721,6 +1725,10 @@ p {
   .db-body .db-right {
     margin-top: 0;
   }
+}
+
+.card-head-title h4 {
+  color: #000000;
 }
 
 .lang-sel {
@@ -2457,6 +2465,9 @@ span.copyNoti {
   background-color: #ffffff;
   height: 180px;
 }
+.my-common-widget.lg-block {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .my-common-widget {
     margin-bottom: 10px;
@@ -2817,7 +2828,6 @@ span.copyNoti {
   display: block;
 }
 .noti-list .noti-item .noti-item-left .noti-content span.noti-date, .noti-list .noti-item .noti-item-left .noti-content span.noti-desc {
-  text-transform: capitalize;
   margin-bottom: 5px;
 }
 .noti-list .noti-item .noti-item-right .noti-actions {
@@ -3167,6 +3177,9 @@ span.copyNoti {
   border: none;
 }
 
+.empConnect.empAnni .card-right {
+  width: 35%;
+}
 .empConnect.empBday {
   padding: 0;
 }
@@ -3366,6 +3379,10 @@ span.copyNoti {
 
 .db-body .option-list {
   height: 100%;
+}
+
+.md-option {
+  display: none;
 }
 
 .option-list {
@@ -4727,6 +4744,10 @@ textarea {
 }
 
 /****tab block****/
+.md-inbox {
+  display: none;
+}
+
 .tab-block {
   width: 100%;
 }
@@ -4735,6 +4756,9 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 45px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
 }
 .tab-block .tab-head .noti-filter {
   font-size: 16px;
@@ -4752,49 +4776,15 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  top: 1px;
-}
-@media screen and (max-width: 767px) {
-  .tab-block .tab-head .tab-title-list {
-    width: 70%;
-  }
-}
-.tab-block .tab-head .tab-title-list .tab-title-item {
-  height: 40px;
-  line-height: 40px;
-  width: 130px;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: bold;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  border-bottom: none;
-  border-right: none;
-  background-color: #99cc33;
-  color: #ffffff;
-}
-@media screen and (max-width: 767px) {
-  .tab-block .tab-head .tab-title-list .tab-title-item {
-    width: 50%;
-  }
-}
-.tab-block .tab-head .tab-title-list .tab-title-item:last-child {
-  border-right: 1px solid #ddd;
-}
-.tab-block .tab-head .tab-title-list .tab-title-item.active {
-  color: #000000;
-  background-color: #ffffff;
+  width: 100%;
 }
 .tab-block .tab-body {
-  border: 1px solid #ccc;
   background-color: #ffffff;
-  height: calc(100% - 40px);
+  height: calc(100% - 50px);
   overflow: hidden;
 }
 .tab-block .tab-body .tab-content {
-  height: 547px;
+  height: calc(100% - 40px);
   overflow-y: auto;
 }
 .tab-block .noti-content {
@@ -4808,10 +4798,19 @@ textarea {
 }
 .tab-block .noti-list .noti-item {
   height: 90px;
+  margin: 0;
+  padding: 0 20px;
+}
+.tab-block .noti-list .noti-item:last-child {
+  border-bottom: none;
 }
 
-.my-inbox {
-  border: none;
+.my-inbox .tab-title-item {
+  color: #000000;
+}
+.my-inbox .inbox-filter {
+  color: #555;
+  cursor: pointer;
 }
 /****tab block end****/
 .login-head .menu-icon {

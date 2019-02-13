@@ -1,6 +1,17 @@
 .db-body .option-list{
   height: 100%;
 }
+
+.md-option{
+  display: none;
+}
+
+.option-fw-widget{
+  // display: none;
+  // &.active{
+  //   display: block;
+  // }
+}
 .option-list {
   display: flex;
   flex-wrap: wrap;

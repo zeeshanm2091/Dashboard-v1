@@ -1,10 +1,15 @@
 /****tab block****/
+.md-inbox{
+  display: none;
+}
 .tab-block {
   width:100%;
   .tab-head {
     position: relative;
     @include dis-flex();
-
+    height: 45px;
+    padding: 0 20px;
+    border-bottom: 1px solid $border;
     .noti-filter {
       font-size: 16px;
       span{
@@ -21,52 +26,57 @@
       }
     }
 
-    .tab-title-list {
+    // .tab-title-list {
+    //   @include dis-flex();
+    //   justify-content: flex-start;
+    //   position: relative;
+    //   top: 1px;
+    //   @media screen and (max-width:767px){
+    //     width: 70%;
+    //   }
+    //
+    //   .tab-title-item {
+    //     height: 40px;
+    //     line-height: 40px;
+    //     width: 130px;
+    //     text-align: center;
+    //     text-transform: capitalize;
+    //     font-weight: bold;
+    //     border: 1px solid $border;
+    //     cursor: pointer;
+    //     border-bottom: none;
+    //     border-right: none;
+    //     background-color: $secondary;
+    //     color: $white;
+    //     @media screen and (max-width:767px) {
+    //       width: 50%;
+    //     }
+    //
+    //     &:last-child {
+    //       border-right: 1px solid $border;
+    //     }
+    //
+    //     &.active {
+    //       color: $black;
+    //       background-color: $white;
+    //     }
+    //   }
+    // }
+
+    .tab-title-list{
       @include dis-flex();
-      justify-content: flex-start;
-      position: relative;
-      top: 1px;
-      @media screen and (max-width:767px){
-        width: 70%;
-      }
-
-      .tab-title-item {
-        height: 40px;
-        line-height: 40px;
-        width: 130px;
-        text-align: center;
-        text-transform: capitalize;
-        font-weight: bold;
-        border: 1px solid $border;
-        cursor: pointer;
-        border-bottom: none;
-        border-right: none;
-        background-color: $secondary;
-        color: $white;
-        @media screen and (max-width:767px) {
-          width: 50%;
-        }
-
-        &:last-child {
-          border-right: 1px solid $border;
-        }
-
-        &.active {
-          color: $black;
-          background-color: $white;
-        }
-      }
+      width: 100%;
     }
   }
 
   .tab-body {
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     background-color: $white;
-    height: calc(100% - 40px);
+    height: calc(100% - 50px);
     overflow: hidden;
 
     .tab-content {
-      height: 547px;
+        height: calc(100% - 40px);
       overflow-y: auto;
     }
   }
@@ -87,17 +97,28 @@
   .noti-list {
     .noti-item {
       height: 90px;
+      margin: 0;
+      padding: 0 20px;
+      &:last-child{
+        border-bottom: none;
+      }
     }
   }
 }
 
 .my-inbox{
-  border:none;
-  // height:590px;
-  .xl-block{
+  .tab-title-item{
+    color: $black;
   }
-  .tab-block{
+
+.inbox-filter{
+  color:$text;
+  cursor: pointer;
+  h5{
+    // font-weight: bold;
   }
+
+}
 
 }
 /****tab block end****/

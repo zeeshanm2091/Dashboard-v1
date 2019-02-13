@@ -1,4 +1,9 @@
 .empConnect {
+  &.empAnni{
+    .card-right {
+      width:35%;
+    }
+  }
   &.empBday {
     padding: 0;
 

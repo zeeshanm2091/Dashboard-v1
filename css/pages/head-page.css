@@ -1577,7 +1577,7 @@ h6 {
   color: #33cccc;
   font-size: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .primary-icon {
     font-size: 40px;
   }
@@ -1600,6 +1600,10 @@ h6 {
 }
 
 .primary-bg {
+  background-color: #33cccc;
+}
+
+.primary-hover:hover {
   background-color: #33cccc;
 }
 
@@ -1721,6 +1725,10 @@ p {
   .db-body .db-right {
     margin-top: 0;
   }
+}
+
+.card-head-title h4 {
+  color: #000000;
 }
 
 .lang-sel {
@@ -2457,6 +2465,9 @@ span.copyNoti {
   background-color: #ffffff;
   height: 180px;
 }
+.my-common-widget.lg-block {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .my-common-widget {
     margin-bottom: 10px;
@@ -2817,7 +2828,6 @@ span.copyNoti {
   display: block;
 }
 .noti-list .noti-item .noti-item-left .noti-content span.noti-date, .noti-list .noti-item .noti-item-left .noti-content span.noti-desc {
-  text-transform: capitalize;
   margin-bottom: 5px;
 }
 .noti-list .noti-item .noti-item-right .noti-actions {
@@ -2879,6 +2889,10 @@ span.copyNoti {
 
 .db-body .option-list {
   height: 100%;
+}
+
+.md-option {
+  display: none;
 }
 
 .option-list {

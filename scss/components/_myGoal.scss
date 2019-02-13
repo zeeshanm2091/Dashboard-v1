@@ -16,6 +16,7 @@
 .my-goal-head {
   padding: 20px 20px 0;
   @include dis-flex();
+  align-items: flex-start;
   @media screen and (max-width:767px) {
     padding: 10px 10px 0;
   }

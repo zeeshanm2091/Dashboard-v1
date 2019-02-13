@@ -1,11 +1,26 @@
 .theme-v2{
   .md-block{
     height:(180px * 3 + 40px);
+    border: none;
     .option-list{
       .option-list-item{
           width:25%;
       }
+    }
+  }
+}
 
+.theme-v5{
+  .my-common-widget{
+    border:1px solid $primary;
+  }
+  .md-block{
+    height:(180px * 4 + 60px);
+    border: none;
+    .option-list{
+      .option-list-item{
+          width:25%;
+      }
     }
   }
 }

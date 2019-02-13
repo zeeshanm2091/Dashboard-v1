@@ -109,7 +109,7 @@ h6 {
 .primary-icon {
   color: $primary;
   font-size: 60px;
-  @media screen and (max-width:767px){
+  @media screen and (max-width:1200px){
     font-size: 40px;
   }
 }
@@ -132,6 +132,12 @@ h6 {
 
 .primary-bg{
   background-color: $primary;
+}
+
+.primary-hover{
+  &:hover{
+    background-color: $primary;
+  }
 }
 
 p {
@@ -259,6 +265,10 @@ p {
       margin-top: 0;
     }
   }
+}
+
+.card-head-title h4 {
+    color:$black;
 }
 
 .lang-sel {
@@ -1085,6 +1095,9 @@ span.copyNoti {
     overflow: hidden;
     background-color: $white;
     height:180px;
+    &.lg-block{
+      display: none;
+    }
     @media screen and (max-width:992px){
       margin-bottom: 10px;
     }
