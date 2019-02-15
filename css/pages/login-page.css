@@ -1645,7 +1645,6 @@ p {
 
 .main-content {
   font-family: sans-serif;
-  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1833,11 +1832,13 @@ p {
 }
 
 .serach-box {
-  color: #555;
+  color: #555 !important;
   font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 1024px) {
   .serach-box {
@@ -1853,6 +1854,11 @@ p {
   font-size: 13px;
   text-transform: capitalize;
   box-sizing: border-box;
+  color: #555 !important;
+}
+.serach-box input[type=text]::placeholder {
+  color: #555;
+  opacity: 1;
 }
 @media screen and (max-width: 1024px) {
   .serach-box input[type=text] {
@@ -1976,6 +1982,11 @@ p {
   border: 1px dashed #ddd;
 }
 
+.active .left-list,
+.active .right-list {
+  min-height: 800px;
+}
+
 .left-list,
 .right-list {
   display: flex;
@@ -1984,14 +1995,11 @@ p {
   align-items: flex-start;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height: 800px;
+  min-height: 300px;
 }
 section {
   position: relative;
   width: 100%;
-}
-section .bdayAnn {
-  margin-bottom: 0;
 }
 section .delete-btn {
   z-index: 11;
@@ -2343,12 +2351,14 @@ label:hover {
 /*****range slider*****/
 .range-slider-container {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .rangeSlider {
   -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
+  height: 7px;
   background: #eef1e9;
   outline: none;
   opacity: 0.7;
@@ -2364,8 +2374,8 @@ label:hover {
 .rangeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: #33cccc;
   cursor: pointer;
   border-radius: 50%;
@@ -2461,6 +2471,7 @@ span.copyNoti {
 .my-common-widget {
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  overflow: hidden;
   background-color: #ffffff;
   height: 180px;
   position: relative;
@@ -2519,7 +2530,7 @@ span.copyNoti {
   right: 5px;
   top: 10px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 .wt-setting-dw .icon {
   font-size: 16px;
@@ -2529,30 +2540,13 @@ span.copyNoti {
   position: absolute;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  left: -10px;
-  bottom: -125px;
-  display: none;
-}
-.wt-setting-dw .wt-setting-list:before {
-  content: "";
-  position: absolute;
-  border-bottom: 6px solid #ffffff;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-  top: -6px;
-  left: 11px;
+  left: 21px;
+  bottom: -82px;
+  transition: left 0.5s;
   z-index: 2;
 }
-.wt-setting-dw .wt-setting-list:after {
-  content: "";
-  position: absolute;
-  border-bottom: 7px solid #ddd;
-  border-right: 7px solid transparent;
-  border-left: 7px solid transparent;
-  top: -7px;
-  left: 10px;
-  z-index: 1;
+.wt-setting-dw .wt-setting-list.active {
+  left: -78px;
 }
 .wt-setting-dw .wt-setting-list .wt-setting-item {
   line-height: 35px;
@@ -3402,17 +3396,29 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .card-layout-item .card-action-block .action-result {
-  width: 40%;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
 }
 .card-layout-item .card-action-block .action-result .action-box {
-  height: 50px;
-  width: 100px;
+  height: 80px;
+  width: 80%;
   border: 1px solid #ddd;
+  display: inline-block;
 }
 .card-layout-item .card-action-block .action-values {
-  width: 60%;
+  width: 100%;
+}
+.card-layout-item .card-action-block .action-values .range-slider-container {
+  margin-bottom: 10px;
+}
+.card-layout-item .card-action-block .action-values .range-slider-container .common-label {
+  min-width: 120px;
+  font-weight: normal;
 }
 
 .cust-url input {

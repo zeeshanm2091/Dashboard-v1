@@ -128,17 +128,17 @@ $(document).ready(function() {
   /*****widget tab item******/
 
   $('.widget-btn').click(function() {
-    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item active"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr active"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>Rewards &amp; Recognition</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam active"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Team</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news active"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>Company News</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten active"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>Attendance</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim active"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>Claims</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday active"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>Birthdays &amp; Anniversary</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip active"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>Payslips</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink active"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>More Links</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog active"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Blog</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-inbox active"> <div class="sp-widget-img"> <span class="icon icon-email"></span> </div> <div class="sp-widget-title"> <h4>My Inbox</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-empCont active"> <div class="sp-widget-img"> <span class="icon icon-networking"></span> </div> <div class="sp-widget-title"> <h4>Employee Connect</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div></div>');
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list widget-list"> <div class="widget-block-item my-goals-item"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Goals</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item my-learning-item"> <div class="sp-widget-img"> <span class="icon icon-learning"></span> </div> <div class="sp-widget-title"> <h4>My Learning</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-rnr"> <div class="sp-widget-img"> <span class="icon icon-winners"></span> </div> <div class="sp-widget-title"> <h4>Rewards &amp; Recognition</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-myTeam"> <div class="sp-widget-img"> <span class="icon icon-team"></span> </div> <div class="sp-widget-title"> <h4>My Team</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-news"> <div class="sp-widget-img"> <span class="icon icon-tweets"></span> </div> <div class="sp-widget-title"> <h4>Company News</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-atten"> <div class="sp-widget-img"> <span class="icon icon-attendance"></span> </div> <div class="sp-widget-title"> <h4>Attendance</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-claim"> <div class="sp-widget-img"> <span class="icon icon-claims"></span> </div> <div class="sp-widget-title"> <h4>Claims</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-bday"> <div class="sp-widget-img"> <span class="icon icon-birthday"></span> </div> <div class="sp-widget-title"> <h4>Birthdays &amp; Anniversary</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-payslip"> <div class="sp-widget-img"> <span class="icon icon-payslip"></span> </div> <div class="sp-widget-title"> <h4>Payslips</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-moreLink"> <div class="sp-widget-img"> <span class="icon icon-link"></span> </div> <div class="sp-widget-title"> <h4>More Links</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-perBlog"> <div class="sp-widget-img"> <span class="icon icon-goals"></span> </div> <div class="sp-widget-title"> <h4>My Blog</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-inbox"> <div class="sp-widget-img"> <span class="icon icon-email"></span> </div> <div class="sp-widget-title"> <h4>My Inbox</h4> </div> <span class="icon icon-ok-filled"></span> </div> <div class="widget-block-item wt-empCont"> <div class="sp-widget-img"> <span class="icon icon-networking"></span> </div> <div class="sp-widget-title"> <h4>Employee Connect</h4> </div> <span class="icon icon-ok-filled"></span> </div> </div></div>');
   })
 
 
 
   $('.body-color').click(function() {
-    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div><div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div></div>')
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div> <div class="accord-content"> <div class="accord-body-list"> <div class="color-change-block body-col-cng"> <div class="common-label">body colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block header-col-cng"> <div class="common-label">Header colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block headerTxt-col-cng"> <div class="common-label">header text colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block main-col-cng"> <div class="common-label">main colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> </div> </div>')
   })
 
   $('.card-layout').click(function() {
-    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="common-label">box shadow</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> </div> </div> </div> <div class="card-layout-item bx-radius"> <div class="common-label">box radius</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> </div> </div> </div> <div class="card-layout-item bx-border"> <div class="common-label">box border</div> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div></div>')
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div> <div class="color-change-block card-col-cng"> <div class="common-label">card colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="color-change-block cardBorder-col-cng"> <div class="common-label">card border colour</div> <div class="color-block"> <div class="pickr-child"></div> </div> </div> <div class="accord-content"> <div class="accord-body-list"> <div class="card-layout-item bx-shadow"> <div class="card-action-block"> <div class="action-result"> <div class="action-box"></div> </div> <div class="action-values"> <div class="range-slider-container"><div class="common-label">box shadow</div> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="shadowRange"> </div> <div class="range-slider-container"><div class="common-label">box radius</div> <input type="range" min="0" max="20" value="0" class="rangeSlider" id="radiusRange"> </div> <div class="range-slider-container"><div class="common-label">box border</div> <input type="range" min="1" max="5" value="0" class="rangeSlider" id="borderRange"> </div> </div> </div> </div> </div> </div>')
   })
 
 
@@ -210,54 +210,7 @@ $(document).ready(function() {
 
 
 
-  //widget block item array code
 
-  $('.widget-btn').click(function() {
-
-    if (finaWtList.indexOf("atten-card") >= 0) {
-      $('.wt-atten').addClass('active');
-    };
-    if (finaWtList.indexOf("bdayAnn") >= 0) {
-      $('.wt-bday').addClass('active');
-    };
-    if (finaWtList.indexOf("ctc-card") >= 0) {
-      $('.wt-claim').addClass('active');
-    };
-    if (finaWtList.indexOf("mypms-card") >= 0) {
-      $('.my-goals-item').addClass('active');
-    };
-    if (finaWtList.indexOf("moreLink-card") >= 0) {
-      $('.wt-moreLink').addClass('active');
-    };
-    if (finaWtList.indexOf("my-team") >= 0) {
-      $('.wt-myTeam').addClass('active');
-    };
-    if (finaWtList.indexOf("mycomp-card") >= 0) {
-      $('.wt-payslip').addClass('active');
-    };
-    if (finaWtList.indexOf("mylearn-card") >= 0) {
-      $('.my-learning-item').addClass('active');
-    };
-    if (finaWtList.indexOf("newsCard") >= 0) {
-      $('.wt-news').addClass('active');
-    };
-    if (finaWtList.indexOf("personal-blog-block") >= 0) {
-      $('.wt-perBlog').addClass('active');
-    };
-    if (finaWtList.indexOf("rnr-block") >= 0) {
-      $('.wt-rnr').addClass('active');
-    };
-
-    if (finaWtList.indexOf("my-inbox") >= 0) {
-      $('.wt-inbox').addClass('active');
-    };
-
-    if (finaWtList.indexOf("emp-mainBlock") >= 0) {
-      $('.wt-empCont').addClass('active');
-    };
-
-
-  });
 
 
 
@@ -276,7 +229,7 @@ $(document).ready(function() {
   //************************************************************************range slider*****************************************************//
 
   $('.dashboard-page').on('input', '#shadowRange', function() {
-    $('.bx-shadow .action-box,.my-common-widget,.newsCard,.small-card').css({
+    $('.bx-shadow .action-box,.my-common-widget,.newsCard').css({
       "box-shadow": "0 0" + " " + this.value + "px 0px"
     })
     $('.bdayAnn').css({
@@ -284,8 +237,9 @@ $(document).ready(function() {
     })
   });
 
+
   $('.dashboard-page').on('input', '#radiusRange', function() {
-    $('.bx-radius .action-box,.my-common-widget,.newsCard,.small-card').css({
+    $('.bx-shadow .action-box,.my-common-widget,.newsCard,.wt-setting-list').css({
       "border-radius": this.value + "px"
     })
     $('.bdayAnn .delete-btn').css({
@@ -293,14 +247,65 @@ $(document).ready(function() {
     })
   });
 
+
+
   $('.dashboard-page').on('input', '#borderRange', function() {
-    $('.bx-border .action-box,.my-common-widget,.newsCard,.small-card').css({
+    $('.bx-shadow .action-box,.my-common-widget,.newsCard').css({
       "border-width": this.value + "px"
     })
     $('.bdayAnn').css({
       "border-width": "0px"
     })
   });
+
+
+
+  /*************************************card layout ************************************/
+
+
+  $('.dashboard-page').on('click', '.card-layout', function() {
+
+    $('.card-col-cng .pickr-child').css({
+      "background": $('.my-common-widget').css("background-color")
+    })
+
+    $('.cardBorder-col-cng .pickr-child').css({
+      "background": $('.my-common-widget').css("border-color")
+    })
+
+    $('.card-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.body-color .card-col-cng .color-block .pickr-child').css('backgroundColor', '#' + hex);
+        $('.dashboard-page .my-common-widget,.card-block,.small-card,.my-common-widget input[type=text],.rnr-award-img,.rnr-after,.newsCard').css('backgroundColor', '#' + hex);
+        $('.my-common-widget.bdayAnn').css('backgroundColor', 'transparent');
+        $('.card-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    });
+
+    $('.cardBorder-col-cng .color-block').ColorPicker({
+      onShow: function(colpkr) {
+        $(colpkr).fadeIn(500);
+        return false;
+      },
+      onHide: function(colpkr) {
+        $(colpkr).fadeOut(500);
+        return false;
+      },
+      onChange: function(hsb, hex, rgb) {
+        $('.my-common-widget').css('border-color', '#' + hex);
+        $('.cardBorder-col-cng .pickr-child').css('backgroundColor', '#' + hex);
+      }
+    });
+
+  })
 
   /***********************************emp select code***********************************/
 
@@ -330,15 +335,6 @@ $(document).ready(function() {
     $('.headerTxt-col-cng .pickr-child').css({
       "background": $('.primary-head-bg').css("background-color")
     })
-
-    $('.card-col-cng .pickr-child').css({
-      "background": $('.my-common-widget').css("background-color")
-    })
-
-    $('.cardBorder-col-cng .pickr-child').css({
-      "background": $('.my-common-widget').css("border-color")
-    })
-
 
     $('.main-col-cng .pickr-child').css({
       "background": $('.primary-icon').css("color")
@@ -1043,7 +1039,7 @@ $(document).ready(function() {
   $(document).mouseup(function(e) {
     var container = $(".wt-setting-list");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-      container.fadeOut();
+      container.removeClass('active');
     }
   });
 
@@ -1142,32 +1138,6 @@ $(document).ready(function() {
 
 
 
-  /*********************************widget presence test*****************************/
-
-  var widgetRightlist = [];
-  var rightListLen = $('.right-list .my-common-widget').length;
-  for (var i = 1; i <= rightListLen; i++) {
-    widgetRightlist.push($('.right-list .my-common-widget:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
-  }
-
-
-  var widgetLeftlist = [];
-  var leftListLen = $('.left-list .my-common-widget').length;
-  for (var i = 1; i <= leftListLen; i++) {
-    if ($('.left-list .my-common-widget:nth-child(' + i + ') > *:nth-child(1)').attr('class') === undefined) {
-      widgetLeftlist.push($('.left-list .bdayAnn').attr('class'))
-    } else {
-      widgetLeftlist.push($('.left-list .my-common-widget:nth-child(' + i + ') > div:nth-child(1)').attr('class').split(" ").pop());
-    }
-  }
-
-
-  var allWidgetList = widgetLeftlist.concat(widgetRightlist);
-  console.log("---------------------");
-
-  var finaWtList = $.unique(allWidgetList.sort());
-
-  console.log(finaWtList);
 
 
 
@@ -1219,10 +1189,19 @@ $(document).ready(function() {
   // })
 
   $('.setting-menu').on('click', '.theme-item', function() {
+
     var Childno = $(this).index() + 1;
     $('.dashboard-page').attr('class', 'main-content dashboard-page theme-v' + Childno);
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
+
+
+
+
+
+
+
+
 
     //theme 1
 
@@ -1230,133 +1209,217 @@ $(document).ready(function() {
 
       $('.db-body').slideDown();
       $('.banner-fw-widget,.option-fw-widget').slideUp();
-
-
-
-      //left widgets
-      for (var i = 0; i < $('.left-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'rnr-block', 'main-bday-block', 'my-goals']) === -1) {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block', 'my-goals']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
       //right widget
-      for (var i = 0; i < $('.right-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'mycomp-card', 'mypms-card', 'mylearn-card', 'moreLink-card', 'my-learning']) === -1) {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'mycomp-card', 'mypms-card', 'moreLink-card', 'mylearn-card', 'my-learning']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
+
     }
 
     //theme 2
 
     if (Childno === 2) {
-
       $('.db-body').slideDown();
       $('.banner-fw-widget,.option-fw-widget').slideUp();
-      //left widgets
-      for (var i = 0; i < $('.left-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block']) === -1) {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
       //right widget
-      for (var i = 0; i < $('.right-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['option-list']) === -1) {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['option-list']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
     }
 
-
     //theme 3
 
     if (Childno === 3) {
+      // $('.db-body').slideUp();
       $('.banner-fw-widget,.option-fw-widget').slideDown();
-      $('.db-body').slideUp();
-
-
-      /*******top banner slider*****/
-      var swiper = new Swiper('.basic-banner-slider .swiper-container', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        loop: true,
-        pagination: {
-          el: '.banner-pagination',
-        },
-        // autoplay: {
-        //   delay: 2000,
-        // }
-      });
-
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), []) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
+        }
+      }
+      //right widget
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), []) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
+        }
+      }
 
     }
 
     //theme 4
 
     if (Childno === 4) {
-
-      $('.banner-fw-widget').slideDown();
-      $('.option-fw-widget').slideUp();
-      $('.db-body').slideDown();
-
-      //left widgets
-      for (var i = 0; i < $('.left-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['my-inbox']) === -1) {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      $('.banner-fw-widget,.option-fw-widget').slideDown();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['my-inbox']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
       //right widget
-      for (var i = 0; i < $('.right-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['option-list']) === -1) {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['option-list']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
 
     }
 
+    //theme 5
 
     if (Childno === 5) {
-      $('.db-body').slideDown();
       $('.banner-fw-widget,.option-fw-widget').slideUp();
-      //left widgets
-      for (var i = 0; i < $('.left-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.left-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block']) === -1) {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.left-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
       //right widget
-      for (var i = 0; i < $('.right-list section').length; i++) {
-        var newI = i + 1;
-        if ($.inArray($('.right-list section:nth-child(' + newI + ') > *').attr('class').split(" ").pop(), ['option-list']) === -1) {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideUp();
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['option-list']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
-          $('.right-list section:nth-child(' + newI + ') > *').parent().slideDown();
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
+
     }
+
+
+
+    /*********************************widget presence test*****************************/
+    var widgetLeftlist = [];
+    var leftListLen = $('.left-list .wt-main-block').length;
+
+    for (var i = 1; i <= leftListLen; i++) {
+      if ($('.left-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
+        widgetLeftlist.push($('.left-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+      } else {
+        console.log("--------------------------left-list-----------------------");
+        console.log($('.left-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+      }
+    }
+
+    var widgetRightlist = [];
+    var rightListLen = $('.right-list .wt-main-block').length;
+    for (var i = 1; i <= rightListLen; i++) {
+      if ($('.right-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
+        widgetRightlist.push($('.right-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+      } else {
+        console.log("--------------------------right-list----------------------");
+        console.log($('.right-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+      }
+    }
+
+    var allWidgetList = widgetLeftlist.concat(widgetRightlist);
+    finalWtList = allWidgetList;
+    console.log(finalWtList);
+
+
+    //******************************************************widget block item array code
+
+
+    $('.dashboard-page').on('click', '.widget-btn', function() {
+
+      if (finalWtList.indexOf('atten-card') >= 0) {
+        $('.wt-atten').addClass('active')
+      }
+
+      if (finalWtList.indexOf('ctc-card') >= 0) {
+        $('.wt-claim').addClass('active')
+      }
+
+      if (finalWtList.indexOf('emp-mainBlock') >= 0) {
+        $('.wt-empCont').addClass('active')
+      }
+
+      if (finalWtList.indexOf('main-bday-block') >= 0) {
+        $('.wt-bday').addClass('active')
+      }
+
+      if (finalWtList.indexOf('moreLink-card') >= 0) {
+        $('.wt-moreLink').addClass('active')
+      }
+
+      if (finalWtList.indexOf('my-goals') >= 0) {
+        $('.my-goals-item').addClass('active')
+      }
+
+      if (finalWtList.indexOf('my-learning') >= 0) {
+        $('.my-learning-item').addClass('active')
+      }
+
+      if (finalWtList.indexOf('my-team') >= 0) {
+        $('.wt-myTeam').addClass('active')
+      }
+
+      if (finalWtList.indexOf('mycomp-card') >= 0) {
+        $('.wt-payslip').addClass('active')
+      }
+
+      if (finalWtList.indexOf('mycomp-card') >= 0) {
+        $('.wt-payslip').addClass('active')
+      }
+
+      if (finalWtList.indexOf('mylearn-card') >= 0) {
+        $('.my-learning-item').addClass('active')
+      }
+
+      if (finalWtList.indexOf('newsCard') >= 0) {
+        $('.wt-news').addClass('active')
+      }
+
+      if (finalWtList.indexOf('personal-blog-block') >= 0) {
+        $('.wt-perBlog').addClass('active')
+      }
+
+      if (finalWtList.indexOf('rnr-block') >= 0) {
+        $('.wt-rnr').addClass('active')
+      }
+
+      if (finalWtList.indexOf('my-inbox') >= 0) {
+        $('.wt-inbox').addClass('active')
+      }
+
+    })
+
+
   })
 
 
@@ -1365,7 +1428,7 @@ $(document).ready(function() {
   /*****************************************widget setting btn code **********************************************************/
 
   $('.dashboard-page').on('click', '.wt-setting-dw .icon', function() {
-    $(this).parent().find('.wt-setting-list').fadeIn();
+    $(this).parent().find('.wt-setting-list').toggleClass('active');
 
   })
 

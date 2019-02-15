@@ -180,7 +180,7 @@ p {
 
 .main-content {
   font-family: sans-serif;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   position: relative;
 }
 // .small-card{
@@ -385,9 +385,11 @@ p {
 }
 
 .serach-box {
-  color: $text;
+  color: $text !important;
   font-size: 14px;
   @include dis-flex();
+  position: relative;
+  z-index: 1;
   @media screen and (max-width:1024px) {
     font-size: 16px;
   }
@@ -401,6 +403,11 @@ p {
     font-size: 13px;
     text-transform: capitalize;
     box-sizing: border-box;
+    color: $text !important;
+    &::placeholder{
+      color:$text;
+      opacity: 1;
+    }
     @media screen and (max-width:1024px) {
       width: 120px;
       font-size: 12px;
@@ -524,13 +531,20 @@ p {
   }
 }
 
+.active{
+  .left-list,
+  .right-list {
+    min-height:800px;
+  }
+}
+
 .left-list,
 .right-list {
   @include dis-flex();
   align-items: flex-start;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height: 800px;
+  min-height: 300px;
 
   .my-common-widget {
     // &:last-child{
@@ -545,7 +559,7 @@ section {
   // margin-bottom: 20px;
   // margin-bottom: 0 !important;
   .bdayAnn {
-    margin-bottom: 0;
+    // margin-bottom: 0;
     // .my-common-widget{
     //   height:182px;
     // }
@@ -963,12 +977,13 @@ label:hover {
 
 .range-slider-container {
   width: 100%;
+  @include dis-flex();
 }
 
 .rangeSlider {
   -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
+    // width: 100%;
+  height: 7px;
   background: $bg-color;
   outline: none;
   opacity: 0.7;
@@ -984,8 +999,8 @@ label:hover {
 .rangeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: $primary;
   cursor: pointer;
   border-radius: 50%;
@@ -1089,7 +1104,7 @@ span.copyNoti {
 .my-common-widget {
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  // overflow: hidden;
+  overflow: hidden;
   background-color: $white;
   height: 180px;
   position: relative;
@@ -1164,7 +1179,7 @@ span.copyNoti {
   right: 5px;
   top: 10px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 
   .icon {
     font-size: 16px;
@@ -1175,32 +1190,38 @@ span.copyNoti {
     position: absolute;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    left: -10px;
-    bottom: -125px;
-    display: none;
+    // border-radius: 10px;
+    left: 21px;
+    bottom: -82px;
+    // display: none;
+    transition: left 0.5s;
+    z-index: 2;
 
-    &:before {
-      content: "";
-      position: absolute;
-      border-bottom: 6px solid $white;
-      border-right: 6px solid transparent;
-      border-left: 6px solid transparent;
-      top: -6px;
-      left: 11px;
-      z-index: 2;
+    &.active{
+      left: -78px;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      border-bottom: 7px solid $border;
-      border-right: 7px solid transparent;
-      border-left: 7px solid transparent;
-      top: -7px;
-      left: 10px;
-      z-index: 1;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   border-bottom: 6px solid $white;
+    //   border-right: 6px solid transparent;
+    //   border-left: 6px solid transparent;
+    //   top: -6px;
+    //   right: 11px;
+    //   z-index: 2;
+    // }
+    //
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   border-bottom: 7px solid $border;
+    //   border-right: 7px solid transparent;
+    //   border-left: 7px solid transparent;
+    //   top: -7px;
+    //   right: 10px;
+    //   z-index: 1;
+    // }
 
     .wt-setting-item {
       line-height: 35px;

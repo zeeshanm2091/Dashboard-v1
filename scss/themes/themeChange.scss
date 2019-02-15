@@ -10,9 +10,28 @@
   }
 }
 
+.theme-v3{
+  .db-body{
+    height:0px;
+    overflow: hidden;
+  }
+  .active{
+    .left-list,.right-list{
+      min-height: 0px;
+      // display: none;
+    }
+  }
+}
+
 .theme-v5{
   .my-common-widget{
     border:1px solid $primary;
+  }
+  .wt-setting-list {
+    .wt-setting-item{
+        border-color: $primary;
+    }
+    border-color: $primary;
   }
   .md-block{
     height:(180px * 4 + 60px);
@@ -20,6 +39,18 @@
     .option-list{
       .option-list-item{
           width:25%;
+      }
+      .wt-setting-list {
+        border-color: $primary;
+        .wt-setting-item{
+          border-color: $primary;
+        }
+        left: 21px;
+        bottom:-83px;
+        &.active{
+          left:-79px;
+          bottom:-83px;
+        }
       }
     }
   }

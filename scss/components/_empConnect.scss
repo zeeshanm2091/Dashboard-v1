@@ -59,6 +59,8 @@
     .card-right {
       @include dis-flex();
       width: 60%;
+      position: relative;
+      z-index: 2;
 
       @media screen and (max-width:1366px){
         width: 65%;
@@ -89,7 +91,7 @@
           color: $text;
           cursor: pointer;
           position: relative;
-          font-size: 14px;
+          font-size: 13px;
 
           &:last-child{
             width:70px;
