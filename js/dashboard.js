@@ -1038,7 +1038,13 @@ $(document).ready(function() {
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.fadeOut();
     }
+  });
 
+  $(document).mouseup(function(e) {
+    var container = $(".wt-setting-list");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.fadeOut();
+    }
   });
 
 
@@ -1354,6 +1360,22 @@ $(document).ready(function() {
   })
 
 
+
+
+  /*****************************************widget setting btn code **********************************************************/
+
+  $('.dashboard-page').on('click', '.wt-setting-dw .icon', function() {
+    $(this).parent().find('.wt-setting-list').fadeIn();
+
+  })
+
+  $('.dashboard-page').on('click', '.wt-st-cust', function() {
+    $('.setting-widget-popup').fadeIn();
+  })
+
+  $('.dashboard-page').on('click', '.wt-st-remove', function() {
+    $(this).parent().parent().parent().parent().slideUp();
+  })
 
 
 

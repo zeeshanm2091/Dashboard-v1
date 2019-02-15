@@ -66,6 +66,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
+
 body {
   font-size: 13px;
   font-family: sans-serif;
@@ -109,33 +110,33 @@ h6 {
 .primary-icon {
   color: $primary;
   font-size: 60px;
-  @media screen and (max-width:1200px){
+  @media screen and (max-width:1200px) {
     font-size: 40px;
   }
 }
 
-.primary-font{
-  color:$primary;
+.primary-font {
+  color: $primary;
 }
 
-.primary-border{
+.primary-border {
   border-color: $primary;
 }
 
-.primary-head-bg{
+.primary-head-bg {
   background-color: $white;
 }
 
-.primary-head-text{
-  color:$black;
+.primary-head-text {
+  color: $black;
 }
 
-.primary-bg{
+.primary-bg {
   background-color: $primary;
 }
 
-.primary-hover{
-  &:hover{
+.primary-hover {
+  &:hover {
     background-color: $primary;
   }
 }
@@ -182,7 +183,6 @@ p {
   padding-bottom: 30px;
   position: relative;
 }
-
 // .small-card{
 //   width:48%
 // }
@@ -210,8 +210,8 @@ p {
   max-width: 100%;
 }
 
-.no-pd{
-  padding: 0px;
+.no-pd {
+  padding: 0;
 }
 
 .ot-pd {
@@ -268,7 +268,7 @@ p {
 }
 
 .card-head-title h4 {
-    color:$black;
+  color: $black;
 }
 
 .lang-sel {
@@ -308,8 +308,7 @@ p {
   position: relative;
   cursor: pointer;
   width: 80px;
-
-  @media screen and (max-width:767px){
+  @media screen and (max-width:767px) {
     width: auto;
   }
 
@@ -453,7 +452,6 @@ p {
   // @media screen and (max-width:767px) {
   //   height: auto;
   // }
-
   .card-left {
     width: 40%;
     text-align: center;
@@ -519,9 +517,9 @@ p {
   }
 }
 
-.active{
+.active {
   .left-list,
-  .right-list{
+  .right-list {
     border: 1px dashed $border;
   }
 }
@@ -534,13 +532,11 @@ p {
   align-content: flex-start;
   min-height: 800px;
 
-  .my-common-widget{
+  .my-common-widget {
     // &:last-child{
     //   margin-bottom: 0px;
     // }
-
   }
-
 }
 
 section {
@@ -548,17 +544,18 @@ section {
   width: 100%;
   // margin-bottom: 20px;
   // margin-bottom: 0 !important;
-  .bdayAnn{
-    margin-bottom: 0px;
+  .bdayAnn {
+    margin-bottom: 0;
     // .my-common-widget{
     //   height:182px;
     // }
   }
+
   .delete-btn {
     z-index: 11;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 0;
     height: 40px;
     width: 40px;
     text-align: center;
@@ -570,8 +567,6 @@ section {
       line-height: 40px;
     }
   }
-
-
 }
 // }
 
@@ -725,6 +720,7 @@ label:hover {
   cursor: text;
 }
 /****button css****/
+
 .btn-s {
   &.db-btn {
     width: 30% !important;
@@ -903,6 +899,7 @@ label:hover {
   }
 }
 /***disabled****/
+
 .disabled {
   opacity: 0.5;
   position: relative;
@@ -916,6 +913,7 @@ label:hover {
   }
 }
 /*****error mgs *****/
+
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;
@@ -932,6 +930,7 @@ label:hover {
   font-weight: bold;
 }
 /*****color pickr*****/
+
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
@@ -943,7 +942,6 @@ label:hover {
   cursor: pointer;
 }
 /****loader*****/
-
 .db-loader {
   position: fixed;
   left: 0;
@@ -962,6 +960,7 @@ label:hover {
   }
 }
 /*****range slider*****/
+
 .range-slider-container {
   width: 100%;
 }
@@ -1014,7 +1013,6 @@ span.copyNoti {
   right: 50px;
 }
 /*****copy right******/
-
 .db-copyRight {
   @include dis-flex();
   text-transform: capitalize;
@@ -1037,7 +1035,6 @@ span.copyNoti {
   }
 }
 /**********card block***********/
-
 .card-block {
   height: 180px;
   border: 1px solid #ccc;
@@ -1090,29 +1087,30 @@ span.copyNoti {
 }
 
 .my-common-widget {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    overflow: hidden;
-    background-color: $white;
-    height:180px;
-    &.lg-block{
-      display: none;
-    }
-    @media screen and (max-width:992px){
-      margin-bottom: 10px;
-    }
-}
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  // overflow: hidden;
+  background-color: $white;
+  height: 180px;
+  position: relative;
 
-.widget-autoHeight{
-  @media screen and (max-width:767px){
-    height:auto;
+  &.lg-block {
+    display: none;
+  }
+  @media screen and (max-width:992px) {
+    margin-bottom: 10px;
   }
 }
 
-.dashboard-page .db-body{
-  margin-top: 20px;
+.widget-autoHeight {
+  @media screen and (max-width:767px) {
+    height: auto;
+  }
 }
 
+.dashboard-page .db-body {
+  margin-top: 20px;
+}
 // .xl-block{
 //   height:588px;
 //   overflow: hidden;
@@ -1121,12 +1119,10 @@ span.copyNoti {
 //
 //   }
 // }
-
 // .l-block{
 //   height:382px;
 //   overflow: hidden;
 // }
-
 // .wt-fullWidth{
 //   border: none;
 //   .option-list{
@@ -1134,33 +1130,94 @@ span.copyNoti {
 //     // display: none;
 //   }
 // }
-
 /**************widget height and width*******************/
-
-.xs-block{
-  height:180px;
+.xs-block {
+  height: 180px;
   width: calc(50% - 10px);
-  @media screen and (max-width:992px){
-    width: calc(50% - 5px)
+  @media screen and (max-width:992px) {
+    width: calc(50% - 5px);
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 }
 
-.sm-block{
-  height:180px;
+.sm-block {
+  height: 180px;
 }
 
-.md-block{
-  height:380px;
+.md-block {
+  height: 380px;
   // @media screen and (max-width:992px){
   //   height:auto;
   // }
 }
 
-.lg-block{
-  width:100%;
-  height:auto;
+.lg-block {
+  width: 100%;
+  height: auto;
   border: none;
+}
+
+.wt-setting-dw {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .wt-setting-list {
+    width: 100px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    left: -10px;
+    bottom: -125px;
+    display: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border-bottom: 6px solid $white;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      top: -6px;
+      left: 11px;
+      z-index: 2;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-bottom: 7px solid $border;
+      border-right: 7px solid transparent;
+      border-left: 7px solid transparent;
+      top: -7px;
+      left: 10px;
+      z-index: 1;
+    }
+
+    .wt-setting-item {
+      line-height: 35px;
+      text-transform: capitalize;
+      font-size: 13px;
+      padding: 0 10px;
+      cursor: pointer;
+      border-bottom: 1px solid $border;
+      color: $black;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $bg-color;
+      }
+    }
+  }
 }

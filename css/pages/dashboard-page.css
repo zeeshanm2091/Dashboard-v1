@@ -1664,7 +1664,7 @@ p {
 }
 
 .no-pd {
-  padding: 0px;
+  padding: 0;
 }
 
 .ot-pd {
@@ -1991,13 +1991,13 @@ section {
   width: 100%;
 }
 section .bdayAnn {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 section .delete-btn {
   z-index: 11;
   position: absolute;
   right: 0;
-  top: 0px;
+  top: 0;
   height: 40px;
   width: 40px;
   text-align: center;
@@ -2461,9 +2461,9 @@ span.copyNoti {
 .my-common-widget {
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  overflow: hidden;
   background-color: #ffffff;
   height: 180px;
+  position: relative;
 }
 .my-common-widget.lg-block {
   display: none;
@@ -2512,6 +2512,62 @@ span.copyNoti {
   width: 100%;
   height: auto;
   border: none;
+}
+
+.wt-setting-dw {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.wt-setting-dw .icon {
+  font-size: 16px;
+}
+.wt-setting-dw .wt-setting-list {
+  width: 100px;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  left: -10px;
+  bottom: -125px;
+  display: none;
+}
+.wt-setting-dw .wt-setting-list:before {
+  content: "";
+  position: absolute;
+  border-bottom: 6px solid #ffffff;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  top: -6px;
+  left: 11px;
+  z-index: 2;
+}
+.wt-setting-dw .wt-setting-list:after {
+  content: "";
+  position: absolute;
+  border-bottom: 7px solid #ddd;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: -7px;
+  left: 10px;
+  z-index: 1;
+}
+.wt-setting-dw .wt-setting-list .wt-setting-item {
+  line-height: 35px;
+  text-transform: capitalize;
+  font-size: 13px;
+  padding: 0 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  color: #000000;
+}
+.wt-setting-dw .wt-setting-list .wt-setting-item:last-child {
+  border-bottom: none;
+}
+.wt-setting-dw .wt-setting-list .wt-setting-item:hover {
+  background-color: #eef1e9;
 }
 
 /****components****/
@@ -2673,7 +2729,7 @@ span.copyNoti {
 }
 
 .empConnect {
-  overflow: hidden;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .empConnect {
@@ -2766,7 +2822,6 @@ span.copyNoti {
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  z-index: 10;
 }
 .empConnect .card-head .card-right .emp-filteList .emp-filter-item {
   margin-right: 15px;
