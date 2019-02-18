@@ -5881,6 +5881,10 @@ textarea {
   margin-top: -3px;
 }
 
+.wt-pr-blog {
+  display: none;
+}
+
 .personal-blog-block:hover .personal-arrow-back,
 .personal-blog-block:hover .personal-arrow-next {
   opacity: 1;
@@ -6117,6 +6121,10 @@ textarea {
   border: none;
   margin-top: 0;
   padding-top: 10px;
+}
+
+.wt-myGoals, .wt-myLearning {
+  display: none;
 }
 
 .sp-mainContent .main-container {
