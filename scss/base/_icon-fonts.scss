@@ -12,6 +12,19 @@
 
 }
 
+// @font-face {
+//   font-family: "zing-icon-font";
+//   src:url("../../Fonts/zing-icon-font.eot");
+//   src:url("../../Fonts/zing-icon-font.eot?#iefix") format("embedded-opentype");
+//   src:url("../../Fonts/zing-icon-font.woff") format("woff");
+//   src:url("../../Fonts/zing-icon-font.ttf") format("truetype");
+//   src:url("../../Fonts/zing-icon-font.svg#zing-icon-font") format("svg");
+//
+//   font-weight: normal;
+//   font-style: normal;
+//
+// }
+
 [data-icon]:before {
   font-family: "zing-icon-font" !important;
   content: attr(data-icon);

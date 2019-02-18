@@ -2382,10 +2382,12 @@ label:hover {
 }
 
 .rangeSlider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
+  width: 15px;
+  height: 15px;
+  background: #33cccc;
   cursor: pointer;
+  border-radius: 50%;
+  border: none;
 }
 
 span.copyNoti {

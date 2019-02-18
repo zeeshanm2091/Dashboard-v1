@@ -1258,7 +1258,7 @@ $(document).ready(function() {
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block', 'my-goals']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['newsCard', 'my-team', 'main-bday-block', 'rnr-block']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1266,7 +1266,7 @@ $(document).ready(function() {
       }
       //right widget
       for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
-        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'mycomp-card', 'mypms-card', 'moreLink-card', 'mylearn-card', 'my-learning']) === -1) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'mycomp-card', 'mypms-card', 'moreLink-card', 'mylearn-card']) === -1) {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1366,7 +1366,30 @@ $(document).ready(function() {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
         }
       }
+    }
 
+
+
+    //theme 5
+
+    if (Childno === 6) {
+      $('.banner-fw-widget,.option-fw-widget').slideUp();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['my-team', 'my-inbox']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
+        }
+      }
+      //right widget
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['mylearn-card']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
+        }
+      }
     }
 
 

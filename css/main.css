@@ -2382,10 +2382,12 @@ label:hover {
 }
 
 .rangeSlider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
+  width: 15px;
+  height: 15px;
+  background: #33cccc;
   cursor: pointer;
+  border-radius: 50%;
+  border: none;
 }
 
 span.copyNoti {
@@ -3067,6 +3069,10 @@ span.copyNoti {
 }
 .newsCard .newsCard-content .newsCard-desc .newsCard-link span:before {
   line-height: 40px;
+}
+
+.wt-anni-block {
+  display: none;
 }
 
 .empConnect {
@@ -4855,7 +4861,7 @@ textarea {
   overflow: hidden;
 }
 .tab-block .tab-body .tab-content {
-  height: calc(100% - 40px);
+  height: 288px;
   overflow-y: auto;
 }
 .tab-block .noti-content {
