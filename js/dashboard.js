@@ -1370,7 +1370,7 @@ $(document).ready(function() {
 
 
 
-    //theme 5
+    //theme 6
 
     if (Childno === 6) {
       $('.banner-fw-widget,.option-fw-widget').slideUp();
@@ -1384,7 +1384,7 @@ $(document).ready(function() {
       }
       //right widget
       for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
-        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['mylearn-card']) === -1) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['mylearn-card', 'wt-anni-summary']) === -1) {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1527,6 +1527,39 @@ $(document).ready(function() {
     $(this).parent().parent().parent().parent().slideUp();
   })
 
+
+
+  /*****************************************anniversary summary block**********************************************************/
+
+  $('.bday-item .anni-type').html("Birthday");
+
+  $('.anni-item .anni-type').html("Anniversary");
+
+  $('.wk-anni-item .anni-type').html("Work Anniversary")
+
+
+  $('.sum-tab-item').click(function() {
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active');
+  })
+
+  $('.bday-btn').click(function() {
+    $('.anni-item').fadeOut(000);
+    $('.wk-anni-item').fadeOut(000);
+    $('.bday-item').fadeIn(200);
+  });
+
+  $('.anni-btn').click(function() {
+    $('.bday-item').fadeOut(000);
+    $('.wk-anni-item').fadeOut(000);
+    $('.anni-item').fadeIn(200);
+  })
+
+  $('.wk-anni-btn').click(function() {
+    $('.bday-item').fadeOut(000);
+    $('.anni-item').fadeOut(000);
+    $('.wk-anni-item').fadeIn(200);
+  })
 
 
 

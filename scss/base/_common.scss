@@ -66,7 +66,6 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
-
 body {
   font-size: 13px;
   font-family: sans-serif;
@@ -404,8 +403,9 @@ p {
     text-transform: capitalize;
     box-sizing: border-box;
     color: $text !important;
-    &::placeholder{
-      color:$text;
+
+    &::placeholder {
+      color: $text;
       opacity: 1;
     }
     @media screen and (max-width:1024px) {
@@ -531,10 +531,10 @@ p {
   }
 }
 
-.active{
+.active {
   .left-list,
   .right-list {
-    min-height:800px;
+    min-height: 800px;
   }
 }
 
@@ -734,7 +734,6 @@ label:hover {
   cursor: text;
 }
 /****button css****/
-
 .btn-s {
   &.db-btn {
     width: 30% !important;
@@ -913,7 +912,6 @@ label:hover {
   }
 }
 /***disabled****/
-
 .disabled {
   opacity: 0.5;
   position: relative;
@@ -927,7 +925,6 @@ label:hover {
   }
 }
 /*****error mgs *****/
-
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;
@@ -944,7 +941,6 @@ label:hover {
   font-weight: bold;
 }
 /*****color pickr*****/
-
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
@@ -956,6 +952,7 @@ label:hover {
   cursor: pointer;
 }
 /****loader*****/
+
 .db-loader {
   position: fixed;
   left: 0;
@@ -974,7 +971,6 @@ label:hover {
   }
 }
 /*****range slider*****/
-
 .range-slider-container {
   width: 100%;
   @include dis-flex();
@@ -982,7 +978,7 @@ label:hover {
 
 .rangeSlider {
   -webkit-appearance: none;
-    // width: 100%;
+  // width: 100%;
   height: 7px;
   background: $bg-color;
   outline: none;
@@ -1012,7 +1008,7 @@ label:hover {
   background: $primary;
   cursor: pointer;
   border-radius: 50%;
-  border:none;
+  border: none;
 }
 
 span.copyNoti {
@@ -1030,6 +1026,7 @@ span.copyNoti {
   right: 50px;
 }
 /*****copy right******/
+
 .db-copyRight {
   @include dis-flex();
   text-transform: capitalize;
@@ -1052,6 +1049,144 @@ span.copyNoti {
   }
 }
 /**********card block***********/
+.card-head {
+  @include dis-flex();
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding: 20px 20px 0;
+  @media screen and (max-width:1200px) {
+    padding: 10px 10px 0;
+  }
+
+  .card-left {
+    @include dis-flex();
+
+    .card-head-title {
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 16px;
+      @media screen and (max-width:1024px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width:992px) {
+        font-size: 16px;
+      }
+    }
+
+    .card-head-icon {
+      font-size: 30px;
+      color: $secondary;
+      padding-right: 10px;
+      display: none;
+      @media screen and (max-width:1024px) {
+        font-size: 20px;
+        padding-right: 5px;
+      }
+      @media screen and (max-width:992px) {
+        font-size: 30px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .card-right {
+    @include dis-flex();
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width:1366px) {
+      width: 65%;
+    }
+    @media screen and (max-width:992px) {
+      width: 65%;
+    }
+    @media screen and (max-width:767px) {
+      width: 50%;
+    }
+    /*******************emp desc block***********************/
+    .emp-name {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    .emp-card-filters {
+      width: 100%;
+    }
+
+    .emp-filteList {
+      @include dis-flex();
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      // z-index: 10;
+      .emp-filter-item {
+        margin-right: 15px;
+        text-transform: capitalize;
+        color: $text;
+        cursor: pointer;
+        position: relative;
+        font-size: 13px;
+
+        &:last-child {
+          width: 70px;
+        }
+        @media screen and (max-width:1200px) {
+          font-size: 12px;
+          text-align: center;
+
+          &:last-child {
+            width: 80px;
+          }
+        }
+        @media screen and (max-width:992px) {
+          font-size: 14px;
+
+          &:last-child {
+            width: 90px;
+          }
+        }
+        @media screen and (max-width:767px) {
+          margin-right: 0;
+
+          &.sin-select {
+            display: none;
+          }
+        }
+
+        &:first-child {
+          &.active {
+            &:before {
+              bottom: 0;
+              width: calc(100% - 20px);
+            }
+          }
+        }
+
+        &:last-child {
+          &.active {
+            &:before {
+              bottom: 0;
+              width: 0;
+            }
+          }
+        }
+
+        &.active {
+          &:before {
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: $primary;
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 .card-block {
   height: 180px;
   border: 1px solid #ccc;
@@ -1148,6 +1283,7 @@ span.copyNoti {
 //   }
 // }
 /**************widget height and width*******************/
+
 .xs-block {
   height: 180px;
   width: calc(50% - 10px);
@@ -1199,10 +1335,9 @@ span.copyNoti {
     transition: left 0.5s;
     z-index: 2;
 
-    &.active{
+    &.active {
       left: -78px;
     }
-
     // &:before {
     //   content: "";
     //   position: absolute;
@@ -1224,7 +1359,6 @@ span.copyNoti {
     //   right: 10px;
     //   z-index: 1;
     // }
-
     .wt-setting-item {
       line-height: 35px;
       text-transform: capitalize;
