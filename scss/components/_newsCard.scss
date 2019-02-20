@@ -1,62 +1,172 @@
+.csr-block,.wellness-block{
+  display: none;
+}
 .newsCard {
+
   // border: 1px solid $border;
   // height: 180px;
-  @media screen and (max-width:767px){
-    height:auto;
+  video.md-video {
+    display: none;
   }
-  .bx-wrapper .bx-next{
-    right:0px;
+  // .video-block{
+  //   .newsCard-play-btn{
+  //     display: block;
+  //   }
+  // }
+
+  .swiper-container-autoheight,
+  .swiper-container-autoheight .swiper-slide {
+    height: 180px;
+    @media screen and (max-width:767px){
+      height:auto;
+    }
+  }
+  @media screen and (max-width:767px) {
+    height: auto;
   }
 
-  .bx-wrapper .bx-prev{
-    left:0px;
+  .bx-wrapper .bx-next {
+    right: 0;
   }
 
+  .bx-wrapper .bx-prev {
+    left: 0;
+  }
   box-sizing: border-box;
   background-color: $white;
 
   .newsCard-content {
-
-
     @include dis-flex();
     align-items: flex-start;
     position: relative;
-
-    @media screen and (max-width:767px){
+    height:100%;
+    @media screen and (max-width:767px) {
       flex-direction: column;
       height: auto;
     }
+  }
 
+  .newsCard-img-block {
+    width: 40%;
+    height:100%;
+    position: relative;
+    @media screen and (max-width:767px) {
+      width: 100%;
+      height: 200px;
+    }
 
-    .newsCard-img-block {
-      width: 40%;
-      position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-      @media screen and (max-width:767px){
-          width: 100%;
-          height:200px;
+  .video-block{
+    .newsCard-play-btn {
+      display: block;
+    }
+    .fancy-box-block{
+      display: block;
+    }
+  }
+
+  .newsCard-play-btn {
+    height: 50px;
+    width: 50px;
+    background-color: $danger;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    border-radius: 50%;
+    color: $white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: none;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:before {
+      line-height: 50px;
+    }
+  }
+
+  .newsCard-desc {
+    width: 60%;
+    padding: 20px 40px 0 20px;
+    text-align: left;
+    @media screen and (max-width:1200px) {
+      padding: 20px 20px 0;
+      min-height: 165px;
+      overflow: hidden;
+
+      h3 {
+        font-size: 16px;
       }
+    }
+    @media screen and (max-width:992px) {
+      width: 100%;
+    }
+    @media screen and (max-width:767px) {
+      padding-bottom: 10px;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    .newsCard-name {
+      margin-bottom: 10px;
 
-      .newsCard-play-btn {
-        height: 50px;
-        width: 50px;
-        background-color: $danger;
-        position: absolute;
-        top: 50%;
-        margin-top: -25px;
-        left: 50%;
-        margin-left: -25px;
-        border-radius: 50%;
+      span {
+        height: 25px;
+        line-height: 25px;
+        padding: 0 15px;
+        // background-color: $primary;
         color: $white;
+        text-transform: capitalize;
+        display: inline-block;
+        background-color: $primary;
+      }
+    }
+
+    .newsCard-text {
+      // padding-bottom: 40px;
+      line-height: 18px;
+      @media screen and (max-width:1200px) {
+        font-size: 14px;
+      }
+    }
+
+    .newsCard-title {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+      line-height: 20px;
+      @media screen and (max-width: 1200px) {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .newsCard-link {
+      a.card-readmore {
+        display: none;
+      }
+
+      span {
+        height: 40px;
+        width: 40px;
+        position: absolute;
         text-align: center;
-        line-height: 50px;
-        font-size: 25px;
-        cursor: pointer;
+        line-height: 40px;
+        bottom: 5px;
+        right: 5px;
+        color: $primary;
+        font-size: 20px !important;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -64,80 +174,87 @@
         }
 
         &:before {
-          line-height: 50px;
+          line-height: 40px;
         }
       }
     }
+  }
+}
+
+.md-block {
+
+
+
+  .newsCard-content {
+    width: 100%;
+  }
+
+  .newsCard {
+
+    .video-block{
+      .newsCard-play-btn {
+        display: none;
+      }
+      .fancy-box-block{
+        display: none;
+      }
+      video.md-video{
+        display: block;
+      }
+      .newsCard-desc{
+        display: none;
+      }
+    }
+
+    video {
+      height: 100%;
+      width: 100%;
+    }
+
+    .swiper-container-autoheight,
+    .swiper-container-autoheight .swiper-slide {
+      height: 380px;
+    }
+
+    .wt-setting-dw {
+      color: $white;
+    }
+
+    .newsCard-img-block {
+      width: 100%;
+      position: relative;
+    }
 
     .newsCard-desc {
-      width: 60%;
-      padding: 20px 40px 0 20px;
-      text-align: left;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0,0,0,0.3);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-      @media screen and (max-width:992px){
-          width: 100%;
+    .newsCard-title {
+      color: $white;
+    }
+
+    .newsCard-text {
+      p {
+        color: $white;
+      }
+    }
+
+    .newsCard-link {
+      a {
+        margin-top: 5px;
+        display: none;
       }
 
-      @media screen and (max-width:767px){
-          padding-bottom:10px;
-      }
-
-      .newsCard-name {
-        margin-bottom: 10px;
-
-        span {
-          height: 25px;
-          line-height: 25px;
-          padding: 0 15px;
-          // background-color: $primary;
-          color: $white;
-          text-transform: capitalize;
-          display: inline-block;
-          background-color: $primary;
-        }
-      }
-
-      .newsCard-text {
-        // padding-bottom: 40px;
-        line-height: 18px;
-        @media screen and (max-width:1200px){
-          font-size: 14px;
-        }
-      }
-
-      .newsCard-title {
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: capitalize;
-        line-height: 20px;
-
-        @media screen and (max-width: 1200px){
-          font-size: 14px;
-          line-height: 16px;
-          margin-bottom: 5px;
-        }
-      }
-
-      .newsCard-link {
-        span {
-          height: 40px;
-          width: 40px;
-          position: absolute;
-          text-align: center;
-          line-height: 40px;
-          bottom: 5px;
-          right: 5px;
-          color: $primary;
-          font-size: 20px !important;
-          transition: all 0.2s ease-in-out;
-          &:hover{
-            transform: scale(1.05);
-          }
-
-          &:before {
-            line-height: 40px;
-          }
-        }
+      a.card-readmore {
+        display: block;
       }
     }
   }

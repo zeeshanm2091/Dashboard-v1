@@ -205,6 +205,10 @@ p {
   }
 }
 
+.btn-filter{
+  font-size:16px;
+}
+
 .main-container-fluid {
   max-width: 100%;
 }
@@ -249,10 +253,10 @@ p {
     @media screen and (max-width:992px) {
       width: 100%;
 
-      .atten-card,
-      .ctc-card {
-        margin-top: 30px;
-      }
+      // .atten-card,
+      // .ctc-card {
+      //   margin-top: 30px;
+      // }
     }
   }
 
@@ -320,7 +324,7 @@ p {
   }
 
   .selected-item {
-    padding-right: 30px;
+    // padding-right: 30px;
     z-index: 3;
     position: relative;
     height: 100%;
@@ -1102,6 +1106,7 @@ span.copyNoti {
     }
     @media screen and (max-width:767px) {
       width: 50%;
+      // padding-right: 10px;
     }
     /*******************emp desc block***********************/
     .emp-name {
@@ -1120,7 +1125,7 @@ span.copyNoti {
       position: relative;
       // z-index: 10;
       .emp-filter-item {
-        margin-right: 15px;
+        margin-right: 10px;
         text-transform: capitalize;
         color: $text;
         cursor: pointer;
@@ -1146,7 +1151,7 @@ span.copyNoti {
           }
         }
         @media screen and (max-width:767px) {
-          margin-right: 0;
+          // margin-right: 0;
 
           &.sin-select {
             display: none;
@@ -1313,6 +1318,9 @@ span.copyNoti {
 }
 
 .wt-setting-dw {
+  @media screen and (max-width:992px){
+    display: none;
+  }
   position: absolute;
   right: 5px;
   top: 10px;
@@ -1378,3 +1386,7 @@ span.copyNoti {
     }
   }
 }
+
+// .wt-main-block{
+//   display: block !important;
+// }

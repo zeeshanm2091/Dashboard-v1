@@ -1658,6 +1658,10 @@ p {
   display: block;
 }
 
+.btn-filter {
+  font-size: 16px;
+}
+
 .main-container-fluid {
   max-width: 100%;
 }
@@ -1713,12 +1717,6 @@ p {
 .db-body .db-right {
     width: 100%;
   }
-  .db-body .db-left .atten-card,
-.db-body .db-left .ctc-card,
-.db-body .db-right .atten-card,
-.db-body .db-right .ctc-card {
-    margin-top: 30px;
-  }
 }
 @media screen and (max-width: 767px) {
   .db-body .db-right {
@@ -1773,7 +1771,6 @@ p {
   padding-left: 0;
 }
 .dropdown-block .selected-item {
-  padding-right: 30px;
   z-index: 3;
   position: relative;
   height: 100%;
@@ -2518,7 +2515,7 @@ span.copyNoti {
   position: relative;
 }
 .card-head .card-right .emp-filteList .emp-filter-item {
-  margin-right: 15px;
+  margin-right: 10px;
   text-transform: capitalize;
   color: #555;
   cursor: pointer;
@@ -2546,9 +2543,6 @@ span.copyNoti {
   }
 }
 @media screen and (max-width: 767px) {
-  .card-head .card-right .emp-filteList .emp-filter-item {
-    margin-right: 0;
-  }
   .card-head .card-right .emp-filteList .emp-filter-item.sin-select {
     display: none;
   }
@@ -2678,6 +2672,11 @@ span.copyNoti {
   cursor: pointer;
   z-index: 3;
 }
+@media screen and (max-width: 992px) {
+  .wt-setting-dw {
+    display: none;
+  }
+}
 .wt-setting-dw .icon {
   font-size: 16px;
 }
@@ -2736,9 +2735,26 @@ span.copyNoti {
   text-decoration: underline;
 }
 
+.csr-block, .wellness-block {
+  display: none;
+}
+
 .newsCard {
   box-sizing: border-box;
   background-color: #ffffff;
+}
+.newsCard video.md-video {
+  display: none;
+}
+.newsCard .swiper-container-autoheight,
+.newsCard .swiper-container-autoheight .swiper-slide {
+  height: 180px;
+}
+@media screen and (max-width: 767px) {
+  .newsCard .swiper-container-autoheight,
+.newsCard .swiper-container-autoheight .swiper-slide {
+    height: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .newsCard {
@@ -2746,10 +2762,10 @@ span.copyNoti {
   }
 }
 .newsCard .bx-wrapper .bx-next {
-  right: 0px;
+  right: 0;
 }
 .newsCard .bx-wrapper .bx-prev {
-  left: 0px;
+  left: 0;
 }
 .newsCard .newsCard-content {
   display: flex;
@@ -2757,6 +2773,7 @@ span.copyNoti {
   align-items: center;
   align-items: flex-start;
   position: relative;
+  height: 100%;
 }
 @media screen and (max-width: 767px) {
   .newsCard .newsCard-content {
@@ -2764,21 +2781,28 @@ span.copyNoti {
     height: auto;
   }
 }
-.newsCard .newsCard-content .newsCard-img-block {
+.newsCard .newsCard-img-block {
   width: 40%;
+  height: 100%;
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  .newsCard .newsCard-content .newsCard-img-block {
+  .newsCard .newsCard-img-block {
     width: 100%;
     height: 200px;
   }
 }
-.newsCard .newsCard-content .newsCard-img-block img {
+.newsCard .newsCard-img-block img {
   width: 100%;
   height: 100%;
 }
-.newsCard .newsCard-content .newsCard-img-block .newsCard-play-btn {
+.newsCard .video-block .newsCard-play-btn {
+  display: block;
+}
+.newsCard .video-block .fancy-box-block {
+  display: block;
+}
+.newsCard .newsCard-play-btn {
   height: 50px;
   width: 50px;
   background-color: #ff6666;
@@ -2794,32 +2818,43 @@ span.copyNoti {
   font-size: 25px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  display: none;
 }
-.newsCard .newsCard-content .newsCard-img-block .newsCard-play-btn:hover {
+.newsCard .newsCard-play-btn:hover {
   transform: scale(1.05);
 }
-.newsCard .newsCard-content .newsCard-img-block .newsCard-play-btn:before {
+.newsCard .newsCard-play-btn:before {
   line-height: 50px;
 }
-.newsCard .newsCard-content .newsCard-desc {
+.newsCard .newsCard-desc {
   width: 60%;
   padding: 20px 40px 0 20px;
   text-align: left;
 }
+@media screen and (max-width: 1200px) {
+  .newsCard .newsCard-desc {
+    padding: 20px 20px 0;
+    min-height: 165px;
+    overflow: hidden;
+  }
+  .newsCard .newsCard-desc h3 {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 992px) {
-  .newsCard .newsCard-content .newsCard-desc {
+  .newsCard .newsCard-desc {
     width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
-  .newsCard .newsCard-content .newsCard-desc {
+  .newsCard .newsCard-desc {
     padding-bottom: 10px;
   }
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-name {
+.newsCard .newsCard-desc .newsCard-name {
   margin-bottom: 10px;
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-name span {
+.newsCard .newsCard-desc .newsCard-name span {
   height: 25px;
   line-height: 25px;
   padding: 0 15px;
@@ -2828,28 +2863,31 @@ span.copyNoti {
   display: inline-block;
   background-color: #33cccc;
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-text {
+.newsCard .newsCard-desc .newsCard-text {
   line-height: 18px;
 }
 @media screen and (max-width: 1200px) {
-  .newsCard .newsCard-content .newsCard-desc .newsCard-text {
+  .newsCard .newsCard-desc .newsCard-text {
     font-size: 14px;
   }
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-title {
+.newsCard .newsCard-desc .newsCard-title {
   font-size: 16px;
   font-weight: bold;
   text-transform: capitalize;
   line-height: 20px;
 }
 @media screen and (max-width: 1200px) {
-  .newsCard .newsCard-content .newsCard-desc .newsCard-title {
+  .newsCard .newsCard-desc .newsCard-title {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 5px;
   }
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-link span {
+.newsCard .newsCard-desc .newsCard-link a.card-readmore {
+  display: none;
+}
+.newsCard .newsCard-desc .newsCard-link span {
   height: 40px;
   width: 40px;
   position: absolute;
@@ -2861,11 +2899,66 @@ span.copyNoti {
   font-size: 20px !important;
   transition: all 0.2s ease-in-out;
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-link span:hover {
+.newsCard .newsCard-desc .newsCard-link span:hover {
   transform: scale(1.05);
 }
-.newsCard .newsCard-content .newsCard-desc .newsCard-link span:before {
+.newsCard .newsCard-desc .newsCard-link span:before {
   line-height: 40px;
+}
+
+.md-block .newsCard-content {
+  width: 100%;
+}
+.md-block .newsCard .video-block .newsCard-play-btn {
+  display: none;
+}
+.md-block .newsCard .video-block .fancy-box-block {
+  display: none;
+}
+.md-block .newsCard .video-block video.md-video {
+  display: block;
+}
+.md-block .newsCard .video-block .newsCard-desc {
+  display: none;
+}
+.md-block .newsCard video {
+  height: 100%;
+  width: 100%;
+}
+.md-block .newsCard .swiper-container-autoheight,
+.md-block .newsCard .swiper-container-autoheight .swiper-slide {
+  height: 380px;
+}
+.md-block .newsCard .wt-setting-dw {
+  color: #ffffff;
+}
+.md-block .newsCard .newsCard-img-block {
+  width: 100%;
+  position: relative;
+}
+.md-block .newsCard .newsCard-desc {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.md-block .newsCard .newsCard-title {
+  color: #ffffff;
+}
+.md-block .newsCard .newsCard-text p {
+  color: #ffffff;
+}
+.md-block .newsCard .newsCard-link a {
+  margin-top: 5px;
+  display: none;
+}
+.md-block .newsCard .newsCard-link a.card-readmore {
+  display: block;
 }
 
 .wt-anni-block {
@@ -5074,7 +5167,6 @@ textarea {
 
 .login-fields {
   height: 40px;
-  margin-bottom: 10px;
   font-size: 13px;
   padding: 0 20px;
   text-transform: capitalize;
@@ -6131,7 +6223,7 @@ textarea {
 .personal-blog-block .card-block {
   border: none;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .wt-myGoals, .wt-myLearning {
@@ -6659,10 +6751,15 @@ textarea {
   vertical-align: middle;
 }
 
+.anni-summary-block {
+  display: none;
+}
+
 .wt-anni-summary {
   position: relative;
 }
 .wt-anni-summary .wt-anni-link {
+  display: none;
   position: absolute;
   bottom: 10px;
   right: 30px;
@@ -6707,6 +6804,12 @@ textarea {
   position: relative;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  .sum-tab-head .sum-tab-item {
+    margin-right: 10px;
+    align-items: center;
+  }
+}
 .sum-tab-head .sum-tab-item:before {
   width: 0;
   transition: width 0.5s;
@@ -6736,17 +6839,22 @@ textarea {
 .sum-item-icon.icon-business-operations {
   color: #03a9f5;
 }
+.sum-item-icon.icon-tasklist {
+  color: #33cccc;
+}
 
 .sum-tab-body {
   margin: 20px 0;
-  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
-  height: 100%;
+  min-height: 260px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 .sum-tab-body .emp-img-block .emp-img {
   height: 50px;
@@ -6764,6 +6872,11 @@ textarea {
   min-width: 110px;
   width: 16.66%;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .anni-sum-item {
+    min-width: 100px;
+  }
 }
 .anni-sum-item .emp-img-block {
   display: inline-block;

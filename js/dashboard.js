@@ -56,7 +56,7 @@ $(document).ready(function() {
       left: "350px"
     }, 300);
     $('.left-block .menu-main-content').animate({
-      left: "-50%"
+      left: "-80%"
     }, 300);
   })
 
@@ -104,16 +104,33 @@ $(document).ready(function() {
     $('.widget-click-desc h4').html($(this).text());
   })
 
-  $('.theme-change-block .db-btn').click(function() {
+  $('.dashboard-page').on('click', '.theme-change-block .db-btn', function() {
     $('.accorrd-main-body').css({
       "right": "0px"
     })
-
     $('.widget-click-desc h5').html("Your customising theme");
     $('.widget-click-desc h4').html("theme");
 
 
+
+    var themeTabNo;
+    themeTabNo = parseInt($('.dashboard-page').attr('class').split(" ").pop().split("").pop());
+    console.log(themeTabNo);
+    console.log(typeof(themeTabNo));
+
+    if (!isNaN(themeTabNo)) {
+      $('.theme-list .theme-item:nth-child(' + themeTabNo + ')').addClass('active');
+    }
+
+
+
+
+
+
+
+
   })
+
 
   $('.accord-closing .icon-back').click(function() {
     $(this).parent().parent().css({
@@ -143,7 +160,7 @@ $(document).ready(function() {
 
 
   $('.theme-change-block .db-btn').click(function() {
-    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/themes/dahsboard-theme1.jpg" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/themes/dahsboard-theme2.jpg" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/themes/dahsboard-theme3.jpg" alt=""> </div> <div class="theme-item theme-4"> <img src="../images/themes/dahsboard-theme4.jpg" alt=""> </div> <div class="theme-item theme-5"> <img src="../images/themes/dahsboard-theme5.jpg" alt=""> </div><div class="theme-item theme-6"> <img src="../images/themes/dahsboard-theme6.jpg" alt=""> </div> </div></div></div>');
+    $('.accord-main-content').append('<div class="accord-content-info"> <p>Select widget here to appear in your Portal Home for all users,data and widget actions will be changed based on the user role.</p> </div><div class="accord-content"><div class="accord-body-list"><div class="theme-list accord-body-list"> <div class="theme-item theme-1"> <img src="../images/themes/dahsboard-theme1.jpg" alt=""> </div> <div class="theme-item theme-2"> <img src="../images/themes/dahsboard-theme2.jpg" alt=""> </div> <div class="theme-item theme-3"> <img src="../images/themes/dahsboard-theme3.jpg" alt=""> </div> <div class="theme-item theme-4"> <img src="../images/themes/dahsboard-theme4.jpg" alt=""> </div> <div class="theme-item theme-5"> <img src="../images/themes/dahsboard-theme5.jpg" alt=""> </div><div class="theme-item theme-6"> <img src="../images/themes/dahsboard-theme6.jpg" alt=""> </div><div class="theme-item theme-7"> <img src="../images/themes/dashboard-theme7.png" alt=""> </div> </div></div></div>');
   })
 
 
@@ -1242,18 +1259,10 @@ $(document).ready(function() {
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
 
-
-
-
-
-
-
-
-
     //theme 1
 
     if (Childno === 1) {
-
+      $('.newsCard').parent().removeClass('md-block');
       $('.db-body').slideDown();
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
@@ -1278,6 +1287,7 @@ $(document).ready(function() {
     //theme 2
 
     if (Childno === 2) {
+      $('.newsCard').parent().removeClass('md-block');
       $('.db-body').slideDown();
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
@@ -1301,6 +1311,7 @@ $(document).ready(function() {
     //theme 3
 
     if (Childno === 3) {
+      $('.newsCard').parent().removeClass('md-block');
       // $('.db-body').slideUp();
       $('.banner-fw-widget,.option-fw-widget').slideDown();
       //left widget
@@ -1325,6 +1336,7 @@ $(document).ready(function() {
     //theme 4
 
     if (Childno === 4) {
+      $('.newsCard').parent().removeClass('md-block');
       $('.option-fw-widget').slideUp();
       $('.banner-fw-widget').slideDown();
       //left widget
@@ -1349,6 +1361,7 @@ $(document).ready(function() {
     //theme 5
 
     if (Childno === 5) {
+      $('.newsCard').parent().removeClass('md-block');
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
@@ -1373,10 +1386,14 @@ $(document).ready(function() {
     //theme 6
 
     if (Childno === 6) {
+      $('.newsCard').parent().addClass('md-block');
+
+      console.log($('.newsCard').parent().attr('class'));
+
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['my-team', 'my-inbox']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['my-team', 'my-inbox', 'newsCard']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1388,6 +1405,34 @@ $(document).ready(function() {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
+
+        }
+      }
+    }
+
+    //theme 6
+
+    if (Childno === 7) {
+      $('.wt-csr-block').parent().removeClass('md-block');
+
+      console.log($('.newsCard').parent().attr('class'));
+
+      $('.banner-fw-widget,.option-fw-widget').slideUp();
+      //left widget
+      for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['my-team', 'main-bday-block', 'newsCard']) === -1) {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
+        }
+      }
+      //right widget
+      for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['wt-csr-block', 'wt-wellness-block', 'atten-card', 'ctc-card', 'personal-blog-block']) === -1) {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
+        } else {
+          $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
+
         }
       }
     }
@@ -1559,7 +1604,15 @@ $(document).ready(function() {
     $('.bday-item').fadeOut(000);
     $('.anni-item').fadeOut(000);
     $('.wk-anni-item').fadeIn(200);
-  })
+  });
+
+  $('.wk-all-btn').click(function() {
+    $('.bday-item').fadeIn(200);
+    $('.anni-item').fadeIn(200);
+    $('.wk-anni-item').fadeIn(200);
+  });
+
+
 
 
 

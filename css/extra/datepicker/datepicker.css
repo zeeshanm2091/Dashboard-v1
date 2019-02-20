@@ -24,7 +24,8 @@
 .datepicker-arrow {
   border-bottom-color: #9cf;
   margin: 0 10px;
-  position: relative
+  position: relative;
+  right: -30px;
 }
 
 .datepicker-arrow:after {
@@ -130,14 +131,30 @@
 
 .datepicker-content {
   background-color: #ffffff !important;
+  position: absolute;
+  right: -30px;
 }
 
 @media screen and (max-width:992px) {
   .datepicker-container {
-    left: 100px !important;
+    left: 100px;
   }
 
   .datepicker-arrow {
     margin: 0 0 0 90%;
+  }
+
+  .datepicker-arrow {
+    right: -10px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .datepicker-content {
+    right: -50px;
+  }
+
+  .datepicker-arrow {
+    right: -30px;
   }
 }
