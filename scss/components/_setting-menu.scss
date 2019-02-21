@@ -184,6 +184,13 @@
     }
 }
 
+.banner-setting-block{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
 .accord-container {
   // .accord-item:last-child {
   //   padding-bottom: 60px;
@@ -210,7 +217,7 @@
 
     .accord-item-title {
       .icon {
-        transform: rotate(180deg);
+        // transform: rotate(180deg);
       }
     }
   }
@@ -562,7 +569,7 @@
         .common-label{
           min-width: 120px;
           font-weight:normal;
-          
+
         }
       }
     }

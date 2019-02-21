@@ -20,6 +20,7 @@
 
   .db-arrow {
     color: $white;
+    display: none;
     @media screen and (max-width:767px) {
       top: 50%;
     }

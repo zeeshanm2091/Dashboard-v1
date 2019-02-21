@@ -4332,6 +4332,13 @@ span.copyNoti {
   color: #ffffff;
 }
 
+.banner-setting-block {
+  display: none;
+}
+.banner-setting-block.active {
+  display: block;
+}
+
 .accord-container .accord-item-title,
 .accord-container .setting-btns {
   padding: 0 20px;
@@ -4350,9 +4357,6 @@ span.copyNoti {
 }
 .accord-container .active .accord-item-body {
   display: block;
-}
-.accord-container .active .accord-item-title .icon {
-  transform: rotate(180deg);
 }
 .accord-container .accord-item-body {
   height: 300px;
@@ -4819,6 +4823,7 @@ textarea {
 }
 .basic-banner-slider .db-arrow {
   color: #ffffff;
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .basic-banner-slider .db-arrow {
