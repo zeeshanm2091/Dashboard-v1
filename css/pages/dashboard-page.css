@@ -1758,6 +1758,19 @@ p {
   cursor: pointer;
   width: 80px;
 }
+.dropdown-block #datepair {
+  position: relative;
+  z-index: 2;
+}
+.dropdown-block #datepair:before {
+  content: "";
+  border-top: 5px solid #555;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  right: 3px;
+  top: 9px;
+}
 @media screen and (max-width: 767px) {
   .dropdown-block {
     width: auto;
@@ -1783,16 +1796,6 @@ p {
   position: absolute;
   right: 3px;
   top: 7px;
-  z-index: 1;
-}
-.dropdown-block:before {
-  content: "";
-  border-top: 5px solid #555;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  position: absolute;
-  right: 3px;
-  top: 5px;
   z-index: 1;
 }
 .dropdown-block .dropdown-list,
@@ -2430,7 +2433,7 @@ span.copyNoti {
   align-items: center;
   align-items: flex-start;
   margin-bottom: 10px;
-  padding: 20px 20px 0;
+  padding: 10px 20px 10px 10px;
 }
 @media screen and (max-width: 1200px) {
   .card-head {
@@ -2487,6 +2490,7 @@ span.copyNoti {
 @media screen and (max-width: 1366px) {
   .card-head .card-right {
     width: 65%;
+    margin-right: 10px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2992,9 +2996,6 @@ span.copyNoti {
 .empConnect.empBday {
   padding: 0;
 }
-.empConnect.empBday .card-head {
-  padding: 20px 20px 0;
-}
 @media screen and (max-width: 1200px) {
   .empConnect.empBday .card-head {
     padding: 10px 10px 0;
@@ -3284,7 +3285,6 @@ span.copyNoti {
 }
 
 .db-body .option-list-item {
-  height: 33.33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3823,6 +3823,9 @@ span.copyNoti {
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
+}
+.setting-icon.active {
+  color: #33cccc;
 }
 @media screen and (max-width: 992px) {
   .setting-icon {
@@ -5356,6 +5359,21 @@ textarea {
 .db-head .db-head-content .left-block .main-logo span {
   display: none;
 }
+.db-head .db-head-content .right-block .setting-swipe-btn {
+  font-size: 20px;
+  padding-right: 20px;
+}
+.db-head .db-head-content .right-block .setting-swipe-btn.active {
+  color: #33cccc;
+}
+.db-head .db-head-content .right-block .setting-swipe-btn .icon {
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .db-head .db-head-content .right-block .setting-swipe-btn {
+    display: none;
+  }
+}
 .db-head .db-head-content .right-block .right-head-menu {
   position: relative;
 }
@@ -6229,10 +6247,6 @@ textarea {
   border: none;
   margin-top: 0;
   padding-top: 0px;
-}
-
-.wt-myGoals, .wt-myLearning {
-  display: none;
 }
 
 .sp-mainContent .main-container {

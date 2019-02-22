@@ -60,8 +60,9 @@ $(document).ready(function() {
     }, 300);
   })
 
-  $('.setting-icon .icon-setting').click(function() {
+  $('.setting-swipe-btn .icon').click(function() {
     $('.dashboard-page .main-container').toggleClass('active');
+    $(this).parent().toggleClass('active');
 
   })
 
@@ -75,8 +76,7 @@ $(document).ready(function() {
   })
 
   $('.setting-menu .setting-head > .icon-wrong').click(function() {
-    $('.dashboard-page .main-container').toggleClass('active');
-
+    // $('.dashboard-page .main-container').toggleClass('active');
 
     $('.left-list,.right-list').sortable({
       disabled: true
@@ -743,7 +743,7 @@ $(document).ready(function() {
 
 
 
-  $('.setting-icon .icon-setting').click(function() {
+  $('.setting-swipe-btn .icon').click(function() {
 
     var classArr = $('.main-container').attr('class').split(' ');
 
@@ -752,49 +752,17 @@ $(document).ready(function() {
 
       $('.active .left-list,.active .right-list').sortable({
         items: '.my-common-widget,.bdayAnn',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .my-common-widget,.option-list a,.noti-item-left,.noti-item-right',
+        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .my-common-widget,.option-list a,.noti-item-left,.noti-item-right,.tab-title-list,.noti-item-left,.noti-item-right',
         forcePlaceholderSize: true,
         connectWith: '.left-list,.right-list',
         disabled: false
       })
 
-      // $('.divide-block').sortable({
-      //   items: 'li',
-      //   cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head,div',
-      //   forcePlaceholderSize: true,
-      // })
-
-      // $('.widget-list').sortable({
-      //   items: 'section',
-      //   cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.card-head',
-      //   forcePlaceholderSize: true,
-      //   connectWith: '.left-list,.right-list'
-      // });
-
-
-      // $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
-      //   disabled: true
-      // })
-      //
-      // $('.__basic .option-list,.__basic2 .option-list,.menu-main-content .option-list').sortable({
-      //   disabled: true
-      // })
-
-
-      //dashboard-changes
-
-
-
-
       if ($(window).width() < 992) {
         $('.left-list,.right-list,.divide-block,.widget-list').sortable({
           disabled: true
         })
-
       }
-
-
-      //dashboard-changes
 
       $(function() {
         $('.active .left-list,.active .right-list').sortable()
@@ -821,7 +789,7 @@ $(document).ready(function() {
               simulateTouch: false,
             });
 
-            var swiper = new Swiper('.empConnect .swiper-container', {
+            var swiper = new Swiper('.emp-mainBlock .swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -857,9 +825,6 @@ $(document).ready(function() {
               loop: true
             });
 
-
-            // dashboard-changes
-
             var myswiper = new Swiper('.swiper-container.personal-blog-container', {
               navigation: {
                 nextEl: '.personal-arrow-next',
@@ -890,6 +855,19 @@ $(document).ready(function() {
 
             });
 
+            if ($(window).width() < 767) {
+              var swiper = new Swiper('.rnr-container.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 50,
+                navigation: {
+                  nextEl: '.rnr-next',
+                  prevEl: '.rnr-prev',
+                },
+                // loop: true,
+                autoHeight: false
+              });
+            }
+
             $('.img-click').click(function() {
               $(this).addClass('active');
               $(this).siblings().removeClass('active');
@@ -903,91 +881,6 @@ $(document).ready(function() {
 
 
 
-      //****************************************************************************delete btn code*******************************************************************//
-
-
-      //
-      // var widLength = $('.widget-list > section').length;
-      // var newArr = [];
-      //
-      // console.log(widLength);
-      //
-      // console.log(newArr);
-      // for (var i = 1; i < widLength; i++) {
-      //   console.log(newArr.push($('.widget-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      // }
-
-      // $('.delete-btn').click(function() {
-      //
-      //   // $('.widget-list section').find('.main-markup > div').each(function(index) {
-      //   //   if (index > 0) {
-      //   //     $(this).remove();
-      //   //     // alert("working")
-      //   //   }
-      //   // });
-      //
-      //   $(this).parent().remove();
-      //   if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
-      //     if ($(this).parent().attr('class') === "sec-50") {
-      //       $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-      //     } else {
-      //       $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-      //     }
-      //   }
-      // });
-
-
-      // var mainListLeft = $('.left-list > section').length;
-      // var mainListRight = $('.right-list > section').length;
-      //
-      // var ListArr = [];
-      //
-      // for (var i = 1; i < mainListLeft + 1; i++) {
-      //   console.log(ListArr.push($('.left-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      // }
-      //
-      // for (var i = 1; i < mainListRight + 1; i++) {
-      //   console.log(ListArr.push($('.right-list section:nth-child(' + i + ') .main-markup > div').attr('class')));
-      // }
-
-
-
-
-
-
-      // new code
-
-      // var sampleArr = [];
-      // var widgetArr = [];
-      // $('.delete-btn').click(function() {
-      //   // $(this).removeClass('icon-wrong')
-      //   // $(this).addClass('icon-plus-symbol')
-      //   $(this).parent().remove();
-      //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-      //   sampleArr.push($(this).parent().find('.main-markup > div').attr('class').split(" ").slice(-1)[0]);
-      //   console.log(sampleArr);
-      //
-      //
-      //   for (var i = 0; i < $('.widget-list section').length; i++) {
-      //     widgetArr.push($('.widget-list section:nth-child(' + i + 1 + ')').find('.main-markup > div').attr('class').split(" ").slice(-1)[0])
-      //   }
-      //   console.log(widgetArr);
-      //
-      //   console.log($('.widget-list section').length);
-      //
-      //
-      //
-      //
-      // })
-
-      //
-      // $('.delete-btn.icon-plus-symbol').click(function() {
-      //   $(this).removeClass('icon-plus-symbol')
-      //   $(this).addClass('icon-wrong')
-      //   $(this).parent().remove();
-      //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>')
-      // })
-
 
 
       /************************************************on drag initiation functions***********************************************************************/
@@ -995,10 +888,6 @@ $(document).ready(function() {
       $(function() {
         $('.active .left-list,.active .right-list').sortable()
           .on('sortable:receive', function(e, ui) {
-            //changes
-
-
-
 
             $('.db-left section,.db-right section').css("z-index", "10");
             $('.delete-btn').click(function() {
@@ -1013,34 +902,14 @@ $(document).ready(function() {
             });
 
 
-
-            // console.log('active');
-
-            // $('.delete-btn').click(function() {
-            //   // $(this).removeClass('icon-wrong')
-            //   // $(this).addClass('icon-plus-symbol')
-            //   $(this).parent().remove();
-            //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-            //   sampleArr.push($(this).parent().find('.main-markup > div').attr('class').split(" ").slice(-1)[0]);
-            //   console.log(sampleArr);
-            // })
-
-            // $('.delete-btn').click(function() {
-            //   $(this).parent().remove();
-            //   $('.widget-list').append('<section>' + $(this).parent().html() + '</section>')
-            // })
-
           })
       })
 
       $(function() {
-        // $('.option-list').sortable()
-        //   .on('sortable:activate', function(e, ui) {
-        //     $('li').css("z-index", "10")
-        //   })
+
       })
     } else {
-      // $('.delete-btn').hide()
+
     }
 
 
@@ -1226,6 +1095,8 @@ $(document).ready(function() {
 
   /*************************************banner layout changes code **********************/
 
+
+
   $('.banner-layout').click(function() {
     $('.accorrd-main-body').addClass('no-pd');
     $('.accord-main-content ').append('<div class="accord-content"><div class="slide-accord"> <div class="slide-accord-item active"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">1</span> </h4> <span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"><input type="file"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock banner-card-title"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-text"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-link"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div> </div> <div class="slider-add-btn ot-pd"> <h4> <span class="icon icon-plus"></span> <span>Add Slider</span> </h4> </div></div>');
@@ -1243,41 +1114,49 @@ $(document).ready(function() {
   $('.setting-menu').on('click', '.slider-add-btn', function() {
 
     var slideNo = $('.slide-accord .slide-accord-item').length + 1;
+    console.log(slideNo);
 
-    if (slideNo >= 2) {
+    if (slideNo <= 5) {
+      $('.slide-accord').append('<div class="slide-accord-item active"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">' + slideNo + '</span> </h4><span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock banner-card-title"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-text"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-link"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div>');
+
+    } else {
+      alert("you can only add five slides")
+    }
+
+
+
+    if (slideNo >= 2 && slideNo < 6) {
+      //slide addition
+      $('.banner-list').append('<div class="banner-list-item swiper-slide"> <div class="banner-img"></div> <div class="banner-desc-block"> <a href="javascript:;" class="banner-desc-wrap"> <div class="banner-title"> <h2>Banner title goes here' + '---------------' + slideNo + '</h2> </div> <div class="banner-text"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maiores dolore saepe facere, at, quibusdam dolores molestias ut omnis quisquam expedita laboriosam ducimus eveniet? Tenetur similique id odio nobis, velit!</p> </div> </a> </div> </div>')
 
       bannerSwiper = new Swiper('.basic-banner-slider .swiper-container', {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        loop: true,
+        // loop: true,
         pagination: {
           el: '.banner-pagination',
         },
+        simulateTouch: false,
+        slideToClickedSlide: true
         // autoplay: {
         //   delay: 2000,
         // }
       });
 
-
-
       $('.swiper-pagination-bullet').fadeIn();
       $('.db-arrow').fadeIn();
     }
 
-    if (slideNo < 6) {
-      $('.slide-accord').append('<div class="slide-accord-item"> <div class="slide-accort-title ot-pd"> <h4> <span class="slide-accored-arrow"></span> <span>Slider</span> <span class="ac-slide-no">' + slideNo + '</span> </h4><span class="slide-remove icon icon-cross"></span> </div> <div class="slide-accord-body"> <div class="slide-img"> <div class="slide-img-info"> <h4>Banner Image</h4> <p>Banner works best with an image with a size of 1400 x 380 pixels, crop your image before you upload it for a perfect fit</p> </div> <div class="slide-img-upload"> <div class="slide-img-display"> </div> <div class="slide-upload-info"> <h4>Click here to upload image</h4> </div> </div> <div class="slide-card-content"> <div class="slide-card-inputBlock banner-card-title"> <div class="slide-card-label"> <h4>Title</h4> <h5>Max 200 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-text"> <div class="slide-card-label"> <h4>Text</h4> <h5>Max 500 Characters</h5> </div> <div class="slide-card-inputContent"> <textarea name="name" rows="3" cols="80"></textarea> </div> </div> <div class="slide-card-inputBlock banner-card-link"> <div class="slide-card-label"> <h4>Link</h4> </div> <div class="slide-card-inputContent"> <input type="text"> </div> </div> </div> </div> </div> </div>');
-    } else {
-      alert("you can only add five slides")
-    }
+
 
 
     $('.slide-accord .slide-accord-item').siblings().find('.slide-accord-body').slideUp();
     $('.slide-accord .slide-accord-item:last-child .slide-accord-body').slideDown();
 
 
-    bannerSwiper.slideTo(slideNo, 1000, false)
+    bannerSwiper.slideTo(slideNo, 1000, false);
 
 
   });
@@ -1294,10 +1173,10 @@ $(document).ready(function() {
     $(this).parent().siblings().find('.slide-accord-body').slideUp();
     $(this).parent().siblings().removeClass('active');
 
-    slideChildNo = $(this).parent().index() + 1;
-    console.log(slideChildNo);
-    bannerSwiper.slideTo(slideChildNo, 1000, false)
-
+    slideChildNo = $(this).parent().index();
+    // console.log(slideChildNo);
+    bannerSwiper.slideTo(slideChildNo, 1000, false);
+    // event.stopPropagation();
   });
 
 
@@ -1306,7 +1185,15 @@ $(document).ready(function() {
 
 
   $('.setting-menu').on('click', '.slide-remove', function() {
+    var delSlide = $(this).parent().parent().index() + 1;
     $(this).parent().parent().remove();
+
+    $('.banner-list .banner-list-item:nth-child(' + delSlide + ')').remove();
+
+    event.stopPropagation();
+
+
+
   })
 
 
@@ -1325,7 +1212,7 @@ $(document).ready(function() {
 
 
 
-  var allWidgetList = ["primary-newsCard", "my-team", "main-bday-block", "rnr-block", "atten-card", "ctc-card", "mycomp-card", "mypms-card", "mylearn-card", "moreLink-card"];
+  var allWidgetList = ["primary-newsCard", "my-team", "main-bday-block", "rnr-block", "atten-card", "ctc-card", "mycomp-card", "mypms-card", "mylearn-card", "moreLink-card", "my-goals"];
   var finalWtList = [];
   var finalWtList = finalWtList.concat(allWidgetList);
 
@@ -1344,7 +1231,7 @@ $(document).ready(function() {
       $('.banner-fw-widget,.option-fw-widget').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'my-team', 'main-bday-block', 'rnr-block']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'my-team', 'main-bday-block', 'rnr-block', 'my-goals']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();

@@ -66,6 +66,7 @@ $list1: $one 0%,$one 40%, $two 100%, $three 100%;
   border-radius: $radius;
 }
 /******main content*****/
+
 body {
   font-size: 13px;
   font-family: sans-serif;
@@ -205,8 +206,8 @@ p {
   }
 }
 
-.btn-filter{
-  font-size:16px;
+.btn-filter {
+  font-size: 16px;
 }
 
 .main-container-fluid {
@@ -252,7 +253,6 @@ p {
     }
     @media screen and (max-width:992px) {
       width: 100%;
-
       // .atten-card,
       // .ctc-card {
       //   margin-top: 30px;
@@ -311,6 +311,23 @@ p {
   position: relative;
   cursor: pointer;
   width: 80px;
+
+  #datepair{
+    position: relative;
+    z-index: 2;
+    &:before{
+      content: "";
+      border-top: 5px solid $text;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      position: absolute;
+      right: 3px;
+      top: 9px;
+      // z-index: 1;
+    }
+  }
+
+
   @media screen and (max-width:767px) {
     width: auto;
   }
@@ -343,14 +360,14 @@ p {
   }
 
   &:before {
-    content: "";
-    border-top: 5px solid $text;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    position: absolute;
-    right: 3px;
-    top: 5px;
-    z-index: 1;
+    // content: "";
+    // border-top: 5px solid $text;
+    // border-right: 5px solid transparent;
+    // border-left: 5px solid transparent;
+    // position: absolute;
+    // right: 3px;
+    // top: 9px;
+    // z-index: 1;
   }
 
   .dropdown-list,
@@ -738,6 +755,7 @@ label:hover {
   cursor: text;
 }
 /****button css****/
+
 .btn-s {
   &.db-btn {
     width: 30% !important;
@@ -916,6 +934,7 @@ label:hover {
   }
 }
 /***disabled****/
+
 .disabled {
   opacity: 0.5;
   position: relative;
@@ -929,6 +948,7 @@ label:hover {
   }
 }
 /*****error mgs *****/
+
 .db-error-mgs {
   width: 100%;
   margin-bottom: 10px;
@@ -945,6 +965,7 @@ label:hover {
   font-weight: bold;
 }
 /*****color pickr*****/
+
 .pcr-app {
   top: -120px !important;
   left: 40px !important;
@@ -956,7 +977,6 @@ label:hover {
   cursor: pointer;
 }
 /****loader*****/
-
 .db-loader {
   position: fixed;
   left: 0;
@@ -975,6 +995,7 @@ label:hover {
   }
 }
 /*****range slider*****/
+
 .range-slider-container {
   width: 100%;
   @include dis-flex();
@@ -1030,7 +1051,6 @@ span.copyNoti {
   right: 50px;
 }
 /*****copy right******/
-
 .db-copyRight {
   @include dis-flex();
   text-transform: capitalize;
@@ -1053,11 +1073,12 @@ span.copyNoti {
   }
 }
 /**********card block***********/
+
 .card-head {
   @include dis-flex();
   align-items: flex-start;
   margin-bottom: 10px;
-  padding: 20px 20px 0;
+  padding: 10px 20px 10px 10px;
   @media screen and (max-width:1200px) {
     padding: 10px 10px 0;
   }
@@ -1100,6 +1121,7 @@ span.copyNoti {
     z-index: 2;
     @media screen and (max-width:1366px) {
       width: 65%;
+      margin-right: 10px;
     }
     @media screen and (max-width:992px) {
       width: 65%;
@@ -1152,7 +1174,6 @@ span.copyNoti {
         }
         @media screen and (max-width:767px) {
           // margin-right: 0;
-
           &.sin-select {
             display: none;
           }
@@ -1288,7 +1309,6 @@ span.copyNoti {
 //   }
 // }
 /**************widget height and width*******************/
-
 .xs-block {
   height: 180px;
   width: calc(50% - 10px);
@@ -1318,7 +1338,7 @@ span.copyNoti {
 }
 
 .wt-setting-dw {
-  @media screen and (max-width:992px){
+  @media screen and (max-width:992px) {
     display: none;
   }
   position: absolute;
@@ -1386,7 +1406,6 @@ span.copyNoti {
     }
   }
 }
-
 // .wt-main-block{
 //   display: block !important;
 // }
