@@ -1,8 +1,9 @@
-.csr-block,.wellness-block{
+.csr-block,
+.wellness-block {
   display: none;
 }
-.newsCard {
 
+.newsCard {
   // border: 1px solid $border;
   // height: 180px;
   video.md-video {
@@ -13,12 +14,11 @@
   //     display: block;
   //   }
   // }
-
   .swiper-container-autoheight,
   .swiper-container-autoheight .swiper-slide {
     height: 180px;
-    @media screen and (max-width:767px){
-      height:auto;
+    @media screen and (max-width:767px) {
+      height: auto;
     }
   }
   @media screen and (max-width:767px) {
@@ -39,7 +39,7 @@
     @include dis-flex();
     align-items: flex-start;
     position: relative;
-    height:100%;
+    height: 100%;
     @media screen and (max-width:767px) {
       flex-direction: column;
       height: auto;
@@ -48,7 +48,7 @@
 
   .newsCard-img-block {
     width: 40%;
-    height:100%;
+    height: 100%;
     position: relative;
     @media screen and (max-width:767px) {
       width: 100%;
@@ -61,11 +61,12 @@
     }
   }
 
-  .video-block{
+  .video-block {
     .newsCard-play-btn {
       display: block;
     }
-    .fancy-box-block{
+
+    .fancy-box-block {
       display: block;
     }
   }
@@ -99,10 +100,11 @@
 
   .newsCard-desc {
     width: 60%;
-    padding: 20px 40px 0 20px;
+    padding: 10px 40px 0 10px;
+    height: 180px;
     text-align: left;
     @media screen and (max-width:1200px) {
-      padding: 20px 20px 0;
+      // padding: 20px 20px 0;
       min-height: 165px;
       overflow: hidden;
 
@@ -182,26 +184,25 @@
 }
 
 .md-block {
-
-
-
   .newsCard-content {
     width: 100%;
   }
 
   .newsCard {
-
-    .video-block{
+    .video-block {
       .newsCard-play-btn {
         display: none;
       }
-      .fancy-box-block{
+
+      .fancy-box-block {
         display: none;
       }
-      video.md-video{
+
+      video.md-video {
         display: block;
       }
-      .newsCard-desc{
+
+      .newsCard-desc {
         display: none;
       }
     }
@@ -231,7 +232,7 @@
       background-color: rgba(0,0,0,0.3);
       width: 100%;
       height: 100%;
-      padding: 20px;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

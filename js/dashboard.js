@@ -17,6 +17,11 @@ $(document).ready(function() {
   // });
 
 
+
+
+
+
+
   //****************************************************************************head menu code*******************************************************************//
   $('.menu-tab .menu-icon').click(function() {
     $(this).parent().find('.menu-main-content').animate({

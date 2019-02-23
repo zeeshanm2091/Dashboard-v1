@@ -1839,6 +1839,7 @@ p {
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 125px;
 }
 @media screen and (max-width: 1024px) {
   .serach-box {
@@ -1846,7 +1847,7 @@ p {
   }
 }
 .serach-box input[type=text] {
-  padding: 0 5px;
+  padding: 0 10px 0 5px;
   margin: 0;
   border: none;
   height: 20px;
@@ -1901,7 +1902,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 65px);
+  height: calc(100% - 39px);
   padding: 0 20px;
 }
 .card-body.ctc-body, .card-body.nonctc-body {
@@ -2432,13 +2433,7 @@ span.copyNoti {
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
-  margin-bottom: 10px;
-  padding: 10px 20px 10px 10px;
-}
-@media screen and (max-width: 1200px) {
-  .card-head {
-    padding: 10px 10px 0;
-  }
+  padding: 10px 25px 10px 10px;
 }
 .card-head .card-left {
   display: flex;
@@ -2507,10 +2502,10 @@ span.copyNoti {
   font-weight: bold;
   text-transform: capitalize;
 }
-.card-head .card-right .emp-card-filters {
+.card-head .card-right .com-card-filters {
   width: 100%;
 }
-.card-head .card-right .emp-filteList {
+.card-head .card-right .com-filteList {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2518,48 +2513,46 @@ span.copyNoti {
   align-items: center;
   position: relative;
 }
-.card-head .card-right .emp-filteList .emp-filter-item {
-  margin-right: 10px;
+.card-head .card-right .com-filteList .com-filter-item {
+  margin: 0 10px 0 0px;
   text-transform: capitalize;
   color: #555;
   cursor: pointer;
   position: relative;
   font-size: 13px;
+  overflow: hidden;
 }
-.card-head .card-right .emp-filteList .emp-filter-item:last-child {
-  width: 70px;
+.card-head .card-right .com-filteList .com-filter-item:last-child {
+  margin: 0px;
 }
 @media screen and (max-width: 1200px) {
-  .card-head .card-right .emp-filteList .emp-filter-item {
+  .card-head .card-right .com-filteList .com-filter-item {
     font-size: 12px;
     text-align: center;
   }
-  .card-head .card-right .emp-filteList .emp-filter-item:last-child {
-    width: 80px;
-  }
 }
 @media screen and (max-width: 992px) {
-  .card-head .card-right .emp-filteList .emp-filter-item {
+  .card-head .card-right .com-filteList .com-filter-item {
     font-size: 14px;
   }
-  .card-head .card-right .emp-filteList .emp-filter-item:last-child {
+  .card-head .card-right .com-filteList .com-filter-item:last-child {
     width: 90px;
   }
 }
 @media screen and (max-width: 767px) {
-  .card-head .card-right .emp-filteList .emp-filter-item.sin-select {
+  .card-head .card-right .com-filteList .com-filter-item.sin-select {
     display: none;
   }
 }
-.card-head .card-right .emp-filteList .emp-filter-item:first-child.active:before {
+.card-head .card-right .com-filteList .com-filter-item:first-child.active:before {
   bottom: 0;
   width: calc(100% - 20px);
 }
-.card-head .card-right .emp-filteList .emp-filter-item:last-child.active:before {
+.card-head .card-right .com-filteList .com-filter-item:last-child.active:before {
   bottom: 0;
   width: 0;
 }
-.card-head .card-right .emp-filteList .emp-filter-item.active:before {
+.card-head .card-right .com-filteList .com-filter-item.active:before {
   content: "";
   height: 1px;
   width: 100%;
@@ -3204,6 +3197,11 @@ span.copyNoti {
   justify-content: center;
   align-items: center;
   width: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .db-body .option-list-item {
+    width: 90px;
+  }
 }
 @media screen and (max-width: 992px) {
   .db-body .option-list-item {

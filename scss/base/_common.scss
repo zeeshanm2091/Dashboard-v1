@@ -410,12 +410,13 @@ p {
   @include dis-flex();
   position: relative;
   z-index: 1;
+  width:125px;
   @media screen and (max-width:1024px) {
     font-size: 16px;
   }
 
   input[type="text"] {
-    padding: 0 5px;
+    padding:0 10px 0 5px;
     margin: 0;
     border: none;
     height: 20px;
@@ -463,7 +464,7 @@ p {
 
 .card-body {
   @include dis-flex();
-  height: calc(100% - 65px);
+  height: calc(100% - 39px);
   padding: 0 20px;
 
   &.ctc-body,
@@ -1077,10 +1078,10 @@ span.copyNoti {
 .card-head {
   @include dis-flex();
   align-items: flex-start;
-  margin-bottom: 10px;
-  padding: 10px 20px 10px 10px;
+  // margin-bottom: 10px;
+  padding: 10px 25px 10px 10px;
   @media screen and (max-width:1200px) {
-    padding: 10px 10px 0;
+    // padding: 10px 10px 0;
   }
 
   .card-left {
@@ -1136,34 +1137,36 @@ span.copyNoti {
       text-transform: capitalize;
     }
 
-    .emp-card-filters {
+    .com-card-filters {
       width: 100%;
     }
 
-    .emp-filteList {
+    .com-filteList {
       @include dis-flex();
       justify-content: flex-end;
       align-items: center;
       position: relative;
       // z-index: 10;
-      .emp-filter-item {
-        margin-right: 10px;
+      .com-filter-item {
+        margin:0 10px 0 0px;
         text-transform: capitalize;
         color: $text;
         cursor: pointer;
         position: relative;
         font-size: 13px;
+        overflow: hidden;
+
 
         &:last-child {
-          width: 70px;
+          margin:0px;
         }
         @media screen and (max-width:1200px) {
           font-size: 12px;
           text-align: center;
 
-          &:last-child {
-            width: 80px;
-          }
+          // &:last-child {
+          //   width: 80px;
+          // }
         }
         @media screen and (max-width:992px) {
           font-size: 14px;

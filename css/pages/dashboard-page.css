@@ -1839,6 +1839,7 @@ p {
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 125px;
 }
 @media screen and (max-width: 1024px) {
   .serach-box {
@@ -1846,7 +1847,7 @@ p {
   }
 }
 .serach-box input[type=text] {
-  padding: 0 5px;
+  padding: 0 10px 0 5px;
   margin: 0;
   border: none;
   height: 20px;
@@ -1901,7 +1902,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 65px);
+  height: calc(100% - 39px);
   padding: 0 20px;
 }
 .card-body.ctc-body, .card-body.nonctc-body {
@@ -2432,13 +2433,7 @@ span.copyNoti {
   justify-content: space-between;
   align-items: center;
   align-items: flex-start;
-  margin-bottom: 10px;
-  padding: 10px 20px 10px 10px;
-}
-@media screen and (max-width: 1200px) {
-  .card-head {
-    padding: 10px 10px 0;
-  }
+  padding: 10px 25px 10px 10px;
 }
 .card-head .card-left {
   display: flex;
@@ -2507,10 +2502,10 @@ span.copyNoti {
   font-weight: bold;
   text-transform: capitalize;
 }
-.card-head .card-right .emp-card-filters {
+.card-head .card-right .com-card-filters {
   width: 100%;
 }
-.card-head .card-right .emp-filteList {
+.card-head .card-right .com-filteList {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2518,48 +2513,46 @@ span.copyNoti {
   align-items: center;
   position: relative;
 }
-.card-head .card-right .emp-filteList .emp-filter-item {
-  margin-right: 10px;
+.card-head .card-right .com-filteList .com-filter-item {
+  margin: 0 10px 0 0px;
   text-transform: capitalize;
   color: #555;
   cursor: pointer;
   position: relative;
   font-size: 13px;
+  overflow: hidden;
 }
-.card-head .card-right .emp-filteList .emp-filter-item:last-child {
-  width: 70px;
+.card-head .card-right .com-filteList .com-filter-item:last-child {
+  margin: 0px;
 }
 @media screen and (max-width: 1200px) {
-  .card-head .card-right .emp-filteList .emp-filter-item {
+  .card-head .card-right .com-filteList .com-filter-item {
     font-size: 12px;
     text-align: center;
   }
-  .card-head .card-right .emp-filteList .emp-filter-item:last-child {
-    width: 80px;
-  }
 }
 @media screen and (max-width: 992px) {
-  .card-head .card-right .emp-filteList .emp-filter-item {
+  .card-head .card-right .com-filteList .com-filter-item {
     font-size: 14px;
   }
-  .card-head .card-right .emp-filteList .emp-filter-item:last-child {
+  .card-head .card-right .com-filteList .com-filter-item:last-child {
     width: 90px;
   }
 }
 @media screen and (max-width: 767px) {
-  .card-head .card-right .emp-filteList .emp-filter-item.sin-select {
+  .card-head .card-right .com-filteList .com-filter-item.sin-select {
     display: none;
   }
 }
-.card-head .card-right .emp-filteList .emp-filter-item:first-child.active:before {
+.card-head .card-right .com-filteList .com-filter-item:first-child.active:before {
   bottom: 0;
   width: calc(100% - 20px);
 }
-.card-head .card-right .emp-filteList .emp-filter-item:last-child.active:before {
+.card-head .card-right .com-filteList .com-filter-item:last-child.active:before {
   bottom: 0;
   width: 0;
 }
-.card-head .card-right .emp-filteList .emp-filter-item.active:before {
+.card-head .card-right .com-filteList .com-filter-item.active:before {
   content: "";
   height: 1px;
   width: 100%;
@@ -2739,7 +2732,8 @@ span.copyNoti {
   text-decoration: underline;
 }
 
-.csr-block, .wellness-block {
+.csr-block,
+.wellness-block {
   display: none;
 }
 
@@ -2832,12 +2826,12 @@ span.copyNoti {
 }
 .newsCard .newsCard-desc {
   width: 60%;
-  padding: 20px 40px 0 20px;
+  padding: 10px 40px 0 10px;
+  height: 180px;
   text-align: left;
 }
 @media screen and (max-width: 1200px) {
   .newsCard .newsCard-desc {
-    padding: 20px 20px 0;
     min-height: 165px;
     overflow: hidden;
   }
@@ -2946,7 +2940,7 @@ span.copyNoti {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2995,11 +2989,6 @@ span.copyNoti {
 }
 .empConnect.empBday {
   padding: 0;
-}
-@media screen and (max-width: 1200px) {
-  .empConnect.empBday .card-head {
-    padding: 10px 10px 0;
-  }
 }
 .empConnect.empBday .card-head .card-right .emp-filteList {
   justify-content: flex-end;
@@ -3290,6 +3279,11 @@ span.copyNoti {
   align-items: center;
   width: 100px;
 }
+@media screen and (max-width: 1200px) {
+  .db-body .option-list-item {
+    width: 90px;
+  }
+}
 @media screen and (max-width: 992px) {
   .db-body .option-list-item {
     width: 120px;
@@ -3298,9 +3292,6 @@ span.copyNoti {
 
 .my-team .card-head .card-right .emp-filteList {
   justify-content: flex-end;
-}
-.my-team .card-head .card-right .emp-filteList .emp-filter-item:last-child {
-  width: auto;
 }
 .my-team .myteam-list {
   display: flex;
@@ -3366,7 +3357,7 @@ span.copyNoti {
   top: 30%;
 }
 .moreLink-card .card-head {
-  padding: 20px 20px 0 20px;
+  padding: 10px 20px 10px 10px;
 }
 @media screen and (max-width: 1200px) {
   .moreLink-card .card-head {
@@ -3658,9 +3649,6 @@ span.copyNoti {
   }
 }
 
-.rnr-block .rnr-container {
-  padding: 0 20px;
-}
 .rnr-block .rnr-arrow {
   top: 50%;
   position: absolute;
@@ -6063,7 +6051,7 @@ textarea {
   opacity: 1;
 }
 .personal-blog-block .card-body {
-  height: 314px;
+  height: 318px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -6236,7 +6224,7 @@ textarea {
 
 .personal-blog-block .card-head {
   text-transform: capitalize;
-  padding: 20px 20px 0;
+  padding: 10px 20px 10px 10px;
   cursor: pointer;
 }
 .personal-blog-block .card-head .icon {
@@ -6257,7 +6245,7 @@ textarea {
 }
 
 .my-goal-head {
-  padding: 20px 20px 0;
+  padding: 10px 20px 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6270,6 +6258,7 @@ textarea {
 }
 .my-goal-head .goal-btn {
   width: 120px;
+  margin-right: 10px;
 }
 .my-goal-head .goal-btn .db-btn:hover {
   background-color: #33cccc;
@@ -6279,10 +6268,6 @@ textarea {
 .my-goal-head .my-goal-title {
   color: #000000;
 }
-.my-goal-head .my-goal-title h4 {
-  font-weight: bold;
-}
-
 .goal-block-score {
   display: flex;
   justify-content: space-between;
@@ -6888,6 +6873,11 @@ textarea {
   min-width: 110px;
   width: 16.66%;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .anni-sum-item {
+    min-width: 100px;
+  }
 }
 @media screen and (max-width: 767px) {
   .anni-sum-item {
