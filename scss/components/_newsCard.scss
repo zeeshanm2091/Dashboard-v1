@@ -116,7 +116,9 @@
       width: 100%;
     }
     @media screen and (max-width:767px) {
-      padding-bottom: 10px;
+      padding: 10px;
+      height:auto;
+      min-height:auto;
     }
 
     .newsCard-name {
@@ -155,6 +157,7 @@
     }
 
     .newsCard-link {
+      display: none;
       a.card-readmore {
         display: none;
       }
@@ -236,15 +239,27 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media screen and (max-width:767px){
+        position: static;
+        background-color: $white;
+        justify-content: flex-start;
+        height:auto;
+      }
     }
 
     .newsCard-title {
       color: $white;
+      @media screen and (max-width:767px){
+        color: $text;
+      }
     }
 
     .newsCard-text {
       p {
         color: $white;
+        @media screen and (max-width:767px){
+          color: $text;
+        }
       }
     }
 

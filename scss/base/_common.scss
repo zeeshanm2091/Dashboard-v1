@@ -146,6 +146,9 @@ p {
   color: $text;
   line-height: 1.5em;
   font-size: 13px;
+  @media screen and (max-width:767px){
+      line-height: 1.2em;
+  }
 }
 
 .caption {
@@ -410,7 +413,7 @@ p {
   @include dis-flex();
   position: relative;
   z-index: 1;
-  width:125px;
+  width:130px;
   @media screen and (max-width:1024px) {
     font-size: 16px;
   }
@@ -464,8 +467,13 @@ p {
 
 .card-body {
   @include dis-flex();
-  height: calc(100% - 39px);
+  height: 120px;
   padding: 0 20px;
+
+  @media screen and (max-width: 767px){
+    
+    padding: 0 10px;
+  }
 
   &.ctc-body,
   &.nonctc-body {
@@ -475,9 +483,9 @@ p {
       display: flex;
     }
   }
-  @media screen and (max-width:1200px) {
-    padding: 0 10px;
-  }
+  // @media screen and (max-width:1200px) {
+  //   padding: 0 10px;
+  // }
   // @media screen and (max-width:767px) {
   //   height: auto;
   // }
@@ -1080,8 +1088,8 @@ span.copyNoti {
   align-items: flex-start;
   // margin-bottom: 10px;
   padding: 10px 25px 10px 10px;
-  @media screen and (max-width:1200px) {
-    // padding: 10px 10px 0;
+  @media screen and (max-width:992px) {
+    padding: 10px 10px 10px 10px;
   }
 
   .card-left {
@@ -1126,6 +1134,7 @@ span.copyNoti {
     }
     @media screen and (max-width:992px) {
       width: 65%;
+      margin-right: 0px;
     }
     @media screen and (max-width:767px) {
       width: 50%;
@@ -1172,7 +1181,7 @@ span.copyNoti {
           font-size: 14px;
 
           &:last-child {
-            width: 90px;
+            // width: 90px;
           }
         }
         @media screen and (max-width:767px) {
@@ -1329,9 +1338,9 @@ span.copyNoti {
 
 .md-block {
   height: 380px;
-  // @media screen and (max-width:992px){
-  //   height:auto;
-  // }
+  @media screen and (max-width:767px){
+    height:auto;
+  }
 }
 
 .lg-block {

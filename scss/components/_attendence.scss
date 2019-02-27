@@ -45,7 +45,7 @@
     @include dis-flex();
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 80%;
+    width: 100%;
     max-width: 126px;
     @media screen and (max-width:1024px){
       width:100%;

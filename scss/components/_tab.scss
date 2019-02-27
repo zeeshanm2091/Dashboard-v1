@@ -10,6 +10,9 @@
     height: 45px;
     padding: 0 20px;
     border-bottom: 1px solid $border;
+    @media screen and (max-width:767px){
+      padding: 0 10px;
+    }
     .noti-filter {
       font-size: 16px;
       span{
@@ -75,6 +78,10 @@
     height: calc(100% - 50px);
     overflow: hidden;
 
+    @media screen and(max-width:767px){
+      height:auto;
+    }
+
     .tab-content {
         height:288px;
       overflow-y: auto;
@@ -99,6 +106,9 @@
       height: 90px;
       margin: 0;
       padding: 0 20px;
+      @media screen and (max-width:767px){
+        padding: 0 10px;
+      }
       &:last-child{
         border-bottom: none;
       }

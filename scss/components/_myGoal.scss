@@ -37,6 +37,10 @@
       }
     }
 
+    @media screen and (max-width:767px){
+      margin-right: 0px;
+    }
+
   }
 
   .my-goal-title {
@@ -56,6 +60,7 @@
   @media screen and (max-width:767px) {
     height: 110px;
     padding: 10px;
+    align-items: flex-start;
   }
 }
 
