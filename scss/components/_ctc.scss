@@ -1,6 +1,17 @@
 .ctc-card {
   color:$text;
   .card-body{
+    .ctc-content-block{
+      width: 100%;
+      .ctc-content-wrap{
+        display: flex;
+        align-items: center;
+      }
+      display: none;
+      &:first-child{
+        display: block;
+      }
+    }
     .card-left{
       span{
         @media screen and (max-width:1200px){

@@ -1,9 +1,10 @@
 .db-body .option-list{
   height: 100%;
   .wt-setting-list {
+    top:-10px;
     &.active{
       left:-78px;
-      bottom:-82px;
+      top:-10px;
     }
   }
 
@@ -26,17 +27,17 @@
   align-items: center;
 
   .wt-setting-list {
-    &.active{
-      left:-79px;
-      bottom:-83px;
-    }
+    // &.active{
+    //   left:-79px;
+    //   bottom:-83px;
+    // }
   }
 
   .option-list-item {
     width: 120px;
     text-align: center;
     transition: all 0.2s ease-in-out;
-    height: 150px;
+    // height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,9 +101,9 @@
 
 .md-block {
   .option-list {
-    @media screen and (max-width:992px) {
-      height: auto;
-    }
+    // @media screen and (max-width:992px) {
+    //   height: auto;
+    // }
   }
 }
 
@@ -127,7 +128,8 @@
     justify-content: center;
     align-items: center;
     width: 100px;
-    @media screen and (max-width:1200px){
+
+    @media screen and (max-width:1366px){
       width:90px;
     }
     @media screen and (max-width:992px) {

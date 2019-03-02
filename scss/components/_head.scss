@@ -84,7 +84,7 @@
         }
 
         .close-btn {
-          font-size: 20px;
+          font-size: 16px;
           color: $text;
           height: 50px;
           width: 50px;
@@ -122,10 +122,20 @@
         &.active{
           color:$primary;
         }
-    font-size: 20px;
-    padding-right: 20px;
+    font-size: 16px;
+    // padding-right: 20px;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    border:1px solid $text;
+    margin-right:20px;
+    text-align:center;
     .icon{
       cursor: pointer;
+      &:before{
+        line-height: 28px;
+      }
+
     }
     @media screen and (max-width: 992px){
       display: none;
@@ -307,7 +317,7 @@
           right: -17px;
           font-size: 12px;
           font-weight: bold;
-          background-color: $danger;
+          background-color: $text;
           text-align: center;
           line-height: 25px;
           color: $white;

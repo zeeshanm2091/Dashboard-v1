@@ -1,6 +1,6 @@
-// .wt-myGoals,.wt-myLearning{
-//   display: none;
-// }
+.wt-myGoals,.wt-myLearning{
+  display: none;
+}
 
 
 .sp-mainContent {
@@ -30,6 +30,7 @@
     width: 120px;
     margin-right: 10px;
     .db-btn{
+      border-color:$primary;
       &:hover{
         background-color: $primary;
         border-color:$primary;
@@ -116,7 +117,7 @@
   height: 40px;
   border-top: 1px solid $border;
   border-bottom: 1px solid $border;
-  background-color: $white;
+  // background-color: $white;
   @include dis-flex();
   justify-content: flex-start;
 }
@@ -129,7 +130,7 @@
   cursor: pointer;
 
   &.active {
-    &:before {
+    span {
       height: 2px;
       width: 100%;
       content: '';
@@ -143,7 +144,7 @@
 
 .sp-tab-body {
   height: 145px;
-  background-color: #fff;
+  // background-color: #fff;
   padding: 20px 20px 0;
   overflow-y:scroll;
   @media screen and (max-width:992px) {
@@ -252,7 +253,7 @@
 }
 /*****************my learning block*********************/
 
-.my-learning {
+.learnDetail-card {
   .sp-tab-item {
     @media screen and (max-width:767px) {
       flex-direction: column;
@@ -403,7 +404,7 @@
     margin-top: 10px;
   }
 }
-// .my-goals,.my-learning{
+// .goals-card,.learnDetail-card{
 // display: none;
 // }
 

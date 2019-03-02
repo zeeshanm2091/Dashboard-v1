@@ -1577,6 +1577,11 @@ h6 {
   color: #33cccc;
   font-size: 60px;
 }
+@media screen and (max-width: 1366px) {
+  .primary-icon {
+    font-size: 50px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .primary-icon {
     font-size: 40px;
@@ -1585,6 +1590,12 @@ h6 {
 
 .primary-font {
   color: #33cccc;
+}
+
+.primary-hover:hover {
+  background-color: #33cccc;
+  color: #ffffff;
+  border: 1px solid #33cccc;
 }
 
 .primary-border {
@@ -1600,6 +1611,14 @@ h6 {
 }
 
 .primary-bg {
+  background-color: #33cccc;
+}
+
+.primary-text-bg {
+  background-color: #555;
+}
+
+.primary-bg-before:before {
   background-color: #33cccc;
 }
 
@@ -1993,6 +2012,11 @@ p {
   min-height: 800px;
 }
 
+.active .left-list,
+.active .right-list {
+  min-width: 300px;
+}
+
 .left-list,
 .right-list {
   display: flex;
@@ -2001,7 +2025,6 @@ p {
   align-items: flex-start;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height: 300px;
 }
 section {
   position: relative;
@@ -2613,7 +2636,7 @@ span.copyNoti {
   line-height: 40px;
 }
 
-.my-common-widget {
+.com-card {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   overflow: hidden;
@@ -2621,11 +2644,11 @@ span.copyNoti {
   height: 180px;
   position: relative;
 }
-.my-common-widget.lg-block {
+.com-card.lg-block {
   display: none;
 }
 @media screen and (max-width: 992px) {
-  .my-common-widget {
+  .com-card {
     margin-bottom: 10px;
   }
 }
@@ -2663,9 +2686,10 @@ span.copyNoti {
 .md-block {
   height: 380px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .md-block {
     height: auto;
+    padding: 10px 0;
   }
 }
 
@@ -2673,6 +2697,13 @@ span.copyNoti {
   width: 100%;
   height: auto;
   border: none;
+}
+
+.fullwidth-top-block .wt-setting-dw .wt-setting-list {
+  top: -10px;
+}
+.fullwidth-top-block .wt-setting-dw .wt-setting-list.active {
+  top: -10px;
 }
 
 .wt-setting-dw {
@@ -2696,7 +2727,7 @@ span.copyNoti {
   background-color: #fff;
   border: 1px solid #ccc;
   left: 21px;
-  bottom: -82px;
+  top: -11px;
   transition: left 0.5s;
   z-index: 2;
 }
@@ -2711,6 +2742,9 @@ span.copyNoti {
   cursor: pointer;
   border-bottom: 1px solid #ddd;
   color: #000000;
+}
+.wt-setting-dw .wt-setting-list .wt-setting-item.wt-st-add {
+  display: none;
 }
 .wt-setting-dw .wt-setting-list .wt-setting-item:last-child {
   border-bottom: none;
@@ -2810,7 +2844,7 @@ span.copyNoti {
   }
 }
 .db-head .db-head-content .left-block .menu-tab .close-btn {
-  font-size: 20px;
+  font-size: 16px;
   color: #555;
   height: 50px;
   width: 50px;
@@ -2836,14 +2870,22 @@ span.copyNoti {
   display: none;
 }
 .db-head .db-head-content .right-block .setting-swipe-btn {
-  font-size: 20px;
-  padding-right: 20px;
+  font-size: 16px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  margin-right: 20px;
+  text-align: center;
 }
 .db-head .db-head-content .right-block .setting-swipe-btn.active {
   color: #33cccc;
 }
 .db-head .db-head-content .right-block .setting-swipe-btn .icon {
   cursor: pointer;
+}
+.db-head .db-head-content .right-block .setting-swipe-btn .icon:before {
+  line-height: 28px;
 }
 @media screen and (max-width: 992px) {
   .db-head .db-head-content .right-block .setting-swipe-btn {
@@ -3010,7 +3052,7 @@ span.copyNoti {
   right: -17px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #ff6666;
+  background-color: #555;
   text-align: center;
   line-height: 25px;
   color: #ffffff;
@@ -3108,7 +3150,7 @@ span.copyNoti {
 }
 
 .setting-icon {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 15px;
   cursor: pointer;
 }

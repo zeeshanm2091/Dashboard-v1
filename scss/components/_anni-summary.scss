@@ -1,7 +1,7 @@
 .anni-summary-block{
   display: none;
 }
-.wt-anni-summary {
+.anniSum-card {
   position: relative;
   .wt-anni-link{
     display: none;
@@ -27,6 +27,8 @@
   .card-body {
     align-items: flex-start;
     flex-direction: column;
+    padding: 0px;
+    height:auto;
   }
 }
 

@@ -110,6 +110,9 @@ h6 {
 .primary-icon {
   color: $primary;
   font-size: 60px;
+  @media screen and (max-width:1366px){
+    font-size: 50px;
+  }
   @media screen and (max-width:1200px) {
     font-size: 40px;
   }
@@ -117,6 +120,14 @@ h6 {
 
 .primary-font {
   color: $primary;
+}
+
+.primary-hover{
+  &:hover{
+    background-color: $primary;
+      color: $white;
+      border: 1px solid $primary;
+  }
 }
 
 .primary-border {
@@ -133,6 +144,16 @@ h6 {
 
 .primary-bg {
   background-color: $primary;
+}
+
+.primary-text-bg {
+  background-color: $text;
+}
+
+.primary-bg-before {
+  &:before{
+    background-color: $primary;
+  }
 }
 
 .primary-hover {
@@ -471,7 +492,7 @@ p {
   padding: 0 20px;
 
   @media screen and (max-width: 767px){
-    
+
     padding: 0 10px;
   }
 
@@ -568,15 +589,22 @@ p {
   }
 }
 
+.active{
+  .left-list,
+  .right-list {
+    min-width:300px;
+  }
+}
+
 .left-list,
 .right-list {
   @include dis-flex();
   align-items: flex-start;
   flex-wrap: wrap;
   align-content: flex-start;
-  min-height: 300px;
+  // min-height: 300px;
 
-  .my-common-widget {
+  .com-card {
     // &:last-child{
     //   margin-bottom: 0px;
     // }
@@ -590,7 +618,7 @@ section {
   // margin-bottom: 0 !important;
   .bdayAnn {
     // margin-bottom: 0;
-    // .my-common-widget{
+    // .com-card{
     //   height:182px;
     // }
   }
@@ -1276,7 +1304,7 @@ span.copyNoti {
   }
 }
 
-.my-common-widget {
+.com-card {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   overflow: hidden;
@@ -1338,8 +1366,9 @@ span.copyNoti {
 
 .md-block {
   height: 380px;
-  @media screen and (max-width:767px){
+  @media screen and (max-width:992px){
     height:auto;
+    padding: 10px 0;
   }
 }
 
@@ -1347,6 +1376,18 @@ span.copyNoti {
   width: 100%;
   height: auto;
   border: none;
+}
+
+.fullwidth-top-block{
+  .wt-setting-dw{
+    .wt-setting-list{
+      top:-10px;
+      &.active{
+        top: -10px;
+      }
+    }
+  }
+
 }
 
 .wt-setting-dw {
@@ -1363,6 +1404,8 @@ span.copyNoti {
     font-size: 16px;
   }
 
+
+
   .wt-setting-list {
     width: 100px;
     position: absolute;
@@ -1370,7 +1413,7 @@ span.copyNoti {
     border: 1px solid #ccc;
     // border-radius: 10px;
     left: 21px;
-    bottom: -82px;
+    top: -11px;
     // display: none;
     transition: left 0.5s;
     z-index: 2;
@@ -1407,6 +1450,10 @@ span.copyNoti {
       cursor: pointer;
       border-bottom: 1px solid $border;
       color: $black;
+
+      &.wt-st-add{
+        display: none;
+      }
 
       &:last-child {
         border-bottom: none;
