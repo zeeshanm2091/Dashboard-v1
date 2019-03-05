@@ -1,27 +1,6 @@
 $(document).ready(function() {
 
 
-  /*******top banner slider*****/
-  // var swiper = new Swiper('.basic-banner-slider .swiper-container', {
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   loop: true,
-  //   pagination: {
-  //     el: '.banner-pagination',
-  //   },
-  //   // autoplay: {
-  //   //   delay: 2000,
-  //   // }
-  // });
-
-
-
-
-
-
-
   //****************************************************************************head menu code*******************************************************************//
   $('.menu-tab .menu-icon').click(function() {
     $(this).parent().find('.menu-main-content').animate({
@@ -67,9 +46,7 @@ $(document).ready(function() {
 
 
   $('.setting-swipe-btn .icon').click(function() {
-
     $(this).parent().toggleClass('active');
-
     if ($('.dashboard-page .db-body.main-container').attr('class').split(' ').pop() === 'deactive') {
       $('.dashboard-page .db-body.main-container').removeClass('deactive');
       $('.dashboard-page .db-body.main-container').addClass('active')
@@ -78,7 +55,6 @@ $(document).ready(function() {
       $('.dashboard-page .db-body.main-container').removeClass('active');
       $('.left-list,.right-list').sortable('destroy');
     }
-
   })
 
   $('.setting-menu .setting-head > .icon-wrong').click(function() {
@@ -90,16 +66,7 @@ $(document).ready(function() {
     }, 300)
   })
 
-  $('.setting-menu .setting-head > .icon-wrong').click(function() {
-    // $('.dashboard-page .main-container').toggleClass('active');
 
-    $('.left-list,.right-list').sortable({
-      disabled: true
-    })
-
-
-
-  })
 
   /***************setting accordion********************/
 
@@ -121,11 +88,8 @@ $(document).ready(function() {
     $('.widget-click-desc h4').html("theme");
 
 
-
     var themeTabNo;
     themeTabNo = parseInt($('.dashboard-page').attr('class').split(" ").pop().split("").pop());
-    console.log(themeTabNo);
-    console.log(typeof(themeTabNo));
 
     if (!isNaN(themeTabNo)) {
       $('.theme-list .theme-item:nth-child(' + themeTabNo + ')').addClass('active');
@@ -165,102 +129,13 @@ $(document).ready(function() {
   })
 
 
-  /************************************widget btn action***********************************/
-
-  $('.setting-menu').on('click', '.widget-block-item', function() {
-    $(this).toggleClass('active');
-  });
-
-  $('.setting-menu').on('click', '.wt-main-banner', function() {
-    $('.banner-fw').fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-ol-fw', function() {
-    $('.option-fw').fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-news', function() {
-    $('.primary-newsCard').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-myTeam', function() {
-    $('.team-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-wk-anni', function() {
-    $('.workAnni-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-bday', function() {
-    $('.bdayAnn').fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-rnr', function() {
-    $('.rnr-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.my-goals-item', function() {
-    $('.goals-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-atten', function() {
-    $('.atten-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-claim', function() {
-    $('.ctc-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-payslip', function() {
-    $('.comp-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-pms', function() {
-    $('.pms-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.my-ln-summary', function() {
-    $('.learnSumarry-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.my-learning-item', function() {
-    $('.learnDetail-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-moreLink', function() {
-    $('.moreLink-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-inbox', function() {
-    $('.inbox-card').parent().fadeToggle();
-  });
-
-  $('.setting-menu').on('click', '.wt-art', function() {
-    $('.artisan-card').parent().fadeToggle();
-  })
-
-  $('.setting-menu').on('click', '.wt-ol', function() {
-    $('.option-list').parent().fadeToggle();
-  })
-
-  $('.setting-menu').on('click', '.wt-csr', function() {
-    $('.csr-card').parent().fadeToggle();
-  })
-
-  $('.setting-menu').on('click', '.wt-wellness', function() {
-    $('.wellness-card').parent().fadeToggle();
-  })
-
-  $('.setting-menu').on('click', '.wt-all-bna', function() {
-    $('.anniSum-card').parent().fadeToggle();
-  })
 
 
 
   //************************************************************************range slider*****************************************************//
 
   $('.dashboard-page').on('input', '#shadowRange', function() {
-    $('.bx-shadow .action-box,.com-card,.newsCard').css({
+    $('.bx-shadow .action-box,.com-card,.small-card,.newsCard').css({
       "box-shadow": "0 0" + " " + this.value + "px 0px"
     })
     $('.bdayAnn').css({
@@ -270,7 +145,7 @@ $(document).ready(function() {
 
 
   $('.dashboard-page').on('input', '#radiusRange', function() {
-    $('.bx-shadow .action-box,.com-card,.newsCard,.wt-setting-list').css({
+    $('.bx-shadow .action-box,.com-card,.newsCard,.small-card,.wt-setting-list').css({
       "border-radius": this.value + "px"
     })
     $('.bdayAnn .delete-btn').css({
@@ -279,9 +154,8 @@ $(document).ready(function() {
   });
 
 
-
   $('.dashboard-page').on('input', '#borderRange', function() {
-    $('.bx-shadow .action-box,.com-card,.newsCard').css({
+    $('.bx-shadow .action-box,.com-card,.small-card,.newsCard').css({
       "border-width": this.value + "px"
     })
     $('.bdayAnn').css({
@@ -347,10 +221,7 @@ $(document).ready(function() {
   })
 
 
-
-
   /*****************************color picker code *****************************************/
-
 
 
   $('.dashboard-page').on('click', '.body-color', function() {
@@ -483,9 +354,6 @@ $(document).ready(function() {
         $('.main-col-cng .pickr-child').css('backgroundColor', '#' + hex);
       }
     });
-
-
-
   })
 
 
@@ -532,7 +400,6 @@ $(document).ready(function() {
 
   /***************notification tab code***************/
 
-
   $('.header-notification').click(function() {
     $('.noti-wrap').fadeIn();
   });
@@ -558,8 +425,6 @@ $(document).ready(function() {
       $('.ctc-content-block:nth-child(1)').hide();
     }
 
-
-
   })
 
 
@@ -569,31 +434,29 @@ $(document).ready(function() {
 
   //****************************************************************************swiper code**********************************************************************//
 
-  var swiper = new Swiper('.db-slider.swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    loop: true,
-    autoHeight: true,
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
-    simulateTouch: false,
-  });
 
 
 
-  /**************personal blog code ******************/
-  //travel blog slider
 
-  var swiper = new Swiper('.workAnni-card .swiper-container', {
+
+
+  var swiper = new Swiper('.workAnni-card .db-slider.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     slidesPerView: 6,
     spaceBetween: 20,
+    loop: true,
+    autoHeight: true,
+    simulateTouch: false,
+  });
+
+  var swiper = new Swiper('.db-slider.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     loop: true,
     autoHeight: true,
     simulateTouch: false,
@@ -632,8 +495,6 @@ $(document).ready(function() {
 
     });
   }
-
-
 
 
 
@@ -700,7 +561,6 @@ $(document).ready(function() {
         nextEl: '.rnr-next',
         prevEl: '.rnr-prev',
       },
-      // loop: true,
       autoHeight: false
     });
   }
@@ -723,7 +583,7 @@ $(document).ready(function() {
       //dashboard-changes
       $('.active .left-list,.active .right-list').sortable({
         items: '.com-card,.bdayAnn',
-        cancel: '.db-arrow,.newsCard-img-block,.delete-btn,.emp-filter-item,.bdayAnn .com-card,.noti-item-left,.noti-item-right,.tab-title-list,.noti-item-left,.noti-item-right',
+        cancel: '.db-arrow,.newsCard-img-block,.com-filter-item,.noti-item-left,.noti-item-right,.tab-title-list,.noti-item-left,.noti-item-right',
         forcePlaceholderSize: true,
         connectWith: '.left-list,.right-list',
         disabled: false
@@ -734,8 +594,13 @@ $(document).ready(function() {
       }
 
       $(function() {
+
+
         $('.active .left-list,.active .right-list').sortable()
           .on('sortable:receive', function(e, ui) {
+
+
+
 
             var swiper = new Swiper('.db-slider', {
               navigation: {
@@ -771,7 +636,7 @@ $(document).ready(function() {
             });
 
 
-            var swiper = new Swiper('.empConnect.small-card .swiper-container', {
+            var swiper = new Swiper('.mainBday-card .small-card .swiper-container', {
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -843,13 +708,8 @@ $(document).ready(function() {
               $(this).parent().parent().parent().find('.img-display').find('img').attr('src', $(this).find('img').attr('src'));
 
             });
-
           })
-
       })
-
-
-
 
 
       /************************************************on drag initiation functions***********************************************************************/
@@ -871,7 +731,6 @@ $(document).ready(function() {
             });
           })
 
-
       })
 
       $(function() {
@@ -881,14 +740,7 @@ $(document).ready(function() {
       $('.left-list,.right-list,.divide-block,.widget-list').sortable('destroy')
     }
 
-
   })
-
-
-
-
-
-
 
 
 
@@ -1061,9 +913,6 @@ $(document).ready(function() {
   var slideChildNo;
   var bannerSwiper;
 
-
-
-
   $('.setting-menu').on('click', '.slider-add-btn', function() {
 
     var slideNo = $('.slide-accord .slide-accord-item').length + 1;
@@ -1102,18 +951,12 @@ $(document).ready(function() {
       $('.db-arrow').fadeIn();
     }
 
-
-
-
     $('.slide-accord .slide-accord-item').siblings().find('.slide-accord-body').slideUp();
     $('.slide-accord .slide-accord-item:last-child .slide-accord-body').slideDown();
 
-
     bannerSwiper.slideTo(slideNo, 1000, false);
 
-
   });
-
 
 
   $('.setting-menu').on('click', '.slide-accort-title', function() {
@@ -1130,18 +973,11 @@ $(document).ready(function() {
   });
 
 
-
-
-
-
   $('.setting-menu').on('click', '.slide-remove', function() {
     var delSlide = $(this).parent().parent().index() + 1;
     $(this).parent().parent().remove();
-
     $('.banner-list .banner-list-item:nth-child(' + delSlide + ')').remove();
-
     event.stopPropagation();
-
 
 
   })
@@ -1152,9 +988,49 @@ $(document).ready(function() {
 
 
 
-  var allWidgetList = ["primary-newsCard", 'team-card', "main-bday-block", 'rnr-card', "atten-card", "ctc-card", 'comp-card', 'pms-card', 'learnSumarry-card', "moreLink-card"];
+  var allWidgetList = ["primary-newsCard", 'team-card', 'mainBday-card', 'rnr-card', "atten-card", "ctc-card", 'comp-card', 'pms-card', 'learnSumarry-card', "moreLink-card"];
+  var fullWidthArr;
   var finalWtList = [];
   var finalWtList = finalWtList.concat(allWidgetList);
+
+  function activeWidgets() {
+    setTimeout(function() {
+      //left widgets
+      var widgetLeftlist = [];
+      var leftListLen = $('.left-list .wt-main-block').length;
+      for (var i = 1; i <= leftListLen; i++) {
+        if ($('.left-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
+          widgetLeftlist.push($('.left-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+        } else {
+
+        }
+      }
+
+      //Right widgets
+      var widgetRightlist = [];
+      var rightListLen = $('.right-list .wt-main-block').length;
+      for (var i = 1; i <= rightListLen; i++) {
+        if ($('.right-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
+          widgetRightlist.push($('.right-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
+        } else {
+
+        }
+      }
+
+      //top banner widgets
+      fullWidthArr = [];
+      for (var i = 1; i <= $('.fullwidth-top-block .com-card').length; i++) {
+        if ($('.fullwidth-top-block .com-card:nth-child(' + i + ')').css('display') !== 'none') {
+          fullWidthArr.push($('.fullwidth-top-block .com-card:nth-child(' + i + ')').attr('class').split(' ').pop());
+        }
+      }
+
+      allWidgetList = widgetLeftlist.concat(widgetRightlist);
+      finalWtList = allWidgetList.concat(fullWidthArr);
+    }, 402);
+  }
+
+
 
   $('.setting-menu').on('click', '.theme-item', function() {
     var Childno = $(this).index() + 1;
@@ -1162,6 +1038,8 @@ $(document).ready(function() {
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
     $('.banner-setting-block').removeClass('active');
+
+
 
     //theme 1
 
@@ -1171,7 +1049,7 @@ $(document).ready(function() {
       $('.banner-fw,.option-fw').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'main-bday-block', 'rnr-card', 'goals-card']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'mainBday-card', 'rnr-card', 'goals-card']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1179,7 +1057,7 @@ $(document).ready(function() {
       }
       //right widget
       for (var i = 1; i <= $('.right-list .wt-main-block').length; i++) {
-        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'comp-card', 'pms-card', 'moreLink-card', 'learnSumarry-card']) === -1) {
+        if ($.inArray($('.right-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['atten-card', 'ctc-card', 'comp-card', 'pms-card', 'moreLink-card', 'learnSumarry-card', 'learnDetail-card']) === -1) {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.right-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1196,7 +1074,7 @@ $(document).ready(function() {
       $('.banner-fw,.option-fw').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'main-bday-block', 'rnr-card']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'mainBday-card', 'rnr-card']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1274,7 +1152,7 @@ $(document).ready(function() {
       $('.banner-fw,.option-fw').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'main-bday-block', 'rnr-card']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['primary-newsCard', 'team-card', 'mainBday-card', 'rnr-card']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1327,7 +1205,7 @@ $(document).ready(function() {
       $('.banner-fw,.option-fw').slideUp();
       //left widget
       for (var i = 1; i <= $('.left-list .wt-main-block').length; i++) {
-        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['team-card', 'main-bday-block', 'primary-newsCard']) === -1) {
+        if ($.inArray($('.left-list .wt-main-block:nth-child(' + i + ') >*').attr('class').split(" ").pop(), ['team-card', 'mainBday-card', 'primary-newsCard']) === -1) {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideUp();
         } else {
           $('.left-list .wt-main-block:nth-child(' + i + ')').slideDown();
@@ -1370,50 +1248,35 @@ $(document).ready(function() {
 
     }
 
-    var fullWidthArr = [];
+
+
+
     setTimeout(function() {
       if (Childno === 3 || Childno === 4) {
+
+
+        fullWidthArr = [];
         for (var i = 1; i <= $('.fullwidth-top-block .com-card').length; i++) {
           if ($('.fullwidth-top-block .com-card:nth-child(' + i + ')').css('display') !== 'none') {
             fullWidthArr.push($('.fullwidth-top-block .com-card:nth-child(' + i + ')').attr('class').split(' ').pop());
           }
         }
+      } else {
+        fullWidthArr = [];
       }
+
     }, 401)
 
     /*********************************widget presence test*****************************/
+    activeWidgets();
 
-    setTimeout(function() {
-      var widgetLeftlist = [];
-      var leftListLen = $('.left-list .wt-main-block').length;
-      for (var i = 1; i <= leftListLen; i++) {
-        if ($('.left-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
-          widgetLeftlist.push($('.left-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
-        } else {
-
-        }
-      }
-
-      var widgetRightlist = [];
-      var rightListLen = $('.right-list .wt-main-block').length;
-      for (var i = 1; i <= rightListLen; i++) {
-        if ($('.right-list .wt-main-block:nth-child(' + i + ')').css('display') !== 'none') {
-          widgetRightlist.push($('.right-list .wt-main-block:nth-child(' + i + ') > *:nth-child(1)').attr('class').split(" ").pop());
-        } else {
-
-        }
-      }
-
-      allWidgetList = widgetLeftlist.concat(widgetRightlist);
-      console.log(allWidgetList);
-      finalWtList = allWidgetList.concat(fullWidthArr);
-    }, 402);
 
   })
 
+
   //******************************************************widget block item array code
 
-  $('.dashboard-page').on('click', '.widget-btn', function() {
+  function wtActionBtnAct() {
 
     if (finalWtList.indexOf('banner-fw') >= 0) {
       $('.wt-main-banner').addClass('active')
@@ -1439,7 +1302,7 @@ $(document).ready(function() {
       $('.wt-empCont').addClass('active')
     }
 
-    if (finalWtList.indexOf('main-bday-block') >= 0) {
+    if (finalWtList.indexOf('mainBday-card') >= 0) {
       $('.wt-bday').addClass('active')
     }
 
@@ -1502,10 +1365,240 @@ $(document).ready(function() {
     if (finalWtList.indexOf('anniSum-card') >= 0) {
       $('.wt-all-bna').addClass('active')
     }
+  }
+
+  function wtActionBtnDeAct() {
+
+    if (finalWtList.indexOf('banner-fw') < 0) {
+      $('.wt-main-banner').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('option-fw') < 0) {
+      $('.wt-ol-fw').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('option-list') < 0) {
+      $('.wt-ol').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('atten-card') < 0) {
+      $('.wt-atten').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('ctc-card') < 0) {
+      $('.wt-claim').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('workAnni-card') < 0) {
+      $('.wt-empCont').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('mainBday-card') < 0) {
+      $('.wt-bday').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('moreLink-card') < 0) {
+      $('.wt-moreLink').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('goals-card') < 0) {
+      $('.my-goals-item').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('learnDetail-card') < 0) {
+      $('.my-learning-item').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('learnSumarry-card') < 0) {
+      $('.my-ln-summary').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('team-card') < 0) {
+      $('.wt-myTeam').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('comp-card') < 0) {
+      $('.wt-payslip').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('pms-card') < 0) {
+      $('.wt-pms').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('comp-card') < 0) {
+      $('.wt-payslip').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('primary-newsCard') < 0) {
+      $('.wt-news').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('artisan-card') < 0) {
+      $('.wt-art').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('rnr-card') < 0) {
+      $('.wt-rnr').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('inbox-card') < 0) {
+      $('.wt-inbox').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('csr-card') < 0) {
+      $('.wt-csr').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('wellness-card') < 0) {
+      $('.wt-wellness').removeClass('active')
+    }
+
+    if (finalWtList.indexOf('anniSum-card') < 0) {
+      $('.wt-all-bna').removeClass('active')
+    }
+  }
+
+  $('.dashboard-page').on('click', '.widget-btn', function() {
+
+    activeWidgets();
+
+    wtActionBtnAct();
+
+
 
   })
 
+  /*****************************************widget setting btn code **********************************************************/
 
+  $('.dashboard-page').on('click', '.wt-setting-dw .icon', function() {
+    $(this).parent().find('.wt-setting-list').toggleClass('active');
+
+  })
+
+  $('.dashboard-page').on('click', '.wt-st-cust', function() {
+    $('.setting-widget-popup').fadeIn();
+  })
+
+  $('.dashboard-page').on('click', '.wt-st-remove', function() {
+
+    $(this).parent().parent().parent().parent().slideUp();
+    var removeWt = $(this).parent().parent().parent().attr('class').split(' ').pop();
+
+    for (var i = 0; i < finalWtList.length; i++) {
+      if (removeWt === finalWtList[i]) {
+        finalWtList.splice(i, 1)
+      }
+    }
+
+    wtActionBtnDeAct()
+
+  });
+
+  /************************************widget btn action***********************************/
+
+  $('.setting-menu').on('click', '.widget-block-item', function() {
+    $(this).toggleClass('active');
+
+
+    activeWidgets()
+
+    if ($(this).attr('class').indexOf('active') >= 0) {
+      $('.banner-setting-block').toggleClass('active');
+
+    }
+
+
+
+
+
+
+
+
+  });
+
+  $('.setting-menu').on('click', '.wt-main-banner', function() {
+    $('.banner-fw').fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-ol-fw', function() {
+    $('.option-fw').fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-news', function() {
+    $('.primary-newsCard').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-myTeam', function() {
+    $('.team-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-wk-anni', function() {
+    $('.workAnni-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-bday', function() {
+    $('.bdayAnn').fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-rnr', function() {
+    $('.rnr-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.my-goals-item', function() {
+    $('.goals-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-atten', function() {
+    $('.atten-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-claim', function() {
+    $('.ctc-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-payslip', function() {
+    $('.comp-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-pms', function() {
+    $('.pms-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.my-ln-summary', function() {
+    $('.learnSumarry-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.my-learning-item', function() {
+    $('.learnDetail-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-moreLink', function() {
+    $('.moreLink-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-inbox', function() {
+    $('.inbox-card').parent().fadeToggle();
+  });
+
+  $('.setting-menu').on('click', '.wt-art', function() {
+    $('.artisan-card').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-ol', function() {
+    $('.option-list').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-csr', function() {
+    $('.csr-card').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-wellness', function() {
+    $('.wellness-card').parent().fadeToggle();
+  })
+
+  $('.setting-menu').on('click', '.wt-all-bna', function() {
+    $('.anniSum-card').parent().fadeToggle();
+  })
 
 
 
@@ -1546,34 +1639,6 @@ $(document).ready(function() {
     $('.anni-item').fadeIn(200);
     $('.wk-anni-item').fadeIn(200);
   });
-
-
-  /*****************************************widget setting btn code **********************************************************/
-
-  $('.dashboard-page').on('click', '.wt-setting-dw .icon', function() {
-    $(this).parent().find('.wt-setting-list').toggleClass('active');
-
-  })
-
-  $('.dashboard-page').on('click', '.wt-st-cust', function() {
-    $('.setting-widget-popup').fadeIn();
-  })
-
-  $('.dashboard-page').on('click', '.wt-st-remove', function() {
-    $(this).parent().parent().parent().parent().slideUp();
-
-
-    var removeWt = $(this).parent().parent().parent().attr('class').split(' ').pop()
-
-    console.log(removeWt);
-
-
-
-
-  })
-
-
-
 
 
 })

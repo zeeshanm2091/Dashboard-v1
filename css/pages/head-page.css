@@ -2463,6 +2463,11 @@ span.copyNoti {
   align-items: flex-start;
   padding: 10px 25px 10px 10px;
 }
+@media screen and (max-width: 1200px) {
+  .card-head {
+    padding: 10px 15px 10px 10px;
+  }
+}
 @media screen and (max-width: 992px) {
   .card-head {
     padding: 10px 10px 10px 10px;
@@ -2510,14 +2515,13 @@ span.copyNoti {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
   position: relative;
   z-index: 2;
   /*******************emp desc block***********************/
 }
 @media screen and (max-width: 1366px) {
   .card-head .card-right {
-    width: 65%;
+    width: auto;
     margin-right: 10px;
   }
 }
@@ -2636,7 +2640,7 @@ span.copyNoti {
   line-height: 40px;
 }
 
-.com-card {
+.com-card, .small-card {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   overflow: hidden;
@@ -2644,11 +2648,11 @@ span.copyNoti {
   height: 180px;
   position: relative;
 }
-.com-card.lg-block {
+.com-card.lg-block, .small-card.lg-block {
   display: none;
 }
 @media screen and (max-width: 992px) {
-  .com-card {
+  .com-card, .small-card {
     margin-bottom: 10px;
   }
 }
@@ -2879,6 +2883,9 @@ span.copyNoti {
   text-align: center;
 }
 .db-head .db-head-content .right-block .setting-swipe-btn.active {
+  border-color: #33cccc;
+}
+.db-head .db-head-content .right-block .setting-swipe-btn.active .icon {
   color: #33cccc;
 }
 .db-head .db-head-content .right-block .setting-swipe-btn .icon {
@@ -3853,120 +3860,5 @@ textarea {
 }
 
 /*****themes******/
-.theme-v1 {
-  background-color: #eef1e9;
-}
-.theme-v1 .setting-icon {
-  color: #ffffff;
-}
-.theme-v1 .menu-main-content .option-list .option-list-item .option-icon-block .svg-option-icon {
-  background-color: #eef1e9;
-}
-.theme-v1 .option-list .option-list-item .option-icon-block span {
-  height: 80px;
-  width: 80px;
-  background-color: #fff;
-  display: inline-block;
-  border-radius: 50%;
-  font-size: 0;
-  display: none;
-}
-.theme-v1 .option-list .option-list-item .option-icon-block .svg-option-icon {
-  display: inline-block;
-}
-.theme-v1 .empConnect,
-.theme-v1 .newsCard {
-  border: none;
-  border-radius: 5px;
-}
-.theme-v1 .newsCard .newsCard-content .newsCard-img-block img {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.theme-v1 .db-head {
-  background-color: #89b72e;
-}
-.theme-v1 .db-head .db-head-content .left-block .menu-tab .menu-icon {
-  margin-right: 20px;
-}
-.theme-v1 .db-head .db-head-content .left-block .menu-tab .menu-icon span {
-  background-color: #ffffff;
-}
-.theme-v1 .db-head .db-head-content .left-block .main-logo a {
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px;
-  letter-spacing: 1px;
-  line-height: 20px;
-}
-.theme-v1 .db-head .db-head-content .left-block .main-logo img {
-  display: none;
-}
-.theme-v1 .db-head .db-head-content .left-block .main-logo span {
-  display: block;
-}
-.theme-v1 .db-head .db-head-content .right-block .header-notification {
-  font-size: 30px;
-  position: relative;
-  color: #ffffff;
-}
-.theme-v1 .db-head .db-head-content .right-block .header-notification .noti-count {
-  background-color: #ffffff;
-  color: #000000;
-}
-.theme-v1 .db-head .db-head-content .right-block .right-head-menu .menu-icon span {
-  background-color: #ffffff;
-}
-.theme-v1 .empConnect .card-head .card-left .card-head-icon {
-  display: none;
-}
-
-.theme-v2 {
-  background-color: #eef1e9;
-}
-.theme-v2 .setting-icon {
-  color: #ffffff;
-}
-.theme-v2 .db-head {
-  background-color: #89b72e;
-}
-.theme-v2 .db-head .db-head-content .left-block .menu-tab .menu-icon {
-  margin-right: 20px;
-}
-.theme-v2 .db-head .db-head-content .left-block .menu-tab .menu-icon span {
-  background-color: #ffffff;
-}
-.theme-v2 .db-head .db-head-content .left-block .main-logo a {
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px;
-  letter-spacing: 1px;
-  line-height: 20px;
-}
-.theme-v2 .db-head .db-head-content .left-block .main-logo img {
-  display: none;
-}
-.theme-v2 .db-head .db-head-content .left-block .main-logo span {
-  display: block;
-}
-.theme-v2 .db-head .db-head-content .right-block .header-notification {
-  font-size: 30px;
-  position: relative;
-  color: #ffffff;
-}
-.theme-v2 .db-head .db-head-content .right-block .header-notification .noti-count {
-  background-color: #ffffff;
-  color: #000000;
-}
-.theme-v2 .db-head .db-head-content .right-block .right-head-menu .menu-icon span {
-  background-color: #ffffff;
-}
-.theme-v2 .empConnect .card-head .card-left .card-head-icon {
-  display: none;
-}
 
 /*# sourceMappingURL=head-page.css.map */

@@ -1116,6 +1116,9 @@ span.copyNoti {
   align-items: flex-start;
   // margin-bottom: 10px;
   padding: 10px 25px 10px 10px;
+  @media screen and (max-width:1200px){
+    padding: 10px 15px 10px 10px;
+  }
   @media screen and (max-width:992px) {
     padding: 10px 10px 10px 10px;
   }
@@ -1153,13 +1156,14 @@ span.copyNoti {
 
   .card-right {
     @include dis-flex();
-    width: 60%;
+    // width: 60%;
     position: relative;
     z-index: 2;
     @media screen and (max-width:1366px) {
-      width: 65%;
+      width: auto;
       margin-right: 10px;
     }
+
     @media screen and (max-width:992px) {
       width: 65%;
       margin-right: 0px;
@@ -1304,7 +1308,7 @@ span.copyNoti {
   }
 }
 
-.com-card {
+.com-card,.small-card {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   overflow: hidden;
