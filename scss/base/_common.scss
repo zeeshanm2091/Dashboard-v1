@@ -122,6 +122,16 @@ h6 {
   color: $primary;
 }
 
+.primary-fChild{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.primary-lChild{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
 .primary-hover{
   &:hover{
     background-color: $primary;
@@ -206,6 +216,7 @@ p {
   font-family: sans-serif;
   // padding-bottom: 30px;
   position: relative;
+  left:350px;
 }
 // .small-card{
 //   width:48%
@@ -1308,7 +1319,7 @@ span.copyNoti {
   }
 }
 
-.com-card,.small-card {
+.com-card {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   overflow: hidden;

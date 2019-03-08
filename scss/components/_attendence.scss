@@ -1,20 +1,23 @@
 .atten-card {
-
+  .atn-leave-btn{
+    margin-top:5px;
+    text-decoration: none;
+    display: block;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 
   .card-body {
     .card-left {
       width: 60%;
       text-align: center;
-        // @media screen and (max-width:767px) {
-        //   width:100%;
-        // }
+
     }
 
     .card-right {
       width: 40%;
-      // @media screen and (max-width:767px) {
-      //   width:100%;
-      // }
+
       .empConnect{
         margin-top: 0px;
       }
@@ -22,9 +25,7 @@
       .attn-info {
         p {
           color:$text;
-          // &.attn-desc{
-          //
-          // }
+
 
 
           &.attn-count {

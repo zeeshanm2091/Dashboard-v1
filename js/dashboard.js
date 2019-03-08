@@ -31,31 +31,61 @@ $(document).ready(function() {
 
 
   $('.setting-icon').click(function() {
-    $('.setting-menu').animate({
-      left: "0px"
-    }, 300);
-    $('.main-content').animate({
-      left: "350px"
-    }, 300);
-    $('.left-block .menu-main-content').animate({
-      left: "-80%"
-    }, 300);
+
+
+    if ($('.setting-menu').css('left') === "0px") {
+
+      $('.setting-menu').animate({
+        left: "-600px"
+      }, 300);
+
+      $('.main-content').animate({
+        left: "0px"
+      }, 300);
+
+
+    } else {
+      $('.setting-menu').animate({
+        left: "0px"
+      }, 300);
+
+      $('.main-content').animate({
+        left: "350px"
+      }, 300);
+
+    }
+
+
+
+
+
+
+
+    // $('.left-block .menu-main-content').animate({
+    //   left: "-80%"
+    // }, 300);
+
   });
 
 
 
 
-  $('.setting-swipe-btn .icon').click(function() {
+  $('.setting-icon,.setting-menu .setting-head > .icon-wrong').click(function() {
     $(this).parent().toggleClass('active');
+    $('.dnd-card').toggleClass('dnd-active')
     if ($('.dashboard-page .db-body.main-container').attr('class').split(' ').pop() === 'deactive') {
       $('.dashboard-page .db-body.main-container').removeClass('deactive');
       $('.dashboard-page .db-body.main-container').addClass('active')
     } else {
       $('.dashboard-page .db-body.main-container').addClass('deactive');
       $('.dashboard-page .db-body.main-container').removeClass('active');
+      $('.left-list,.right-list').unbind();
+      $('.left-list,.right-list').sortable();
       $('.left-list,.right-list').sortable('destroy');
     }
   })
+
+
 
   $('.setting-menu .setting-head > .icon-wrong').click(function() {
     $('.setting-menu').animate({
@@ -135,7 +165,7 @@ $(document).ready(function() {
   //************************************************************************range slider*****************************************************//
 
   $('.dashboard-page').on('input', '#shadowRange', function() {
-    $('.bx-shadow .action-box,.com-card,.small-card,.newsCard').css({
+    $('.bx-shadow .action-box,.com-card,.newsCard').css({
       "box-shadow": "0 0" + " " + this.value + "px 0px"
     })
     $('.bdayAnn').css({
@@ -145,17 +175,25 @@ $(document).ready(function() {
 
 
   $('.dashboard-page').on('input', '#radiusRange', function() {
-    $('.bx-shadow .action-box,.com-card,.newsCard,.small-card,.wt-setting-list').css({
+    $('.bx-shadow .action-box,.com-card,.newsCard,.wt-setting-list').css({
       "border-radius": this.value + "px"
     })
     $('.bdayAnn .delete-btn').css({
+      "border-top-right-radius": this.value + "px"
+    })
+    $('.primary-lChild').css({
+      "border-bottom-left-radius": this.value + "px",
+      "border-bottom-right-radius": this.value + "px"
+    })
+    $('.primary-fChild').css({
+      "border-top-left-radius": this.value + "px",
       "border-top-right-radius": this.value + "px"
     })
   });
 
 
   $('.dashboard-page').on('input', '#borderRange', function() {
-    $('.bx-shadow .action-box,.com-card,.small-card,.newsCard').css({
+    $('.bx-shadow .action-box,.com-card,.newsCard').css({
       "border-width": this.value + "px"
     })
     $('.bdayAnn').css({
@@ -337,7 +375,7 @@ $(document).ready(function() {
       },
       onChange: function(hsb, hex, rgb) {
         $('.primary-icon,.primary-font').css('color', '#' + hex);
-        $('.primary-bg,').css('backgroundColor', '#' + hex);
+        $('.primary-bg').css('backgroundColor', '#' + hex);
         $('.primary-border').css('border-color', '#' + hex);
 
         $('.wt-main-block .db-btn').hover(function() {
@@ -435,12 +473,7 @@ $(document).ready(function() {
   //****************************************************************************swiper code**********************************************************************//
 
 
-
-
-
-
-
-  var swiper = new Swiper('.workAnni-card .db-slider.swiper-container', {
+  var swiper = new Swiper('.workAnni-slider.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -452,7 +485,7 @@ $(document).ready(function() {
     simulateTouch: false,
   });
 
-  var swiper = new Swiper('.db-slider.swiper-container', {
+  var swiper = new Swiper('.news-slider.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -568,179 +601,6 @@ $(document).ready(function() {
 
 
 
-
-  //****************************************************************************drag and drop code*************************************************************************//
-
-
-
-
-  $('.setting-swipe-btn .icon').click(function() {
-
-    var classArr = $('.dashboard-page .db-body.main-container').attr('class').split(' ');
-
-    if ($.inArray(classArr, ['active']) == -1) {
-
-      //dashboard-changes
-      $('.active .left-list,.active .right-list').sortable({
-        items: '.com-card,.bdayAnn',
-        cancel: '.db-arrow,.newsCard-img-block,.com-filter-item,.noti-item-left,.noti-item-right,.tab-title-list,.noti-item-left,.noti-item-right',
-        forcePlaceholderSize: true,
-        connectWith: '.left-list,.right-list',
-        disabled: false
-      })
-
-      if ($(window).width() < 992) {
-        $('.left-list,.right-list,.divide-block,.widget-list').sortable('destroy')
-      }
-
-      $(function() {
-
-
-        $('.active .left-list,.active .right-list').sortable()
-          .on('sortable:receive', function(e, ui) {
-
-
-
-
-            var swiper = new Swiper('.db-slider', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              loop: true,
-              autoHeight: true,
-              pagination: {
-                el: '.swiper-pagination',
-              },
-              simulateTouch: false,
-            });
-
-            var swiper = new Swiper('db-slider.swiper-container', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              simulateTouch: false,
-            });
-
-            var swiper = new Swiper('.workAnni-card .swiper-container', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              slidesPerView: 6,
-              spaceBetween: 20,
-              loop: true,
-              autoHeight: true,
-              simulateTouch: false,
-            });
-
-
-            var swiper = new Swiper('.mainBday-card .small-card .swiper-container', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              slidesPerView: 3,
-              spaceBetween: 20,
-              simulateTouch: false,
-              loop: true
-            });
-
-
-            var swiper = new Swiper('.moreLink-card .swiper-container', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              slidesPerView: 4,
-              spaceBetween: 20,
-              simulateTouch: false,
-              loop: true
-            });
-
-            var myswiper = new Swiper('.swiper-container.personal-blog-container', {
-              navigation: {
-                nextEl: '.personal-arrow-next',
-                prevEl: '.personal-arrow-back',
-              },
-              loop: true,
-              autoplay: {
-                delay: 2000,
-              }
-            });
-
-            $(".swiper-container").mouseenter(function() {
-              myswiper.autoplay.stop();
-            });
-
-            $(".swiper-container").mouseleave(function() {
-              myswiper.autoplay.start();
-            });
-
-            var swiper = new Swiper('.swiper-container.gallery-thumbs', {
-              navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              slidesPerView: 4,
-              loop: true,
-              spaceBetween: 2
-
-            });
-
-            if ($(window).width() < 767) {
-              var swiper = new Swiper('.rnr-container.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 50,
-                navigation: {
-                  nextEl: '.rnr-next',
-                  prevEl: '.rnr-prev',
-                },
-                // loop: true,
-                autoHeight: false
-              });
-            }
-
-            $('.img-click').click(function() {
-              $(this).addClass('active');
-              $(this).siblings().removeClass('active');
-              $(this).parent().parent().parent().find('.img-display').find('img').attr('src', $(this).find('img').attr('src'));
-
-            });
-          })
-      })
-
-
-      /************************************************on drag initiation functions***********************************************************************/
-
-      $(function() {
-
-        $('.active .left-list,.active .right-list').sortable()
-          .on('sortable:receive', function(e, ui) {
-            $('.db-left section,.db-right section').css("z-index", "10");
-            $('.delete-btn').click(function() {
-              $(this).parent().remove();
-              if (jQuery.inArray($(this).parent().find('.main-markup > div').attr('class'), newArr) === -1) {
-                if ($(this).parent().attr('class') === "sec-50") {
-                  $('.widget-list').append('<section class="sec-50">' + $(this).parent().html() + '</section>');
-                } else {
-                  $('.widget-list').append('<section>' + $(this).parent().html() + '</section>');
-                }
-              }
-            });
-          })
-
-      })
-
-      $(function() {
-
-      })
-    } else {
-      $('.left-list,.right-list,.divide-block,.widget-list').sortable('destroy')
-    }
-
-  })
 
 
 
@@ -947,7 +807,7 @@ $(document).ready(function() {
         // }
       });
 
-      $('.swiper-pagination-bullet').fadeIn();
+      $('.swiper-pagination').fadeIn();
       $('.db-arrow').fadeIn();
     }
 
@@ -967,9 +827,15 @@ $(document).ready(function() {
     $(this).parent().siblings().removeClass('active');
 
     slideChildNo = $(this).parent().index();
-    // console.log(slideChildNo);
+    console.log(slideChildNo);
+
     bannerSwiper.slideTo(slideChildNo, 1000, false);
-    // event.stopPropagation();
+    event.stopPropagation();
+
+
+
+
+
   });
 
 
@@ -977,6 +843,14 @@ $(document).ready(function() {
     var delSlide = $(this).parent().parent().index() + 1;
     $(this).parent().parent().remove();
     $('.banner-list .banner-list-item:nth-child(' + delSlide + ')').remove();
+    $('.banner-pagination span:nth-child(' + delSlide + ')').remove();
+
+    if ($('.banner-pagination span').length <= 1) {
+      $('.banner-pagination').fadeOut();
+    }
+
+
+
     event.stopPropagation();
 
 
@@ -1299,7 +1173,7 @@ $(document).ready(function() {
     }
 
     if (finalWtList.indexOf('workAnni-card') >= 0) {
-      $('.wt-empCont').addClass('active')
+      $('.wt-wk-anni').addClass('active')
     }
 
     if (finalWtList.indexOf('mainBday-card') >= 0) {
@@ -1505,6 +1379,8 @@ $(document).ready(function() {
     if ($(this).attr('class').indexOf('active') >= 0) {
       $('.banner-setting-block').toggleClass('active');
 
+    } else {
+      $('.banner-setting-block').removeClass('active');
     }
 
 
@@ -1639,6 +1515,204 @@ $(document).ready(function() {
     $('.anni-item').fadeIn(200);
     $('.wk-anni-item').fadeIn(200);
   });
+
+
+
+
+
+  //****************************************************************************drag and drop code*************************************************************************//
+
+
+  $('.setting-icon,.setting-menu .setting-head > .icon-wrong').click(function() {
+    var classArr = $('.dashboard-page .db-body.main-container').attr('class').split(' ');
+    if ($.inArray(classArr, ['active']) == -1) {
+
+
+      //dashboard-changes
+      $('.left-list,.right-list').sortable({
+        items: '.dnd-active',
+        cancel: '.db-arrow,.newsCard-img-block,.com-filter-item,.noti-item-left,.noti-item-right,.tab-title-list,.noti-item-left,.noti-item-right',
+        forcePlaceholderSize: true,
+        connectWith: '.left-list,.right-list',
+      })
+
+      if ($(window).width() < 992) {
+        $('.left-list,.right-list').sortable('destroy')
+      }
+
+      $(function() {
+
+        $('.active .left-list,.active .right-list').sortable()
+          .on('sortable:receive', function(e, ui) {
+
+            var swiper = new Swiper('.news-slider', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              loop: true,
+              autoHeight: true,
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              simulateTouch: false,
+            });
+
+            var swiper = new Swiper('db-slider.swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              simulateTouch: false,
+            });
+
+            var swiper = new Swiper('.workAnni-card.swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 6,
+              spaceBetween: 20,
+              loop: true,
+              autoHeight: true,
+              simulateTouch: false,
+            });
+
+
+            var swiper = new Swiper('.mainBday-card .small-card .swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 3,
+              spaceBetween: 20,
+              simulateTouch: false,
+              loop: true
+            });
+
+
+            var swiper = new Swiper('.moreLink-card .swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 4,
+              spaceBetween: 20,
+              simulateTouch: false,
+              loop: true
+            });
+
+            var myswiper = new Swiper('.swiper-container.personal-blog-container', {
+              navigation: {
+                nextEl: '.personal-arrow-next',
+                prevEl: '.personal-arrow-back',
+              },
+              loop: true,
+              autoplay: {
+                delay: 2000,
+              }
+            });
+
+            $(".swiper-container").mouseenter(function() {
+              myswiper.autoplay.stop();
+            });
+
+            $(".swiper-container").mouseleave(function() {
+              myswiper.autoplay.start();
+            });
+
+            var swiper = new Swiper('.swiper-container.gallery-thumbs', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              slidesPerView: 4,
+              loop: true,
+              spaceBetween: 2
+
+            });
+
+            if ($(window).width() < 767) {
+              var swiper = new Swiper('.rnr-container.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 50,
+                navigation: {
+                  nextEl: '.rnr-next',
+                  prevEl: '.rnr-prev',
+                },
+                // loop: true,
+                autoHeight: false
+              });
+            }
+
+            $('.img-click').click(function() {
+              $(this).addClass('active');
+              $(this).siblings().removeClass('active');
+              $(this).parent().parent().parent().find('.img-display').find('img').attr('src', $(this).find('img').attr('src'));
+
+            });
+          })
+      })
+
+      /************************************************on drag initiation functions***********************************************************************/
+
+      $(function() {
+        $('active .left-list,.right-list').sortable()
+          .on('sortable:activate', function(e, ui) {
+            $('.dnd-active').css("z-index", "10");
+          })
+      })
+
+    } else {
+      $('.left-list,.right-list').sortable('destroy');
+    }
+
+  })
+
+
+
+
+  $('body').click(function(e) {
+    // console.log((e.target.className).split(' ').pop());
+    if ($('.db-body.main-container').attr('class').split(' ').pop() === 'active') {
+
+
+
+      if ($.inArray((e.target.className).split(' ').pop(), ['left-list', 'right-list', 'db-head-content', 'active']) >= 0) {
+        $('.confirm-popup').fadeIn();
+
+        $('.confirm-btn .db-btn.btn-no').click(function() {
+          $(this).parent().parent().parent().parent().fadeOut();
+        })
+
+        $('.confirm-btn .db-btn.btn-yes').click(function() {
+          $('.db-body.main-container').removeClass('active');
+          $(this).parent().parent().parent().parent().fadeOut();
+          $('.left-list,.right-list').unbind();
+          $('.left-list,.right-list').sortable();
+          $('.left-list,.right-list').sortable('destroy');
+        })
+      }
+    }
+
+
+  })
+
+  console.log($('.db-body.main-container').attr('class').split(' ').pop() === 'active');
+
+
+
+
+
+
+  //****************************************************************************popup******************************************************************//
+
+
+
+
+
+
+
 
 
 })

@@ -68,21 +68,25 @@
   }
 }
 
-.theme-v8 {
-  .basic-banner-slider {
-    height: 100vh;
 
-    .banner-img {
-      height: 100vh;
+  .theme-v8 {
+    .basic-banner-slider {
+      height: calc(100vh - 80px);
+
+      .banner-img {
+        height: 100vh;
+      }
+      .swiper-slide{
+        height:auto;
+      }
+    }
+
+    &.dashboard-page {
+      .db-body {
+        margin-top: 0;
+      }
+    }
+    .com-card {
+      margin-bottom: 0;
     }
   }
-
-  .dashboard-page {
-    .db-body {
-      margin-top: 0;
-    }
-  }
-  .com-card {
-    margin-bottom: 0;
-  }
-}

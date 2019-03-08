@@ -30,11 +30,13 @@
   <link rel="stylesheet" href="../css/pages/dashboard-page.css">
   <!-- <script src="../js/main2.js" charset="utf-8"></script> -->
 
+  <!-- /*****dnd js******/ -->
+  <script src="../js/touch-dnd.js"></script>
+
   <script src="../js/dashboard.js" charset="utf-8"></script>
   <script src="../js/widget-setup.js" charset="utf-8"></script>
 
-  <!-- /*****dnd js******/ -->
-  <script src="../js/touch-dnd.js"></script>
+
 
 
   <!-- <style>
@@ -1252,9 +1254,9 @@
               </div>
             </div>
             <div class="right-block">
-              <div class="setting-swipe-btn">
+              <!-- <div class="setting-swipe-btn">
                 <span class="icon icon-directions primary-head-text"></span>
-              </div>
+              </div> -->
               <div class="db-setting">
                 <div class="setting-icon">
                   <span class="icon icon-setting primary-head-text"></span>
@@ -1554,9 +1556,9 @@
           <div class="wt-setting-dw">
             <span class="icon icon-menu-dots"></span>
             <div class="wt-setting-list">
-              <div class="wt-setting-item wt-st-cust">setting</div>
+              <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
               <div class="wt-setting-item wt-st-add">add new</div>
-              <div class="wt-setting-item wt-st-remove">remove</div>
+              <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
             </div>
           </div>
           <ul class="option-list">
@@ -1701,17 +1703,17 @@
         <div class="db-left">
           <section class="left-list">
 
-            <section class="com-card widget-autoHeight wt-main-block">
+            <section class="com-card dnd-card widget-autoHeight wt-main-block">
               <div class="newsCard primary-newsCard">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
-                    <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
+                    <div class="wt-setting-item wt-st-add" style="display:block">add new</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
-                <div class="db-slider swiper-container">
+                <div class="news-slider swiper-container">
                   <div class="slider-list swiper-wrapper">
                     <div class="slider-item swiper-slide">
                       <a href="javascript:;">
@@ -1841,14 +1843,14 @@
                 </div>
               </div>
             </section>
-            <section class="com-card wt-main-block wt-anni-block">
+            <section class="com-card dnd-card wt-main-block wt-anni-block">
               <div class="workAnni-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -1896,7 +1898,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="db-slider swiper-container">
+                  <div class="workAnni-slider db-slider swiper-container">
                     <div class="slider-list swiper-wrapper">
                       <div class="slider-item swiper-slide">
                         <a href="javascript:;">
@@ -2067,14 +2069,14 @@
               </div>
             </section>
 
-            <section class="com-card md-block md-inbox wt-main-block">
+            <section class="com-card dnd-card md-block md-inbox wt-main-block">
               <div class="tab-block inbox-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="tab-head">
@@ -2247,15 +2249,15 @@
               </div>
             </section>
 
-            <section class="com-card wt-main-block">
+            <section class="com-card dnd-card wt-main-block">
 
               <div class="team-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="my-team-content">
@@ -2370,15 +2372,15 @@
               </div>
             </section>
 
-            <section class="bdayAnn wt-main-block">
-              <div class="mainBday-card">
+            <section class="bdayAnn dnd-card wt-main-block">
+              <div class="mainBday-card bdayAnn">
                 <div class="com-card small-card xs-block empBday">
-                  <div class="wt-setting-dw">
+                  <div class="wt-setting-dw" style="display:none">
                     <span class="icon icon-menu-dots"></span>
                     <div class="wt-setting-list">
-                      <div class="wt-setting-item wt-st-cust">setting</div>
+                      <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                       <div class="wt-setting-item wt-st-add">add new</div>
-                      <div class="wt-setting-item wt-st-remove">remove</div>
+                      <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                     </div>
                   </div>
                   <div class="comCard-content">
@@ -2574,15 +2576,16 @@
                   </div>
                 </div>
                 <div class="com-card small-card xs-block empAnni">
-                  <div class="comCard-content">
-                    <div class="wt-setting-dw">
-                      <span class="icon icon-menu-dots"></span>
-                      <div class="wt-setting-list">
-                        <div class="wt-setting-item wt-st-cust">setting</div>
-                        <div class="wt-setting-item wt-st-add">add new</div>
-                        <div class="wt-setting-item wt-st-remove">remove</div>
-                      </div>
+                  <div class="wt-setting-dw">
+                    <span class="icon icon-menu-dots"></span>
+                    <div class="wt-setting-list">
+                      <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
+                      <div class="wt-setting-item wt-st-add">add new</div>
+                      <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                     </div>
+                  </div>
+                  <div class="comCard-content">
+
                     <div class="card-head">
                       <div class="card-left">
                         <div class="card-head-icon">
@@ -2777,15 +2780,15 @@
               </div>
             </section>
 
-            <section class="com-card wt-main-block">
+            <section class="com-card dnd-card wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="rnr-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -2872,14 +2875,14 @@
               </div>
             </section>
 
-            <section class="com-card md-block wt-main-block wt-myGoals">
+            <section class="com-card dnd-card md-block wt-main-block wt-myGoals">
               <div class="goals-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="my-goals-wrap">
@@ -3093,14 +3096,14 @@
         <div class="db-right">
           <section class="right-list">
 
-            <section class="com-card widget-autoHeight wt-main-block csr-block">
+            <section class="com-card dnd-card widget-autoHeight wt-main-block csr-block">
               <div class="newsCard csr-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="db-slider">
@@ -3150,14 +3153,14 @@
               </div>
             </section>
 
-            <section class="com-card widget-autoHeight md-block wt-main-block wellness-block">
+            <section class="com-card dnd-card widget-autoHeight md-block wt-main-block wellness-block">
               <div class="newsCard wellness-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="db-slider">
@@ -3207,16 +3210,16 @@
               </div>
             </section>
 
-            <section class="com-card md-block wt-main-block wt-pr-blog">
+            <section class="com-card dnd-card md-block wt-main-block wt-pr-blog">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <!-- <div class=""> -->
               <div class="artisan-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="card-head">
@@ -3437,14 +3440,14 @@
               <!-- </div> -->
             </section>
 
-            <section class="com-card md-block md-option wt-main-block">
+            <section class="com-card dnd-card md-block md-option wt-main-block">
               <ul class="option-list">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <li class="option-list-item claim-option">
@@ -3581,14 +3584,14 @@
               </ul>
             </section>
 
-            <section class="com-card xs-block wt-main-block">
+            <section class="com-card dnd-card xs-block wt-main-block">
               <div class="divide-left small-card atten-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -3611,6 +3614,7 @@
                       <div class="attn-info">
                         <h1 class="attn-count">3.0</h1>
                         <p class="attn-desc">Absences in this month</p>
+                        <a href="javascript:;" class="atn-leave-btn primary-font">Apply leave</a>
                       </div>
                     </div>
                   </div>
@@ -3618,15 +3622,15 @@
               </div>
             </section>
 
-            <section class="com-card xs-block wt-main-block">
+            <section class="com-card dnd-card xs-block wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="divide-right small-card ctc-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content ctc-tab">
@@ -3700,15 +3704,15 @@
               </div>
             </section>
 
-            <section class="com-card xs-block wt-main-block">
+            <section class="com-card dnd-card xs-block wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="divide-left small-card comp-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -3737,15 +3741,15 @@
               </div>
             </section>
 
-            <section class="com-card xs-block wt-main-block">
+            <section class="com-card dnd-card xs-block wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="divide-right small-card pms-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -3773,15 +3777,15 @@
               </div>
             </section>
 
-            <section class="com-card wt-main-block">
+            <section class="com-card dnd-card wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="divide-left learnSumarry-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -3849,15 +3853,15 @@
               </div>
             </section>
 
-            <section class="com-card wt-main-block">
+            <section class="com-card dnd-card wt-main-block">
               <!-- <span class="delete-btn icon icon-wrong"> </span> -->
               <div class="divide-left moreLink-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="comCard-content">
@@ -3982,15 +3986,15 @@
               </div>
             </section>
 
-            <section class="com-card md-block wt-main-block wt-myLearning">
+            <section class="com-card dnd-card md-block wt-main-block wt-myLearning">
               <!-- <div class=""> -->
               <div class="learnDetail-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="my-goals-wrap">
@@ -4211,14 +4215,14 @@
               <!-- </div> -->
             </section>
 
-            <section class="com-card md-block wt-main-block anni-summary-block">
+            <section class="com-card dnd-card md-block wt-main-block anni-summary-block">
               <div class="anniSum-card">
                 <div class="wt-setting-dw">
                   <span class="icon icon-menu-dots"></span>
                   <div class="wt-setting-list">
-                    <div class="wt-setting-item wt-st-cust">setting</div>
+                    <div class="wt-setting-item wt-st-cust primary-fChild">setting</div>
                     <div class="wt-setting-item wt-st-add">add new</div>
-                    <div class="wt-setting-item wt-st-remove">remove</div>
+                    <div class="wt-setting-item wt-st-remove primary-lChild">remove</div>
                   </div>
                 </div>
                 <div class="card-head">
@@ -4963,6 +4967,27 @@
     </div>
   </div>
 
+  <div class="dp-popup confirm-popup">
+    <div class="dp-popup-content">
+      <div class="info-icon">
+        <span class="icon icon-">!</span>
+      </div>
+      <div class="db-popup-head">
+        <h2>Sure?</h2>
+        <h5>Are you sure, do you want to apply changes?</h5>
+      </div>
+      <div class="db-popup-body">
+        <div class="btn-group confirm-btn">
+          <div class="db-btn btn-yes">
+            <span>yes</span>
+          </div>
+          <div class="db-btn btn-no">
+            <span>no</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

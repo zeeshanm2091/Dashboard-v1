@@ -158,6 +158,18 @@
   }
 }
 
+.news-slider{
+  &:hover{
+    .db-arrow {
+      opacity: 1;
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
+
 
 .db-arrow {
   color:$primary;
